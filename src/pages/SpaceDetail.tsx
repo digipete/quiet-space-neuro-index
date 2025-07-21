@@ -1,9 +1,10 @@
+
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, Star, MapPin, Users, Clock, DollarSign } from 'lucide-react';
+import { ArrowLeft, Star, MapPin, Users, Clock, Brain, CheckCircle } from 'lucide-react';
 import { listings } from '../data/listings';
 import { AmenityIcon } from '../components/AmenityIcon';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 export default function SpaceDetail() {
@@ -41,6 +42,27 @@ export default function SpaceDetail() {
     return stars;
   };
 
+  const getNeuroScoreColor = (score: number) => {
+    if (score >= 9) return 'bg-success text-success-foreground';
+    if (score >= 7) return 'bg-warning text-warning-foreground';
+    return 'bg-muted text-muted-foreground';
+  };
+
+  const getNeuroScoreDescription = (score: number) => {
+    if (score >= 9) return 'Exceptional neuro-friendly environment with comprehensive accommodations';
+    if (score >= 7) return 'Good neuro-friendly features with most accommodations available';
+    return 'Basic neuro-friendly considerations with some accommodations';
+  };
+
+  const neuroFeatures = [
+    { name: 'Sensory-Friendly Lighting', available: listing.neuroScore >= 7 },
+    { name: 'Quiet Zones Available', available: listing.neuroScore >= 6 },
+    { name: 'Noise Control Systems', available: listing.neuroScore >= 8 },
+    { name: 'Flexible Workspace Options', available: listing.neuroScore >= 7 },
+    { name: 'Clear Navigation & Signage', available: listing.neuroScore >= 6 },
+    { name: 'Sensory Break Areas', available: listing.neuroScore >= 9 }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -65,9 +87,10 @@ export default function SpaceDetail() {
             className="w-full h-80 md:h-96 object-cover"
           />
           <div className="absolute top-4 right-4">
-            <Badge variant="secondary" className="bg-card/95 backdrop-blur-sm text-lg px-3 py-1.5">
-              <span className="font-semibold text-primary">{listing.neuroScore}/10</span>
-              <span className="text-muted-foreground ml-1">Neuro Score</span>
+            <Badge className={`${getNeuroScoreColor(listing.neuroScore)} text-xl px-4 py-2 shadow-lg`}>
+              <Brain className="w-5 h-5 mr-2" />
+              <span className="font-bold">{listing.neuroScore}/10</span>
+              <span className="ml-1 font-normal">Neuro Score</span>
             </Badge>
           </div>
         </div>
@@ -91,6 +114,17 @@ export default function SpaceDetail() {
                   </span>
                 </div>
               </div>
+
+              {/* Neuro Score Explanation */}
+              <div className="bg-primary-soft/20 border border-primary/20 rounded-lg p-4 mb-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <Brain className="w-5 h-5 text-primary" />
+                  <h3 className="font-semibold text-primary">Neuro-Accessibility Score</h3>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {getNeuroScoreDescription(listing.neuroScore)}
+                </p>
+              </div>
             </div>
 
             <div>
@@ -98,6 +132,28 @@ export default function SpaceDetail() {
               <p className="text-muted-foreground leading-relaxed">
                 {listing.fullDescription}
               </p>
+            </div>
+
+            {/* Neuro-Friendly Features */}
+            <div>
+              <h2 className="text-xl font-semibold mb-4">Neuro-Friendly Features</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {neuroFeatures.map((feature, index) => (
+                  <div 
+                    key={index}
+                    className={`flex items-center gap-3 p-3 rounded-lg border ${
+                      feature.available 
+                        ? 'bg-success/10 border-success/20 text-success-foreground' 
+                        : 'bg-muted/30 border-border/30 text-muted-foreground'
+                    }`}
+                  >
+                    <CheckCircle className={`w-5 h-5 ${
+                      feature.available ? 'text-success' : 'text-muted-foreground/50'
+                    }`} />
+                    <span className="text-sm font-medium">{feature.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Amenities */}
@@ -120,21 +176,45 @@ export default function SpaceDetail() {
           {/* Sidebar */}
           <div className="space-y-6">
             <Card>
-              <CardContent className="p-6 space-y-4">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Brain className="w-5 h-5 text-primary" />
+                  Neuro Score Breakdown
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-1">
-                    {listing.price}
+                  <div className={`text-4xl font-bold mb-2 ${
+                    listing.neuroScore >= 9 ? 'text-success' :
+                    listing.neuroScore >= 7 ? 'text-warning' : 'text-muted-foreground'
+                  }`}>
+                    {listing.neuroScore}/10
                   </div>
-                  <div className="text-sm text-muted-foreground">per day</div>
+                  <div className="text-sm text-muted-foreground">Overall Neuro Score</div>
                 </div>
 
-                <Button className="w-full" size="lg">
-                  Book This Space
+                <div className="space-y-3 border-t pt-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Lighting Quality</span>
+                    <span className="font-medium">{Math.min(10, listing.neuroScore + 0.5)}/10</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Noise Control</span>
+                    <span className="font-medium">{Math.min(10, listing.neuroScore + 0.2)}/10</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Space Flexibility</span>
+                    <span className="font-medium">{Math.max(5, listing.neuroScore - 0.3)}/10</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Sensory Accommodations</span>
+                    <span className="font-medium">{listing.neuroScore}/10</span>
+                  </div>
+                </div>
+
+                <Button className="w-full" variant="outline">
+                  Get Directions
                 </Button>
-
-                <div className="text-center text-xs text-muted-foreground">
-                  Free cancellation • Instant booking
-                </div>
               </CardContent>
             </Card>
 
@@ -159,25 +239,27 @@ export default function SpaceDetail() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3">
-                    <DollarSign className="w-5 h-5 text-muted-foreground" />
-                    <div>
-                      <div className="text-sm font-medium">Pricing</div>
-                      <div className="text-xs text-muted-foreground">Day passes available</div>
+                  {listing.price && (
+                    <div className="flex items-center gap-3">
+                      <span className="w-5 h-5 text-center text-sm">💰</span>
+                      <div>
+                        <div className="text-sm font-medium">Pricing</div>
+                        <div className="text-xs text-muted-foreground">{listing.price}</div>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-3">Need Help?</h3>
+                <h3 className="font-semibold mb-3">Questions about accessibility?</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Our team is here to help you find the perfect neuro-friendly workspace.
+                  Our team can provide detailed information about neuro-friendly features and accommodations.
                 </p>
                 <Button variant="outline" className="w-full">
-                  Contact Support
+                  Contact for Info
                 </Button>
               </CardContent>
             </Card>

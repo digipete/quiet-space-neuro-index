@@ -1,3 +1,4 @@
+
 export const listings = [
   {
     id: "1",
@@ -15,7 +16,7 @@ export const listings = [
       { name: "Adjustable Lighting", icon: "settings" },
       { name: "Sensory Break Room", icon: "coffee" }
     ],
-    fullDescription: "Our Mindful Coworking Studio is thoughtfully designed with neurodiverse professionals in mind. The space features soft, natural lighting throughout, with no harsh fluorescent bulbs. Each workspace can be customized for lighting and noise levels. We provide noise-canceling headphones, fidget tools, and a dedicated sensory break room for decompression.",
+    fullDescription: "Our Mindful Coworking Studio represents the gold standard in neuro-inclusive workspace design. Every element has been carefully considered to support neurodivergent professionals. The space features advanced circadian lighting systems that automatically adjust throughout the day, eliminating harsh fluorescents entirely. Multiple quiet zones provide sanctuary for those who need to decompress, while our dedicated sensory break room offers fidget tools, weighted blankets, and calming textures. Sound masking technology maintains consistent ambient noise levels, and all furniture is ergonomically selected to accommodate different sensory needs and working preferences.",
     price: "$45/day",
     capacity: "20 people",
     hoursOfOperation: "24/7 access for members"
@@ -35,7 +36,7 @@ export const listings = [
       { name: "Plant-Filled", icon: "leaf" },
       { name: "Ergonomic Seating", icon: "armchair" }
     ],
-    fullDescription: "Calm Collective offers an open yet thoughtfully designed workspace that promotes focus and well-being. Our space includes individual focus pods for deep work, collaborative areas with soft acoustic treatments, and plenty of greenery to create a calming atmosphere. All furniture is ergonomically selected and the lighting is carefully calibrated to reduce eye strain.",
+    fullDescription: "Calm Collective redefines the traditional coworking experience with a neuro-conscious approach to space design. Our thoughtfully curated environment balances openness with privacy, featuring individual focus pods for deep work and collaborative areas with superior acoustic treatments. The space is abundantly filled with greenery, creating a biophilic environment that naturally reduces stress and improves cognitive function. Soft, natural textures throughout the space provide sensory comfort, while our carefully calibrated lighting system reduces eye strain and supports natural circadian rhythms. Every piece of furniture has been ergonomically selected to accommodate different physical needs and working styles.",
     price: "$38/day",
     capacity: "35 people", 
     hoursOfOperation: "6 AM - 10 PM daily"
@@ -56,7 +57,7 @@ export const listings = [
       { name: "Air Purification", icon: "wind" },
       { name: "Biophilic Design", icon: "trees" }
     ],
-    fullDescription: "Sanctuary Work Haven represents the pinnacle of neuro-friendly workspace design. Each individual pod offers complete control over your environment - from lighting temperature and intensity to sound levels and air quality. Our circadian lighting system automatically adjusts throughout the day to support your natural rhythms, while advanced air purification ensures optimal cognitive function.",
+    fullDescription: "Sanctuary Work Haven represents the pinnacle of neuro-adaptive workspace technology. Each individual pod is a micro-environment where users have complete control over their sensory experience. Advanced circadian lighting systems automatically sync with your natural rhythms, while precision climate control maintains optimal temperature and humidity levels. Our revolutionary sound isolation technology creates an ultra-quiet environment, with ambient noise levels consistently below 35 decibels. Medical-grade air purification systems ensure optimal air quality for enhanced cognitive function. The space incorporates extensive biophilic design principles, with living walls and natural materials that create a connection to nature while supporting mental well-being and focus.",
     price: "$65/day",
     capacity: "15 people",
     hoursOfOperation: "24/7 access for members"

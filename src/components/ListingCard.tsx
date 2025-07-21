@@ -1,8 +1,10 @@
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, MapPin } from 'lucide-react';
+import { Star, MapPin, Brain } from 'lucide-react';
 import { AmenityIcon } from './AmenityIcon';
 import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 interface Amenity {
   name: string;
@@ -18,7 +20,7 @@ interface ListingCardProps {
   neuroScore: number;
   userRating: number;
   amenities: Amenity[];
-  price: string;
+  price?: string; // Made optional since it's not the focus
 }
 
 export function ListingCard({ 
@@ -62,6 +64,18 @@ export function ListingCard({
     return stars;
   };
 
+  const getNeuroScoreColor = (score: number) => {
+    if (score >= 9) return 'bg-success text-success-foreground';
+    if (score >= 7) return 'bg-warning text-warning-foreground';
+    return 'bg-muted text-muted-foreground';
+  };
+
+  const getNeuroScoreLabel = (score: number) => {
+    if (score >= 9) return 'Excellent';
+    if (score >= 7) return 'Good';
+    return 'Fair';
+  };
+
   return (
     <Card className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20 bg-card">
       <div className="relative overflow-hidden rounded-t-lg">
@@ -86,10 +100,19 @@ export function ListingCard({
           </div>
         )}
         
-        <div className="absolute top-3 right-3 bg-card/95 backdrop-blur-sm rounded-lg px-2 py-1 shadow-sm">
-          <span className="text-sm font-semibold text-primary">
+        {/* Prominent Neuro Score Badge */}
+        <div className="absolute top-3 right-3">
+          <Badge className={`${getNeuroScoreColor(neuroScore)} text-lg px-3 py-2 shadow-lg`}>
+            <Brain className="w-4 h-4 mr-1" />
             {neuroScore}/10
-          </span>
+          </Badge>
+        </div>
+
+        {/* Neuro Score Label */}
+        <div className="absolute top-3 left-3">
+          <Badge variant="secondary" className="bg-card/95 backdrop-blur-sm">
+            {getNeuroScoreLabel(neuroScore)}
+          </Badge>
         </div>
       </div>
 
@@ -139,7 +162,10 @@ export function ListingCard({
         </div>
 
         <div className="flex items-center justify-between pt-2 border-t border-border/50">
-          <span className="text-lg font-semibold text-primary">{price}</span>
+          <div className="flex items-center gap-2">
+            <Brain className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-primary">Neuro Score: {neuroScore}/10</span>
+          </div>
           <Link 
             to={`/space/${id}`}
             className="text-sm text-primary hover:text-primary/80 font-medium transition-colors"
