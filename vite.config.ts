@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: mode === 'production' ? '/quiet-space-neuro-index/' : '/',
+  base: '/',
   plugins: [
     react(),
     mode === 'development' &&
