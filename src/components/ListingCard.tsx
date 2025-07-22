@@ -72,11 +72,6 @@ export function ListingCard({
     return 'bg-muted text-muted-foreground';
   };
 
-  const getNeuroScoreLabel = (score: number) => {
-    if (score >= 9) return 'Excellent';
-    if (score >= 7) return 'Good';
-    return 'Fair';
-  };
 
   return (
     <Card className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20 bg-card">
@@ -110,10 +105,11 @@ export function ListingCard({
           </Badge>
         </div>
 
-        {/* Neuro Score Label */}
+        {/* Certification Badge */}
         <div className="absolute top-3 left-3">
           <Badge variant="secondary" className="bg-card/95 backdrop-blur-sm">
-            {getNeuroScoreLabel(neuroScore)}
+            <Award className="w-3 h-3 mr-1" />
+            {certification}
           </Badge>
         </div>
       </div>
@@ -164,15 +160,9 @@ export function ListingCard({
         </div>
 
         <div className="flex items-center justify-between pt-2 border-t border-border/50">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <Brain className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Score: {neuroScore}/10</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-muted-foreground" />
-              <span className="text-sm text-muted-foreground">{certification}</span>
-            </div>
+          <div className="flex items-center gap-2">
+            <Brain className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-primary">Score: {neuroScore}/10</span>
           </div>
           <Link 
             to={`/space/${id}`}
