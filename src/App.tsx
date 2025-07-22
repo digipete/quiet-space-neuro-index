@@ -14,7 +14,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.PROD ? '/quiet-space-neuro-index' : ''}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/space/:id" element={<SpaceDetail />} />
