@@ -1,25 +1,60 @@
 import { useState, useMemo } from 'react';
 import { listings } from '../data/listings';
 import { ListingCard } from '../components/ListingCard';
-import { SearchAndFilter } from '../components/SearchAndFilter';
+import { AdvancedSearchFilter } from '../components/AdvancedSearchFilter';
 import { Brain, MapPin } from 'lucide-react';
 
 const Index = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCertification, setSelectedCertification] = useState('all');
+  const [minNeuroScore, setMinNeuroScore] = useState(0);
+  const [selectedLocation, setSelectedLocation] = useState('all');
+
+  const availableLocations = useMemo(() => {
+    const locations: string[] = listings.map(listing => {
+      // Extract city/region from location string
+      const parts = listing.location.split(',');
+      return parts[parts.length - 1]?.trim() || listing.location; // Get country/region
+    });
+    return [...new Set(locations)].sort();
+  }, []);
 
   const filteredListings = useMemo(() => {
-    if (!searchTerm.trim()) return listings;
-    
-    const term = searchTerm.toLowerCase();
-    return listings.filter(listing => 
-      listing.title.toLowerCase().includes(term) ||
-      listing.description.toLowerCase().includes(term) ||
-      listing.location.toLowerCase().includes(term) ||
-      listing.amenities.some(amenity => 
-        amenity.name.toLowerCase().includes(term)
-      )
-    );
-  }, [searchTerm]);
+    return listings.filter(listing => {
+      // Search term filter
+      if (searchTerm.trim()) {
+        const term = searchTerm.toLowerCase();
+        const matchesSearch = 
+          listing.title.toLowerCase().includes(term) ||
+          listing.description.toLowerCase().includes(term) ||
+          listing.location.toLowerCase().includes(term) ||
+          listing.amenities.some(amenity => 
+            amenity.name.toLowerCase().includes(term)
+          );
+        if (!matchesSearch) return false;
+      }
+
+      // Certification filter
+      if (selectedCertification !== 'all' && listing.certification !== selectedCertification) {
+        return false;
+      }
+
+      // Neuro score filter
+      if (listing.neuroScore < minNeuroScore) {
+        return false;
+      }
+
+      // Location filter
+      if (selectedLocation !== 'all') {
+        const listingRegion = listing.location.split(',').pop()?.trim();
+        if (listingRegion !== selectedLocation) {
+          return false;
+        }
+      }
+
+      return true;
+    });
+  }, [searchTerm, selectedCertification, minNeuroScore, selectedLocation]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -47,9 +82,17 @@ const Index = () => {
             </p>
           </div>
           
-          <SearchAndFilter 
+          <AdvancedSearchFilter 
             searchTerm={searchTerm}
             onSearchChange={setSearchTerm}
+            selectedCertification={selectedCertification}
+            onCertificationChange={setSelectedCertification}
+            minNeuroScore={minNeuroScore}
+            onNeuroScoreChange={setMinNeuroScore}
+            selectedLocation={selectedLocation}
+            onLocationChange={setSelectedLocation}
+            availableLocations={availableLocations}
+            resultCount={filteredListings.length}
           />
         </div>
 
@@ -62,10 +105,10 @@ const Index = () => {
                 : `${filteredListings.length} Results`}
             </h3>
             
-            {searchTerm && (
+            {selectedLocation !== 'all' && (
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4" />
-                <span>All locations</span>
+                <span>{selectedLocation}</span>
               </div>
             )}
           </div>
@@ -85,6 +128,7 @@ const Index = () => {
                 neuroScore={listing.neuroScore}
                 userRating={listing.userRating}
                 amenities={listing.amenities}
+                certification={listing.certification}
                 price={listing.price}
               />
             ))}

@@ -1,6 +1,6 @@
 
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, Star, MapPin, Users, Clock, Brain, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Star, MapPin, Users, Clock, Brain, CheckCircle, Award } from 'lucide-react';
 import { listings } from '../data/listings';
 import { AmenityIcon } from '../components/AmenityIcon';
 import { Button } from '@/components/ui/button';
@@ -236,6 +236,14 @@ export default function SpaceDetail() {
                     <div>
                       <div className="text-sm font-medium">Hours</div>
                       <div className="text-xs text-muted-foreground">{listing.hoursOfOperation}</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <Award className="w-5 h-5 text-muted-foreground" />
+                    <div>
+                      <div className="text-sm font-medium">Certification</div>
+                      <div className="text-xs text-muted-foreground">{listing.certification}</div>
                     </div>
                   </div>
 

@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Star, MapPin, Brain } from 'lucide-react';
+import { Star, MapPin, Brain, Award } from 'lucide-react';
 import { AmenityIcon } from './AmenityIcon';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -20,6 +20,7 @@ interface ListingCardProps {
   neuroScore: number;
   userRating: number;
   amenities: Amenity[];
+  certification: string;
   price?: string; // Made optional since it's not the focus
 }
 
@@ -32,6 +33,7 @@ export function ListingCard({
   neuroScore, 
   userRating, 
   amenities,
+  certification,
   price 
 }: ListingCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -162,9 +164,15 @@ export function ListingCard({
         </div>
 
         <div className="flex items-center justify-between pt-2 border-t border-border/50">
-          <div className="flex items-center gap-2">
-            <Brain className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Neuro Score: {neuroScore}/10</span>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <Brain className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Score: {neuroScore}/10</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Award className="w-4 h-4 text-muted-foreground" />
+              <span className="text-sm text-muted-foreground">{certification}</span>
+            </div>
           </div>
           <Link 
             to={`/space/${id}`}
