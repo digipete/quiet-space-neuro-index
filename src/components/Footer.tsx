@@ -37,11 +37,6 @@ export const Footer = () => {
                   How It Works
                 </Link>
               </li>
-              <li>
-                <Link to="/resources" className="text-muted-foreground hover:text-primary transition-colors">
-                  Resources
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -78,11 +73,7 @@ export const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>hello@quietspaceclub.com</span>
-              </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Phone className="w-4 h-4" />
-                <span>+44 (0) 20 7123 4567</span>
+                <span>hello@quietspace.club</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4" />
