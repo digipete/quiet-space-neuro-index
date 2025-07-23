@@ -50,6 +50,8 @@ jobs:
           fi
           echo "Checking for assets..."
           ls -la dist/assets/ || echo "No assets directory found"
+          echo "Copying CNAME to dist..."
+          cp CNAME dist/ || echo "CNAME not found"
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
