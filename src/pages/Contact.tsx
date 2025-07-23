@@ -82,8 +82,8 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-16 px-4 bg-card/30">
+     {/* Contact Information */}
+     {/* <section className="py-16 px-4 bg-card/30">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
@@ -104,7 +104,7 @@ const Contact = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Form */}
       <section className="py-20 px-4">
