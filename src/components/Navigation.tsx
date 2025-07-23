@@ -10,9 +10,10 @@ export const Navigation = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Find Spaces', path: '/spaces' },
+    { name: 'NeuroIndex', path: '/spaces' },
     { name: 'About', path: '/about' },
     { name: 'How It Works', path: '/how-it-works' },
+    { name: 'Workspace Providers', path: '/workspace-providers' },
     { name: 'Resources', path: '/resources' },
     { name: 'Contact', path: '/contact' },
   ];

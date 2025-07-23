@@ -32,7 +32,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      description: "hello@quietspaceclub.com",
+      description: "hello@quietspace.club",
       action: "Send Email"
     },
     {

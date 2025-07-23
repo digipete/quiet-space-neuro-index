@@ -168,11 +168,11 @@ const HowItWorks = () => {
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              The Science Behind
-              <span className="text-primary block">Neuro-Accessibility Scoring</span>
+              How NeuroFlow Works
+              <span className="text-primary block">The Science Behind Our Assessment</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Our methodology combines cutting-edge research in environmental psychology, neuroscience, and occupational therapy to create the world's first comprehensive neuro-accessibility index.
+              Our NeuroFlow methodology combines cutting-edge research in environmental psychology, neuroscience, and occupational therapy to create the world's first comprehensive neuro-accessibility index.
             </p>
           </div>
         </div>
@@ -216,12 +216,12 @@ const HowItWorks = () => {
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Our Comprehensive Scoring Framework
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Each workspace is evaluated across five scientifically-validated dimensions that directly impact neurodiverse productivity and well-being.
-              </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our NeuroFlow Scoring Framework
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Each workspace is evaluated with NeuroFlow across five scientifically-validated dimensions that directly impact neurodiverse productivity and well-being.
+            </p>
             </div>
 
             <div className="space-y-8">
@@ -265,12 +265,12 @@ const HowItWorks = () => {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Our Rigorous Assessment Process
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Every space undergoes a comprehensive four-phase evaluation to ensure accuracy and reliability.
-              </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our NeuroFlow Assessment Process
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Every space undergoes our comprehensive NeuroFlow four-phase evaluation to ensure accuracy and reliability.
+            </p>
             </div>
 
             <div className="space-y-8">
