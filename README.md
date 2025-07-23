@@ -1,8 +1,8 @@
-# Welcome to your Lovable project
+# Welcome to Quiet Space Club
 
 ## Project info
 
-**URL**: https://index.quietspace.club
+**URL**: https://quietspace.club
 
 ## How can I edit this code?
 
