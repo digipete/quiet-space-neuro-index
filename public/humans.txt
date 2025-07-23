@@ -1,0 +1,22 @@
+/* TEAM */
+  
+  Founder & CEO: Quiet Space Club
+  Contact: hello [at] quietspace.club
+  From: Global
+
+/* THANKS */
+
+  To the neurodiverse community for inspiring this platform
+  To workspace providers committed to inclusivity
+  To researchers advancing neurodiversity understanding
+
+/* SITE */
+
+  Last update: 2025/01/23
+  Languages: English
+  Doctype: HTML5
+  IDE: Lovable, VS Code
+  Framework: React, TypeScript, Tailwind CSS
+  Standards: HTML5, CSS3, ES6+
+  Components: Radix UI, Lucide React
+  Accessibility: WCAG 2.1 AA compliant
