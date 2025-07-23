@@ -143,12 +143,12 @@ export default function SpaceDetail() {
                     key={index}
                     className={`flex items-center gap-3 p-3 rounded-lg border ${
                       feature.available 
-                        ? 'bg-success/10 border-success/20 text-success-foreground' 
-                        : 'bg-muted/30 border-border/30 text-muted-foreground'
+                        ? 'bg-green-50 border-green-200 text-green-800 dark:bg-green-900/20 dark:border-green-800 dark:text-green-200' 
+                        : 'bg-gray-50 border-gray-200 text-gray-600 dark:bg-gray-800/50 dark:border-gray-700 dark:text-gray-400'
                     }`}
                   >
                     <CheckCircle className={`w-5 h-5 ${
-                      feature.available ? 'text-success' : 'text-muted-foreground/50'
+                      feature.available ? 'text-green-600 dark:text-green-400' : 'text-gray-400 dark:text-gray-600'
                     }`} />
                     <span className="text-sm font-medium">{feature.name}</span>
                   </div>
