@@ -11,12 +11,13 @@ export const Navigation = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'NeuroIndex', path: '/spaces' },
-    { name: 'About', path: '/about' },
     { name: 'How It Works', path: '/how-it-works' },
     { name: 'Workspace Providers', path: '/workspace-providers' },
-    { name: 'Resources', path: '/resources' },
+    { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
+
+  // { name: 'Resources', path: '/resources' },
 
   const isActive = (path: string) => location.pathname === path;
 
