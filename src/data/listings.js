@@ -2,9 +2,9 @@
 export const listings = [
   {
     id: "1",
-    title: "Fora Space - Soho",
+    title: "The Jellicoe - Fora Space",
     description: "A leading example of neuro-inclusive workspace design, offering exceptional acoustic comfort, biophilic elements, and highly flexible environments to enhance focus and creativity.",
-    location: "Soho, London, UK",
+    location: "King's Cross, London, UK",
     imageUrl: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&h=600&fit=crop",
     neuroScore: 9.5,
     userRating: 4.9,
