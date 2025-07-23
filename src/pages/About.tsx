@@ -108,13 +108,16 @@ const About = () => {
                 <h2 className="text-3xl font-bold mb-6">The Story Behind Our Mission</h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p className="text-lg leading-relaxed">
-                    "I remember the exact moment I realized traditional workspaces weren't designed for minds like mine. It was 2022, and I was sitting in what was supposed to be a 'quiet' coworking space in London. The fluorescent lights were humming, keyboards were clacking, and the air conditioning was creating this constant white noise that made my ADHD brain feel like it was short-circuiting."
+                    "Quiet Space Club was born from a deeply personal journey by our founding team over the last 25 years."
                   </p>
                   <p className="text-lg leading-relaxed">
-                    "As a neuroscientist, I understood the theory behind sensory processing differences. But living with them daily while trying to maintain a research career? That was entirely different. I found myself constantly searching for environments that wouldn't overwhelm my sensory system, only to discover that most workspace platforms treated 'quiet' as a simple checkbox rather than a complex spectrum of needs."
+                    "Throughout their career, our founders struggled to find a place where thery truly fit in. Misunderstood and often pushed aside due to their neurodivergence often facing environments that stifled potential instead of nurturing it."
                   </p>
                   <p className="text-lg leading-relaxed">
-                    "That's when I realized: if a neuroscientist with resources and knowledge was struggling to find suitable workspaces, what about the millions of other neurodiverse professionals facing the same challenge? We needed a systematic, scientific approach to matching people with environments that support their unique cognitive needs."
+                    "These experiences planted a seed: what if workplaces could be different? What if they could embrace the unique strengths of neurodivergent individuals instead of marginalising them?"
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    "Driven by this vision, Quiet Space Club was created to redefine what it means to belong in the workplace. It’s a mission rooted in personal experience but aimed at creating a truly accessible future of work for everyone."
                   </p>
                 </div>
               </div>
