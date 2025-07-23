@@ -59,7 +59,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm">
+      {/* <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center gap-3 mb-2">
             <Brain className="w-8 h-8 text-primary" />
@@ -69,7 +69,7 @@ const Index = () => {
             Discover neuro-friendly workspaces designed for focus and comfort
           </p>
         </div>
-      </header>
+      </header> */}
 
       <main className="container mx-auto px-4 py-8">
         {/* Search Section */}
