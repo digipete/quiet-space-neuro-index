@@ -1,5 +1,6 @@
+
 name: Deploy to GitHub Pages
-# build and deply the sites
+
 on:
   push:
     branches: [ "main" ]
@@ -32,6 +33,23 @@ jobs:
         
       - name: Build
         run: npm run build
+        env:
+          NODE_ENV: production
+        
+      - name: Verify build output
+        run: |
+          echo "Build completed. Checking dist directory..."
+          ls -la dist/
+          echo "Checking for index.html..."
+          if [ -f "dist/index.html" ]; then
+            echo "✅ index.html found"
+            head -20 dist/index.html
+          else
+            echo "❌ index.html not found!"
+            exit 1
+          fi
+          echo "Checking for assets..."
+          ls -la dist/assets/ || echo "No assets directory found"
         
       - name: Setup Pages
         uses: actions/configure-pages@v4

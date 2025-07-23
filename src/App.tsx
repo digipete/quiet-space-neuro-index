@@ -18,33 +18,46 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter basename={import.meta.env.DEV ? '' : ''}>
-        <div className="min-h-screen flex flex-col">
-          <Navigation />
-          <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/spaces" element={<Index />} />
-              <Route path="/space/:id" element={<SpaceDetail />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/how-it-works" element={<HowItWorks />} />
-              <Route path="/resources" element={<Resources />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/workspace-providers" element={<WorkspaceProviders />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  // Handle GitHub Pages SPA routing
+  const search = window.location.search;
+  if (search) {
+    const query = new URLSearchParams(search);
+    const redirect = query.get('redirect');
+    if (redirect) {
+      const newPath = redirect.replace(/~and~/g, '&');
+      window.history.replaceState(null, '', newPath);
+    }
+  }
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter basename="/">
+          <div className="min-h-screen flex flex-col">
+            <Navigation />
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/spaces" element={<Index />} />
+                <Route path="/space/:id" element={<SpaceDetail />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/how-it-works" element={<HowItWorks />} />
+                <Route path="/resources" element={<Resources />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/workspace-providers" element={<WorkspaceProviders />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

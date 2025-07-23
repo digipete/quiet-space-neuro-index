@@ -1,0 +1,7 @@
+
+{
+  "status": "healthy",
+  "timestamp": "{{BUILD_TIME}}",
+  "site": "NeuroIndex - Quiet Space Club",
+  "version": "1.0.0"
+}
