@@ -111,7 +111,7 @@ const About = () => {
                     "Quiet Space Club was born from a deeply personal journey by our founding team over the last 25 years."
                   </p>
                   <p className="text-lg leading-relaxed">
-                    "Throughout their career, our founders struggled to find a place where thery truly fit in. Misunderstood and often pushed aside due to their neurodivergence often facing environments that stifled potential instead of nurturing it."
+                    "Throughout their career, our founders struggled to find a place where they truly fit in. Misunderstood and often pushed aside due to their neurodivergence often facing environments that stifled potential instead of nurturing it."
                   </p>
                   <p className="text-lg leading-relaxed">
                     "These experiences planted a seed: what if workplaces could be different? What if they could embrace the unique strengths of neurodivergent individuals instead of marginalising them?"
