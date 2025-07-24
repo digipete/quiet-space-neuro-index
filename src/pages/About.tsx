@@ -49,29 +49,29 @@ const About = () => {
 
   const milestones = [
     {
-      year: "2022",
+      year: "1998",
       title: "The Struggle Begins",
-      description: "Dr. Sarah Chen's personal experience with sensory overload in traditional coworking spaces sparked the initial research into neuro-accessibility."
+      description: "Pete Hallett's personal experience with sensory overload in traditional work environments sparked the couriosity into what was happening inside his brain."
     },
     {
-      year: "2023",
+      year: "2020",
+      title: "Something Needed To Be Done",
+      description: "After having some time to reflect on his career, Pete realised that the struggles he had experienced might have een to do with having a different way of seeing things and so began an Neurodiversity assessment process."
+    },
+    {
+      year: "2022",
       title: "Research Foundation",
       description: "Partnered with University College London to develop the first scientifically-validated neuro-accessibility scoring system."
     },
     {
-      year: "2023",
+      year: "2024",
+      title: "Alpha Launch",
+      description: "Refined the workspace assessment framework and launched with a selection of carefully assessed spaces and started to grow a community following."
+    },
+    {
+      year: "2025",
       title: "Beta Launch",
-      description: "Launched with 50 carefully assessed spaces across London, Manchester, and Birmingham, serving our first 500 users."
-    },
-    {
-      year: "2024",
-      title: "Community Growth",
-      description: "Reached 2,400+ neurodiverse professionals and expanded to 340+ certified spaces across 28 UK cities."
-    },
-    {
-      year: "2024",
-      title: "Research Validation",
-      description: "Published findings in the Journal of Environmental Psychology, validating our approach and methodology."
+      description: "Launched a beta product and started to rapidly scale the offering"
     }
   ];
 
