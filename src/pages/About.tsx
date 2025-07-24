@@ -28,10 +28,10 @@ const About = () => {
 
   const team = [
     {
-      name: "Dr. Sarah Chen",
-      role: "Founder & CEO",
-      description: "Neuroscientist with ADHD who struggled for years to find workspaces that didn't overwhelm her sensory processing. Her personal journey combined with 12 years of research led to the creation of our neuro-accessibility framework.",
-      expertise: "Environmental Neuroscience, ADHD Research"
+      name: "Pete Hallett",
+      role: "Founder",
+      description: "Late adulthood diagnosed Neuro spicy human with AuDHD who struggled for years to find workspaces that didn't overwhelm his sensory processing. Her personal journey combined with deep learning over the last 10 years led to the creation of our NeuroFlow framework.",
+      expertise: "Life Experience of coping and not being well supported"
     },
     {
       name: "Marcus Thompson",
