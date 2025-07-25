@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Mail, Phone, MapPin, Clock, MessageCircle, Users, Building } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { supabase, type ContactSubmission } from '@/lib/supabase';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -19,30 +20,58 @@ const Contact = () => {
     message: '',
     inquiryType: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // For email sending functionality, you'll need to connect to Supabase
-    // to handle backend email services properly
-    toast({
-      title: "Message Received!",
-      description: "Thank you for your message. We'll get back to you within 24 hours.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-      inquiryType: ''
-    });
+    try {
+      const contactSubmission: Omit<ContactSubmission, 'id' | 'created_at'> = {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        inquiry_type: formData.inquiryType,
+        status: 'new'
+      };
+
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([contactSubmission]);
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for your message. We'll get back to you within 24 hours.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        inquiryType: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleOtherButtonClick = () => {
@@ -202,9 +231,9 @@ const Contact = () => {
                     />
                   </div>
                   
-                  <Button type="submit" className="w-full">
+                  <Button type="submit" className="w-full" disabled={isSubmitting}>
                     <MessageCircle className="w-4 h-4 mr-2" />
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                 </form>
               </div>
