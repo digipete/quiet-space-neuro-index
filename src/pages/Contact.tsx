@@ -117,6 +117,7 @@ const Contact = () => {
     { value: "press", label: "Press & Media" }
   ];
 
+  console.log('Contact component rendering...');
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
