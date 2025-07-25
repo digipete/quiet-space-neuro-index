@@ -32,6 +32,16 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
+      // Check if Supabase is configured
+      if (!supabase) {
+        toast({
+          title: "Configuration Required",
+          description: "Supabase connection is not properly configured. Please check your environment variables.",
+          variant: "destructive"
+        });
+        return;
+      }
+
       const contactSubmission: Omit<ContactSubmission, 'id' | 'created_at'> = {
         name: formData.name,
         email: formData.email,
