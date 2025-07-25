@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Mail, Phone, MapPin, Clock, MessageCircle, Users, Building } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { supabase, type ContactSubmission } from '@/lib/supabase';
+import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -32,23 +32,13 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Check if Supabase is configured
-      if (!supabase) {
-        toast({
-          title: "Configuration Required",
-          description: "Supabase connection is not properly configured. Please check your environment variables.",
-          variant: "destructive"
-        });
-        return;
-      }
-
-      const contactSubmission: Omit<ContactSubmission, 'id' | 'created_at'> = {
+      const contactSubmission = {
         name: formData.name,
         email: formData.email,
         subject: formData.subject,
         message: formData.message,
         inquiry_type: formData.inquiryType,
-        status: 'new'
+        status: 'new' as const
       };
 
       const { error } = await supabase
