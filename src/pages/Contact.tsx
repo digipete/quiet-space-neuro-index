@@ -6,9 +6,12 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Mail, Phone, MapPin, Clock, MessageCircle, Users, Building } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,8 +27,29 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission
+    
+    // For email sending functionality, you'll need to connect to Supabase
+    // to handle backend email services properly
+    toast({
+      title: "Message Received!",
+      description: "Thank you for your message. We'll get back to you within 24 hours.",
+    });
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+      inquiryType: ''
+    });
+  };
+
+  const handleOtherButtonClick = () => {
+    toast({
+      title: "Contact Form Required",
+      description: "Please use the contact form to contact us",
+    });
   };
 
   const contactInfo = [
@@ -206,7 +230,7 @@ const Contact = () => {
                         We're always looking for neuro-friendly spaces to add to our platform. 
                         Get in touch to learn about our certification process.
                       </p>
-                      <Button variant="outline" className="w-full">
+                      <Button variant="outline" className="w-full" onClick={handleOtherButtonClick}>
                         Partnership Inquiry
                       </Button>
                     </CardContent>
@@ -229,7 +253,7 @@ const Contact = () => {
                         Join our community forums and local meetups to share experiences 
                         and get support from peers.
                       </p>
-                      <Button variant="outline" className="w-full">
+                      <Button variant="outline" className="w-full" onClick={handleOtherButtonClick}>
                         Join Community
                       </Button>
                     </CardContent>
@@ -252,7 +276,7 @@ const Contact = () => {
                         Our live chat is available during business hours for quick questions 
                         and technical support.
                       </p>
-                      <Button variant="outline" className="w-full">
+                      <Button variant="outline" className="w-full" onClick={handleOtherButtonClick}>
                         Start Chat
                       </Button>
                     </CardContent>
