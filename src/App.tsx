@@ -25,8 +25,8 @@ const App = () => {
     const query = new URLSearchParams(search);
     const redirect = query.get('redirect');
     if (redirect) {
-      const newPath = redirect.replace(/~and~/g, '&');
-      window.history.replaceState(null, '', newPath);
+      const decodedPath = decodeURIComponent(redirect);
+      window.history.replaceState(null, '', decodedPath);
     }
   }
 
