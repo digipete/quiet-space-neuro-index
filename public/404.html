@@ -6,17 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NeuroIndex - Redirecting...</title>
     <script>
-      // GitHub Pages SPA redirect handler for custom domain
+      // GitHub Pages SPA redirect handler
       (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        } else if (l.pathname !== '/') {
-          // Redirect direct page visits to homepage with redirect parameter
+        if (l.pathname !== '/') {
+          // Redirect all non-root paths to the root with a redirect parameter
           window.location.replace('/?redirect=' + encodeURIComponent(l.pathname + l.search + l.hash));
         }
       }(window.location))
