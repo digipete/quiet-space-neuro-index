@@ -1,18 +1,96 @@
 
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { ArrowLeft, Star, MapPin, Users, Clock, Brain, CheckCircle, Award } from 'lucide-react';
-import { listings } from '../data/listings';
+import { supabase } from '@/integrations/supabase/client';
 import { AmenityIcon } from '../components/AmenityIcon';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
+interface Amenity {
+  name: string;
+  icon: string;
+}
+
+interface Listing {
+  id: string;
+  title: string;
+  description: string;
+  location: string;
+  image_url: string;
+  neuro_score: number;
+  user_rating: number;
+  certification: string;
+  amenities: Amenity[];
+  full_description: string;
+  price: string;
+  capacity: string;
+  hours_of_operation: string;
+}
+
 export default function SpaceDetail() {
   const { id } = useParams();
-  const listing = listings.find(l => l.id === id);
+  const [listing, setListing] = useState<Listing | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (id) {
+      fetchListing(id);
+    }
+  }, [id]);
+
+  const fetchListing = async (listingId: string) => {
+    try {
+      const { data, error } = await supabase
+        .from('listings')
+        .select('*')
+        .eq('id', listingId)
+        .single();
+
+      if (error) {
+        console.error('Error fetching listing:', error);
+        return;
+      }
+
+      if (data) {
+        const transformedListing: Listing = {
+          id: data.id,
+          title: data.title,
+          description: data.description,
+          location: data.location,
+          image_url: data.image_url,
+          neuro_score: data.neuro_score,
+          user_rating: data.user_rating,
+          certification: data.certification,
+          amenities: Array.isArray(data.amenities) ? data.amenities as unknown as Amenity[] : [],
+          full_description: data.full_description,
+          price: data.price,
+          capacity: data.capacity,
+          hours_of_operation: data.hours_of_operation
+        };
+        setListing(transformedListing);
+      }
+    } catch (error) {
+      console.error('Error fetching listing:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Loading workspace details...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!listing) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/spaces" replace />;
   }
 
   const renderStars = (rating: number) => {
@@ -55,12 +133,12 @@ export default function SpaceDetail() {
   };
 
   const neuroFeatures = [
-    { name: 'Sensory-Friendly Lighting', available: listing.neuroScore >= 7 },
-    { name: 'Quiet Zones Available', available: listing.neuroScore >= 6 },
-    { name: 'Noise Control Systems', available: listing.neuroScore >= 8 },
-    { name: 'Flexible Workspace Options', available: listing.neuroScore >= 7 },
-    { name: 'Clear Navigation & Signage', available: listing.neuroScore >= 6 },
-    { name: 'Sensory Break Areas', available: listing.neuroScore >= 9 }
+    { name: 'Sensory-Friendly Lighting', available: listing.neuro_score >= 7 },
+    { name: 'Quiet Zones Available', available: listing.neuro_score >= 6 },
+    { name: 'Noise Control Systems', available: listing.neuro_score >= 8 },
+    { name: 'Flexible Workspace Options', available: listing.neuro_score >= 7 },
+    { name: 'Clear Navigation & Signage', available: listing.neuro_score >= 6 },
+    { name: 'Sensory Break Areas', available: listing.neuro_score >= 9 }
   ];
 
   return (
@@ -82,14 +160,14 @@ export default function SpaceDetail() {
         {/* Hero Image */}
         <div className="relative rounded-xl overflow-hidden mb-8 shadow-lg">
           <img
-            src={listing.imageUrl}
+            src={listing.image_url}
             alt={listing.title}
             className="w-full h-80 md:h-96 object-cover"
           />
           <div className="absolute top-4 right-4">
-            <Badge className={`${getNeuroScoreColor(listing.neuroScore)} text-xl px-4 py-2 shadow-lg`}>
+            <Badge className={`${getNeuroScoreColor(listing.neuro_score)} text-xl px-4 py-2 shadow-lg`}>
               <Brain className="w-5 h-5 mr-2" />
-              <span className="font-bold">{listing.neuroScore}/10</span>
+              <span className="font-bold">{listing.neuro_score}/10</span>
               <span className="ml-1 font-normal">Neuro Score</span>
             </Badge>
           </div>
@@ -108,9 +186,9 @@ export default function SpaceDetail() {
               
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex items-center gap-2">
-                  {renderStars(listing.userRating)}
+                  {renderStars(listing.user_rating)}
                   <span className="text-sm text-muted-foreground">
-                    ({listing.userRating} rating)
+                    ({listing.user_rating} rating)
                   </span>
                 </div>
               </div>
@@ -122,7 +200,7 @@ export default function SpaceDetail() {
                   <h3 className="font-semibold text-primary">Neuro-Accessibility Score</h3>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  {getNeuroScoreDescription(listing.neuroScore)}
+                  {getNeuroScoreDescription(listing.neuro_score)}
                 </p>
               </div>
             </div>
@@ -130,7 +208,7 @@ export default function SpaceDetail() {
             <div>
               <h2 className="text-xl font-semibold mb-3">About This Space</h2>
               <p className="text-muted-foreground leading-relaxed">
-                {listing.fullDescription}
+                {listing.full_description}
               </p>
             </div>
 
@@ -185,10 +263,10 @@ export default function SpaceDetail() {
               <CardContent className="space-y-4">
                 <div className="text-center">
                   <div className={`text-4xl font-bold mb-2 ${
-                    listing.neuroScore >= 9 ? 'text-success' :
-                    listing.neuroScore >= 7 ? 'text-warning' : 'text-muted-foreground'
+                    listing.neuro_score >= 9 ? 'text-success' :
+                    listing.neuro_score >= 7 ? 'text-warning' : 'text-muted-foreground'
                   }`}>
-                    {listing.neuroScore}/10
+                    {listing.neuro_score}/10
                   </div>
                   <div className="text-sm text-muted-foreground">Overall Neuro Score</div>
                 </div>
@@ -196,19 +274,19 @@ export default function SpaceDetail() {
                 <div className="space-y-3 border-t pt-4">
                   <div className="flex justify-between items-center">
                     <span className="text-sm">Lighting Quality</span>
-                    <span className="font-medium">{Math.min(10, listing.neuroScore + 0.5)}/10</span>
+                    <span className="font-medium">{Math.min(10, listing.neuro_score + 0.5)}/10</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm">Noise Control</span>
-                    <span className="font-medium">{Math.min(10, listing.neuroScore + 0.2)}/10</span>
+                    <span className="font-medium">{Math.min(10, listing.neuro_score + 0.2)}/10</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm">Space Flexibility</span>
-                    <span className="font-medium">{Math.max(5, listing.neuroScore - 0.3)}/10</span>
+                    <span className="font-medium">{Math.max(5, listing.neuro_score - 0.3)}/10</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm">Sensory Accommodations</span>
-                    <span className="font-medium">{listing.neuroScore}/10</span>
+                    <span className="font-medium">{listing.neuro_score}/10</span>
                   </div>
                 </div>
 
@@ -235,7 +313,7 @@ export default function SpaceDetail() {
                     <Clock className="w-5 h-5 text-muted-foreground" />
                     <div>
                       <div className="text-sm font-medium">Hours</div>
-                      <div className="text-xs text-muted-foreground">{listing.hoursOfOperation}</div>
+                      <div className="text-xs text-muted-foreground">{listing.hours_of_operation}</div>
                     </div>
                   </div>
 

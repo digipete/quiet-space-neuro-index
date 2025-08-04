@@ -1,14 +1,78 @@
-import { useState, useMemo } from 'react';
-import { listings } from '../data/listings';
+import { useState, useMemo, useEffect } from 'react';
 import { ListingCard } from '../components/ListingCard';
 import { AdvancedSearchFilter } from '../components/AdvancedSearchFilter';
 import { Brain, MapPin } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+
+interface Amenity {
+  name: string;
+  icon: string;
+}
+
+interface Listing {
+  id: string;
+  title: string;
+  description: string;
+  location: string;
+  image_url: string;
+  neuro_score: number;
+  user_rating: number;
+  certification: string;
+  amenities: Amenity[];
+  full_description: string;
+  price: string;
+  capacity: string;
+  hours_of_operation: string;
+}
 
 const Index = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCertification, setSelectedCertification] = useState('all');
   const [minNeuroScore, setMinNeuroScore] = useState(0);
   const [selectedLocation, setSelectedLocation] = useState('all');
+  const [listings, setListings] = useState<Listing[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchListings();
+  }, []);
+
+  const fetchListings = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('listings')
+        .select('*')
+        .order('title');
+
+      if (error) {
+        console.error('Error fetching listings:', error);
+        return;
+      }
+
+      // Transform the data to match our interface
+      const transformedListings: Listing[] = (data || []).map(item => ({
+        id: item.id,
+        title: item.title,
+        description: item.description,
+        location: item.location,
+        image_url: item.image_url,
+        neuro_score: item.neuro_score,
+        user_rating: item.user_rating,
+        certification: item.certification,
+        amenities: Array.isArray(item.amenities) ? item.amenities as unknown as Amenity[] : [],
+        full_description: item.full_description,
+        price: item.price,
+        capacity: item.capacity,
+        hours_of_operation: item.hours_of_operation
+      }));
+
+      setListings(transformedListings);
+    } catch (error) {
+      console.error('Error fetching listings:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const availableLocations = useMemo(() => {
     const locations: string[] = listings.map(listing => {
@@ -17,7 +81,7 @@ const Index = () => {
       return parts[parts.length - 1]?.trim() || listing.location; // Get country/region
     });
     return [...new Set(locations)].sort();
-  }, []);
+  }, [listings]);
 
   const filteredListings = useMemo(() => {
     return listings.filter(listing => {
@@ -40,7 +104,7 @@ const Index = () => {
       }
 
       // Neuro score filter
-      if (listing.neuroScore < minNeuroScore) {
+      if (listing.neuro_score < minNeuroScore) {
         return false;
       }
 
@@ -54,7 +118,18 @@ const Index = () => {
 
       return true;
     });
-  }, [searchTerm, selectedCertification, minNeuroScore, selectedLocation]);
+  }, [searchTerm, selectedCertification, minNeuroScore, selectedLocation, listings]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Loading workspaces...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -124,9 +199,9 @@ const Index = () => {
                 title={listing.title}
                 description={listing.description}
                 location={listing.location}
-                imageUrl={listing.imageUrl}
-                neuroScore={listing.neuroScore}
-                userRating={listing.userRating}
+                imageUrl={listing.image_url}
+                neuroScore={listing.neuro_score}
+                userRating={listing.user_rating}
                 amenities={listing.amenities}
                 certification={listing.certification}
                 price={listing.price}
