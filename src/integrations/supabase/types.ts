@@ -50,6 +50,60 @@ export type Database = {
         }
         Relationships: []
       }
+      listings: {
+        Row: {
+          amenities: Json
+          capacity: string
+          certification: string
+          created_at: string
+          description: string
+          full_description: string
+          hours_of_operation: string
+          id: string
+          image_url: string
+          location: string
+          neuro_score: number
+          price: string
+          title: string
+          updated_at: string
+          user_rating: number
+        }
+        Insert: {
+          amenities?: Json
+          capacity: string
+          certification: string
+          created_at?: string
+          description: string
+          full_description: string
+          hours_of_operation: string
+          id?: string
+          image_url: string
+          location: string
+          neuro_score: number
+          price: string
+          title: string
+          updated_at?: string
+          user_rating: number
+        }
+        Update: {
+          amenities?: Json
+          capacity?: string
+          certification?: string
+          created_at?: string
+          description?: string
+          full_description?: string
+          hours_of_operation?: string
+          id?: string
+          image_url?: string
+          location?: string
+          neuro_score?: number
+          price?: string
+          title?: string
+          updated_at?: string
+          user_rating?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
