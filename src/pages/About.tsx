@@ -93,7 +93,7 @@ const About = () => {
               <span className="text-primary block">Backed by Science</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              What started as one neuroscientist's struggle with sensory overload has become a movement to transform how neurodiverse professionals find and experience workspaces.
+              What started as one neuro-spicy's struggle with sensory overload has become a movement to transform how neurodiverse professionals find and experience workspaces.
             </p>
           </div>
         </div>
