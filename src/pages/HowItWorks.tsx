@@ -2,7 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Brain, Search, Star, MapPin, CheckCircle, Users, Shield, Target, Lightbulb, Activity, Eye, Volume2, Thermometer, Zap } from 'lucide-react';
+import { Brain, Search, Star, MapPin, CheckCircle, Users, Shield, Target, Lightbulb, Activity, Eye, Volume2, Thermometer, Zap, Database, Code } from 'lucide-react';
 
 const HowItWorks = () => {
   const steps = [
@@ -419,6 +419,64 @@ const HowItWorks = () => {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Coming Soon: Data & API Solutions */}
+      <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Coming Soon: Data & API Solutions
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We're developing comprehensive data solutions and API access for researchers, 
+              developers, and organisations working in neuro-accessibility.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="p-8">
+              <div className="mb-4">
+                <Database className="h-8 w-8 text-primary mb-3" />
+                <h3 className="text-xl font-semibold mb-2">Standardised Register</h3>
+                <p className="text-muted-foreground">
+                  Access to a comprehensive database of neuro-accessible workspaces with 
+                  standardised metrics and certifications.
+                </p>
+              </div>
+            </Card>
+
+            <Card className="p-8">
+              <div className="mb-4">
+                <Brain className="h-8 w-8 text-primary mb-3" />
+                <h3 className="text-xl font-semibold mb-2">AI-Ready Data</h3>
+                <p className="text-muted-foreground">
+                  Structured data optimised for machine learning and AI applications 
+                  in workplace accessibility research.
+                </p>
+              </div>
+            </Card>
+          </div>
+
+          <Card className="p-8 bg-primary/5 border-primary/20">
+            <div className="text-center">
+              <Code className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="text-2xl font-bold mb-4">Enterprise API Access</h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                Coming soon: Real-time data access, comprehensive filtering, 
+                and integration support for enterprise applications.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" variant="outline" disabled>
+                  Register Interest
+                </Button>
+                <Button size="lg" variant="ghost" disabled>
+                  View Documentation
+                </Button>
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
     </div>
