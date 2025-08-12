@@ -1,9 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { CheckCircle, Users, TrendingUp, Award, FileCheck, MessageSquare, Building2, Star, Clock, Zap } from 'lucide-react';
 
 export default function WorkspaceProviders() {
+  useEffect(() => {
+    // Load Stripe buy button script
+    const script = document.createElement('script');
+    script.src = 'https://js.stripe.com/v3/buy-button.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="https://js.stripe.com/v3/buy-button.js"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
+
+  const handleStripePurchase = () => {
+    // Create Stripe buy button element dynamically
+    const buyButton = document.createElement('stripe-buy-button');
+    buyButton.setAttribute('buy-button-id', 'buy_btn_1RvMLOJ4zutBRYV5kbcjJIu9');
+    buyButton.setAttribute('publishable-key', 'pk_live_51FHqPXJ4zutBRYV5T82KHTZ8iqj5bljVJjV8O3gU91TGoACgfjkViMxidzzsyJ0hhQRzWjHmlSC1wID90OWYb2YB00tVMqBXDR');
+    
+    // Append to body temporarily to trigger the purchase flow
+    document.body.appendChild(buyButton);
+    
+    // Trigger the click
+    setTimeout(() => {
+      buyButton.click();
+      // Remove after a short delay
+      setTimeout(() => {
+        if (document.body.contains(buyButton)) {
+          document.body.removeChild(buyButton);
+        }
+      }, 1000);
+    }, 100);
+  };
+
   const businessBenefits = [
     {
       icon: <Users className="h-8 w-8 text-primary" />,
@@ -50,8 +87,13 @@ export default function WorkspaceProviders() {
             Join the leading co-working spaces creating inclusive environments for neurodivergent professionals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="text-lg px-8 py-3">Get Started Today</Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-3">View Sample Report</Button>
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90"
+              onClick={handleStripePurchase}
+            >
+              Get Started Today
+            </Button>
           </div>
           <p className="text-sm text-gray-500">
             Trusted by forward-thinking workspace providers across the UK
@@ -154,7 +196,11 @@ export default function WorkspaceProviders() {
             <p className="text-lg text-gray-600 mb-6">
               Ready to get started? Begin your certification journey today.
             </p>
-            <Button size="lg" className="text-lg px-8 py-3">
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90"
+              onClick={handleStripePurchase}
+            >
               Start Certification Process
             </Button>
           </div>
@@ -211,10 +257,19 @@ export default function WorkspaceProviders() {
             and start attracting new customers today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="text-lg px-8 py-3 bg-secondary text-secondary-foreground hover:bg-secondary/80"
+              onClick={handleStripePurchase}
+            >
               Get Certified Now
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-primary">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-primary bg-transparent"
+            >
               Schedule a Demo
             </Button>
           </div>
