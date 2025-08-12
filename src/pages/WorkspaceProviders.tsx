@@ -21,18 +21,47 @@ export default function WorkspaceProviders() {
   }, []);
 
   const handleStripePurchase = () => {
-    // Create Stripe buy button element directly
+    console.log('Stripe purchase triggered');
+    
+    // Check if the script is loaded
+    if (!document.querySelector('script[src="https://js.stripe.com/v3/buy-button.js"]')) {
+      console.error('Stripe script not loaded');
+      return;
+    }
+
+    // Remove any existing buy buttons
+    const existingButtons = document.querySelectorAll('stripe-buy-button');
+    existingButtons.forEach(btn => btn.remove());
+
+    // Create new Stripe buy button
     const buyButton = document.createElement('stripe-buy-button') as any;
     buyButton.setAttribute('buy-button-id', 'buy_btn_1RvMLOJ4zutBRYV5kbcjJIu9');
     buyButton.setAttribute('publishable-key', 'pk_live_51FHqPXJ4zutBRYV5T82KHTZ8iqj5bljVJjV8O3gU91TGoACgfjkViMxidzzsyJ0hhQRzWjHmlSC1wID90OWYb2YB00tVMqBXDR');
     
-    // Append directly to body and trigger click
-    document.body.appendChild(buyButton);
+    // Create a container for better control
+    const container = document.createElement('div');
+    container.style.position = 'fixed';
+    container.style.top = '0';
+    container.style.left = '0';
+    container.style.width = '100%';
+    container.style.height = '100%';
+    container.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    container.style.zIndex = '9999';
+    container.style.display = 'flex';
+    container.style.alignItems = 'center';
+    container.style.justifyContent = 'center';
     
-    // Wait a moment for the element to initialize, then click
-    setTimeout(() => {
-      buyButton.click();
-    }, 200);
+    container.appendChild(buyButton);
+    document.body.appendChild(container);
+    
+    // Close on background click
+    container.addEventListener('click', (e) => {
+      if (e.target === container) {
+        container.remove();
+      }
+    });
+
+    console.log('Stripe buy button created and added to DOM');
   };
 
   const businessBenefits = [

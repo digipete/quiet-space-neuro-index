@@ -133,10 +133,24 @@ supabase gen types typescript --linked > src/integrations/supabase/types.ts
 
 ### Major Releases
 
+**v4.0 - Workspace Providers Platform (Jan 2025)**
+- Complete workspace provider certification system
+- Stripe payment integration for provider onboarding
+- Professional assessment and certification process
+- Business growth analytics and ROI tracking
+- Premium marketplace positioning for certified spaces
+
+**v3.5 - Security & Contact Management (Jan 2025)**
+- Comprehensive security audit and RLS policy implementation
+- Contact form with email notifications via Edge Functions
+- Admin panel foundations for contact submission management
+- Database security hardening and vulnerability fixes
+
 **v3.0 - Database Migration (Jan 2025)**
 - Migrated from static JSON data to Supabase database
 - Added dynamic content management
 - Implemented proper data relationships
+- Full backend integration with authentication
 
 **v2.0 - Enhanced Search & Filtering (Dec 2024)**
 - Advanced search functionality
