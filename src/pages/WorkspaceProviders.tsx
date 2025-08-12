@@ -21,24 +21,18 @@ export default function WorkspaceProviders() {
   }, []);
 
   const handleStripePurchase = () => {
-    // Create Stripe buy button element dynamically
-    const buyButton = document.createElement('stripe-buy-button');
+    // Create Stripe buy button element directly
+    const buyButton = document.createElement('stripe-buy-button') as any;
     buyButton.setAttribute('buy-button-id', 'buy_btn_1RvMLOJ4zutBRYV5kbcjJIu9');
     buyButton.setAttribute('publishable-key', 'pk_live_51FHqPXJ4zutBRYV5T82KHTZ8iqj5bljVJjV8O3gU91TGoACgfjkViMxidzzsyJ0hhQRzWjHmlSC1wID90OWYb2YB00tVMqBXDR');
     
-    // Append to body temporarily to trigger the purchase flow
+    // Append directly to body and trigger click
     document.body.appendChild(buyButton);
     
-    // Trigger the click
+    // Wait a moment for the element to initialize, then click
     setTimeout(() => {
       buyButton.click();
-      // Remove after a short delay
-      setTimeout(() => {
-        if (document.body.contains(buyButton)) {
-          document.body.removeChild(buyButton);
-        }
-      }, 1000);
-    }, 100);
+    }, 200);
   };
 
   const businessBenefits = [
