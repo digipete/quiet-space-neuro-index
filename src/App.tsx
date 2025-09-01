@@ -14,6 +14,8 @@ import HowItWorks from "./pages/HowItWorks";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import WorkspaceProviders from "./pages/WorkspaceProviders";
+import AdminAuth from "./pages/AdminAuth";
+import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +50,8 @@ const App = () => {
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/workspace-providers" element={<WorkspaceProviders />} />
+                <Route path="/admin/auth" element={<AdminAuth />} />
+                <Route path="/admin/dashboard" element={<AdminDashboard />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

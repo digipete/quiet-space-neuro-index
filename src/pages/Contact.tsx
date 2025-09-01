@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,9 +7,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Mail, Phone, MapPin, Clock, MessageCircle, Users, Building } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, MessageCircle, Users, Building, Shield } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import DOMPurify from 'dompurify';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -18,9 +19,11 @@ const Contact = () => {
     email: '',
     subject: '',
     message: '',
-    inquiryType: ''
+    inquiryType: '',
+    honeypot: '' // Honeypot field for bot detection
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const lastSubmissionTime = useRef<number>(0);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -32,26 +35,72 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      const contactSubmission = {
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
+      // Security checks
+      
+      // 1. Check honeypot field (should be empty)
+      if (formData.honeypot) {
+        console.log('Bot detected via honeypot field');
+        toast({
+          title: "Error",
+          description: "Please try again later.",
+          variant: "destructive"
+        });
+        return;
+      }
+
+      // 2. Rate limiting - prevent rapid submissions
+      const now = Date.now();
+      if (now - lastSubmissionTime.current < 5000) { // 5 second rate limit
+        toast({
+          title: "Too Fast",
+          description: "Please wait before submitting another message.",
+          variant: "destructive"
+        });
+        return;
+      }
+      lastSubmissionTime.current = now;
+
+      // 3. Basic validation
+      if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+        toast({
+          title: "Validation Error",
+          description: "Please fill in all required fields.",
+          variant: "destructive"
+        });
+        return;
+      }
+
+      // 4. Sanitize inputs
+      const sanitizedData = {
+        name: DOMPurify.sanitize(formData.name.trim()),
+        email: DOMPurify.sanitize(formData.email.trim()),
+        subject: DOMPurify.sanitize(formData.subject.trim()),
+        message: DOMPurify.sanitize(formData.message.trim()),
         inquiry_type: formData.inquiryType,
         status: 'new' as const
       };
 
+      // 5. Additional length checks
+      if (sanitizedData.message.length > 5000) {
+        toast({
+          title: "Message Too Long",
+          description: "Please limit your message to 5000 characters.",
+          variant: "destructive"
+        });
+        return;
+      }
+
       const { error } = await supabase
         .from('contact_submissions')
-        .insert([contactSubmission]);
+        .insert([sanitizedData]);
 
       if (error) {
         throw error;
       }
 
       // Send email notification
-      const emailResponse = await supabase.functions.invoke('send-contact-email', {
-        body: contactSubmission
+      const emailResponse = await supabase.functions.invoke('send-contact-email-secure', {
+        body: sanitizedData
       });
 
       if (emailResponse.error) {
@@ -70,7 +119,8 @@ const Contact = () => {
         email: '',
         subject: '',
         message: '',
-        inquiryType: ''
+        inquiryType: '',
+        honeypot: ''
       });
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -239,6 +289,23 @@ const Contact = () => {
                       onChange={handleInputChange}
                       rows={6}
                       required
+                      maxLength={5000}
+                    />
+                    <div className="text-xs text-muted-foreground text-right">
+                      {formData.message.length}/5000 characters
+                    </div>
+                  </div>
+                  
+                  {/* Honeypot field - hidden from users but visible to bots */}
+                  <div style={{ display: 'none' }}>
+                    <Label htmlFor="website">Website (leave blank)</Label>
+                    <Input
+                      id="website"
+                      name="honeypot"
+                      value={formData.honeypot}
+                      onChange={handleInputChange}
+                      tabIndex={-1}
+                      autoComplete="off"
                     />
                   </div>
                   
@@ -332,14 +399,27 @@ const Contact = () => {
       <section className="py-20 px-4 bg-card/30">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Quick answers to common questions about Quiet Space Club.
-              </p>
-            </div>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-xl text-muted-foreground">
+                  Quick answers to common questions about Quiet Space Club.
+                </p>
+                
+                {/* Admin Access Link - Hidden but accessible */}
+                <div className="mt-8">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    onClick={() => window.location.href = '/admin/auth'}
+                    className="text-xs opacity-50 hover:opacity-100"
+                  >
+                    <Shield className="w-3 h-3 mr-1" />
+                    Admin Access
+                  </Button>
+                </div>
+              </div>
             
             <div className="space-y-4">
               {[
