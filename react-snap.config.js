@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // Basic configuration
   puppeteerArgs: ["--no-sandbox", "--disable-setuid-sandbox"],
   
