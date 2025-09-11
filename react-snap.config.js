@@ -13,8 +13,9 @@ module.exports = {
     "/contact"
   ],
   
-  // Output directory
+  // Output directory - must match Vite's output
   destination: "dist",
+  source: "dist",
   
   // Wait for network to be idle before capturing
   waitFor: 1000,

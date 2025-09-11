@@ -37,7 +37,13 @@ jobs:
           NODE_ENV: production
           
       - name: Run react-snap for prerendering
-        run: npx react-snap
+        run: |
+          echo "Starting react-snap prerendering..."
+          echo "Current directory: $(pwd)"
+          echo "Contents of dist directory:"
+          ls -la dist/
+          echo "Running react-snap..."
+          npx react-snap
         env:
           NODE_ENV: production
         
