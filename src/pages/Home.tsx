@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Brain, MapPin, Star, Shield, Search, Users, Award, TrendingUp, Heart } from 'lucide-react';
+import { SEOHead } from '@/components/SEOHead';
+import { WebsiteStructuredData, OrganizationStructuredData } from '@/components/StructuredData';
 
 const Home = () => {
   const features = [
@@ -64,6 +66,13 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="NeuroIndex - Find Neuro-Friendly Workspaces | Quiet Space Club"
+        description="Discover certified neuro-inclusive workspaces designed for neurodivergent individuals. Find quiet, sensory-friendly offices, coworking spaces, and meeting rooms with NeuroFlow assessment scores."
+        keywords="neurodiverse workspaces, neurodivergent office spaces, sensory-friendly coworking, autism-friendly workspaces, ADHD workplace, quiet office spaces, neuro-inclusive environments, accessible workspaces, NeuroFlow certification, workspace providers, neurodiverse talent, inclusive office design, sensory overload prevention, noise-controlled workspaces, adaptable lighting offices"
+      />
+      <WebsiteStructuredData />
+      <OrganizationStructuredData />
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">

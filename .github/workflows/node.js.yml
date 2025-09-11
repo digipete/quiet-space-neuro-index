@@ -52,6 +52,14 @@ jobs:
           ls -la dist/assets/ || echo "No assets directory found"
           echo "Copying CNAME to dist..."
           cp CNAME dist/ || echo "CNAME not found"
+          echo "Copying sitemap.xml to dist..."
+          cp public/sitemap.xml dist/ || echo "sitemap.xml not found"
+          echo "Copying robots.txt to dist..."
+          cp public/robots.txt dist/ || echo "robots.txt not found"
+          echo "Copying .htaccess to dist..."
+          cp public/.htaccess dist/ || echo ".htaccess not found"
+          echo "Copying Google verification file to dist..."
+          cp public/google-site-verification.html dist/ || echo "google-site-verification.html not found"
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
