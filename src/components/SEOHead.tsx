@@ -54,10 +54,10 @@ export const SEOHead = ({ title, description, keywords, image, type }: SEOHeadPr
     updateMetaTag('og:type', seoType, 'property');
     
     // Twitter tags
-    updateMetaTag('twitter:title', seoTitle);
-    updateMetaTag('twitter:description', seoDescription);
-    updateMetaTag('twitter:image', seoImage);
-    updateMetaTag('twitter:url', canonicalUrl);
+    updateMetaTag("twitter:title", seoTitle);
+    updateMetaTag("twitter:description", seoDescription);
+    updateMetaTag("twitter:image", seoImage);
+    updateMetaTag("twitter:url", canonicalUrl);
 
     // Canonical URL
     let canonical = document.querySelector('link[rel="canonical"]');
