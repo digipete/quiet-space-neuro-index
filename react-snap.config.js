@@ -18,10 +18,13 @@ module.exports = {
   source: "dist",
   
   // Wait for network to be idle before capturing
-  waitFor: 1000,
+  waitFor: 2000,
   
-  // Enable crawling for additional routes
-  crawl: true,
+  // Limit concurrent pages to reduce flakiness in CI
+  concurrency: 2,
+  
+  // Disable crawling to avoid unexpected routes during CI
+  crawl: false,
   
   // Remove inline styles to prevent FOUC
   removeStyleTags: false,
