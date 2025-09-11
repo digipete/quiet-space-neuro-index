@@ -45,8 +45,8 @@ export default {
   cacheAjaxRequests: false,
   http2PushManifest: false,
   
-  // Preload resources
-  preloadResources: true,
+  // Preload images during prerendering
+  preloadImages: true,
   
   // Skip third party scripts during prerendering  
   skipThirdPartyRequests: true

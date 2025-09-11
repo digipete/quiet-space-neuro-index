@@ -20,7 +20,7 @@ async function postBuild() {
 
     console.log('React-snap prerendering completed successfully!')
   } catch (error) {
-    console.error('React-snap failed:', error)
+    console.error('React-snap failed:', error?.stack || error)
     process.exit(1)
   }
 }
