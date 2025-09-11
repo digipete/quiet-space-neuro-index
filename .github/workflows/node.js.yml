@@ -35,6 +35,11 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          
+      - name: Run react-snap for prerendering
+        run: npx react-snap
+        env:
+          NODE_ENV: production
         
       - name: Verify build output
         run: |

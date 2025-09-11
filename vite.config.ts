@@ -29,6 +29,8 @@ export default defineConfig(({ mode }) => ({
         manualChunks: undefined,
       },
     },
+    // Ensure proper file structure for react-snap
+    target: 'es2015'
   },
   publicDir: 'public',
 }));
