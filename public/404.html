@@ -9,8 +9,8 @@
       // GitHub Pages SPA redirect handler
       (function(l) {
         if (l.pathname !== '/') {
-          // Redirect all non-root paths to the root with a redirect parameter
-          window.location.replace('/?redirect=' + encodeURIComponent(l.pathname + l.search + l.hash));
+          var path = l.pathname.slice(1);
+          window.location.replace('/?redirect=' + encodeURIComponent('/' + path + l.search + l.hash));
         }
       }(window.location))
     </script>
