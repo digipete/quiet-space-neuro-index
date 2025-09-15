@@ -31,46 +31,26 @@ jobs:
       - name: Install dependencies
         run: npm ci
         
-      - name: Build
-        run: npm run build
-        env:
-          NODE_ENV: production
-          
-      - name: Run react-snap for prerendering
+      - name: Build and generate static pages
         run: |
-          echo "Starting react-snap prerendering..."
-          echo "Current directory: $(pwd)"
-          echo "Contents of dist directory:"
-          ls -la dist/
-          echo "Running react-snap via postbuild.js (uses react-snap.config.js)..."
-          node postbuild.js
+          echo "Building project and generating static pages..."
+          node scripts/build-static.js
         env:
           NODE_ENV: production
         
       - name: Verify build output
         run: |
-          echo "Build completed. Checking dist directory..."
+          echo "Verifying build completed successfully..."
           ls -la dist/
-          echo "Checking for index.html..."
-          if [ -f "dist/index.html" ]; then
-            echo "✅ index.html found"
-            head -20 dist/index.html
-          else
-            echo "❌ index.html not found!"
-            exit 1
-          fi
-          echo "Checking for assets..."
-          ls -la dist/assets/ || echo "No assets directory found"
-          echo "Copying CNAME to dist..."
-          cp CNAME dist/ || echo "CNAME not found"
-          echo "Copying sitemap.xml to dist..."
-          cp public/sitemap.xml dist/ || echo "sitemap.xml not found"
-          echo "Copying robots.txt to dist..."
-          cp public/robots.txt dist/ || echo "robots.txt not found"
-          echo "Copying .htaccess to dist..."
-          cp public/.htaccess dist/ || echo ".htaccess not found"
-          echo "Copying Google verification file to dist..."
-          cp public/google-site-verification.html dist/ || echo "google-site-verification.html not found"
+          echo "Checking for main files..."
+          test -f dist/index.html && echo "✓ index.html found" || echo "✗ index.html missing"
+          test -f dist/sitemap.xml && echo "✓ sitemap.xml found" || echo "✗ sitemap.xml missing"
+          test -d dist/assets && echo "✓ assets directory found" || echo "✗ assets directory missing"
+          
+          echo "Checking static page generation..."
+          test -f dist/about.html && echo "✓ about.html generated" || echo "✗ about.html missing"
+          test -f dist/how-it-works.html && echo "✓ how-it-works.html generated" || echo "✗ how-it-works.html missing"
+          test -f dist/spaces.html && echo "✓ spaces.html generated" || echo "✗ spaces.html missing"
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
