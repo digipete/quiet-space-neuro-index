@@ -20,7 +20,7 @@ async function generateStaticPages() {
   
   const browser = await puppeteer.launch({
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
   });
   
   const page = await browser.newPage();
@@ -30,6 +30,13 @@ async function generateStaticPages() {
   
   const distDir = path.join(__dirname, '../dist');
   
+  console.log('📁 Build directory:', distDir);
+  console.log('📂 Directory exists:', fs.existsSync(distDir));
+  
+  if (fs.existsSync(distDir)) {
+    console.log('📄 Files in dist:', fs.readdirSync(distDir));
+  }
+
   for (const route of routes) {
     try {
       console.log(`📄 Generating ${route.path}...`);
@@ -61,7 +68,7 @@ async function generateStaticPages() {
       const outputPath = path.join(distDir, route.file);
       fs.writeFileSync(outputPath, cleanHtml);
       
-      console.log(`✅ Generated ${route.file}`);
+      console.log(`✅ Generated ${route.file} at ${outputPath}`);
       
     } catch (error) {
       console.error(`❌ Failed to generate ${route.path}:`, error.message);
