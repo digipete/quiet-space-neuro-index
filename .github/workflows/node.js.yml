@@ -36,6 +36,7 @@ jobs:
           node scripts/build-static.js
         env:
           NODE_ENV: production
+          CI: true
         
       - name: Verify build output
         run: |
