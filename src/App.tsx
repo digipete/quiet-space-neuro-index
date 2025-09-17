@@ -1,4 +1,5 @@
 
+import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -23,16 +24,22 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
-  // Handle GitHub Pages SPA routing
-  const search = window.location.search;
-  if (search) {
-    const query = new URLSearchParams(search);
-    const redirect = query.get('redirect');
-    if (redirect) {
-      const decodedPath = decodeURIComponent(redirect);
-      window.history.replaceState(null, '', decodedPath);
+  // Handle GitHub Pages SPA routing redirect
+  React.useEffect(() => {
+    const search = window.location.search;
+    if (search) {
+      const query = new URLSearchParams(search);
+      const redirect = query.get('redirect');
+      if (redirect) {
+        const decodedPath = decodeURIComponent(redirect);
+        // Clean up the URL and navigate to the proper route
+        window.history.replaceState(null, '', decodedPath);
+        
+        // Force a re-render to ensure React Router picks up the new path
+        window.location.reload();
+      }
     }
-  }
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>

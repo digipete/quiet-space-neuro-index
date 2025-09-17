@@ -10,8 +10,8 @@ async function buildStatic() {
     console.log('🏗️  Building React app...');
     execSync('npm run build', { stdio: 'inherit' });
     
-    console.log('📄 Generating static pages...');
-    await import('./generate-static-pages.js');
+    console.log('📄 Generating SEO-optimized static pages...');
+    await import('./generate-seo-pages.js');
     
     console.log('📁 Copying static assets...');
     const distDir = path.join(__dirname, '../dist');
@@ -38,6 +38,36 @@ async function buildStatic() {
         console.log(`✅ Copied ${file}`);
       }
     });
+
+    // Generate GitHub Pages 404.html for SPA routing
+    console.log('📄 Generating 404.html for SPA routing...');
+    const spa404Content = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting... | Quiet Space Club</title>
+    <script>
+      // GitHub Pages SPA redirect
+      const pathSegmentsToKeep = 1;
+      const location = window.location;
+      const pathname = location.pathname.slice(1);
+      
+      if (pathname) {
+        location.replace(
+          location.protocol + '//' + location.hostname + location.port +
+          '/?redirect=' + encodeURIComponent(location.pathname + location.search + location.hash)
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to the main application...</p>
+  </body>
+</html>`;
+    
+    fs.writeFileSync(path.join(distDir, '404.html'), spa404Content);
+    console.log('✅ Generated 404.html for SPA routing');
     
     console.log('🎉 Static build completed successfully!');
     

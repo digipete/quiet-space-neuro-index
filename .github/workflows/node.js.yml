@@ -48,9 +48,15 @@ jobs:
           test -d dist/assets && echo "✓ assets directory found" || echo "✗ assets directory missing"
           
           echo "Checking static page generation..."
-          test -f dist/about.html && echo "✓ about.html generated" || echo "✗ about.html missing"
-          test -f dist/how-it-works.html && echo "✓ how-it-works.html generated" || echo "✗ how-it-works.html missing"
-          test -f dist/spaces.html && echo "✓ spaces.html generated" || echo "✗ spaces.html missing"
+          test -f dist/about/index.html && echo "✓ about/index.html generated" || echo "✗ about/index.html missing"
+          test -f dist/how-it-works/index.html && echo "✓ how-it-works/index.html generated" || echo "✗ how-it-works/index.html missing"
+          test -f dist/spaces/index.html && echo "✓ spaces/index.html generated" || echo "✗ spaces/index.html missing"
+          test -f dist/contact/index.html && echo "✓ contact/index.html generated" || echo "✗ contact/index.html missing"
+          test -f dist/resources/index.html && echo "✓ resources/index.html generated" || echo "✗ resources/index.html missing"
+          test -f dist/workspace-providers/index.html && echo "✓ workspace-providers/index.html generated" || echo "✗ workspace-providers/index.html missing"
+          test -f dist/404.html && echo "✓ 404.html generated" || echo "✗ 404.html missing"
+          
+          echo "Static pages successfully generated with proper SEO structure!"
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
