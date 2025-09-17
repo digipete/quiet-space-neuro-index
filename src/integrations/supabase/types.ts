@@ -104,6 +104,36 @@ export type Database = {
         }
         Relationships: []
       }
+      security_events: {
+        Row: {
+          created_at: string
+          event_details: Json
+          event_type: string
+          id: string
+          ip_address: string | null
+          user_agent: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          event_details?: Json
+          event_type: string
+          id?: string
+          ip_address?: string | null
+          user_agent?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          event_details?: Json
+          event_type?: string
+          id?: string
+          ip_address?: string | null
+          user_agent?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
@@ -133,6 +163,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      check_contact_submission_rate_limit: {
+        Args: { user_email?: string; user_ip?: string }
+        Returns: boolean
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
@@ -143,6 +177,19 @@ export type Database = {
       is_admin: {
         Args: { user_id?: string }
         Returns: boolean
+      }
+      is_spam_content: {
+        Args: { content_text: string }
+        Returns: boolean
+      }
+      log_security_event: {
+        Args: {
+          p_event_details?: Json
+          p_event_type: string
+          p_ip_address?: string
+          p_user_agent?: string
+        }
+        Returns: undefined
       }
     }
     Enums: {

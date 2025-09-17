@@ -80,33 +80,11 @@ const handler = async (req: Request): Promise<Response> => {
 
     const { name, email, subject, message, inquiry_type }: ContactEmailRequest = await req.json();
 
-    // Input validation
-    if (!name?.trim() || !email?.trim() || !message?.trim()) {
+    // Input validation (basic client-side checks before database validation)
+    if (!name?.trim() || !email?.trim() || !message?.trim() || !subject?.trim()) {
+      console.log("Missing required fields in request");
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
-        {
-          status: 400,
-          headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      );
-    }
-
-    // Length validation
-    if (message.length > 5000) {
-      return new Response(
-        JSON.stringify({ error: "Message too long (max 5000 characters)" }),
-        {
-          status: 400,
-          headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      );
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return new Response(
-        JSON.stringify({ error: "Invalid email format" }),
         {
           status: 400,
           headers: { "Content-Type": "application/json", ...corsHeaders },
@@ -119,50 +97,40 @@ const handler = async (req: Request): Promise<Response> => {
       name: sanitizeInput(name.substring(0, 100)),
       email: sanitizeInput(email.substring(0, 200)),
       subject: sanitizeInput(subject.substring(0, 200)),
-      message: sanitizeInput(message.substring(0, 5000)),
+      message: sanitizeInput(message.substring(0, 2000)),
       inquiry_type: sanitizeInput(inquiry_type.substring(0, 50))
     };
 
     console.log("Processing secure contact email for:", sanitizedData.name, sanitizedData.email);
 
-    // Check for spam patterns
-    const spamPatterns = [
-      /\b(viagra|cialis|poker|casino|lottery|bitcoin|crypto)\b/i,
-      /\b(click here|visit now|act now|limited time)\b/i,
-      /\$\$\$|!!!!/,
-      /<a\s+href/i
-    ];
-
-    const fullText = `${sanitizedData.name} ${sanitizedData.email} ${sanitizedData.subject} ${sanitizedData.message}`;
-    const isSpam = spamPatterns.some(pattern => pattern.test(fullText));
-
-    if (isSpam) {
-      console.log("Potential spam detected, blocking submission");
-      return new Response(
-        JSON.stringify({ error: "Submission blocked due to spam detection" }),
-        {
-          status: 400,
-          headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      );
-    }
-
-    // Store in database with additional metadata
+    // Store in database - let the enhanced RLS policies handle validation, rate limiting, and spam detection
     const { error: dbError } = await supabase
       .from('contact_submissions')
-      .insert([{
-        ...sanitizedData,
-        status: 'new',
-        metadata: {
-          ip: clientIP,
-          user_agent: req.headers.get('user-agent'),
-          timestamp: new Date().toISOString()
-        }
-      }]);
+      .insert([sanitizedData]);
 
     if (dbError) {
       console.error("Database error:", dbError);
-      throw new Error("Failed to store submission");
+      
+      // Handle specific RLS violations with user-friendly messages
+      if (dbError.code === '23505' || dbError.message.includes('rate limit')) {
+        return new Response(
+          JSON.stringify({ error: "Too many submissions. Please wait before submitting again." }),
+          {
+            status: 429,
+            headers: { "Content-Type": "application/json", ...corsHeaders },
+          }
+        );
+      } else if (dbError.message.includes('spam') || dbError.message.includes('violates row-level security')) {
+        return new Response(
+          JSON.stringify({ error: "Submission blocked. Please check your message and try again." }),
+          {
+            status: 400,
+            headers: { "Content-Type": "application/json", ...corsHeaders },
+          }
+        );
+      } else {
+        throw new Error("Failed to store submission");
+      }
     }
 
     // Send notification email to admin

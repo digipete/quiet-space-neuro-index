@@ -22,6 +22,16 @@ interface ContactSubmission {
   created_at: string;
 }
 
+interface SecurityEvent {
+  id: string;
+  event_type: string;
+  event_details: any;
+  user_id?: string;
+  ip_address?: string;
+  user_agent?: string;
+  created_at: string;
+}
+
 const AdminDashboard = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
@@ -29,10 +39,13 @@ const AdminDashboard = () => {
   const [loading, setLoading] = useState(true);
   const [submissions, setSubmissions] = useState<ContactSubmission[]>([]);
   const [loadingSubmissions, setLoadingSubmissions] = useState(false);
+  const [securityEvents, setSecurityEvents] = useState<SecurityEvent[]>([]);
+  const [activeTab, setActiveTab] = useState<'submissions' | 'security'>('submissions');
 
   useEffect(() => {
     checkAuth();
     loadSubmissions();
+    loadSecurityEvents();
   }, []);
 
   const checkAuth = async () => {
@@ -83,6 +96,25 @@ const AdminDashboard = () => {
       });
     } finally {
       setLoadingSubmissions(false);
+    }
+  };
+
+  const loadSecurityEvents = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('security_events')
+        .select('*')
+        .order('created_at', { ascending: false })
+        .limit(50);
+
+      if (error) {
+        throw error;
+      }
+
+      setSecurityEvents(data || []);
+    } catch (error: any) {
+      console.error('Error loading security events:', error);
+      // Don't show toast error for security events to avoid spamming admin
     }
   };
 
@@ -235,8 +267,188 @@ const AdminDashboard = () => {
           </Card>
         </div>
 
+        {/* Tabs */}
+        <div className="mb-6">
+          <div className="flex space-x-1 bg-muted p-1 rounded-lg w-fit">
+            <Button
+              variant={activeTab === 'submissions' ? 'default' : 'ghost'}
+              size="sm"
+              onClick={() => setActiveTab('submissions')}
+              className="px-4"
+            >
+              <MessageSquare className="w-4 h-4 mr-2" />
+              Contact Submissions
+            </Button>
+            <Button
+              variant={activeTab === 'security' ? 'default' : 'ghost'}
+              size="sm"
+              onClick={() => setActiveTab('security')}
+              className="px-4"
+            >
+              <Shield className="w-4 h-4 mr-2" />
+              Security Events
+            </Button>
+          </div>
+        </div>
+
+        {/* Contact Submissions Tab */}
+        {activeTab === 'submissions' && (
+          <Card>
+            <CardHeader>
+              <CardTitle>Contact Submissions</CardTitle>
+              <CardDescription>
+                Manage and respond to customer inquiries
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              {loadingSubmissions ? (
+                <div className="flex items-center justify-center py-8">
+                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
+                </div>
+              ) : submissions.length === 0 ? (
+                <div className="text-center py-8 text-muted-foreground">
+                  No submissions yet
+                </div>
+              ) : (
+                <ScrollArea className="h-[600px] pr-4">
+                  <div className="space-y-4">
+                    {submissions.map((submission) => (
+                      <Card key={submission.id} className="p-4">
+                        <div className="space-y-3">
+                          <div className="flex items-start justify-between">
+                            <div>
+                              <div className="flex items-center gap-2 mb-1">
+                                <h3 className="font-medium">{submission.name}</h3>
+                                <Badge variant={getStatusBadgeVariant(submission.status)}>
+                                  {submission.status.replace('_', ' ')}
+                                </Badge>
+                              </div>
+                              <p className="text-sm text-muted-foreground">{submission.email}</p>
+                              <p className="text-sm text-muted-foreground">
+                                Type: {submission.inquiry_type}
+                              </p>
+                            </div>
+                            <p className="text-xs text-muted-foreground">
+                              {new Date(submission.created_at).toLocaleDateString()}
+                            </p>
+                          </div>
+                          
+                          <div>
+                            <h4 className="font-medium text-sm mb-1">Subject:</h4>
+                            <p className="text-sm">{submission.subject}</p>
+                          </div>
+                          
+                          <div>
+                            <h4 className="font-medium text-sm mb-1">Message:</h4>
+                            <p className="text-sm bg-muted p-3 rounded whitespace-pre-wrap">
+                              {sanitizeMessage(submission.message)}
+                            </p>
+                          </div>
+                          
+                          {submission.status !== 'resolved' && (
+                            <div className="flex gap-2 pt-2">
+                              {submission.status === 'new' && (
+                                <Button 
+                                  size="sm" 
+                                  variant="outline"
+                                  onClick={() => updateSubmissionStatus(submission.id, 'in_progress')}
+                                >
+                                  Mark In Progress
+                                </Button>
+                              )}
+                              <Button 
+                                size="sm" 
+                                onClick={() => updateSubmissionStatus(submission.id, 'resolved')}
+                              >
+                                Mark Resolved
+                              </Button>
+                            </div>
+                          )}
+                          
+                          {submission.status === 'resolved' && (
+                            <Button 
+                              size="sm" 
+                              variant="outline"
+                              onClick={() => updateSubmissionStatus(submission.id, 'new')}
+                            >
+                              Reopen
+                            </Button>
+                          )}
+                        </div>
+                      </Card>
+                    ))}
+                  </div>
+                </ScrollArea>
+              )}
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Security Events Tab */}
+        {activeTab === 'security' && (
+          <Card>
+            <CardHeader>
+              <CardTitle>Security Events</CardTitle>
+              <CardDescription>
+                Monitor security-related activities and events
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              {securityEvents.length === 0 ? (
+                <div className="text-center py-8 text-muted-foreground">
+                  No security events recorded yet
+                </div>
+              ) : (
+                <ScrollArea className="h-[600px] pr-4">
+                  <div className="space-y-3">
+                    {securityEvents.map((event) => (
+                      <Card key={event.id} className="p-4">
+                        <div className="space-y-2">
+                          <div className="flex items-start justify-between">
+                            <div className="flex items-center gap-2">
+                              <Badge variant={event.event_type === 'CONTACT_SUBMISSION' ? 'default' : 'secondary'}>
+                                {event.event_type.replace('_', ' ')}
+                              </Badge>
+                              {event.ip_address && (
+                                <span className="text-xs text-muted-foreground">
+                                  IP: {event.ip_address}
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-xs text-muted-foreground">
+                              {new Date(event.created_at).toLocaleString()}
+                            </p>
+                          </div>
+                          
+                          {event.event_details && Object.keys(event.event_details).length > 0 && (
+                            <div>
+                              <h4 className="font-medium text-sm mb-1">Details:</h4>
+                              <pre className="text-xs bg-muted p-2 rounded overflow-x-auto">
+                                {JSON.stringify(event.event_details, null, 2)}
+                              </pre>
+                            </div>
+                          )}
+                          
+                          {event.user_agent && (
+                            <div>
+                              <h4 className="font-medium text-sm mb-1">User Agent:</h4>
+                              <p className="text-xs text-muted-foreground truncate">
+                                {event.user_agent}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      </Card>
+                    ))}
+                  </div>
+                </ScrollArea>
+              )}
+            </CardContent>
+          </Card>
+        )}
+
         {/* Submissions List */}
-        <Card>
+        <Card style={{display: 'none'}}>
           <CardHeader>
             <CardTitle>Contact Submissions</CardTitle>
             <CardDescription>
