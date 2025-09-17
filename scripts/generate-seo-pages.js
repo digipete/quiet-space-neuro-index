@@ -1,81 +1,107 @@
-import puppeteer from 'puppeteer';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Routes with their SEO data
+// Define routes and their SEO metadata
 const routes = [
   {
     path: '/',
     file: 'index.html',
-    title: 'NeuroIndex - Find Neuro-Friendly Workspaces | Quiet Space Club',
-    description: 'Discover inclusive, neuro-accessible workspaces designed for neurodivergent professionals. Search ADHD-friendly, autism-accessible coworking spaces with our science-based NeuroFlow rating system.',
-    keywords: 'neuro-friendly workspaces, neurodivergent coworking, ADHD workspace, autism accessible office, sensory-friendly coworking, neurodiverse workplace, inclusive office space, quiet workspace, neuro accommodation, ADHD coworking space'
+    title: 'Quiet Workspaces | Neuroinclusive Office Spaces Near You',
+    description: 'Find neuroinclusive workspaces designed for focus and productivity. Discover quiet offices, private booths, and accessible coworking spaces that support neurodivergent professionals.',
+    keywords: 'quiet workspace, neuroinclusive office, coworking space, neurodivergent workspace, focus rooms, private office, accessible workspace, quiet office near me',
   },
   {
     path: '/spaces',
-    file: 'spaces/index.html',
-    title: 'Search Neuro-Friendly Workspaces | NeuroIndex Directory',
-    description: 'Browse and search our comprehensive directory of neuro-accessible workspaces. Find ADHD-friendly and autism-accessible coworking spaces with detailed NeuroFlow scores and reviews.',
-    keywords: 'search workspaces, neuro workspace directory, ADHD office search, autism coworking finder, sensory workspace search, neurodivergent office directory, accessible workspace listings, quiet space finder'
+    file: 'spaces.html', 
+    title: 'Browse Quiet Workspaces | Filter by Location & Amenities',
+    description: 'Browse our curated directory of quiet workspaces. Filter by location, amenities, and accessibility features to find your perfect neuroinclusive office space.',
+    keywords: 'browse workspaces, quiet office directory, neuroinclusive coworking, accessible office spaces, workspace finder, quiet rooms, focus spaces',
   },
   {
     path: '/about',
-    file: 'about/index.html',
-    title: 'About Quiet Space Club | NeuroIndex for Neuro-Friendly Workspaces',
-    description: 'Learn about our mission to connect neurodivergent individuals with accessible, sensory-friendly workspaces. Discover our evidence-based approach and community-driven platform.',
-    keywords: 'about quiet space club, neurodiverse workplace inclusion, autism workplace support, ADHD office solutions, sensory accessibility research, neurodivergent community platform, inclusive workspace mission'
+    file: 'about.html',
+    title: 'About Quiet Space Club | Neuroinclusive Workspace Directory',
+    description: 'Learn about our mission to make workspaces more accessible for neurodivergent professionals. Discover how we\'re building a more inclusive future of work.',
+    keywords: 'about quiet space club, neuroinclusive mission, neurodivergent workspace advocacy, accessible office spaces, inclusive coworking',
   },
   {
     path: '/how-it-works',
-    file: 'how-it-works/index.html', 
-    title: 'How NeuroFlow Works | Science-Based Neuro-Accessibility Rating',
-    description: 'Understand our NeuroFlow methodology that combines neuroscience research and environmental psychology to rate workspace neuro-accessibility for ADHD, autism, and sensory needs.',
-    keywords: 'NeuroFlow methodology, neuro-accessibility rating, workplace neuroscience, ADHD workspace assessment, autism office evaluation, sensory workspace scoring, neurodivergent workplace research'
-  },
-  {
-    path: '/workspace-providers',
-    file: 'workspace-providers/index.html',
-    title: 'Partner with Quiet Space Club | Neuro-Accessibility Certification',
-    description: 'Transform your coworking space with neuro-accessibility certification. Attract neurodivergent professionals and create inclusive environments with our NeuroFlow assessment.',
-    keywords: 'workspace certification, neuro-accessible coworking, ADHD workplace certification, autism office certification, inclusive workspace provider, neurodivergent coworking partner, workspace accessibility assessment'
+    file: 'how-it-works.html',
+    title: 'How It Works | Find & Book Quiet Workspaces Easily',
+    description: 'Learn how to find, book, and access neuroinclusive workspaces through our platform. Simple steps to secure your perfect quiet office space.',
+    keywords: 'how to book workspace, quiet office booking, neuroinclusive workspace guide, coworking booking process, workspace reservation',
   },
   {
     path: '/resources',
-    file: 'resources/index.html',
-    title: 'Neurodiversity Resources | Workplace Inclusion Guides',
-    description: 'Access comprehensive resources on neurodiversity in the workplace, including guides for creating ADHD-friendly and autism-accessible work environments.',
-    keywords: 'neurodiversity resources, ADHD workplace guide, autism work support, workplace inclusion resources, neurodivergent employee support, sensory workplace tips, neuro-friendly office design'
+    file: 'resources.html',
+    title: 'Resources | Guides for Neurodivergent Professionals',
+    description: 'Access guides, tips, and resources for neurodivergent professionals navigating the modern workplace. Tools for creating inclusive work environments.',
+    keywords: 'neurodivergent resources, workplace accessibility guides, neuroinclusive tips, professional development neurodivergent, workplace accommodations',
   },
   {
     path: '/contact',
-    file: 'contact/index.html',
-    title: 'Contact Quiet Space Club | Get Support for Neuro-Friendly Workspaces',
-    description: 'Get in touch with our team for support finding neuro-accessible workspaces or partnering with us. We help neurodivergent professionals and inclusive workspace providers.',
-    keywords: 'contact quiet space club, neurodiversity support, ADHD workspace help, autism accommodation support, neuro-friendly workspace assistance, inclusive office consultation'
+    file: 'contact.html',
+    title: 'Contact Us | Get in Touch with Quiet Space Club',
+    description: 'Have questions about our neuroinclusive workspaces? Get in touch with our team for support, partnerships, or to list your quiet office space.',
+    keywords: 'contact quiet space club, workspace partnerships, list your space, neuroinclusive support, quiet office questions',
+  },
+  {
+    path: '/workspace-providers',
+    file: 'workspace-providers.html',
+    title: 'For Workspace Providers | Partner with Quiet Space Club',
+    description: 'Are you a workspace provider interested in serving neurodivergent professionals? Learn how to partner with us and make your space more inclusive.',
+    keywords: 'workspace provider partnership, neuroinclusive coworking partner, quiet office listing, accessible workspace certification, inclusive office space',
   }
 ];
 
-function generateHTML(route) {
-  const canonicalUrl = `https://index.quietspace.club${route.path === '/' ? '' : route.path}`;
+async function generateSEOPages() {
+  console.log('🚀 Generating SEO-optimized pages...');
   
-  return `<!DOCTYPE html>
+  // Read the built index.html to get the correct asset references
+  const builtIndexPath = path.join(__dirname, '../dist/index.html');
+  let assetReferences = '';
+  
+  if (fs.existsSync(builtIndexPath)) {
+    const builtContent = fs.readFileSync(builtIndexPath, 'utf-8');
+    
+    // Extract script and link tags from the built index.html
+    const scriptMatches = builtContent.match(/<script[^>]*src="[^"]*"[^>]*><\/script>/g) || [];
+    const linkMatches = builtContent.match(/<link[^>]*rel="stylesheet"[^>]*>/g) || [];
+    
+    // Combine CSS and JS references
+    assetReferences = [...linkMatches, ...scriptMatches].join('\n    ');
+  }
+  
+  // Fallback if we can't read the built assets
+  if (!assetReferences) {
+    console.log('⚠️ Could not find built assets, using fallback references');
+    assetReferences = `<link rel="stylesheet" href="/assets/index.css">
+    <script type="module" crossorigin src="/assets/index.js"></script>`;
+  }
+
+  for (const route of routes) {
+    console.log(`📄 Generating ${route.path}...`);
+    
+    const canonicalUrl = `https://index.quietspace.club${route.path}`;
+    const currentYear = new Date().getFullYear();
+    
+    const html = `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO -->
     <title>${route.title}</title>
     <meta name="description" content="${route.description}" />
     <meta name="keywords" content="${route.keywords}" />
-    <meta name="author" content="Quiet Space Club" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="English" />
-    <meta name="revisit-after" content="7 days" />
     <link rel="canonical" href="${canonicalUrl}" />
-
-    <!-- Open Graph / Facebook -->
+    
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="${canonicalUrl}" />
     <meta property="og:title" content="${route.title}" />
@@ -111,32 +137,34 @@ function generateHTML(route) {
         "@type": "Organization",
         "name": "Quiet Space Club",
         "url": "https://index.quietspace.club",
-        "logo": "https://index.quietspace.club/og-image.png"
-      }
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://index.quietspace.club/og-image.png"
+        }
+      },
+      "dateModified": "${new Date().toISOString()}",
+      "inLanguage": "en-US"
     }
     </script>
-    
-    <!-- GitHub Pages SPA redirect handler -->
-    <script>
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      }(window.location))
-    </script>
-    
-    <!-- Preload critical resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  </head>
 
+    <!-- Performance & Accessibility -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Robots & Indexing -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    
+    <!-- Author & Copyright -->
+    <meta name="author" content="Quiet Space Club" />
+    <meta name="copyright" content="© ${currentYear} Quiet Space Club. All rights reserved." />
+    
+    <!-- Additional Meta -->
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+    <meta name="revisit-after" content="7 days" />
+  </head>
   <body>
-    <!-- Fallback content for search engines -->
     <noscript>
       <div style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px;">
         <h1>${route.title}</h1>
@@ -147,7 +175,8 @@ function generateHTML(route) {
 
     <div id="root"></div>
     
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Load the built JavaScript and CSS files -->
+    ${assetReferences}
     
     <!-- Redirect non-JS users to main site -->
     <script>
@@ -161,58 +190,35 @@ function generateHTML(route) {
     </script>
   </body>
 </html>`;
-}
 
-async function generateSEOPages() {
-  console.log('🚀 Generating SEO-optimized static pages...');
-  
-  const distDir = path.join(__dirname, '../dist');
-  
-  console.log('📁 Build directory:', distDir);
-  
-  if (!fs.existsSync(distDir)) {
-    console.error('❌ Build directory does not exist. Run npm run build first.');
-    process.exit(1);
-  }
-
-  // Generate optimized HTML for each route
-  for (const route of routes) {
-    try {
-      console.log(`📄 Generating SEO page: ${route.path} -> ${route.file}`);
-      
-      const html = generateHTML(route);
-      const outputPath = path.join(distDir, route.file);
-      const outputDir = path.dirname(outputPath);
-      
-      // Ensure directory exists
-      if (!fs.existsSync(outputDir)) {
-        fs.mkdirSync(outputDir, { recursive: true });
+    // Create directory structure for clean URLs
+    const routePath = route.path === '/' ? 'index.html' : route.path.substring(1);
+    const outputPath = path.join(__dirname, '../dist', routePath);
+    
+    if (route.path !== '/') {
+      // Create directory for clean URLs (e.g., /about/index.html)
+      const dir = path.dirname(outputPath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
       }
-      
-      // Write the file
+      const indexPath = path.join(dir, 'index.html');
+      fs.writeFileSync(indexPath, html);
+      console.log(`✅ Generated: ${indexPath}`);
+    } else {
+      // Root index.html
       fs.writeFileSync(outputPath, html);
-      
-      console.log(`✅ Generated ${route.file}`);
-      
-    } catch (error) {
-      console.error(`❌ Failed to generate ${route.path}:`, error.message);
+      console.log(`✅ Generated: ${outputPath}`);
     }
   }
-  
-  console.log('🎉 SEO page generation completed!');
-  console.log('📋 Generated files:');
-  routes.forEach(route => {
-    const filePath = path.join(distDir, route.file);
-    if (fs.existsSync(filePath)) {
-      console.log(`  ✅ ${route.file} (${(fs.statSync(filePath).size / 1024).toFixed(1)}KB)`);
-    }
-  });
+
+  console.log('🎉 SEO pages generation complete!');
 }
 
-// Handle errors
-process.on('unhandledRejection', (error) => {
-  console.error('Unhandled rejection:', error);
+// Error handling
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
   process.exit(1);
 });
 
+// Run the generation
 generateSEOPages().catch(console.error);
