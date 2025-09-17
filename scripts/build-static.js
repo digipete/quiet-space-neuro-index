@@ -17,10 +17,71 @@ async function buildStatic() {
     const distDir = path.join(__dirname, '../dist');
     const publicDir = path.join(__dirname, '../public');
     
+    // Generate updated sitemap with current date
+    console.log('🗺️  Generating updated sitemap...');
+    const currentDate = new Date().toISOString().split('T')[0];
+    const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <url>
+    <loc>https://index.quietspace.club/</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://index.quietspace.club/spaces</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://index.quietspace.club/workspace-providers</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://index.quietspace.club/about</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://index.quietspace.club/how-it-works</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://index.quietspace.club/resources</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://index.quietspace.club/contact</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>`;
+    
+    fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapContent);
+    console.log('✅ Generated updated sitemap.xml');
+    
     // Copy additional static files
     const staticFiles = [
       'robots.txt',
-      'sitemap.xml', 
       '.htaccess',
       'CNAME',
       'google-site-verification.html',
