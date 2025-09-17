@@ -4,9 +4,5 @@ import './index.css'
 
 const rootElement = document.getElementById('root')!
 
-// Hydrate if prerendered markup exists, otherwise render
-if (rootElement.hasChildNodes()) {
-  hydrateRoot(rootElement, <App />)
-} else {
-  createRoot(rootElement).render(<App />)
-}
+// Always render fresh for proper SPA behavior on static pages
+createRoot(rootElement).render(<App />)

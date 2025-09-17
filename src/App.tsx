@@ -34,9 +34,6 @@ const App = () => {
         const decodedPath = decodeURIComponent(redirect);
         // Clean up the URL and navigate to the proper route
         window.history.replaceState(null, '', decodedPath);
-        
-        // Force a re-render to ensure React Router picks up the new path
-        window.location.reload();
       }
     }
   }, []);

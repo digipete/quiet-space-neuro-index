@@ -145,14 +145,7 @@ function generateHTML(route) {
       </div>
     </noscript>
 
-    <div id="root">
-      <!-- Loading state with proper content -->
-      <div style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; text-align: center;">
-        <h1>${route.title}</h1>
-        <p>${route.description}</p>
-        <div style="margin: 20px 0;">Loading interactive content...</div>
-      </div>
-    </div>
+    <div id="root"></div>
     
     <script type="module" src="/src/main.tsx"></script>
     
