@@ -32,8 +32,8 @@ jobs:
         
       - name: Build and generate static pages
         run: |
-          echo "Building project with prerendering for SEO..."
-          node scripts/build-prerender.js
+          echo "Building project and generating static pages..."
+          node scripts/build-static.js
         env:
           NODE_ENV: production
           CI: true
