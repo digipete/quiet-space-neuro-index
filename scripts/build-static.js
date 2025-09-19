@@ -87,7 +87,8 @@ async function buildStatic() {
       'google-site-verification.html',
       'humans.txt',
       'manifest.json',
-      'status.json'
+      'status.json',
+      '.nojekyll'
     ];
     
     staticFiles.forEach(file => {
