@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Brain, Heart, Target, Users, Award, Globe, Lightbulb, CheckCircle } from 'lucide-react';
-import { SEOHead } from '@/components/SEOHead';
+import { SEO } from '@/components/SEO';
 
 const About = () => {
   const values = [
@@ -85,8 +85,8 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="About Quiet Space Club | NeuroIndex for Neuro-Friendly Workspaces"
+      <SEO 
+        title="About Quiet Space Club"
         description="Learn about our mission to connect neurodivergent individuals with accessible, sensory-friendly workspaces. Discover our evidence-based approach and community-driven platform."
         keywords="about quiet space club, neurodiverse workplace inclusion, autism workplace support, ADHD office solutions, sensory accessibility research, neurodivergent community platform, inclusive workspace mission"
       />

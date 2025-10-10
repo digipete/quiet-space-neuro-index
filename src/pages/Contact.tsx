@@ -11,6 +11,7 @@ import { Mail, Phone, MapPin, Clock, MessageCircle, Users, Building, Shield } fr
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import DOMPurify from 'dompurify';
+import { SEO } from '@/components/SEO';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -180,6 +181,11 @@ const Contact = () => {
   console.log('Contact component rendering...');
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contact Us"
+        description="Get in touch with Quiet Space Club. Have questions about neuro-accessible workspaces? Want to list your space? We're here to help."
+        keywords="contact quiet space club, workspace inquiry, list neuro-friendly space, neurodiverse workspace support, partnership opportunities, technical support"
+      />
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">

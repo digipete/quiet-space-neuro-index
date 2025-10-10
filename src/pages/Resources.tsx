@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Book, Users, FileText, ExternalLink, Download, Video } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 const Resources = () => {
   const resourceCategories = [
@@ -54,6 +55,11 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Resources for Neuro-Inclusive Workspaces"
+        description="Explore comprehensive resources, research, and tools for creating neuro-accessible workspaces. Support for neurodivergent professionals and inclusive organizations."
+        keywords="neurodiverse resources, workspace accessibility guides, neurodivergent tools, inclusive workplace research, sensory assessment tools, neuro-friendly design guidelines"
+      />
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">

@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Brain, Search, Star, MapPin, CheckCircle, Users, Shield, Target, Lightbulb, Activity, Eye, Volume2, Thermometer, Zap, Database, Code } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 const HowItWorks = () => {
   const steps = [
@@ -163,6 +164,11 @@ const HowItWorks = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="How It Works - NeuroFlow Assessment"
+        description="Learn about our NeuroFlow methodology - a scientifically-validated framework for evaluating neuro-accessibility in workspaces. Discover our comprehensive assessment process."
+        keywords="neuroflow assessment, workspace evaluation process, neuro-accessibility scoring, sensory environment evaluation, cognitive load assessment, workspace certification"
+      />
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">

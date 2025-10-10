@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { CheckCircle, Users, TrendingUp, Award, FileCheck, MessageSquare, Building2, Star, Clock, Zap } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 export default function WorkspaceProviders() {
   useEffect(() => {
@@ -99,6 +100,11 @@ export default function WorkspaceProviders() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="For Workspace Providers - Get Certified"
+        description="Transform your coworking space with neuro-accessibility certification. Attract new customers, increase bookings, and join the leading network of inclusive workspace providers."
+        keywords="workspace provider certification, coworking space listing, neuro-accessible certification, inclusive workspace network, workspace assessment, coworking business growth"
+      />
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-primary/5 to-secondary/5 py-20">
         <div className="container mx-auto px-4 text-center">

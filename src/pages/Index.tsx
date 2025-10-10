@@ -3,7 +3,7 @@ import { ListingCard } from '../components/ListingCard';
 import { AdvancedSearchFilter } from '../components/AdvancedSearchFilter';
 import { Brain, MapPin } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
-import { SEOHead } from '@/components/SEOHead';
+import { SEO } from '@/components/SEO';
 
 interface Amenity {
   name: string;
@@ -134,8 +134,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="Search Neuro-Friendly Workspaces | NeuroIndex - Quiet Space Club"
+      <SEO 
+        title="Search Neuro-Friendly Workspaces"
         description="Find and book neuro-inclusive workspaces near you. Browse certified sensory-friendly offices, coworking spaces, and meeting rooms with detailed accessibility profiles."
         keywords="search neuro workspaces, find autism friendly office, ADHD workplace near me, sensory friendly coworking spaces, quiet office rental, neurodiverse workspace directory, accessible meeting rooms, neuro-inclusive office spaces"
       />
