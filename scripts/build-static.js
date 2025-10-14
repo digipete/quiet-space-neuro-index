@@ -10,8 +10,8 @@ async function buildStatic() {
     console.log('🏗️  Building React app...');
     execSync('npm run build', { stdio: 'inherit' });
     
-    console.log('📄 Generating SEO-optimized static pages...');
-    await import('./generate-seo-pages.js');
+    console.log('🎨 Pre-rendering pages with Puppeteer for SEO...');
+    execSync('node scripts/prerender-with-puppeteer.js', { stdio: 'inherit' });
     
     console.log('📁 Copying static assets...');
     const distDir = path.join(__dirname, '../dist');
