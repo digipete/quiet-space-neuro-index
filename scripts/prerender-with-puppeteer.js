@@ -65,7 +65,7 @@ async function prerender() {
         });
         
         // Give react-helmet-async time to update meta tags
-        await page.waitForTimeout(1000);
+        await new Promise(resolve => setTimeout(resolve, 1000));
         
         // Extract the full rendered HTML
         const html = await page.content();
