@@ -1,0 +1,41 @@
+# NeuroIndex - Find Neuro-Friendly Workspaces | NeuroIndex - Quiet Space Club
+
+> Discover certified neuro-inclusive workspaces designed for neurodivergent individuals. Find quiet, sensory-friendly offices, coworking spaces, and meeting rooms with scientifically validated accessibility scores.
+
+## Core Content
+
+- [Search NeuroIndex](/spaces): Directory of neuro-accessible workspaces, including offices, coworking spaces, and meeting rooms.
+- [See How It Works](/how-it-works): Explanation of the neuro-accessibility scoring methodology and assessment process.
+- NeuroIndex's proprietary Neuro Index score evaluates environment compatibility with neurodiverse needs, based on environmental psychology, neuroscience, and sensory research.
+- Verified accessibility profiles ensure spaces meet rigorous neuro-accessibility standards, assessed by certified specialists.
+- Community reviews from neurodiverse professionals provide real-world insights and experiences.
+- Scientific research backing the methodology, including Cognitive Load Theory, Sensory Processing research, and Environmental Psychology.
+
+## Resources
+
+- The hidden workplace challenges for neurodiverse professionals:
+  - 20% of workforce is neurodiverse
+  - 78% struggle with sensory overload
+  - 3x higher productivity in neuro-accessible environments
+- Data on spaces helped, cities covered, and user satisfaction:
+  - 2,400+ neurodiverse professionals helped
+  - 340+ certified accessible spaces
+  - 28 UK cities covered
+  - Average user satisfaction of 9.2/10
+- Related research sources:
+  - [Environmental Psychology](https://en.wikipedia.org/wiki/Environmental_psychology)
+  - [Cognitive Load Theory](https://en.wikipedia.org/wiki/Cognitive_load)
+  - Sensory Processing and its impact on workspace design
+
+## Community and Stories
+
+- Testimonials from professionals with ADHD, autism, and sensory sensitivities about how neuro-accessible workspaces improved their productivity and well-being.
+- Real stories highlight the importance of tailored spaces for mental health and focus.
+
+## Optional
+
+- About Quiet Space Club and its mission to promote neuro-inclusive environments.
+- Information on ongoing validation and development of the Neuro Index scoring system.
+- Blog and updates on new space assessments, neurodiversity insights, and related events.
+
+[About Quiet Space Club](/about)
