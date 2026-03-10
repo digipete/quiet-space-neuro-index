@@ -14,7 +14,10 @@ const routes = [
   '/contact',
   '/resources',
   '/workspace-providers',
-  '/spaces'
+  '/spaces',
+  '/blog',
+  '/blog/create-sensory-friendly-meeting-room-process',
+  '/blog/defining-inclusive-workspaces-for-neurodiverse-professionals'
 ];
 
 async function prerender() {
