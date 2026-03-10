@@ -38,4 +38,10 @@
 - Information on ongoing validation and development of the Neuro Index scoring system.
 - Blog and updates on new space assessments, neurodiversity insights, and related events.
 
+## Blog
+
+- [Quiet Space Club Blog](/blog): Expert insights on neuro-inclusive workspaces, sensory-friendly design, and neurodiversity in the workplace.
+- [Create a sensory friendly meeting room in 2026](/blog/create-sensory-friendly-meeting-room-process): Guide to designing meeting spaces that support cognitive diversity through lighting, sound control, flexible participation, and inclusive planning.
+- [Defining inclusive workspaces for neurodiverse professionals](/blog/defining-inclusive-workspaces-for-neurodiverse-professionals): How to identify truly inclusive workspaces through evidence-based design, sensory adaptations, evaluation frameworks, and UK legal context.
+
 [About Quiet Space Club](/about)
