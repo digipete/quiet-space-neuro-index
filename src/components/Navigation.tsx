@@ -13,6 +13,7 @@ export const Navigation = () => {
     { name: 'NeuroIndex', path: '/spaces' },
     { name: 'How It Works', path: '/how-it-works' },
     { name: 'Workspace Providers', path: '/workspace-providers' },
+    { name: 'Blog', path: '/blog' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];

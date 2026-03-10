@@ -56,6 +56,8 @@ const App = () => {
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/workspace-providers" element={<WorkspaceProviders />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/admin/auth" element={<AdminAuth />} />
                 <Route path="/admin/dashboard" element={<AdminDashboard />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
