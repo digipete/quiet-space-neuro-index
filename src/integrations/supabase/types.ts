@@ -174,14 +174,8 @@ export type Database = {
         }
         Returns: boolean
       }
-      is_admin: {
-        Args: { user_id?: string }
-        Returns: boolean
-      }
-      is_spam_content: {
-        Args: { content_text: string }
-        Returns: boolean
-      }
+      is_admin: { Args: { user_id?: string }; Returns: boolean }
+      is_spam_content: { Args: { content_text: string }; Returns: boolean }
       log_security_event: {
         Args: {
           p_event_details?: Json
