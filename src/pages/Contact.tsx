@@ -81,11 +81,11 @@ const Contact = () => {
         status: 'new' as const
       };
 
-      // 5. Additional length checks
-      if (sanitizedData.message.length > 5000) {
+      // 5. Additional length checks — matches server-side limit in edge function
+      if (sanitizedData.message.length > 2000) {
         toast({
           title: "Message Too Long",
-          description: "Please limit your message to 5000 characters.",
+          description: "Please limit your message to 2000 characters.",
           variant: "destructive"
         });
         return;
@@ -178,7 +178,6 @@ const Contact = () => {
     { value: "press", label: "Press & Media" }
   ];
 
-  console.log('Contact component rendering...');
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -295,10 +294,10 @@ const Contact = () => {
                       onChange={handleInputChange}
                       rows={6}
                       required
-                      maxLength={5000}
+                      maxLength={2000}
                     />
                     <div className="text-xs text-muted-foreground text-right">
-                      {formData.message.length}/5000 characters
+                      {formData.message.length}/2000 characters
                     </div>
                   </div>
                   
