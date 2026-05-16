@@ -33,7 +33,6 @@ const Index = () => {
   const [selectedLocation, setSelectedLocation] = useState('all');
   const [listings, setListings] = useState<Listing[]>([]);
   const [loading, setLoading] = useState(true);
-  const [fetchError, setFetchError] = useState(false);
 
   useEffect(() => {
     fetchListings();
@@ -48,7 +47,6 @@ const Index = () => {
 
       if (error) {
         console.error('Error fetching listings:', error);
-        setFetchError(true);
         return;
       }
 
@@ -72,7 +70,6 @@ const Index = () => {
       setListings(transformedListings);
     } catch (error) {
       console.error('Error fetching listings:', error);
-      setFetchError(true);
     } finally {
       setLoading(false);
     }
@@ -130,23 +127,6 @@ const Index = () => {
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
           <p className="text-muted-foreground">Loading workspaces...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (fetchError) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-lg font-semibold mb-2">Unable to load workspaces</p>
-          <p className="text-muted-foreground mb-4">Please try refreshing the page.</p>
-          <button
-            onClick={() => { setFetchError(false); setLoading(true); fetchListings(); }}
-            className="text-primary underline text-sm"
-          >
-            Try again
-          </button>
         </div>
       </div>
     );

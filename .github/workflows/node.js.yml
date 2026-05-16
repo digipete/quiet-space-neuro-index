@@ -34,11 +34,9 @@ jobs:
         run: |
           echo "Building project and generating static pages..."
           node scripts/build-static.js
-                env:
+        env:
           NODE_ENV: production
           CI: true
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
         
       - name: Verify build output
         run: |
