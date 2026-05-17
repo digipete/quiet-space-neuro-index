@@ -25,6 +25,151 @@ export interface BlogSection {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'manager-training-gap-neurodiversity-2026',
+    title: 'The Manager Training Gap: Why 35% of UK Workers Say Their Employer Is Failing on Neurodiversity in 2026',
+    date: 'May 17, 2026',
+    excerpt: 'A new Acas/YouGov survey finds 35% of UK workers say their employer is ineffective at neurodiversity manager training — here\'s what the data means for your workplace.',
+    heroImage: '/blog/manager-training-gap-neurodiversity-2026-hero.svg',
+    heroImageAlt: 'Dark teal graphic showing the statistic that 35% of UK workers say their employer is ineffective at neurodiversity manager training, 2026',
+    keywords: 'neurodiversity manager training, neurodivergent employees UK 2026, Acas neurodiversity survey, reasonable adjustments workplace, neuroinclusion, ADHD autism work support, neurodiversity policy UK, HR neurodiversity training, employment tribunal neurodiversity, neuro-friendly workplace',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'A major new survey by <a href="https://www.acas.org.uk/employers-are-failing-to-support-neurodiversity-at-work" target="_blank" rel="noopener noreferrer">Acas and YouGov</a>, published in March 2026, has confirmed what many neurodivergent professionals in the UK already know from lived experience: the people most responsible for their day-to-day support — their line managers — are not being equipped to help. One in three workers (35%) say their employer is ineffective at training managers on neurodiversity, while fewer than a third (32%) believe their employer gets this right. For neurodivergent workers seeking <a href="/spaces">neuro-friendly environments</a>, this gap between policy intention and on-the-ground reality is acutely felt every single working day.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'What the 2026 Data Actually Shows',
+        id: 'what-the-2026-data-actually-shows'
+      },
+      {
+        type: 'paragraph',
+        text: 'The Acas survey, carried out by YouGov across 1,000 employees in Great Britain, paints a sobering picture. Of those surveyed, 18% described their employer as "very ineffective" at training managers to identify needs and make reasonable adjustments for neurodivergent colleagues. Perhaps most troubling of all: almost one-third (32%) of respondents simply did not know how effective their employer was — pointing to a systemic lack of transparency and communication around neurodiversity support.'
+      },
+      {
+        type: 'table',
+        headers: ['What workers say about employer neurodiversity manager training', 'Share of respondents'],
+        rows: [
+          ['Very effective', '7%'],
+          ['Somewhat effective', '26%'],
+          ['Somewhat ineffective', '17%'],
+          ['Very ineffective', '18%'],
+          ['Do not know', '32%'],
+          ['Net effective', '32%'],
+          ['Net ineffective', '35%']
+        ]
+      },
+      {
+        type: 'paragraph',
+        text: 'Source: <a href="https://www.acas.org.uk/employers-are-failing-to-support-neurodiversity-at-work" target="_blank" rel="noopener noreferrer">Acas / YouGov, February 2026</a>. Fieldwork carried out 5–11 February 2026.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Why Manager Training Is the Central Issue',
+        id: 'why-manager-training-is-the-central-issue'
+      },
+      {
+        type: 'paragraph',
+        text: 'The <a href="https://neurobridge.co.uk/the-state-of-neurodiversity-in-the-workplace-2026/" target="_blank" rel="noopener noreferrer">NeuroBridge State of Neurodiversity in the Workplace 2026</a> report makes clear why the training gap matters so much: over 60% of neurodivergent employees say their line manager is their first port of call when they need support. Meanwhile, research consistently shows that around 70% of overall team engagement is directly linked to manager behaviour. Yet 56% of managers admit they lack the confidence or knowledge to support neurodivergent colleagues effectively, and more than 70% have never received any neurodiversity-specific training.'
+      },
+      {
+        type: 'paragraph',
+        text: 'This creates what researchers call a "support lottery" — where the quality of a neurodivergent employee\'s working life depends almost entirely on the individual awareness and empathy of whoever happens to be their direct manager. In an era when 15–20% of the UK workforce is estimated to be neurodivergent (according to <a href="https://www.acas.org.uk/neurodiversity-at-work" target="_blank" rel="noopener noreferrer">Acas\'s own guidance</a>), leaving support to individual goodwill is not a strategy — it is a structural failure.'
+      },
+      {
+        type: 'protip',
+        text: 'If you\'re neurodivergent and your manager seems well-intentioned but uninformed, consider sharing the <a href="https://www.acas.org.uk/neurodiversity-at-work" target="_blank" rel="noopener noreferrer">Acas guidance on neurodiversity at work</a> directly. Framing it as a resource you found — rather than a criticism — can open the conversation without putting anyone on the defensive.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'The Widening Gap Between Employer Confidence and Employee Experience',
+        id: 'widening-gap-employer-confidence-employee-experience'
+      },
+      {
+        type: 'paragraph',
+        text: 'The <a href="https://cityandguildsfoundation.org/what-we-offer/campaigning/neurodiversity-index/" target="_blank" rel="noopener noreferrer">City & Guilds Foundation 2026 Neurodiversity Index</a> — published in partnership with Do-IT Solutions and now in its fourth year — is equally stark. While employer confidence in their own neurodiversity provision has risen, the lived experience of neurodivergent employees has actually worsened. The Index found that neurodivergent employees are reporting uneven support, slower access to workplace adjustments, lower psychological safety, and increased exposure to microaggressions — all at the same time as their employers feel better about what they\'re doing.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Only 36% of UK employers currently have a formal neurodiversity policy, and fewer than four in ten reference neurodiversity in their DEI strategy at all. This leaves neuroinclusion dependent on individual champions within organisations rather than embedded into standard operating procedure. When those champions leave, so does the support.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'The Rising Legal and Business Risk',
+        id: 'rising-legal-and-business-risk'
+      },
+      {
+        type: 'paragraph',
+        text: 'For employers still treating this as a "nice-to-have" rather than a core operational priority, the financial and legal reality is increasingly hard to ignore. Neurodiversity-related employment tribunals in the UK have increased by <strong>164% in the last four years</strong>, with payouts ranging from tens of thousands to several million pounds. In most cases, the issue is not malicious intent but a failure to make reasonable adjustments — the very thing the Acas survey found employers are not training managers to provide.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Under the Equality Act 2010, many neurodivergent employees have the legal right to reasonable adjustments in the workplace. Conditions including ADHD, autism, dyslexia, and dyspraxia frequently meet the Act\'s definition of disability, even when an individual does not identify as disabled. A manager who does not know this — or who delays acting on an adjustment request — is creating legal exposure for their organisation, often without realising it.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'Burnout, Absence, and the Hidden Cost of Under-Support',
+        id: 'burnout-absence-hidden-cost'
+      },
+      {
+        type: 'paragraph',
+        text: 'Beyond the legal risk, the human cost of inadequate manager training is measurable. The NeuroBridge report found that neurodivergent professionals are <strong>twice as likely to experience high symptoms of burnout</strong> compared to their neurotypical peers. More than half have taken an absence from work specifically because of workplace challenges — not because of their neurodivergence, but because of environments and management styles that were not adapted to accommodate different cognitive needs.'
+      },
+      {
+        type: 'paragraph',
+        text: 'For organisations wondering why they struggle to retain neurodivergent talent, or why certain teams have unusually high attrition or sick leave rates, unaddressed neurodiversity needs — amplified by under-trained managers — are frequently the root cause. The cost of replacing a skilled neurodivergent employee consistently exceeds the cost of providing appropriate adjustments, which are often free or low-cost. Quiet, distraction-reduced environments, flexible hours, written rather than verbal instructions — many of the most impactful adjustments cost nothing. Finding those <a href="/spaces">genuinely neuro-friendly workspaces</a> and building them into everyday working life is where <a href="/how-it-works">the NeuroIndex assessment process</a> can help.'
+      },
+      {
+        type: 'protip',
+        text: 'If you manage a team and are unsure where to start with neurodiversity support, Acas recommends three practical steps: give managers specific skills training on recognising needs and making adjustments; provide organisation-wide practical knowledge-building (not just awareness); and co-create guidance directly with neurodivergent staff rather than designing policies about them without them.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        text: 'What Good Looks Like — And Why Workspace Design Matters Too',
+        id: 'what-good-looks-like-workspace-design'
+      },
+      {
+        type: 'paragraph',
+        text: 'Effective neuroinclusion is not just about HR policy. It is equally about the physical and sensory environments in which neurodivergent employees are expected to work. Open-plan offices, unpredictable soundscapes, harsh fluorescent lighting, and crowded communal spaces actively undermine the performance and wellbeing of people with ADHD, autism, sensory processing differences, and related conditions — regardless of how good their manager\'s intentions might be.'
+      },
+      {
+        type: 'paragraph',
+        text: 'This is why <a href="/">Quiet Space Club</a> exists: to provide neurodivergent professionals with a <a href="/spaces">certified directory of neuro-friendly workspaces</a> that have been assessed against real, evidence-based criteria. Workspace providers who want to genuinely serve this community can <a href="/workspace-providers">learn more about the NeuroIndex certification process here</a>. Policy change and physical environment improvement are not alternatives — they are two sides of the same neuroinclusion coin.'
+      },
+      {
+        type: 'faq',
+        question: 'What does \'reasonable adjustment\' mean for neurodivergent employees in the UK?',
+        answer: 'Under the Equality Act 2010, a reasonable adjustment is a change that an employer makes to remove or reduce a disadvantage related to someone\'s disability. For neurodivergent employees, this could include flexible working hours, written instructions instead of verbal, reduced sensory stimulation in the workplace, noise-cancelling headphones, or additional time for tasks. Many of these adjustments are low or zero cost.'
+      },
+      {
+        type: 'faq',
+        question: 'Are employers legally required to make adjustments for neurodivergent staff?',
+        answer: 'Yes, if an employee\'s neurodivergence meets the definition of disability under the Equality Act 2010 — which it often does, even if the individual does not identify as disabled. Conditions such as ADHD, autism, dyslexia, and dyspraxia frequently qualify. Failure to make reasonable adjustments is unlawful and can result in employment tribunal claims. The 164% rise in neurodiversity-related tribunals since 2022 underscores the growing legal risk.'
+      },
+      {
+        type: 'faq',
+        question: 'What should a neurodivergent employee do if their manager is not supportive?',
+        answer: 'Start by putting your request in writing and framing it around specific, practical adjustments rather than general concerns. If your manager does not respond appropriately, escalate to HR or an occupational health contact. Acas offers a free helpline (0300 123 1100) for employees unsure of their rights. If internal routes are exhausted, an Employment Tribunal claim may be an option — particularly where a formal adjustment request has been ignored or refused without justification.'
+      },
+      {
+        type: 'faq',
+        question: 'How can employers improve manager training on neurodiversity?',
+        answer: 'Acas recommends three practical steps: (1) equip line managers with specific skills and confidence to recognise neurodivergent needs and agree adjustments; (2) deliver practical, knowledge-based training to all staff so that neurodiversity support is a shared responsibility; and (3) involve neurodivergent employees in co-designing policies and guidance, rather than writing rules about them without them.'
+      },
+      {
+        type: 'faq',
+        question: 'Why does the physical workspace matter for neurodivergent employees?',
+        answer: 'Even with excellent manager support and policy, an inappropriate physical environment can prevent neurodivergent employees from performing at their best. Factors such as unpredictable noise, harsh lighting, open-plan layouts, and sensory overload are significant barriers for people with ADHD, autism, sensory processing differences, and related conditions. Access to certified neuro-friendly workspaces — like those listed in <a href="/spaces">the Quiet Space Club directory</a> — can make a substantial difference to daily functioning and long-term wellbeing.'
+      }
+    ]
+  },
+  {
     slug: 'create-sensory-friendly-meeting-room-process',
     title: 'Create a sensory friendly meeting room in 2026',
     date: 'March 9, 2026',
