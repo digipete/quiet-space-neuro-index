@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Brain, Menu, X } from 'lucide-react';
+import { Brain, Menu, X, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const Navigation = () => {
@@ -39,14 +39,20 @@ export const Navigation = () => {
                 key={item.name}
                 to={item.path}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.path) 
-                    ? 'text-primary' 
+                  isActive(item.path)
+                    ? 'text-primary'
                     : 'text-muted-foreground'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
+            <Button asChild size="sm" className="ml-2">
+              <Link to="/submit-space">
+                <Plus className="w-4 h-4 mr-1" />
+                List Your Space
+              </Link>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -69,8 +75,8 @@ export const Navigation = () => {
                   key={item.name}
                   to={item.path}
                   className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
-                    isActive(item.path) 
-                      ? 'text-primary bg-primary/10' 
+                    isActive(item.path)
+                      ? 'text-primary bg-primary/10'
                       : 'text-muted-foreground'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -78,6 +84,14 @@ export const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
+              <div className="px-3 pt-2">
+                <Button asChild className="w-full" size="sm" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/submit-space">
+                    <Plus className="w-4 h-4 mr-1" />
+                    List Your Space
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         )}
