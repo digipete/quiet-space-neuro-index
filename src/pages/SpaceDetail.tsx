@@ -1,12 +1,13 @@
 
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { ArrowLeft, Star, MapPin, Users, Clock, Brain, CheckCircle, Award } from 'lucide-react';
+import { ArrowLeft, Star, MapPin, Users, Clock, Brain, CheckCircle, Award, BadgeCheck } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { AmenityIcon } from '../components/AmenityIcon';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { ClaimSpaceModal } from '@/components/ClaimSpaceModal';
 
 interface Amenity {
   name: string;
@@ -33,6 +34,7 @@ export default function SpaceDetail() {
   const { id } = useParams();
   const [listing, setListing] = useState<Listing | null>(null);
   const [loading, setLoading] = useState(true);
+  const [claimModalOpen, setClaimModalOpen] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -344,14 +346,42 @@ export default function SpaceDetail() {
                 <p className="text-sm text-muted-foreground mb-4">
                   Our team can provide detailed information about neuro-friendly features and accommodations.
                 </p>
-                <Button variant="outline" className="w-full">
-                  Contact for Info
+                <Button variant="outline" className="w-full" asChild>
+                  <Link to="/contact">Contact for Info</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-dashed border-primary/30 bg-primary/5">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <BadgeCheck className="w-5 h-5 text-primary" />
+                  <h3 className="font-semibold">Do you manage this space?</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Claim your listing to update details, add photos, and display your verified QSC badge.
+                </p>
+                <Button
+                  variant="outline"
+                  className="w-full border-primary/40 text-primary hover:bg-primary/10"
+                  onClick={() => setClaimModalOpen(true)}
+                >
+                  Claim This Space
                 </Button>
               </CardContent>
             </Card>
           </div>
         </div>
       </main>
+
+      {listing && (
+        <ClaimSpaceModal
+          listingId={listing.id}
+          listingTitle={listing.title}
+          isOpen={claimModalOpen}
+          onClose={() => setClaimModalOpen(false)}
+        />
+      )}
     </div>
   );
 }

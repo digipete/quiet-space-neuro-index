@@ -1,12 +1,40 @@
 
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Brain, MapPin, Star, Shield, Search, Users, Award, TrendingUp, Heart } from 'lucide-react';
+import { Brain, MapPin, Star, Shield, Search, Users, Award, TrendingUp, Heart, Plus } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { WebsiteStructuredData, OrganizationStructuredData } from '@/components/StructuredData';
+import { supabase } from '@/integrations/supabase/client';
+
+interface LiveStats {
+  totalSpaces: number;
+  avgNeuroScore: string;
+  citiesCount: number;
+}
 
 const Home = () => {
+  const [liveStats, setLiveStats] = useState<LiveStats | null>(null);
+
+  useEffect(() => {
+    const fetchStats = async () => {
+      const { data } = await supabase
+        .from('listings')
+        .select('neuro_score, location');
+      if (data && data.length > 0) {
+        const avg = data.reduce((sum, l) => sum + Number(l.neuro_score), 0) / data.length;
+        const cities = new Set(data.map(l => l.location.split(',').pop()?.trim())).size;
+        setLiveStats({
+          totalSpaces: data.length,
+          avgNeuroScore: avg.toFixed(1),
+          citiesCount: cities,
+        });
+      }
+    };
+    fetchStats();
+  }, []);
+
   const features = [
     {
       icon: Brain,
@@ -30,12 +58,14 @@ const Home = () => {
     }
   ];
 
-  const stats = [
-    { value: "2,400+", label: "Neurodiverse Professionals Helped" },
-    { value: "340+", label: "Certified Accessible Spaces" },
-    { value: "28", label: "UK Cities Covered" },
-    { value: "9.2/10", label: "Average User Satisfaction" }
-  ];
+  const stats = liveStats
+    ? [
+        { value: String(liveStats.totalSpaces), label: "Verified Spaces" },
+        { value: `${liveStats.avgNeuroScore}/10`, label: "Average Neuro Score" },
+        { value: String(liveStats.citiesCount), label: "Cities Covered" },
+        { value: "Free", label: "To List During Beta" },
+      ]
+    : null;
 
   const testimonials = [
     {
@@ -103,6 +133,12 @@ const Home = () => {
                   See How It Works
                 </Link>
               </Button>
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-primary/40 text-primary hover:bg-primary/5">
+                <Link to="/submit-space">
+                  <Plus className="w-5 h-5 mr-2" />
+                  List Your Space
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -136,23 +172,25 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                  {stat.value}
+      {/* Stats Section — live data from Supabase */}
+      {stats && (
+        <section className="py-12 px-4">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="text-sm text-muted-foreground">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Features Section */}
       <section className="py-20 px-4">
