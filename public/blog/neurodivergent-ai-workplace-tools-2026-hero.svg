@@ -1,0 +1,38 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f766e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#134e4a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2dd4bf;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#2dd4bf;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <!-- Decorative accent bar -->
+  <rect x="0" y="0" width="1200" height="6" fill="#2dd4bf" opacity="0.7" />
+  <!-- Subtle circuit/network decorative shapes -->
+  <circle cx="950" cy="150" r="180" fill="url(#accent)" />
+  <circle cx="980" cy="480" r="120" fill="#2dd4bf" opacity="0.06" />
+  <circle cx="120" cy="520" r="90" fill="#2dd4bf" opacity="0.07" />
+  <!-- Small decorative dots -->
+  <circle cx="80" cy="80" r="4" fill="#2dd4bf" opacity="0.5" />
+  <circle cx="140" cy="80" r="4" fill="#2dd4bf" opacity="0.3" />
+  <circle cx="110" cy="110" r="4" fill="#2dd4bf" opacity="0.4" />
+  <circle cx="1100" cy="560" r="4" fill="#2dd4bf" opacity="0.5" />
+  <circle cx="1140" cy="540" r="4" fill="#2dd4bf" opacity="0.3" />
+  <!-- Category label -->
+  <rect x="80" y="160" width="220" height="36" rx="18" fill="#2dd4bf" opacity="0.2" />
+  <text x="190" y="183" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#2dd4bf" text-anchor="middle" opacity="0.9">NEURODIVERSITY AT WORK</text>
+  <!-- Main headline -->
+  <text x="80" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" fill="white" opacity="0.97">78% of Neurodivergent</text>
+  <text x="80" y="356" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" fill="white" opacity="0.97">Workers Use AI at Work</text>
+  <!-- Subtitle -->
+  <text x="80" y="430" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="400" fill="#99f6e4" opacity="0.9">How AI is levelling the playing field — and what employers still get wrong</text>
+  <!-- Footer bar -->
+  <rect x="0" y="590" width="1200" height="40" fill="#0a3830" opacity="0.5" />
+  <text x="80" y="614" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#2dd4bf" opacity="0.8">quietspace.club</text>
+  <text x="600" y="614" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="white" opacity="0.5" text-anchor="middle">May 2026 · Quiet Space Club</text>
+</svg>

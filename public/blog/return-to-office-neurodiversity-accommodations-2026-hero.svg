@@ -1,0 +1,22 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f766e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#134e4a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Subtle geometric accent -->
+  <circle cx="1050" cy="120" r="200" fill="#0d9488" fill-opacity="0.15"/>
+  <circle cx="150" cy="520" r="150" fill="#0d9488" fill-opacity="0.10"/>
+  <!-- Tag line -->
+  <text x="80" y="200" font-family="system-ui, -apple-system, Helvetica Neue, sans-serif" font-size="22" font-weight="600" fill="#5eead4" letter-spacing="3">UK NEURODIVERSITY · MAY 2026</text>
+  <!-- Main headline -->
+  <text x="80" y="278" font-family="system-ui, -apple-system, Helvetica Neue, sans-serif" font-size="56" font-weight="800" fill="#ffffff">Return-to-Office Is Triggering</text>
+  <text x="80" y="346" font-family="system-ui, -apple-system, Helvetica Neue, sans-serif" font-size="56" font-weight="800" fill="#ffffff">a Neurodiversity</text>
+  <text x="80" y="414" font-family="system-ui, -apple-system, Helvetica Neue, sans-serif" font-size="56" font-weight="800" fill="#5eead4">Accommodation Crisis</text>
+  <!-- Sub-line -->
+  <text x="80" y="488" font-family="system-ui, -apple-system, Helvetica Neue, sans-serif" font-size="26" font-weight="400" fill="#ccfbf1">What the 2026 Government Data Reveals — and What Employers Must Do</text>
+  <!-- Bottom brand -->
+  <text x="80" y="580" font-family="system-ui, -apple-system, Helvetica Neue, sans-serif" font-size="20" font-weight="500" fill="#5eead4" fill-opacity="0.8">quietspace.club</text>
+</svg>
