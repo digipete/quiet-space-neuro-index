@@ -25,6 +25,172 @@ export interface BlogSection {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'neurodiversity-tribunal-risk-uk-2026',
+    title: 'Neurodiversity Employment Tribunals Have Risen 164% in Four Years — What Every UK Employer Needs to Know in 2026',
+    date: 'May 30, 2026',
+    excerpt: 'UK neurodiversity-related employment tribunals have surged 164% in four years. New 2026 data reveals why — and what HR teams must do now to protect their people and their organisation.',
+    heroImage: '/blog/neurodiversity-tribunal-risk-uk-2026-hero.svg',
+    heroImageAlt: 'Dark teal graphic showing a 164% statistic and scales of justice icon with the headline about the growing tribunal risk UK employers can no longer ignore',
+    keywords: 'neurodiversity employment tribunal UK 2026, neurodivergent discrimination at work, reasonable adjustments legal risk, neuroinclusion UK employers, ADHD autism workplace law, Equality Act neurodivergent, neurodiversity HR compliance 2026, neurodiversity policy UK, neurodivergent employee rights, neurodiversity tribunal statistics',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'A number that should be on every UK HR director\'s desk right now: neurodiversity-related employment tribunals have increased by <strong>164% in the last four years</strong>. That figure, drawn from the 2026 NeuroBridge State of Neurodiversity report, is not a prediction or a warning — it is the current trajectory. And it is accelerating. For organisations that have treated neuroinclusion as an awareness campaign rather than an operational priority, the cost of that approach is now materialising in legal claims, payouts, and reputational damage.'
+      },
+      {
+        type: 'paragraph',
+        text: 'This post unpacks what is driving the surge, what the 2026 data tells us about organisational readiness, and — critically — what practical steps employers can take to reduce risk while genuinely improving outcomes for their neurodivergent workforce. You can <a href="/spaces" target="_blank" rel="noopener noreferrer">explore neuro-friendly workspaces in our directory</a> or <a href="/how-it-works" target="_blank" rel="noopener noreferrer">learn how our NeuroIndex assessment works</a> alongside reading this piece.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'key-takeaways',
+        text: 'Key Takeaways at a Glance'
+      },
+      {
+        type: 'table',
+        headers: ['Finding', 'Data Point', 'Source'],
+        rows: [
+          ['Tribunal increase', '164% rise over 4 years', 'NeuroBridge 2026'],
+          ['Employers with a neurodiversity policy', 'Only 36%', 'City & Guilds Foundation / NeuroBridge'],
+          ['Managers lacking confidence to support ND staff', '56%', 'CIPD Neuroinclusion Report 2024'],
+          ['Managers with no ND-specific training', 'Over 70%', 'CIPD Neuroinclusion Report 2024'],
+          ['ND employees twice as likely to experience burnout', '2x higher risk', 'McKinsey / NeuroBridge 2026'],
+          ['ND employees who have taken absence due to work challenges', 'More than half', 'City & Guilds Neurodiversity Index 2026'],
+          ['Employees self-identifying as neurodivergent', '1 in 4 (25%)', 'Dublin City University, January 2026'],
+          ['Employer confidence vs lived experience gap', 'Widening year on year', 'City & Guilds Neurodiversity Index 2026']
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'why-tribunals-are-rising',
+        text: 'Why Are Neurodiversity Tribunals Rising So Sharply?'
+      },
+      {
+        type: 'paragraph',
+        text: 'The short answer is that more neurodivergent employees are identifying their needs, understanding their rights, and advocating for themselves — while organisational systems have failed to keep pace. The <a href="https://cityandguildsfoundation.org/what-we-offer/campaigning/neurodiversity-index/" target="_blank" rel="noopener noreferrer">City & Guilds Foundation Neurodiversity Index 2026</a>, published in partnership with Do-IT Solutions, is unambiguous: while employer confidence in supporting neurodivergent staff has risen, the lived experience of neurodivergent employees has deteriorated. Employees are reporting slower access to adjustments, lower psychological safety, and increased exposure to microaggressions — even as their employers believe they are doing well.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Under the Equality Act 2010, neurodivergent conditions including ADHD, autism, dyslexia, dyspraxia and dyscalculia can qualify as disabilities where they have a substantial, long-term effect on day-to-day activities. Employers have a legal duty to make reasonable adjustments. When those adjustments are delayed, denied, inconsistently applied, or simply never offered, employers are exposed — and, increasingly, employees are pursuing that exposure through the tribunal system. In many cases, the issue is not malicious intent but systemic failure: no policy, undertrained managers, and a culture where disclosure feels too risky to attempt.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-policy-gap',
+        text: 'The Policy Gap: Only 36% of UK Employers Have a Neurodiversity Policy'
+      },
+      {
+        type: 'paragraph',
+        text: 'Perhaps the starkest finding from the 2026 research landscape is this: despite years of growing awareness, only 36% of UK employers currently have a neurodiversity policy, and fewer than four in ten reference neurodiversity in their DEI strategy at all. This leaves neuroinclusion dependent on individual champions — a sympathetic manager here, a well-meaning HR partner there — rather than embedded into how organisations actually operate.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Without policy infrastructure, reasonable adjustments become discretionary rather than standard. That inconsistency is precisely what drives tribunal claims. An employee who receives strong support under one manager, then changes team and receives none, is not just experiencing inconsistency — they may be experiencing a failure to maintain a continuing duty under the Equality Act. HR teams operating without a clear neurodiversity policy framework are building legal exposure with every personnel change.'
+      },
+      {
+        type: 'protip',
+        text: 'If your organisation doesn\'t yet have a neurodiversity policy, start with three foundations: a clear definition of what neurodiversity means in your context, a process for requesting and reviewing adjustments that doesn\'t require formal diagnosis, and a commitment to manager training. These three elements alone will close the majority of your legal risk gap — and dramatically improve the experience of neurodivergent staff. <a href="/workspace-providers" target="_blank" rel="noopener noreferrer">Workspace providers certified through our NeuroIndex</a> have already embedded these frameworks into their physical environments.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-manager-problem',
+        text: 'The Manager Problem: 70% Have Never Had Neurodiversity Training'
+      },
+      {
+        type: 'paragraph',
+        text: 'Line managers are, in practice, the primary delivery mechanism for neuroinclusion. Over 60% of neurodivergent employees say their manager is their first port of call when they need support — and around 70% of overall team engagement is directly linked to manager behaviour, according to Gallup research. The implications of this are profound: if managers are the primary support system, and the majority of managers are untrained, then neuroinclusion is failing at the point of delivery regardless of what policy documents say.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The 2024 CIPD Neuroinclusion at Work report found that 56% of managers admit they lack the confidence or knowledge to support neurodivergent colleagues effectively, and over 70% have never received any neurodiversity-specific training. This is not a criticism of managers as individuals — it is a systemic failure to equip them. Managers cannot be held accountable for adjustments they were never trained to provide. But organisations can be held accountable, and increasingly are, when those systemic failures reach a tribunal.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'burnout-and-absence',
+        text: 'Burnout, Absence and the Human Cost Behind the Legal Numbers'
+      },
+      {
+        type: 'paragraph',
+        text: 'Behind the tribunal statistics is a significant human cost that organisations should be just as motivated to address. Neurodivergent professionals are twice as likely to experience high symptoms of burnout, and more than half have taken absence due to workplace challenges, according to the 2026 research. This is not about individual fragility — it is about people working in environments that were never designed for different cognitive needs, forcing sustained masking and overcompensation simply to meet baseline expectations.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The financial cost of this to organisations is substantial. Burnout-driven absence, high attrition among neurodivergent talent, and the loss of the distinctive cognitive strengths neurodivergent employees bring — in innovation, pattern recognition, attention to detail, and deep expertise — represent a significant and largely invisible drag on performance. Research consistently shows that neurodiverse teams solve problems faster, make fewer errors, and bring breadth of thinking that more homogeneous teams cannot replicate. The organisations that embed genuine neuroinclusion are not just reducing legal risk; they are retaining a competitive advantage.'
+      },
+      {
+        type: 'protip',
+        text: 'Audit your absence and turnover data by team and manager, not just by individual. Clusters of absence or attrition often signal a management support failure rather than an individual issue. If neurodivergent employees are concentrated among your higher-absence cohorts, that is both a wellbeing signal and a legal risk indicator worth addressing proactively. <a href="/" target="_blank" rel="noopener noreferrer">Quiet Space Club</a> can help you understand how physical workspace environments contribute to or reduce this burden.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'what-tribunals-actually-look-like',
+        text: 'What Neurodiversity Tribunal Cases Actually Look Like'
+      },
+      {
+        type: 'paragraph',
+        text: 'In the majority of neurodiversity-related tribunal cases, the core failure is not a single dramatic act of discrimination. It is a pattern: an employee discloses a neurodivergent condition, requests adjustments, receives an inadequate or delayed response, and eventually reaches a point — through capability process, redundancy, resignation, or formal grievance — where the accumulated failures become a legal claim. Payouts in upheld cases range from tens of thousands to several million pounds, depending on loss of earnings and injury to feelings awards. But the reputational cost, the management time, and the impact on remaining staff are harder to quantify and often more damaging in the long run.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The good news is that the legal standards are not impossible to meet — they require reasonable adjustments, not perfect ones. Employment tribunals do not expect employers to anticipate every possible need. They do expect employers to respond constructively when needs are disclosed, to apply adjustments consistently, and to take reasonable steps to remove barriers. Organisations that can demonstrate an active, documented, and consistently applied approach to neuroinclusion are well-positioned even when claims are made. Those that cannot are not.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'practical-steps-for-2026',
+        text: 'Practical Steps for UK Employers in 2026'
+      },
+      {
+        type: 'paragraph',
+        text: 'The <a href="https://neurobridge.co.uk/the-state-of-neurodiversity-in-the-workplace-2026/" target="_blank" rel="noopener noreferrer">NeuroBridge State of Neurodiversity 2026 report</a> identifies five priority areas for organisations serious about reducing both risk and human cost this year. These are not aspirational targets — they are the minimum infrastructure required to move from awareness to action.'
+      },
+      {
+        type: 'list',
+        items: [
+          '<strong>Establish a neurodiversity policy</strong> — document your organisation\'s commitment, define how adjustments are requested and reviewed, and ensure the process does not require formal diagnosis as a precondition.',
+          '<strong>Train line managers</strong> — not a single awareness session, but ongoing, practical training on how to have adjustment conversations, recognise masking, and apply support consistently.',
+          '<strong>Audit your adjustment process</strong> — map how adjustments actually flow from request to implementation. Identify where delays or inconsistencies occur and fix the process, not just individual instances.',
+          '<strong>Review your physical and remote working environments</strong> — sensory overload, open-plan noise, and inflexible working patterns are among the most common barriers. <a href="/spaces">Neuro-friendly certified spaces</a> provide a benchmark for what good looks like.',
+          '<strong>Build psychological safety</strong> — the majority of neurodivergent employees do not disclose because they fear the career consequences. Structural changes (policy, training, environment) create the conditions for safer disclosure over time.'
+        ]
+      },
+      {
+        type: 'paragraph',
+        text: 'None of these steps requires a large budget — most require intention and consistency. But they do require organisational will to treat neuroinclusion as an operational priority rather than a communications exercise. The 164% rise in tribunals is the data point that should make that case internally. And for organisations that are willing to act, the path forward is clearer than it has ever been.'
+      },
+      {
+        type: 'faq',
+        question: 'Does the Equality Act 2010 cover neurodivergent conditions?',
+        answer: 'Yes, in many cases. Conditions such as ADHD, autism, dyslexia, dyspraxia and dyscalculia can qualify as disabilities under the Equality Act 2010 where they have a substantial and long-term adverse effect on a person\'s ability to carry out normal day-to-day activities. Where this threshold is met, employers have a duty to make reasonable adjustments. Importantly, this duty arises when the employer knows — or ought reasonably to know — that the employee is disabled. Employees do not always need a formal diagnosis for protections to apply.'
+      },
+      {
+        type: 'faq',
+        question: 'What counts as a reasonable adjustment for a neurodivergent employee?',
+        answer: 'Reasonable adjustments vary widely and are assessed on a case-by-case basis. Common examples include flexible working hours, noise-cancelling headphones or quiet workspace access, written rather than verbal instructions, more frequent check-ins with a manager, additional processing time in meetings, and adjustments to recruitment processes. Crucially, \'reasonable\' is assessed in context — a large employer with significant resources is expected to do more than a small business. The key test is whether the adjustment removes or reduces the disadvantage the employee faces.'
+      },
+      {
+        type: 'faq',
+        question: 'What are the most common reasons neurodiversity tribunal claims succeed?',
+        answer: 'The most common failures in successful tribunal claims include: failure to make any reasonable adjustments after disclosure; delays of many months in implementing agreed adjustments; applying adjustments inconsistently (e.g. one manager does, another does not); using capability or disciplinary processes in ways that fail to account for a known neurodivergent condition; and retaliation or detriment following disclosure. In most cases, the employer\'s failure is systemic rather than deliberately discriminatory — which is why building robust processes matters more than good intentions.'
+      },
+      {
+        type: 'faq',
+        question: 'Why are neurodiversity tribunal claims increasing so rapidly?',
+        answer: 'Several factors are converging. More people are receiving diagnoses or self-identifying as neurodivergent in adulthood, particularly following increased awareness post-pandemic. This means more employees now understand their rights. At the same time, employment law solicitors and advice services have become better equipped to support neurodivergent claimants. Organisational support has not kept pace with this increased awareness and advocacy, creating the conditions for claims to arise — and for them to succeed when employers cannot demonstrate a reasonable adjustment process.'
+      },
+      {
+        type: 'faq',
+        question: 'How can workspace environment help reduce neurodiversity-related legal risk?',
+        answer: 'Physical and remote working environments are a significant — and often overlooked — source of disadvantage for neurodivergent employees. Noisy open-plan offices, unpredictable sensory environments, and rigid desk-based working can all constitute barriers for employees with ADHD, autism, sensory processing differences and related conditions. Providing access to quiet, low-stimulus workspaces is one of the most impactful adjustments an employer can offer. <a href="/spaces" target="_blank" rel="noopener noreferrer">Browse our directory of certified neuro-friendly spaces</a> to find options near you, or <a href="/how-it-works" target="_blank" rel="noopener noreferrer">learn about our NeuroIndex certification</a> for workspace providers.'
+      }
+    ]
+  },
+  {
     slug: 'neurodivergent-workplace-adjustments-disclosure-2026',
     title: 'Only 5% of Neurodivergent Employees Get Adjustments That Work — The Disclosure Barrier Explained (2026)',
     date: 'May 30, 2026',
