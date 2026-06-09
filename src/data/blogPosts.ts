@@ -25,6 +25,976 @@ export interface BlogSection {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'neurodivergent-stigma-rising-despite-awareness-2026',
+    title: 'The Stigma Paradox: Why Neurodivergent Disclosure Fear Is Rising in 2026 Despite Record Awareness',
+    date: 'June 6, 2026',
+    excerpt: 'New Understood.org data shows 70% of neurodivergent workers fear disclosure — up from 59% in 2024. Here\'s what UK employers must do about the widening awareness-action gap.',
+    heroImage: '/blog/neurodivergent-stigma-rising-despite-awareness-2026-hero.svg',
+    heroImageAlt: 'Dark teal graphic with the headline "Stigma Is Rising. Awareness Isn\'t Enough." and a teal pill showing that 70% of neurodivergent employees fear disclosing at work, up from 59% in 2024',
+    keywords: 'neurodivergent disclosure stigma 2026, neurodiversity at work survey, workplace accommodations awareness gap, neurodivergent employees UK, AI workplace tools neurodivergent, neuroinclusion UK employers, neurodivergent women workplace, disclosure fear rising, neurodiversity stigma 2026, workplace adjustments neurodivergent',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Awareness of neurodiversity in the workplace has never been higher. Most managers say they understand what neurodiversity means. Most organisations say their workplaces are accessible. And yet, according to the <a href="https://www.understood.org/en/press-releases/neurodiversity-at-work-survey-reveals-persistent-stigma-and-role-for-ai-in-the-workplace" target="_blank" rel="noopener noreferrer">third annual Neurodiversity at Work survey by Understood.org</a>, released in May 2026, the proportion of neurodivergent employees who fear that disclosing their condition will harm their career has risen — from 59% in 2024 to 70% today. That is not a rounding error. That is a 11-percentage-point surge in fear, in a two-year period when neurodiversity has supposedly been climbing the corporate agenda. For UK HR professionals, this data should be genuinely alarming — and it demands a hard look at the difference between awareness and action.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'key-findings-at-a-glance',
+        text: 'Key Findings at a Glance'
+      },
+      {
+        type: 'table',
+        headers: ['Metric', 'Finding', 'Change vs. 2024'],
+        rows: [
+          ['Neurodivergent employees who fear disclosure will harm them', '70%', 'Up from 59%'],
+          ['Neurodivergent employees who don\'t know their accommodation entitlements', '70%', 'Up from 60%'],
+          ['Neurodivergent employees who don\'t know who to ask about adjustments', '60%', 'Up from 49%'],
+          ['Adults saying employers need better accommodation education', '85%', 'New measure'],
+          ['Neurodivergent employees using AI tools at work', '78%', 'vs. 59% of neurotypical peers'],
+          ['Neurodivergent employees more likely to apply for roles thanks to AI', '56%', 'vs. 45% of neurotypical'],
+          ['Neurodivergent women who feel pressure to "mask" at work', '75%', 'vs. 69% of neurodivergent men'],
+          ['Neurodivergent women denied accommodations after requesting them', '22%', 'vs. 7% of neurotypical women'],
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-stigma-paradox',
+        text: 'The Stigma Paradox: Awareness Without Action'
+      },
+      {
+        type: 'paragraph',
+        text: 'The survey, conducted by The Harris Poll among more than 2,000 US adults in March 2026 — of whom 614 identify as neurodivergent — paints a paradoxical picture. Seventy-three percent of employed adults say their workplace is accessible for neurodivergent employees. Sixty-nine percent believe their manager understands neurodiversity. These numbers suggest real progress. But when you ask the people those workplaces are supposedly designed to include, a very different story emerges.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Seven in ten neurodivergent employees have no idea what accommodations they are actually entitled to — a figure that has risen by ten points in just two years. Six in ten do not know who to speak to in their organisation about requesting adjustments, up from 49% in 2024. And 85% of all adults surveyed — neurotypical and neurodivergent alike — say employers need to do more to educate their workforce about what accommodations are available. The gap between what organisations believe they offer and what employees actually experience is not closing. It is widening. This is precisely the pattern identified in the <a href="https://cityandguildsfoundation.org/what-we-offer/campaigning/neurodiversity-index/" target="_blank" rel="noopener noreferrer">City & Guilds Neurodiversity Index 2026</a>, which found a 30–35 percentage-point gap between employer neuroinclusion confidence and employee lived experience across UK organisations.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'what-this-means-for-uk-employers',
+        text: 'What This Means for UK Employers'
+      },
+      {
+        type: 'paragraph',
+        text: 'While the Understood.org survey was conducted in the United States, the dynamics it captures are acutely recognisable in a UK context. UK employment law already requires employers to make reasonable adjustments for disabled employees — and neurodivergent conditions including ADHD, autism, dyslexia, and dyspraxia can qualify as disabilities under the Equality Act 2010. Yet the fact that 60% of neurodivergent employees globally do not know who to approach about adjustments suggests a systemic failure in how organisations communicate their own policies. For UK employers, the risk is not only reputational. Neurodiversity-related employment tribunal claims have risen sharply in recent years, and the cost of defending or losing such cases is substantial. But the more important argument is not legal — it is human and commercial. If neurodivergent employees cannot safely access the adjustments they are entitled to, organisations are losing the full contribution of a significant proportion of their workforce. <a href="/how-it-works">The NeuroIndex framework</a> used to assess spaces listed on Quiet Space Club consistently finds that physical environment is one of the most controllable factors in neurodivergent performance — but it only matters if employees feel safe enough to ask for it in the first place.'
+      },
+      {
+        type: 'protip',
+        text: 'Audit your adjustments process right now — not your policy document, but the actual employee experience. Ask: does every manager know what adjustments are available? Does every neurodivergent employee know who to contact? Is there a clear, low-stigma route to making a request without going through a formal HR process? If the answer to any of these is "probably not", that is your starting point. Publish a plain-English guide to available accommodations on your intranet and circulate it to all staff, not just new joiners.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'ai-as-a-disclosure-enabler',
+        text: 'AI Is Changing the Disclosure Calculation — for Better and Worse'
+      },
+      {
+        type: 'paragraph',
+        text: 'One of the most striking findings in the Understood.org survey is the role of artificial intelligence in reshaping the neurodivergent experience at work. Seventy-eight percent of neurodivergent employees already use AI tools professionally, compared with 59% of their neurotypical peers — suggesting neurodivergent workers have embraced AI as a coping and productivity tool at a notably higher rate. More significantly, 57% say they would be more likely to disclose their neurodivergence if their employer provided specialised AI tools as a standard accommodation: co-pilots, AI assistants, and tools that help with task management, communication, and organisation. And 56% say the availability of such tools has made them more confident applying for high-level roles they previously avoided. This is genuinely encouraging data. AI is functioning as a practical leveller — reducing the friction of tasks that present disproportionate challenges for neurodivergent professionals, from summarising long meetings to breaking multi-step projects into manageable chunks. But there is a shadow side. If AI tools are helping some neurodivergent employees perform more effectively without formal disclosure, organisations may be deceived into believing inclusion is improving, when what they are actually seeing is more sophisticated masking. The underlying stigma problem — the reason disclosure feels unsafe in the first place — remains unaddressed.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'neurodivergent-women-face-unique-barriers',
+        text: 'Neurodivergent Women Face Compounded Barriers'
+      },
+      {
+        type: 'paragraph',
+        text: 'The survey data on neurodivergent women deserves particular attention. Three in four (75%) report feeling pressure to mask or conform to neurotypical behaviours at work due to stigma, compared with 69% of neurodivergent men. They are significantly more likely than neurotypical women to fear leaving their current role because they worry a new employer will not support them — 68% versus 37%. And 22% of neurodivergent women who requested formal accommodations report being denied, compared with just 7% of neurotypical women. This disparity is not a coincidence. Neurodivergent conditions in women are frequently diagnosed later in life, if at all, because diagnostic criteria were historically developed primarily on male populations. Many neurodivergent women enter the workforce without a formal diagnosis, which means they may lack the documentation employers request before granting adjustments — yet they carry the full cognitive and emotional load of navigating a workplace not designed for them. For UK employers committed to gender equity, this data is a reminder that neurodivergent inclusion is also a women\'s inclusion issue, and that policies which appear neutral in practice may create compounded disadvantage.'
+      },
+      {
+        type: 'protip',
+        text: 'Do not require a formal diagnosis before offering support. UK best practice — and increasingly legal expectation — is to assess the functional impact of a condition on an employee\'s work, not to gatekeep adjustments behind medical paperwork. Many neurodivergent employees, particularly women, are awaiting assessments or have never been formally diagnosed. A "diagnosis-first" policy does not protect you legally — it exposes you to claims of indirect discrimination. A simple self-referral route to an occupational health assessment, with interim adjustments offered in the meantime, is a far more defensible and humane approach.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'turning-awareness-into-action',
+        text: 'Turning Awareness Into Action: What Actually Moves the Needle'
+      },
+      {
+        type: 'paragraph',
+        text: 'The Understood.org survey is a useful corrective to the temptation of performative neuroinclusion. Posting about Neurodiversity Celebration Week, or naming a neurodiversity champion, does not change the daily experience of an employee who is masking for eight hours, does not know what adjustments they are entitled to, and fears that asking will mark them out for passed-over promotions. What actually moves the needle is structural: clear, accessible adjustment processes; managers trained not just in awareness but in how to have a practical conversation about support; physical and hybrid environments that reduce sensory and cognitive load by default rather than by exception. The <a href="/spaces">Quiet Space Club directory</a> exists precisely because the physical environment is one of the highest-leverage, lowest-stigma interventions available. An employee who can work from a certified <a href="/spaces">neuro-friendly workspace</a> does not need to disclose, negotiate, or justify — they simply have access to an environment that works for their brain. For <a href="/workspace-providers">workspace providers</a> looking to differentiate in an increasingly competitive market, formal neuroinclusion certification is a meaningful and commercially relevant signal. And for the organisations recommending or subsidising those spaces, it is one of the most tangible demonstrations that inclusion policy translates into practice.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'faqs',
+        text: 'Frequently Asked Questions'
+      },
+      {
+        type: 'faq',
+        question: 'Why is disclosure fear rising even as neurodiversity awareness grows?',
+        answer: 'Awareness and psychological safety are not the same thing. Many organisations have improved their public language around neurodiversity without changing the underlying culture, management behaviours, or power dynamics that make disclosure risky. When employees see that disclosure can lead to being managed differently, overlooked for promotion, or labelled as "difficult", awareness of the topic does not counteract those concrete incentives to stay silent. The Understood.org data suggests the gap between stated values and lived experience is actually widening, which is consistent with findings from the City & Guilds Neurodiversity Index 2026.'
+      },
+      {
+        type: 'faq',
+        question: 'Are UK employers legally required to offer neurodiversity accommodations?',
+        answer: 'Yes — where a neurodivergent condition meets the definition of a disability under the Equality Act 2010 (a physical or mental impairment with a substantial, long-term adverse effect on day-to-day activities), employers are required to make reasonable adjustments. ADHD, autism, dyslexia, dyspraxia, and related conditions frequently meet this threshold. Employers cannot wait for employees to request adjustments if they knew or reasonably should have known about the impairment. The Acas guidance on neurodiversity at work provides a useful practical framework for UK employers.'
+      },
+      {
+        type: 'faq',
+        question: 'What AI tools are most useful for neurodivergent employees?',
+        answer: 'The most widely cited categories include: meeting summarisation tools (reducing the cognitive load of following and retaining spoken information); AI writing assistants (supporting dyslexic employees or those with executive function differences); task management and prioritisation tools (particularly beneficial for employees with ADHD); and real-time transcription or closed captioning (for those with auditory processing difficulties). The key is offering these as standard workplace tools for all employees rather than as a disclosure-triggered accommodation — which reduces stigma and increases uptake.'
+      },
+      {
+        type: 'faq',
+        question: 'Why are neurodivergent women particularly disadvantaged?',
+        answer: 'Neurodivergent conditions in women are frequently underdiagnosed or diagnosed later in life, because diagnostic criteria were historically developed using predominantly male study populations. Women are also socialised to mask more effectively, meaning their difficulties are less visible — which reduces the likelihood of early intervention, diagnosis, and support. In the workplace, this often means neurodivergent women are less likely to have formal documentation, more likely to have spent years compensating without support, and more likely to face scepticism when they do request adjustments.'
+      },
+      {
+        type: 'faq',
+        question: 'How can a neurodivergent professional find a neuro-friendly workspace in the UK?',
+        answer: 'The <a href="/spaces">Quiet Space Club directory</a> lists certified neuro-friendly workspaces across the UK, assessed using the NeuroIndex methodology. Spaces are evaluated on sensory environment, acoustics, lighting, flexibility, and neuroinclusion culture — so you can find a venue that genuinely works for your brain, without having to disclose or negotiate with an individual workspace provider. The <a href="/how-it-works">assessment process</a> is explained in detail on the site.'
+      },
+    ]
+  },
+  {
+    slug: 'one-in-four-neurodivergent-corporate-employees-2026',
+    title: 'The One-in-Four Reality: What 2026 Corporate Research Reveals About Neurodivergent Employees',
+    date: 'June 5, 2026',
+    excerpt: 'New research finds 1 in 4 corporate employees are neurodivergent — yet most face daily barriers to progression, wellbeing, and inclusion. Here\'s what the data demands of UK employers.',
+    heroImage: '/blog/one-in-four-neurodivergent-corporate-employees-2026-hero.svg',
+    heroImageAlt: 'Dark teal graphic showing the headline finding that 1 in 4 corporate employees are neurodivergent, with supporting statistics on depression rates, management representation gaps, and the importance of quiet workspaces',
+    keywords: 'neurodivergent employees UK 2026, one in four neurodivergent workplace, neurodivergent career progression, neurodivergent management gap, quiet workspace neurodiversity, DCU neurodiversity research 2026, neuroinclusion corporate UK, neurodivergent wellbeing work, workplace accommodations neurodivergent, hybrid working neurodiversity',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'One in four corporate employees self-identify or have been diagnosed as neurodivergent. That is the headline finding from <a href="https://www.dcu.ie/graduatestudies/news/2026/apr/one-four-employees-self-identify-neurodivergent-according-new" target="_blank" rel="noopener noreferrer">new research published by Dublin City University\'s Institute of Education</a>, which surveyed more than 1,500 employees across three distinct corporate workplaces. The figure is striking — and it is almost certainly an undercount, given the well-documented reluctance many neurodivergent professionals have around formal disclosure. Combined with data from the <a href="https://cityandguildsfoundation.org/what-we-offer/campaigning/neurodiversity-index/" target="_blank" rel="noopener noreferrer">City & Guilds Neurodiversity Index 2026</a> and the NeuroBridge State of Neurodiversity report, the picture that emerges in mid-2026 is one of enormous untapped potential being systemically suppressed by workplace environments that were never designed with neurodivergent people in mind. The research has direct implications for every HR professional, line manager, and workspace provider in the UK — and for the <a href="/">neurodivergent professionals</a> trying to do their best work inside those organisations.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'key-findings-at-a-glance',
+        text: 'Key Findings at a Glance'
+      },
+      {
+        type: 'table',
+        headers: ['Metric', 'Finding', 'Source'],
+        rows: [
+          ['Corporate employees who are neurodivergent', '1 in 4 (25%)', 'DCU Institute of Education, 2026'],
+          ['Neurodivergent employees likely experiencing significant depression', '18.5%', 'DCU / WHO-5 Wellbeing Index, 2026'],
+          ['Neurodivergent employees in management roles (range across workplaces)', '24%–34%', 'DCU Institute of Education, 2026'],
+          ['Neuromajority employees in management roles (range)', '39%–51%', 'DCU Institute of Education, 2026'],
+          ['Employees (all) saying accommodations are necessary for neurodivergent success', '80%+', 'DCU Institute of Education, 2026'],
+          ['Top accommodations identified by neurodivergent employees', 'Hybrid working, quiet spaces, flexible hours', 'DCU Institute of Education, 2026'],
+          ['Gap between employer neuroinclusion confidence and employee experience', '30–35 percentage points', 'City & Guilds Neurodiversity Index 2026'],
+          ['Neurodivergent professionals more likely to experience burnout vs neurotypical peers', '2x', 'NeuroBridge State of Neurodiversity 2026'],
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-scale-of-neurodivergence-in-uk-workplaces',
+        text: 'The Scale of Neurodivergence in UK Workplaces'
+      },
+      {
+        type: 'paragraph',
+        text: 'The DCU research surveyed employees across three corporate workplaces providing distinct professional services, making the consistency of its findings particularly significant. Autism, ADHD, dyspraxia, OCD, dyslexia, dyscalculia, sensory processing differences, anxiety, and depression were among the most commonly reported neurodivergences. With 25% of respondents identifying as neurodivergent, the implications are profound: in an organisation of 200 people, approximately 50 employees are navigating working life through a brain that processes the world differently. In an organisation of 2,000, that is 500 people — a significant proportion of any workforce, and one whose needs are still routinely overlooked or misunderstood. Commonly cited UK estimates suggest 1 in 7 people are neurodivergent, but the DCU data — using self-identification and diagnosis rather than assumptions — suggests the actual proportion in corporate settings may be considerably higher.'
+      },
+      {
+        type: 'paragraph',
+        text: 'This matters because organisations are still largely designing their workplaces, cultures, and progression pathways for a neurotypical majority that may not exist in the proportions assumed. <a href="/how-it-works">The NeuroIndex methodology</a> used to assess spaces listed on Quiet Space Club is grounded in this same reality: that neuro-friendly design cannot be an afterthought, because neurodivergent people are not a small edge case. They are a substantial and growing proportion of every UK workforce.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-management-gap-hidden-in-plain-sight',
+        text: 'The Management Gap: Hidden in Plain Sight'
+      },
+      {
+        type: 'paragraph',
+        text: 'The most structurally important finding in the DCU report is the disparity in management representation. Across the three corporate workplaces surveyed, between 24% and 34% of neurodivergent employees held managerial positions, compared with 39% to 51% of their neuromajority colleagues. That is a gap of up to 17 percentage points — a consistent, systematic underrepresentation that cannot be explained by capability or ambition. It reflects instead the cumulative effect of workplaces that were not built to support neurodivergent people\'s progression: the executive presence expectations that favour neurotypical communication styles, the informal networking that disadvantages people who find unstructured social interaction exhausting, the performance management systems that focus on process over output. Dr Aoife Brennan, head of the School of Inclusive and Special Education at DCU\'s Institute of Education, put it directly: "The findings reveal that employees who are neurodivergent are less likely to hold managerial positions, which reinforces the need for employers to consider inclusivity in their strategising so that all employees have the same opportunity to progress and grow in their careers."'
+      },
+      {
+        type: 'protip',
+        text: 'If your organisation doesn\'t know the neurodivergent representation at each level of its hierarchy, it can\'t address the management gap. Before building a neuroinclusion strategy, audit your people data by seniority — even anonymised self-identification surveys give you the baseline you need. The gap is almost always larger than leaders expect.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'wellbeing-the-hidden-cost-of-inadequate-support',
+        text: 'Wellbeing: The Hidden Cost of Inadequate Support'
+      },
+      {
+        type: 'paragraph',
+        text: 'The DCU research used the World Health Organisation\'s WHO-5 Wellbeing Index to assess employee mental health. The results are stark: 18.5% of neurodivergent employees were assessed as likely experiencing significant levels of depression — compared with considerably lower rates among their neuromajority colleagues. This finding sits alongside data from the NeuroBridge State of Neurodiversity in the Workplace 2026 report, which found that neurodivergent professionals are twice as likely as their neurotypical peers to experience high symptoms of burnout, and that more than half have taken absence from work due to workplace-related challenges. These are not abstract statistics. They represent a significant proportion of every organisation\'s workforce quietly struggling — often without disclosure, often without support, and often while simultaneously masking their neurodivergent traits in order to meet neurotypical expectations. The financial and human cost is substantial. And much of it is preventable.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The City & Guilds Neurodiversity Index 2026 adds another layer to this picture: 41% of neurodivergent employees report being impacted by workplace challenges on most days. That figure has not improved despite years of rising employer confidence in their neuroinclusion efforts. The confidence gap — with employers rating their own neuroinclusion efforts 30 to 35 percentage points higher than neurodivergent employees rate the same efforts — suggests that most organisations are measuring their intentions rather than their impact. <a href="/workspace-providers">Workspace providers</a> who want to attract neurodivergent professionals are increasingly aware of this: it is not enough to label a room as a quiet zone. The design, the consistency, and the culture around that space all matter.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'what-neurodivergent-employees-actually-need',
+        text: 'What Neurodivergent Employees Actually Need'
+      },
+      {
+        type: 'paragraph',
+        text: 'One of the most practically useful elements of the DCU research is its identification of the specific accommodations that neurodivergent employees themselves prioritise. Over 80% of all survey respondents — neurodivergent and neuromajority alike — agreed that specific accommodations were necessary for neurodivergent employees to succeed at work. The top three accommodations identified by neurodivergent employees were hybrid working, access to quiet spaces, and flexible start and finish times. These are not expensive or operationally complex to provide. They are, in the language of the DCU report, "small changes" that "have a large impact." The research team, which included Dr Laura Gormley, Dr Izzy Fox, and Dr Christina O\'Keeffe alongside Dr Brennan, offers concrete guidance: provide a recognised quiet focus space within team environments, minimise or eliminate hot-desking, reduce reliance on bright overhead lighting, and give employees genuine agency over their own schedules.'
+      },
+      {
+        type: 'paragraph',
+        text: 'This is precisely what Quiet Space Club\'s <a href="/spaces">directory of certified neuro-friendly workspaces</a> is designed to support: for neurodivergent professionals who need a space that works with their brain rather than against it. Not every employer can provide a dedicated quiet room — but those that partner with spaces in the Quiet Space Club network can offer their neurodivergent employees access to assessed, neuro-friendly environments whenever they need them. It is one of the most straightforward ways to move from awareness to the action that the DCU research identifies as the missing piece.'
+      },
+      {
+        type: 'protip',
+        text: 'Hot-desking is particularly harmful for many neurodivergent employees, who depend on environmental predictability and personalised sensory control to regulate focus and manage anxiety. If a full policy change isn\'t immediately possible, begin by designating at least one consistent, bookable quiet zone on each floor — and communicate its purpose clearly to the whole team, not just neurodivergent individuals. Reducing stigma around using it matters as much as providing it.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'from-awareness-to-action-the-imperative-for-2026',
+        text: 'From Awareness to Action: The Imperative for 2026'
+      },
+      {
+        type: 'paragraph',
+        text: 'The title of the DCU report captures the central challenge of neurodivergence in UK workplaces right now: <em>"Awareness is one of the big things, but then after awareness, it\'s action, right?"</em> This question — posed by a research participant, not a consultant — is the most important one any HR leader or senior manager should be asking in 2026. Awareness of neurodiversity has risen substantially. Training programmes exist. Policies are being written. But as the City & Guilds Neurodiversity Index, the NeuroBridge report, and now the DCU research all show in their different ways, the delivery gap has not closed. Neurodivergent employees are still less likely to be promoted. They are still more likely to be experiencing depression. They are still waiting months for workplace adjustments. And they are still working in environments — physical environments — that were designed without them in mind. The research from DCU is clear that small, targeted changes to the physical and cultural working environment produce significant wellbeing and productivity gains, not just for neurodivergent employees but for everyone. That is not a side note. It is the business case.'
+      },
+      {
+        type: 'faq',
+        question: 'How many employees in UK corporate workplaces are neurodivergent?',
+        answer: 'New research from Dublin City University (2026), surveying over 1,500 corporate employees, found that 1 in 4 (25%) self-identify or have been diagnosed as neurodivergent. This is higher than the commonly cited 1-in-7 figure and likely reflects both rising rates of diagnosis and increasing willingness to self-identify in workplace research.'
+      },
+      {
+        type: 'faq',
+        question: 'What are the top workplace accommodations neurodivergent employees need?',
+        answer: 'The DCU 2026 research found that neurodivergent employees prioritise three accommodations above all others: hybrid working flexibility, access to dedicated quiet spaces, and flexible start and finish times. Over 80% of all employees surveyed — not just neurodivergent respondents — agreed that specific accommodations are necessary for neurodivergent colleagues to succeed.'
+      },
+      {
+        type: 'faq',
+        question: 'Are neurodivergent employees less likely to be managers?',
+        answer: 'Yes, significantly so. The DCU research found that 24%–34% of neurodivergent employees held managerial positions across the workplaces surveyed, compared with 39%–51% of neuromajority employees. This gap of up to 17 percentage points reflects systemic barriers to progression rather than any difference in capability.'
+      },
+      {
+        type: 'faq',
+        question: 'What is the wellbeing impact on neurodivergent employees at work?',
+        answer: 'The DCU research found that 18.5% of neurodivergent employees were likely experiencing significant levels of depression, based on the WHO-5 Wellbeing Index. Separately, NeuroBridge\'s 2026 report found neurodivergent professionals are twice as likely as neurotypical peers to experience high levels of burnout, and more than half have taken absence from work due to workplace-related challenges.'
+      },
+      {
+        type: 'faq',
+        question: 'How can workspace providers support neurodivergent professionals?',
+        answer: 'The research points to specific design and policy choices: eliminating or minimising hot-desking, providing quiet focus zones that all employees can access without stigma, reducing bright overhead lighting, and supporting flexible working patterns. Quiet Space Club\'s NeuroIndex assessment evaluates all of these factors when certifying neuro-friendly spaces. You can explore certified spaces in the directory or learn how certification works for workspace providers.'
+      },
+    ]
+  },
+  {
+    slug: 'neurodiversity-index-2026-delivery-gap-uk',
+    title: 'Awareness Isn\'t Enough: What the City & Guilds Neurodiversity Index 2026 Really Tells UK Employers',
+    date: 'June 4, 2026',
+    excerpt: 'The 2026 Neurodiversity Index reveals a widening gap between employer confidence and employee experience. Here\'s what the data means for UK workplaces right now.',
+    heroImage: '/blog/neurodiversity-index-2026-delivery-gap-uk-hero.svg',
+    heroImageAlt: 'Dark teal graphic showing three key statistics from the City & Guilds Neurodiversity Index 2026: 41% of neurodivergent employees impacted most days, 3+ month wait for adjustments, and a 30-35 point confidence versus experience gap',
+    keywords: 'neurodiversity index 2026 UK, City Guilds neurodiversity report, neurodivergent workplace adjustments UK, neuroinclusion delivery gap, employer neurodiversity confidence gap, neurodivergent psychological safety, workplace adjustments delays, neuroinclusion 2026, neurodiversity policy UK, Do-IT Solutions neurodiversity',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'For the fourth consecutive year, the City & Guilds Foundation has published its <a href="https://cityandguildsfoundation.org/what-we-offer/campaigning/neurodiversity-index/" target="_blank" rel="noopener noreferrer">Neurodiversity Index</a> in partnership with Do-IT Solutions — and the 2026 edition lands with an uncomfortable headline: awareness of neurodiversity in UK workplaces is at an all-time high, yet the lived experience of neurodivergent employees has not kept pace. If anything, the gap is widening. Employers feel increasingly confident in their neuroinclusion efforts. Neurodivergent employees increasingly disagree. This is not a minor discrepancy — it is a structural failure that costs organisations talent, productivity, legal exposure, and trust. And it is now, for the first time, rigorously documented at scale across the UK and Ireland.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'key-findings-at-a-glance',
+        text: 'Key Findings at a Glance'
+      },
+      {
+        type: 'table',
+        headers: ['Metric', 'Finding', 'Source'],
+        rows: [
+          ['Neurodivergent employees impacted by challenges most days', '41%', 'City & Guilds Neurodiversity Index 2026'],
+          ['Employees waiting 3+ months for workplace adjustments', 'Twice the rate of other disabled employees', 'City & Guilds Neurodiversity Index 2026'],
+          ['Gap between employer confidence and employee experience', '30–35 percentage points', 'City & Guilds Neurodiversity Index 2026'],
+          ['Senior leaders who have received neurodiversity training', '35% (up from 28%)', 'City & Guilds Neurodiversity Index 2026'],
+          ['Organisations involved in neurodiversity-related tribunals', '13%', 'City & Guilds Neurodiversity Index 2026'],
+          ['UK employers with a neurodiversity policy', '36%', 'Editorialge / UK Workplace Surveys 2026'],
+          ['Neurodivergent professionals experiencing burnout (vs neurotypical)', '2x more likely', 'NeuroBridge State of Neurodiversity 2026'],
+          ['Employees who have received no neurodiversity training', '57%', 'UK Workplace Research 2026'],
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'what-the-confidence-gap-actually-means',
+        text: 'What the Confidence Gap Actually Means'
+      },
+      {
+        type: 'paragraph',
+        text: 'The 2026 Index documents something that many neurodivergent professionals will recognise immediately but that HR data has struggled to capture: the experience of working in an organisation that believes it is doing well, while you are drowning. Employer confidence in neuroinclusion sits between 70% and 80% across the surveyed organisations. Neurodivergent employee reports of actually feeling psychologically safe, or of trusting that adjustments will materialise, sit between 32% and 38%. That is a 30 to 35 percentage point gap between what employers believe they are delivering and what employees report receiving — and it has widened since the 2025 edition.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Professor Amanda Kirby MBBS MRCGP PhD FCGI, CEO of Do-IT Solutions and the lead researcher behind the Index, frames the challenge clearly: "This is not just an inclusion agenda. It is a productivity strategy, a health imperative, and a test of organisational maturity in a changing workforce." The report makes explicit that organisations cannot measure their way out of this problem by surveying only managers and HR teams — the data must come from neurodivergent employees themselves. Those of us building neuro-friendly workspaces at Quiet Space Club know this first-hand: <a href="/how-it-works">our NeuroIndex assessment</a> is grounded in the lived experience of neurodivergent people, not the assumptions of those designing the spaces.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-adjustment-delay-problem',
+        text: 'The Adjustment Delay Problem: Still Broken After Four Years'
+      },
+      {
+        type: 'paragraph',
+        text: 'One of the most damaging findings in the 2026 report is not new — but it is getting worse. Neurodivergent employees wait more than three months for workplace adjustments at <strong>twice the rate</strong> of other disabled employees. Adjustments — whether that means a quieter desk, a different lighting setup, written rather than verbal instructions, or flexible working arrangements — are the operational backbone of neuroinclusion. Without them, awareness campaigns and policy documents are irrelevant. An employee with ADHD who cannot get a noise-cancelling headset policy approved after three months of waiting is not experiencing neuroinclusion. They are experiencing neuroinclusion theatre.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The reasons for delay are structural. Many adjustment requests fall into no-man\'s-land between HR, line managers, occupational health, and facilities — with no single owner and no defined timeline. Even when goodwill exists, most organisations lack a clear process for handling neurodivergent-specific requests, which differ from standard disability accommodations in that they are often low-cost, preventative, and non-medical. The 2026 Index urges organisations to build dedicated adjustment pathways that are fast, transparent, and not contingent on formal diagnosis — a recommendation entirely consistent with <a href="/workspace-providers">how Quiet Space Club certifies workspace providers</a> to ensure their environments genuinely accommodate neurodivergent needs from day one.'
+      },
+      {
+        type: 'protip',
+        text: 'If your organisation\'s adjustment process requires a formal medical diagnosis before anything is approved, it is likely excluding the majority of neurodivergent employees who are undiagnosed or self-identified. Consider a self-referral model: employees describe the challenge they face and the adjustment they need, without needing to name or prove a condition. This approach is faster, cheaper, and more legally defensible than a medicalised gating process.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'psychological-safety-microaggressions-and-daily-impact',
+        text: 'Psychological Safety, Microaggressions, and Daily Impact'
+      },
+      {
+        type: 'paragraph',
+        text: 'Beyond adjustments, the 2026 Index documents a deterioration in the day-to-day working environment for neurodivergent employees. <strong>41% report being impacted by workplace challenges most days</strong> — a figure that should give any HR leader pause. These are not occasional rough days. They are the accumulated weight of environments, expectations, and interpersonal dynamics that were not designed with neurodivergent people in mind: open-plan offices without acoustic refuges, meetings that run without agendas, performance processes that reward extroversion, and social norms that pathologise difference.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Alongside this, the Index records an increase in reported microaggressions — comments, exclusions, and assumptions that individually may seem trivial but collectively erode the psychological safety of neurodivergent employees. Psychological safety — the sense that one can speak up, make mistakes, and ask for support without fear of being seen as less capable — sits at the core of inclusive workplaces. Without it, even technically capable employees cannot access their own potential. The <a href="https://www.neurobridge.co.uk/the-state-of-neurodiversity-in-the-workplace-2026/" target="_blank" rel="noopener noreferrer">NeuroBridge State of Neurodiversity 2026 report</a> corroborates this, finding that neurodivergent professionals are twice as likely to experience high symptoms of burnout compared to their neurotypical colleagues. This is not a wellbeing issue sitting at the margins of HR strategy. It is a talent crisis in slow motion.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'training-progress-and-what-it-is-missing',
+        text: 'Training Progress — and What It Is Missing'
+      },
+      {
+        type: 'paragraph',
+        text: 'The 2026 Index does document genuine progress in one area: senior leader training. <strong>35% of senior leaders have now received neurodiversity training</strong>, up from 28% in 2025. This matters because neuroinclusion that reaches only frontline managers but not the C-suite tends to produce pockets of good practice rather than systemic change — and policies that exist on paper but do not survive the next restructure. The upward trend is encouraging. But 35% still means that almost two thirds of senior leaders in the surveyed organisations have received no training at all, and the broader workforce figure is grimmer still: <strong>57% of all employees have received no neurodiversity training of any kind</strong>.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The gap between senior leader training and workforce-wide understanding matters because neuroinclusion is not primarily a leadership challenge — it is a daily interaction challenge. Line managers who have received no training, colleagues who do not understand why someone needs to leave a noisy room, or team members who interpret a processing difference as rudeness or incompetence: these are the micro-level dynamics that determine whether a neurodivergent employee can actually use the adjustments that HR has theoretically approved. <a href="/">Neuro-friendly workspaces</a> address the physical environment — but an organisation also needs its people to understand what neuroinclusion looks like in practice, every day.'
+      },
+      {
+        type: 'protip',
+        text: 'Before rolling out another neurodiversity awareness module, audit whether your line managers have the tools and authority to actually implement adjustments. The Index data suggests that awareness at leadership level is not translating into changed day-to-day behaviour. A 30-minute conversation between a manager and their neurodivergent direct report — with a clear adjustment request form and a defined five-day response deadline — will achieve more than most eLearning courses.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'tribunal-risk-and-the-policy-gap',
+        text: 'Tribunal Risk and the Policy Gap'
+      },
+      {
+        type: 'paragraph',
+        text: '<strong>13% of organisations surveyed in the 2026 Index have already been involved in neurodiversity-related employment tribunals</strong>. Broader industry data puts the growth of neurodiversity-related tribunal claims in the UK at 164% over the last four years. This is not a niche legal risk — it is a mainstream employment liability, and it is growing precisely because the gap between what employers say they do and what neurodivergent employees experience continues to widen. Most tribunal cases do not arise because an employer refused to support a neurodivergent employee outright; they arise because the process was slow, inconsistent, undocumented, or invalidating — the precise patterns the 2026 Index identifies as endemic. Only <strong>36% of UK employers currently have a neurodiversity policy</strong> in place, which means the majority of organisations have no framework for responding consistently when a neurodivergent employee raises a need.'
+      },
+      {
+        type: 'paragraph',
+        text: 'For workspace providers, the picture is similarly uneven. Many providers who would benefit from <a href="/workspace-providers">Quiet Space Club certification</a> are currently operating without a clear neuroinclusion standard — no acoustic assessment, no lighting audit, no sensory environment review. As demand for certified neuro-friendly spaces grows among neurodivergent professionals and the employers who support them, this gap becomes both a reputational and a commercial risk for providers who have not yet acted.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'what-good-looks-like-in-2026',
+        text: 'What Good Looks Like in 2026'
+      },
+      {
+        type: 'paragraph',
+        text: 'The 2026 Index is not only a catalogue of failures — it also documents what organisations that are getting this right are doing differently. The common factors among higher-performing organisations include: a defined and fast adjustment process that does not require formal diagnosis; neurodiversity included explicitly in DEI strategy rather than bolted on as an afterthought; line manager training that goes beyond awareness to practical skill-building; regular listening exercises that gather data from neurodivergent employees directly; and physical environments — including third-party workspaces — that are assessed against meaningful neuroinclusion standards rather than generic accessibility checklists. The <a href="/spaces">Quiet Space Club directory</a> exists precisely to make that last element easier: a curated, certified list of UK spaces where neurodivergent professionals can work, meet, and focus without the sensory and social load of conventional offices.'
+      },
+      {
+        type: 'faq',
+        question: 'What is the City & Guilds Foundation Neurodiversity Index 2026?',
+        answer: 'The Neurodiversity Index is an annual report produced by the City & Guilds Foundation in partnership with Do-IT Solutions. Now in its fourth year, the 2026 edition surveys neurodivergent employees and employers across the UK and Ireland to measure the state of neuroinclusion, track progress over time, and identify where gaps between policy and practice are widest.'
+      },
+      {
+        type: 'faq',
+        question: 'What does the \'delivery gap\' mean in the context of the 2026 report?',
+        answer: 'The delivery gap refers to the 30–35 percentage point difference between employer confidence in their neuroinclusion efforts (70–80%) and neurodivergent employees\' actual experience of psychological safety and adjustment support (32–38%). In short: organisations believe they are doing well; their neurodivergent employees largely disagree.'
+      },
+      {
+        type: 'faq',
+        question: 'Why are neurodivergent employees waiting so long for workplace adjustments?',
+        answer: 'The 2026 Index attributes the delay to structural fragmentation — adjustment requests typically pass between HR, line managers, occupational health, and facilities without a clear owner or deadline. Many organisations also require formal diagnosis before acting, which excludes the large proportion of neurodivergent employees who are self-identified or in the diagnostic queue. Best practice involves a self-referral adjustment pathway with a defined response timeline.'
+      },
+      {
+        type: 'faq',
+        question: 'What is the legal risk for UK employers who do not address neurodiversity?',
+        answer: 'Neurodiversity-related employment tribunal claims have grown by 164% in the UK over the last four years. The 2026 Index found that 13% of surveyed organisations had already been involved in such cases. Most claims arise not from outright refusal but from slow, inconsistent, or invalidating processes — which is precisely what the Index documents as the current norm. Having no neurodiversity policy (the situation for 64% of UK employers) significantly increases this risk.'
+      },
+      {
+        type: 'faq',
+        question: 'How can neuro-friendly workspaces help address the findings of the 2026 Index?',
+        answer: 'Certified neuro-friendly workspaces remove the physical and sensory barriers that compound the daily challenges documented in the Index. For neurodivergent professionals who cannot get their office environment adjusted quickly enough, access to a <a href="/spaces">quiet, certified workspace</a> can be the difference between a sustainable working week and burnout. For employers, providing access to such spaces is one of the fastest adjustments they can make — no procurement process required, no facilities sign-off needed.'
+      },
+    ],
+  },
+  {
+    slug: 'neurodivergent-talent-retention-crisis-uk-2026',
+    title: 'The Neurodivergent Talent Exodus: Why 1 in 4 Employees Are Neurodivergent — and Nearly 1 in 4 Are Planning to Leave in 2026',
+    date: 'June 3, 2026',
+    excerpt: 'New data shows 25.7% of neurodivergent employees have already quit due to lack of support, and 23% are considering it now. UK employers are sleepwalking into a retention crisis.',
+    heroImage: '/blog/neurodivergent-talent-retention-crisis-uk-2026-hero.svg',
+    heroImageAlt: 'Dark teal graphic showing retention crisis statistics: 25.7% of neurodivergent employees have already quit and 23% are currently considering leaving due to lack of workplace support',
+    keywords: 'neurodivergent retention UK 2026, neurodivergent employees leaving, neurodiversity talent retention, ADHD workplace retention, autistic employees quitting, neurodiversity attrition UK, neurodivergent staff turnover, neuroinclusion retention strategy, 1 in 4 neurodivergent workforce, UK neurodiversity 2026',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'Two findings published in 2026 should be read together by every HR leader in the UK. The first, from <a href="https://www.dcu.ie/graduatestudies/news/2026/apr/one-four-employees-self-identify-neurodivergent-according-new" target="_blank" rel="noopener noreferrer">Dublin City University\'s Institute of Education</a>: one in four corporate employees now self-identify or have been formally diagnosed as neurodivergent — a share far higher than most organisations have ever planned for. The second, from <a href="https://www.alludo.com/en/newsroom/news/data-insights/neurodiversity-at-work-report/" target="_blank" rel="noopener noreferrer">Alludo\'s Neurodiversity at Work Survey</a>: <strong>25.7% of neurodivergent employees have already quit a job because their employer failed to support their needs</strong>, and <strong>23% are currently considering doing so</strong>. Put those numbers side by side and you are looking at a quiet, accelerating talent exodus that most British employers have not yet begun to measure — let alone address.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'key-data-at-a-glance',
+        text: 'Key Data at a Glance'
+      },
+      {
+        type: 'table',
+        headers: ['Metric', 'Finding', 'Source'],
+        rows: [
+          ['Employees who self-identify as neurodivergent', '1 in 4 (25%)', 'Dublin City University, 2026'],
+          ['Neurodivergent employees who have quit due to lack of support', '25.7%', 'Alludo Neurodiversity at Work Survey'],
+          ['Currently considering quitting for the same reason', '23%', 'Alludo Neurodiversity at Work Survey'],
+          ['Primary reason for non-disclosure: fear of being seen as incompetent', '70.1%', 'Alludo Neurodiversity at Work Survey'],
+          ['Employees who think their employer ineffectively trains managers', '35%', 'Acas/YouGov, February 2026'],
+          ['Employers who effectively train managers on neurodiversity', '32%', 'Acas/YouGov, February 2026'],
+          ['Neurodivergent employees likely experiencing significant depression', '18.5%', 'DCU Institute of Education, 2026'],
+          ['Younger neurodivergent workers (<35) most likely to quit', 'Highest risk group', 'Alludo Neurodiversity at Work Survey'],
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-scale-of-neurodivergence-most-employers-have-not-accepted',
+        text: 'The Scale of Neurodivergence Most Employers Have Not Accepted'
+      },
+      {
+        type: 'paragraph',
+        text: 'The DCU finding alone warrants a rethink of how most organisations approach neuroinclusion. A study of over 1,500 corporate employees found that <strong>25% self-identify or have a formal diagnosis of a neurodivergent condition</strong> — conditions including ADHD, autism, dyslexia, dyspraxia and dyscalculia. Acas estimates the UK figure at between 15% and 20% of the adult population, and rising as diagnosis rates climb and cultural awareness grows. What both figures signal is the same: neurodivergence is not a niche concern. It is a mainstream workforce reality, and the policies, processes and physical environments most organisations have built are not designed for the people who are already in them.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Critically, the DCU research found that the wellbeing of neurodivergent employees is significantly worse than that of their neurotypical colleagues. <strong>18.5% of neurodivergent employees are likely experiencing significant levels of depression</strong> based on the WHO-5 Well-Being Index. These individuals are not on sick leave or recorded in any adverse way — they are simply deteriorating quietly inside organisations that have not asked the right questions. The business cost of that deterioration shows up later, in attrition data, in sickness absence, and increasingly in employment tribunals. <a href="/how-it-works">The NeuroIndex assessment</a> used by Quiet Space Club to evaluate workspaces is built precisely to identify whether environments are supporting or compounding this kind of invisible load.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-retention-numbers-employers-are-not-tracking',
+        text: 'The Retention Numbers Employers Are Not Tracking'
+      },
+      {
+        type: 'paragraph',
+        text: 'The Alludo survey data on attrition is among the most commercially significant neurodiversity data published in 2026. When nearly a quarter of neurodivergent employees have already left a role due to inadequate support, and another 23% are actively weighing whether to do the same, the aggregate impact on UK workforce planning is enormous. This is not a future risk — it is a current one, and it disproportionately affects the youngest and most sought-after talent. <strong>Employees under 35 are the most likely to quit</strong> when they do not feel supported, and younger workers are both more likely to have a neurodivergent diagnosis and more likely to be open about it. The demographic most organisations are competing hardest to attract is also the group most likely to leave if neuroinclusion falls short.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Standard exit interview processes rarely capture this. Neurodivergent employees leaving due to a mismatch with their working environment or a failure of managerial support are unlikely to name it explicitly in a structured exit conversation — particularly if, as Alludo\'s data shows, <strong>70.1% of those who have not disclosed their neurodivergence at work did so because they feared being seen as incapable</strong>. If they did not disclose on the way in, they are unlikely to disclose on the way out. The attrition registers as "personal reasons" or "a better opportunity", and the real driver goes unmeasured. <a href="/">Quiet Space Club</a> exists partly for this reason: to create a pathway to neuro-friendly working environments that does not depend on disclosure as a precondition.'
+      },
+      {
+        type: 'protip',
+        text: 'If your organisation does not currently ask neurodiversity-specific questions in exit surveys (anonymously and optionally), you almost certainly have a gap in your retention data. Consider adding a voluntary, anonymous question such as: "Did the physical or sensory environment of your role contribute to your decision to leave?" You will be surprised by what surfaces — and it will be more honest than a face-to-face exit interview.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'why-managers-are-the-critical-failure-point',
+        text: 'Why Managers Are the Critical Failure Point'
+      },
+      {
+        type: 'paragraph',
+        text: 'For most neurodivergent employees, the relationship with their line manager is the single biggest determinant of whether they stay or leave. That makes the <a href="https://www.acas.org.uk/employers-are-failing-to-support-neurodiversity-at-work" target="_blank" rel="noopener noreferrer">Acas/YouGov survey data from February 2026</a> particularly alarming. Of 1,000 employees surveyed across Great Britain, <strong>only 32% think their organisation effectively trains managers</strong> to make reasonable adjustments for neurodivergent colleagues. A further 35% say their employer is actively ineffective at this — with 18% describing it as "very ineffective". Perhaps most troubling of all: <strong>32% said they simply did not know</strong> how effective their employer was at supporting neurodivergent staff. That level of opacity means the problem is invisible to the people who experience it, which makes escalation, measurement and change all but impossible.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The Acas finding is consistent with patterns seen across multiple 2026 reports: awareness has risen, but operational competence has not followed. Managers who have attended a lunch-and-learn on ADHD are not equipped to have a meaningful adjustment conversation, identify sensory overload, or create the psychological safety that neurodivergent employees need in order to disclose and seek support. <a href="/workspace-providers">Workspace providers who seek certification</a> through the Quiet Space platform are assessed not just on physical environment but on whether their teams understand and can respond to neurodivergent needs. Policy on paper rarely survives contact with a manager who has never been properly trained.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'what-neurodivergent-employees-actually-need-to-stay',
+        text: 'What Neurodivergent Employees Actually Need to Stay'
+      },
+      {
+        type: 'paragraph',
+        text: 'The Alludo survey asked neurodivergent employees directly what strategies they had found most effective in making work sustainable. The answers are instructive because they are not primarily about diagnosis-specific accommodations — they are about flexibility, autonomy and restoration. <strong>Working from home was cited by 51.2%</strong> of respondents as an effective strategy. Taking regular breaks (47.6%), mental health and wellness days (41.7%) and flexible scheduling (37.4%) followed. When asked what accommodations they would most value, the answers aligned: flexible schedule (73.1%), remote work option (60.8%) and paid time off or mental health days (48.8%). What this data describes is not a set of special adjustments — it is a working environment built around output rather than presence, trust rather than surveillance, and recovery rather than relentless availability.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The physical environment is a separate and consistently underappreciated variable. <a href="/spaces">Certified neuro-friendly spaces</a> in the Quiet Space directory are assessed against criteria that reflect what neurodivergent employees actually report needing: predictable sensory conditions, control over lighting and acoustics, access to quiet zones for focused work, and the ability to transition between different types of working environment without negotiating it with a manager each time. Many neurodivergent professionals find that accessing a certified workspace — even for two or three days a week — reduces the sensory and cognitive load of their working week significantly enough to make the difference between sustainable employment and deterioration.'
+      },
+      {
+        type: 'protip',
+        text: 'If your organisation is returning people to the office and has not specifically audited the sensory environment for neurodivergent suitability, you are almost certainly losing people you cannot see losing. The combination of open-plan noise, fluorescent lighting, unpredictable interruptions and back-to-back meetings creates a sensory load that accumulates invisibly over weeks and months. Providing access to <a href="/spaces">certified neuro-friendly workspaces</a> as part of your hybrid policy is one of the most evidence-backed retention interventions available — and one of the least commonly used.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'what-to-do-if-you-are-losing-neurodivergent-talent',
+        text: 'What to Do If You Are Losing Neurodivergent Talent'
+      },
+      {
+        type: 'paragraph',
+        text: 'The first step is to accept that you probably are, and that your current data systems are not designed to show you this. Standard attrition metrics, pulse surveys and performance management frameworks are built around neurotypical norms and will not surface the specific experience of neurodivergent employees unless you design for it. That means anonymous neurodiversity-specific feedback mechanisms, manager training that goes beyond awareness to equip people to have adjustment conversations, and a genuine audit of the physical and sensory working environments you are asking people to function in every day. Organisations that have done this work — built infrastructure rather than just awareness — consistently report not just improved retention but measurably higher productivity, engagement and innovation from their neurodivergent workforce.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The competitive pressure to act is sharpening. As the DCU finding makes clear, one in four of the people currently working in British organisations are neurodivergent. As awareness grows, diagnosis rates climb and younger workers become increasingly unwilling to mask indefinitely, that proportion will become more visible, more vocal and more mobile. The organisations that will retain this talent are those that have already built the systems, environments and cultures in which neurodivergent people can genuinely thrive — not those that are still treating neuroinclusion as an edge case to be handled by HR.'
+      },
+      {
+        type: 'faq',
+        question: 'How many employees in the UK are neurodivergent?',
+        answer: 'Research from Dublin City University\'s Institute of Education, published in 2026 and based on a survey of over 1,500 corporate employees, found that 1 in 4 (25%) self-identify or have been formally diagnosed as neurodivergent. Acas estimates the figure at 15–20% of the adult population in the UK. Both figures are almost certainly underestimates given the significant proportion of neurodivergent adults who remain undiagnosed.'
+      },
+      {
+        type: 'faq',
+        question: 'Why do neurodivergent employees leave their jobs?',
+        answer: 'Alludo\'s Neurodiversity at Work Survey found that 25.7% of neurodivergent employees have already quit a job because their employer did not sufficiently support their needs. The main drivers include inadequate workplace adjustments, working environments that cause sensory overload, lack of flexible working, managers who lack training in neurodiversity, and a culture where disclosure feels too risky. Younger employees under 35 are most likely to act on this and leave.'
+      },
+      {
+        type: 'faq',
+        question: 'What do neurodivergent employees need most to stay in a job?',
+        answer: 'Alludo\'s survey found the most effective strategies for neurodivergent employees were: remote work (cited by 51.2%), regular breaks (47.6%), mental health or wellness days (41.7%) and flexible scheduling (37.4%). When asked what accommodations they would value most, flexible schedules (73.1%), remote work options (60.8%) and paid time off or wellness days (48.8%) topped the list. Physical environment is also critical — access to low-stimulation, quiet spaces significantly reduces sensory load and burnout risk.'
+      },
+      {
+        type: 'faq',
+        question: 'Why are neurodivergent employees not disclosing their needs at work?',
+        answer: '70.1% of neurodivergent employees who have not disclosed say their primary reason is fear of being seen as incapable of doing their job. A further 54% are concerned about being treated differently, and 38.5% worry about being overlooked for promotions or new opportunities. The system is designed around disclosure as a precondition for support — but the majority of neurodivergent employees have already assessed that making themselves visible in this way carries more risk than it\'s worth.'
+      },
+      {
+        type: 'faq',
+        question: 'What is the business cost of failing to retain neurodivergent employees?',
+        answer: 'Beyond the direct cost of recruitment — typically estimated at 30–50% of annual salary per lost employee — organisations failing neurodivergent staff also lose disproportionate innovation capacity. Research suggests neurodivergent teams can be up to 30% more productive in certain roles when properly supported. The legal cost is also rising: neurodiversity-related employment tribunal cases in the UK increased by 164% over the last four years. The cost of acting early is substantially lower than the cost of continued inaction.'
+      },
+    ],
+  },
+  {
+    slug: 'neurodivergent-burnout-crisis-uk-2026',
+    title: 'The Neurodivergent Burnout Crisis: Why Only 5% of UK Workers Get the Support They Need in 2026',
+    date: 'June 2, 2026',
+    excerpt: 'New data shows 82% of neurodivergent employees receive no workplace adjustments, and burnout is accelerating. Here\'s what the evidence says — and what must change.',
+    heroImage: '/blog/neurodivergent-burnout-crisis-uk-2026-hero.svg',
+    heroImageAlt: 'Dark teal graphic showing the neurodivergent burnout crisis statistic: only 5% of neurodivergent employees receive workplace adjustments that actually work',
+    keywords: 'neurodivergent burnout UK 2026, workplace adjustments neurodivergent, neurodiversity burnout statistics, ADHD burnout work, autistic burnout workplace, neuroinclusion UK employers, neurodivergent wellbeing, workplace adjustments disclosure, neurodiversity policy UK, neurodivergent mental health work',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'A new figure published this week should stop every HR director in their tracks. According to <a href="https://neurobridge.co.uk/workplace-adjustments-neurodivergent-employees/" target="_blank" rel="noopener noreferrer">NeuroBridge\'s May 2026 analysis</a> of UK client audit data, only <strong>5% of neurodivergent employees receive workplace adjustments that actually work</strong>. A further 82% receive no adjustments at all. The remaining 13% have adjustments in place that don\'t meet their real needs. This isn\'t a compliance failure hiding in the margins — it is the mainstream reality of being neurodivergent at work in Britain right now, and it is driving a burnout crisis that employers can no longer afford to ignore.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'key-data-at-a-glance',
+        text: 'Key Data at a Glance'
+      },
+      {
+        type: 'table',
+        headers: ['Metric', 'Finding', 'Source'],
+        rows: [
+          ['Neurodivergent employees receiving no adjustments', '82%', 'NeuroBridge audit data, May 2026'],
+          ['Neurodivergent employees with adjustments that work', '5%', 'NeuroBridge audit data, May 2026'],
+          ['Those who haven\'t disclosed citing fear of career impact', '73%', 'NeuroBridge White Paper, 2025'],
+          ['Neurodivergent workers twice as likely to experience burnout', '2x', 'McKinsey MHI / NeuroBridge, 2026'],
+          ['Employees who have taken time off due to neurodivergence', '51%', 'City & Guilds Neurodiversity Index 2025'],
+          ['UK employers with a neurodiversity policy', '36%', 'City & Guilds Neurodiversity Index 2026'],
+          ['Neurodivergent employees likely experiencing depression', '18.5%', 'DCU Institute of Education, 2026'],
+          ['Neurodiversity employment tribunal cases rise (4 years)', '+164%', 'NeuroBridge State of ND Report, 2026'],
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'why-burnout-is-accelerating',
+        text: 'Why Neurodivergent Burnout Is Accelerating in 2026'
+      },
+      {
+        type: 'paragraph',
+        text: 'Neurodivergent burnout is distinct from ordinary workplace stress. It is the result of sustained <strong>masking</strong> — the exhausting practice of suppressing natural cognitive patterns to meet neurotypical workplace expectations — combined with environments that are rarely designed to accommodate different sensory, communication or processing needs. Research cited by NeuroBridge shows that neurodivergent professionals are <strong>twice as likely</strong> to experience high burnout symptoms as their neurotypical peers. Yet the very systems meant to prevent this outcome are barely functioning. When 82% of people receive no adjustments, burnout is not a risk to be managed — it is a predictable outcome of current working conditions.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The DCU Institute of Education\'s landmark 2026 survey of over 1,500 corporate employees found that <strong>18.5% of neurodivergent workers are likely experiencing significant levels of depression</strong>, based on the WHO-5 Well-Being Index. These are not people in crisis who have sought help — they are people quietly deteriorating inside organisations that believe they are doing enough. And behind every absence, grievance or exit interview lies a system that failed to act early enough. According to City & Guilds\' Neurodiversity Index, <a href="https://cityandguildsfoundation.org/what-we-offer/campaigning/neurodiversity-index/" target="_blank" rel="noopener noreferrer">51% of neurodivergent employees have taken time off work</a> specifically because of their neurodivergence — with burnout, workplace conflict and unaddressed mental health cited as the primary reasons.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-disclosure-trap',
+        text: 'The Disclosure Trap: Why the System Is Built on a Precondition Most People Can\'t Meet'
+      },
+      {
+        type: 'paragraph',
+        text: 'The standard UK workplace adjustment pathway requires an employee to disclose — to a manager, to HR, often in writing — before support becomes available. In theory this is straightforward. In practice, it demands that neurodivergent individuals make themselves visible inside a system they have often already assessed as unsafe. NeuroBridge\'s audit data reveals the calculation most people are making: <strong>73% of those who haven\'t disclosed say it is because they fear career impact</strong>. They expect their disclosure to follow them into promotion decisions, talent reviews, and the informal judgements that determine who gets the stretch assignment and who doesn\'t. So the disclosure doesn\'t happen. The adjustment doesn\'t happen. The burnout compounds.'
+      },
+      {
+        type: 'paragraph',
+        text: 'This is not a character flaw in neurodivergent workers. It is a rational response to a system that places the entire burden of access on the most vulnerable party. And it explains why organisations with mature-looking adjustment policies on paper still show 82% non-uptake in practice. <a href="/how-it-works">The NeuroIndex assessment approach</a> at Quiet Space Club operates on a similar principle — evaluating workspaces against the actual sensory and cognitive needs of neurodivergent users, rather than relying on people to self-identify and request support. The infrastructure should meet the need. The individual should not have to unlock it with a disclosure.'
+      },
+      {
+        type: 'protip',
+        text: 'Audit your adjustment process from the employee\'s point of view, not HR\'s. Map every step and ask: at which point does an individual have to make themselves visible in a way that feels risky? Every step that requires disclosure before support is a step most neurodivergent employees will not take. Adjustments that require nothing more than a conversation about how someone works best — without a formal diagnosis or label — see dramatically higher uptake.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-policy-gap-most-uk-employers-still-have-no-plan',
+        text: 'The Policy Gap: Most UK Employers Still Have No Plan'
+      },
+      {
+        type: 'paragraph',
+        text: 'Despite years of growing awareness, <strong>only 36% of UK employers currently have a neurodiversity policy</strong>, and fewer than four in ten reference neurodiversity anywhere in their DEI strategy, according to the City & Guilds Neurodiversity Index 2026. What exists in most organisations is a patchwork of individual champions, occasional awareness events, and good intentions that have never been converted into operational infrastructure. This matters because neuroinclusion built on individual goodwill does not scale, does not survive management changes, and cannot protect organisations from the legal risk that is now arriving in employment tribunals at record pace. Neurodiversity-related tribunal cases in the UK have risen by <strong>164% over the last four years</strong>. The cost of inaction has a number attached to it.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The gap between employer confidence and employee experience has widened, not narrowed. Neurodivergent employees report longer waits for adjustments, lower psychological safety, and increased exposure to microaggressions compared to previous years — even as awareness programmes have multiplied. Awareness without infrastructure is not neuroinclusion. It is the appearance of neuroinclusion, and neurodivergent employees can tell the difference immediately. <a href="/workspace-providers">Workspace providers seeking certification</a> through the Quiet Space platform undergo a structured assessment of whether the environment — not just the policy — genuinely supports different cognitive needs.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'what-actually-works-for-reducing-burnout',
+        text: 'What Actually Works for Reducing Neurodivergent Burnout'
+      },
+      {
+        type: 'paragraph',
+        text: 'The good news is that the barriers are not primarily financial. Most effective adjustments cost very little. The problem is architectural — the systems for identifying, requesting and delivering adjustments are built around a disclosure model that the majority of neurodivergent people will not engage with. NeuroBridge\'s emerging approach — which removes disclosure as a precondition and starts instead with self-understanding tools that allow individuals to understand their own cognitive rhythms and working styles — shows that uptake increases dramatically when people retain ownership of their own profile. HR receives aggregate patterns without individual exposure. The individual gets support without becoming a named record in a system they distrust.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Beyond adjustment processes, <a href="/spaces">the physical workspace itself</a> is one of the most powerful and consistently overlooked variables in neurodivergent burnout. Sensory overload — noise, lighting, visual clutter, unpredictable interruptions — is a primary burnout driver for many autistic and ADHD professionals, yet it is almost never addressed in standard reasonable adjustment conversations. Access to genuinely quiet, low-stimulation spaces for focused work is not a luxury preference. For many neurodivergent professionals it is the difference between sustainable employment and cumulative cognitive depletion. The <a href="/">Quiet Space Club directory</a> exists precisely because this need is not being met by mainstream office design.'
+      },
+      {
+        type: 'protip',
+        text: 'If you\'re a neurodivergent professional experiencing burnout symptoms, consider whether your working environment — not just your workload — is contributing. Sensory factors like fluorescent lighting, open-plan noise and unpredictable interruptions create a constant low-level cognitive load that compounds over time. Accessing a <a href="/spaces">certified neuro-friendly workspace</a> even one or two days a week can significantly reduce the sensory burden and create the conditions for sustainable focus.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'what-this-means-for-hr-leaders-in-2026',
+        text: 'What This Means for HR Leaders in 2026'
+      },
+      {
+        type: 'paragraph',
+        text: 'The data in aggregate tells a clear story. Neurodivergent employees are burning out faster, receiving less effective support, and increasingly staying silent about their needs because the cost of speaking up feels higher than the benefit of the support they might receive. For HR leaders, the three most urgent actions are: first, audit adjustment uptake honestly — if your neurodivergent employee population is not engaging with adjustment processes, the process is the problem, not the population; second, remove disclosure as the primary gate to support by implementing universal design principles and self-directed tools that do not require a formal label to access; and third, take physical environment seriously as a wellbeing variable, ensuring neurodivergent employees have genuine access to low-stimulation spaces for focused work.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The organisations that will attract, retain and get the best from neurodivergent talent in 2026 are not those with the most impressive awareness programmes. They are those that have built infrastructure — policies, processes and physical environments — that actually reach the 82% who are currently being walked past.'
+      },
+      {
+        type: 'faq',
+        question: 'Why do so few neurodivergent employees use workplace adjustment processes?',
+        answer: 'NeuroBridge\'s 2026 audit data shows 73% of neurodivergent employees who haven\'t disclosed cite fear of career impact as the primary reason. Standard adjustment processes require disclosure before support is accessible — a precondition many neurodivergent individuals assess as too risky given how they expect disclosure to affect promotion decisions and manager perceptions. The system is technically available but practically inaccessible for most of its intended users.'
+      },
+      {
+        type: 'faq',
+        question: 'What is neurodivergent burnout and how is it different from ordinary workplace stress?',
+        answer: 'Neurodivergent burnout is caused primarily by the sustained effort of masking — suppressing natural cognitive and behavioural patterns to meet neurotypical workplace expectations — combined with sensory environments that are not designed for different processing needs. Unlike ordinary stress, it is cumulative and often invisible to managers until it reaches crisis point. Research shows neurodivergent employees are twice as likely to experience high burnout symptoms as neurotypical colleagues.'
+      },
+      {
+        type: 'faq',
+        question: 'What are the most effective low-cost adjustments for neurodivergent employees?',
+        answer: 'The most consistently effective adjustments include: written rather than verbal instructions, flexible timing for deep focus work, access to quiet low-stimulation spaces, clear and predictable meeting structures, and noise-cancelling headphones or other sensory tools. Most of these require process changes rather than significant spend. The barrier is rarely cost — it is whether organisations have systems to identify and implement adjustments without requiring formal disclosure.'
+      },
+      {
+        type: 'faq',
+        question: 'What is the legal risk for UK employers who fail to support neurodivergent employees?',
+        answer: 'Neurodiversity-related employment tribunal cases in the UK have risen 164% over the last four years. Most cases do not involve malicious intent — they result from a failure to make reasonable adjustments, inconsistent application of policy, or line manager behaviour that could not be defended. As more neurodivergent employees self-advocate and as tribunal awareness grows, the legal and financial risk of inaction is increasing sharply.'
+      },
+      {
+        type: 'faq',
+        question: 'How can physical workspace design reduce neurodivergent burnout?',
+        answer: 'Sensory environment is a primary burnout driver for many autistic and ADHD professionals. Open-plan offices with high noise, fluorescent lighting and unpredictable interruptions impose a constant cognitive load that compounds over time. Access to quiet, low-stimulation spaces for focused work — whether in the office or via <a href="/spaces">certified neuro-friendly external workspaces</a> — is one of the most practical and underutilised burnout reduction strategies available to UK employers.'
+      },
+    ]
+  },
+  {
+    slug: 'neurodivergent-career-ceiling-management-gap-2026',
+    title: 'The Neurodivergent Career Ceiling: Why 1 in 4 Workers Is Neurodivergent — But Missing From Management in 2026',
+    date: 'June 1, 2026',
+    excerpt: 'New research shows 25% of corporate employees are neurodivergent, yet they hold fewer management roles. Here\'s what the data reveals about the career progression gap.',
+    heroImage: '/blog/neurodivergent-career-ceiling-management-gap-2026-hero.svg',
+    heroImageAlt: 'Graphic highlighting the neurodivergent career ceiling, showing management representation gap: 24-34% neurodivergent vs 39-51% neuromajority managers',
+    keywords: 'neurodivergent career progression, neurodivergent management gap, neurodiversity workplace 2026, ADHD career barriers, autistic employees promotion, neurodivergent managers UK, workplace accommodations neurodivergent, career ceiling neurodiversity, DCU neurodiversity research, neuroinclusion career development',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'A quarter of your workforce is neurodivergent. That\'s not a future projection — it\'s what new research from Dublin City University found when it surveyed over 1,500 employees across three corporate workplaces in early 2026. One in four people self-identified or had been diagnosed as neurodivergent. Yet when researchers looked at who held management positions, neurodivergent employees were consistently and significantly underrepresented. The gap is not subtle: neurodivergent employees occupied 24–34% of managerial roles across the three organisations, compared to 39–51% for their neuromajority counterparts. This is the neurodivergent career ceiling — and in 2026, it\'s one of the most pressing inclusion challenges UK employers face.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'key-findings-at-a-glance',
+        text: 'Key Findings at a Glance'
+      },
+      {
+        type: 'table',
+        headers: ['Metric', 'Finding', 'Source'],
+        rows: [
+          ['Neurodivergent employees in the workforce', '1 in 4 (25%)', 'DCU Institute of Education, 2026'],
+          ['ND employees in managerial roles', '24–34%', 'DCU Institute of Education, 2026'],
+          ['Neuromajority employees in managerial roles', '39–51%', 'DCU Institute of Education, 2026'],
+          ['ND employees likely experiencing depression', '18.5%', 'DCU, using WHO-5 Well-Being Index'],
+          ['Employees saying accommodations are necessary', '80%+', 'DCU Institute of Education, 2026'],
+          ['Neurodivergent women who mask at work', '75%', 'Understood.org Neurodiversity at Work Survey, May 2026'],
+          ['UK employers with a neurodiversity policy', '36%', 'City & Guilds Neurodiversity Index 2026'],
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-data-behind-the-ceiling',
+        text: 'The Data Behind the Ceiling'
+      },
+      {
+        type: 'paragraph',
+        text: 'The <a href="https://www.dcu.ie/graduatestudies/news/2026/apr/one-four-employees-self-identify-neurodivergent-according-new" target="_blank" rel="noopener noreferrer">DCU research</a>, led by Dr Aoife Brennan, Dr Laura Gormley, Dr Izzy Fox and Dr Christina O\'Keeffe at the Centre for Inclusive Pedagogy, is one of the most significant corporate neurodiversity studies published this year. Surveying employees across three distinct professional service organisations, it found that the same barriers appear regardless of industry or company culture. "The same challenges arising in all three workplaces would suggest that the findings are indicative of the Irish workplace more broadly," noted report co-author Dr Laura Gormley — and given how closely Irish and UK corporate cultures align, the implications travel easily across the Irish Sea.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The management gap is the most striking headline, but the wellbeing data is arguably more urgent. <strong>18.5% of neurodivergent employees in the study were assessed as likely experiencing significant levels of depression</strong>, based on the World Health Organisation\'s Well-Being Index (WHO-5). These are not people who are disengaged or struggling through a bad week — these are talented professionals experiencing a sustained wellbeing crisis at work, largely invisible to their employers. Neurodivergent employees who cannot access <a href="/how-it-works">the right support and environment</a> do not simply underperform. They quietly deteriorate.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'masking-the-hidden-tax-on-neurodivergent-careers',
+        text: 'Masking: The Hidden Tax on Neurodivergent Careers'
+      },
+      {
+        type: 'paragraph',
+        text: 'One reason neurodivergent professionals reach management at lower rates is the energy cost of masking — suppressing natural behaviours and traits to conform to neurotypical workplace norms. The <a href="https://www.prnewswire.com/news-releases/understoodorg-neurodiversity-at-work-survey-reveals-persistent-stigma-and-role-for-ai-in-the-workplace-302769551.html" target="_blank" rel="noopener noreferrer">Understood.org Neurodiversity at Work Survey, published in May 2026</a>, found that <strong>75% of neurodivergent women and 69% of neurodivergent men</strong> feel pressure to mask or conform to neurotypical behaviour at work due to stigma. Masking is cognitively and emotionally exhausting. It consumes the mental bandwidth that would otherwise go into doing excellent work, building relationships, and developing the strategic visibility that typically precedes promotion.'
+      },
+      {
+        type: 'paragraph',
+        text: 'For neurodivergent professionals who have been masking for years, the prospect of moving into a more senior, visible role can feel actively threatening rather than aspirational. More exposure means more performance, more scrutiny, more sustained effort to appear neurotypical. It is not that neurodivergent employees lack ambition — it is that the environment makes ambition feel dangerous. <a href="/spaces">Workplaces that remove the need to mask</a>, by design rather than by exception, are the ones where neurodivergent careers actually flourish.'
+      },
+      {
+        type: 'protip',
+        text: 'Ask your neurodivergent employees — anonymously — how much energy they spend managing how they come across versus doing their actual job. If the answer is "a lot", your culture is taxing them before the working day has even begun. Psychological safety for neurodivergent people is not just an HR goal; it is a prerequisite for retaining and promoting your most cognitively diverse talent.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-accommodations-most-neurodivergent-employees-actually-want',
+        text: 'The Accommodations Most Neurodivergent Employees Actually Want'
+      },
+      {
+        type: 'paragraph',
+        text: 'The DCU study is unusually specific about what neurodivergent employees themselves prioritise when asked about workplace accommodations. Rather than expensive assistive technology or complex structural redesign, the top requests are remarkably straightforward. <strong>Hybrid working, access to quiet focus spaces, and flexible start and finish times</strong> were the three most frequently cited accommodations. Over 80% of respondents — both neurodivergent and neuromajority — agreed that specific accommodations were necessary for neurodivergent employees to succeed. This is not a minority view. It is a broad professional consensus that most organisations are still failing to act on.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The report also highlights hot-desking as a specific structural barrier. For many neurodivergent employees — particularly those with ADHD, autism, or sensory processing differences — arriving at the office without a guaranteed, consistent workspace creates immediate anxiety and cognitive overload before the working day has started. The recommendation is clear: reduce or eliminate hot-desking, or at minimum provide a designated quiet focus zone that employees can use without prior booking or formal disclosure. <a href="/spaces">The neuro-friendly spaces in our directory</a> are assessed specifically on whether they offer this kind of predictable, low-sensory environment.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'why-neuroinclusion-is-a-leadership-pipeline-issue',
+        text: 'Why Neuroinclusion Is a Leadership Pipeline Issue'
+      },
+      {
+        type: 'paragraph',
+        text: 'The management gap is not just a fairness issue — it is a business risk. If neurodivergent employees represent 25% of the workforce but only 24–34% of management, organisations are systematically losing access to a significant proportion of their cognitive diversity at precisely the level where strategic decisions are made. Research consistently shows that cognitively diverse leadership teams make better decisions, identify more creative solutions, and are more resilient under pressure. Closing the neurodivergent career ceiling is not charity — it is a competitive advantage that most organisations are leaving on the table.'
+      },
+      {
+        type: 'paragraph',
+        text: 'With only <strong>36% of UK employers having any neurodiversity policy</strong> (City &amp; Guilds Neurodiversity Index 2026), the structural foundations for equitable career progression simply do not exist in most organisations. When neuroinclusion depends on individuals — a sympathetic manager, a persistent HR champion — it cannot be consistently applied across a leadership pipeline. <a href="/workspace-providers">Becoming a certified neuroinclusive workspace</a> is one way organisations can signal a structural commitment rather than a discretionary one. The <a href="/how-it-works">NeuroIndex assessment process</a> examines not just physical environment but policies, management culture, and career development equity.'
+      },
+      {
+        type: 'protip',
+        text: 'Audit your last 12 months of promotions. What percentage of people promoted to management roles were neurodivergent? If you don\'t know, that\'s a finding in itself. Promotion data disaggregated by neurodivergence is the fastest way to make the career ceiling visible — and visible problems get fixed. You cannot close a gap you have not measured.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'what-employers-can-do-now',
+        text: 'What Employers Can Do Now'
+      },
+      {
+        type: 'paragraph',
+        text: 'The DCU research closes with a series of practical recommendations that require no specialist budget and no external consultant. They include: providing a dedicated quiet focus space within the immediate team environment; reducing or eliminating hot-desking; switching from bright overhead lighting to dimmable or ambient alternatives; offering genuine flexibility over work schedules; and — critically — designing access to accommodations so that employees do not need to formally disclose a diagnosis to receive support. This last point matters enormously. <a href="/blog/neurodivergent-workplace-adjustments-disclosure-2026">Disclosure remains the biggest barrier to neurodivergent employees accessing support</a>, and any system that requires disclosure first will always miss the people who need it most.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Dr Aoife Brennan, Head of the School of Inclusive and Special Education at DCU, put it plainly: "As the workplace continues to evolve, and with the advancement of new technologies, it is important that inclusion and opportunity for progression for everybody is at the heart of decision-making." The neurodivergent career ceiling is not inevitable. It is the predictable result of designing organisations around a neurotypical default — and it can be dismantled, one structural change at a time. The <a href="/">Quiet Space Club platform</a> exists to help neurodivergent professionals find the workplaces that have already done this work.'
+      },
+      {
+        type: 'faq',
+        question: 'What percentage of the workforce is neurodivergent?',
+        answer: 'Research from Dublin City University (2026) found that 25% of corporate employees — one in four — self-identify or have been diagnosed as neurodivergent. Commonly reported conditions included ADHD, autism, dyslexia, dyspraxia, OCD, dyscalculia, and sensory processing differences.'
+      },
+      {
+        type: 'faq',
+        question: 'Why are neurodivergent employees underrepresented in management?',
+        answer: 'Multiple factors contribute, including the energy cost of masking (suppressing neurodivergent traits to conform to neurotypical norms), reduced psychological safety, lack of formal accommodation during promotion processes, and systemic gaps in management training. The DCU 2026 study found neurodivergent employees held 24–34% of managerial roles versus 39–51% for neuromajority colleagues.'
+      },
+      {
+        type: 'faq',
+        question: 'What workplace accommodations do neurodivergent employees most want?',
+        answer: 'According to the DCU 2026 research, the top three accommodations requested by neurodivergent employees are hybrid working, access to quiet focus spaces, and flexible start and finish times. Over 80% of all employees — not just neurodivergent ones — agreed these accommodations were necessary for neurodivergent colleagues to succeed.'
+      },
+      {
+        type: 'faq',
+        question: 'What is masking and why does it affect career progression?',
+        answer: 'Masking is the practice of suppressing neurodivergent behaviours and traits to appear neurotypical at work. It is cognitively exhausting and disproportionately affects career progression because it consumes mental energy that would otherwise go into strategic thinking, relationship-building, and visibility. The Understood.org 2026 survey found 75% of neurodivergent women and 69% of neurodivergent men feel pressure to mask at work due to stigma.'
+      },
+      {
+        type: 'faq',
+        question: 'How can I find a neuro-friendly workplace that supports career development?',
+        answer: 'The Quiet Space Club directory lists certified neuro-friendly workspaces assessed against the NeuroIndex — a framework that evaluates physical environment, policy, management culture, and career development equity. Browse the <a href="/spaces">directory</a> or learn more about how spaces are assessed via the <a href="/how-it-works">NeuroIndex assessment process</a>.'
+      }
+    ]
+  },
+  {
+    slug: 'neurodiversity-confidence-gap-employer-employee-2026',
+    title: 'The Confidence Illusion: Why UK Employers Feel Good About Neurodiversity in 2026 — But Employees Don\'t',
+    date: 'May 31, 2026',
+    excerpt: 'The City & Guilds 2026 Neurodiversity Index reveals a troubling paradox: employer confidence is rising while neurodivergent employees\' lived experience is getting worse.',
+    heroImage: '/blog/neurodiversity-confidence-gap-employer-employee-2026-hero.svg',
+    heroImageAlt: 'Graphic showing the confidence gap between UK employers and neurodivergent employees in 2026, with statistics from the City and Guilds Neurodiversity Index',
+    keywords: 'neurodiversity confidence gap, City Guilds Neurodiversity Index 2026, neurodivergent employees UK, neuroinclusion workplace, employer neurodiversity policy, psychological safety neurodivergent, workplace adjustments UK, neurodiversity burnout, manager neurodiversity training, neurodivergent lived experience',
+    content: [
+      {
+        type: 'paragraph',
+        text: 'For the fourth consecutive year, the <a href="https://cityandguildsfoundation.org/what-we-offer/campaigning/neurodiversity-index/" target="_blank" rel="noopener noreferrer">City &amp; Guilds Foundation Neurodiversity Index</a> has taken the temperature of neurodiversity across UK and Irish workplaces. The 2026 edition, produced in partnership with Do-IT Solutions under the leadership of Professor Amanda Kirby, lands with a finding that should concern every HR leader, DEI professional, and neurodivergent employee in the country: employer confidence is rising, but the gap between what organisations <em>believe</em> they\'re doing and what neurodivergent employees are actually experiencing has never been wider. Awareness without infrastructure is not inclusion — it\'s theatre.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'key-findings-at-a-glance',
+        text: 'Key Findings at a Glance'
+      },
+      {
+        type: 'table',
+        headers: ['Metric', 'Data Point', 'What It Means'],
+        rows: [
+          ['ND employees lacking consistent support', '64%', 'Nearly two-thirds do not receive reliable help when they ask for it'],
+          ['Employers with a neurodiversity policy', '36%', 'Most organisations have no documented framework at all'],
+          ['Neurodiversity in DEI strategy', 'Fewer than 4 in 10', 'Neuroinclusion remains an afterthought in most DEI agendas'],
+          ['ND employees experiencing burnout risk', '2× more likely', 'Compared to neurotypical colleagues (McKinsey data)'],
+          ['Hiring managers trained on ND', '46%', 'Over half have had no preparation for neurodivergent candidates'],
+          ['Managers lacking ND confidence', '56%', 'More than half admit they don\'t know how to support ND colleagues'],
+          ['Managers without any ND training', '70%+', 'The majority have never received neurodiversity-specific guidance'],
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'what-the-confidence-gap-actually-looks-like',
+        text: 'What the Confidence Gap Actually Looks Like'
+      },
+      {
+        type: 'paragraph',
+        text: 'The 2026 Index documents a striking paradox. Organisations are more likely than ever to say they take neurodiversity seriously. Senior leaders speak about it, internal networks are growing, and awareness campaigns are becoming routine. Yet neurodivergent employees report longer waits for workplace adjustments, lower psychological safety, and greater exposure to microaggressions than in previous years. The confidence, it turns out, belongs largely to the employer — not the employee.'
+      },
+      {
+        type: 'paragraph',
+        text: 'This is not a minor discrepancy. When the gap between stated commitment and lived experience widens, it actively damages trust. Neurodivergent employees who see their employer celebrate Neurodiversity Celebration Week while their adjustment request sits unanswered for three months do not feel included — they feel gaslit. The Index flags that this dynamic is accelerating, and that without structural change, awareness campaigns risk becoming counterproductive.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-policy-problem',
+        text: 'The Policy Problem: Most Employers Are Flying Blind'
+      },
+      {
+        type: 'paragraph',
+        text: 'Only <strong>36% of UK employers currently have a neurodiversity policy</strong>, and fewer than four in ten reference neurodiversity in their DEI strategy at all. This means that in the vast majority of organisations, neuroinclusion depends entirely on individual champions — a sympathetic HR business partner, a manager who happens to understand, a colleague willing to advocate. When those people leave, the support disappears with them. That is not inclusion. It is luck.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The absence of policy creates two further problems. First, it makes it nearly impossible to apply adjustments consistently across teams and business units, so two neurodivergent employees in the same organisation may have radically different experiences depending on which manager they report to. Second, it leaves organisations dangerously exposed to legal challenge. <a href="/blog/neurodiversity-tribunal-risk-uk-2026">Neurodiversity-related employment tribunals have risen 164% in four years</a>, and in many cases the employer\'s liability stems not from malice but from the absence of any framework that managers could actually follow.'
+      },
+      {
+        type: 'protip',
+        text: 'If your organisation doesn\'t have a neurodiversity policy, start by auditing your existing reasonable adjustments process. Ask: does a neurodivergent employee need to formally disclose a condition before accessing support? If the answer is yes, you\'re already losing people before the conversation begins. Redesign access to adjustments so it begins with a conversation about how someone works best — not what their diagnosis is.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'wellbeing-is-deteriorating-not-improving',
+        text: 'Wellbeing Is Deteriorating, Not Improving'
+      },
+      {
+        type: 'paragraph',
+        text: 'One of the most sobering findings in the 2026 landscape is that despite higher corporate awareness, wellbeing outcomes for neurodivergent employees are moving in the wrong direction. Research cited by <a href="https://neurobridge.co.uk/the-state-of-neurodiversity-in-the-workplace-2026/" target="_blank" rel="noopener noreferrer">NeuroBridge\'s 2026 workplace analysis</a> shows that neurodivergent professionals are <strong>twice as likely to experience high symptoms of burnout</strong>, and more than half have taken absence specifically due to workplace challenges. These are not personal failures. They are the predictable outcome of environments that were not designed with different cognitive needs in mind.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The mechanism is well understood: when a workplace\'s default communication styles, sensory environment, and performance expectations do not account for neurodivergent needs, employees spend enormous energy masking and compensating simply to meet baseline expectations. This is exhausting in a way that compounds over time — and it\'s invisible to managers who equate presence with performance. Organisations that are not <a href="/spaces">actively providing neuro-friendly workspaces and conditions</a> are, in effect, asking neurodivergent employees to pay a daily cognitive tax that their neurotypical colleagues do not.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'the-manager-problem-everyone-knows-about-but-nobody-solves',
+        text: 'The Manager Problem Everyone Knows About But Nobody Solves'
+      },
+      {
+        type: 'paragraph',
+        text: 'The data on managers is particularly striking — and particularly consistent year on year. Over <strong>60% of neurodivergent employees say their line manager is their first port of call for support</strong>. Around 70% of overall team engagement is directly linked to manager behaviour. And yet: 56% of managers admit they lack the confidence or knowledge to support neurodivergent colleagues effectively, and more than 70% have never received any neurodiversity-specific training. This is not a training budget problem. It is a prioritisation problem.'
+      },
+      {
+        type: 'paragraph',
+        text: 'When managers are the primary delivery mechanism for neuroinclusion but have no preparation, the result is exactly what the Index documents: inconsistency, avoidable mistakes, and a reliance on the neurodivergent employee themselves to educate their manager about their own needs — often at significant personal and professional cost. Understanding <a href="/how-it-works">what a genuinely neuroinclusive environment requires</a> starts with equipping the people closest to neurodivergent employees to respond well. That means more than a one-hour awareness session at Neurodiversity Celebration Week.'
+      },
+      {
+        type: 'protip',
+        text: 'Practical manager training on neurodiversity should cover three things: how to have an adjustment conversation without requiring a formal diagnosis; how to flex communication styles for different cognitive profiles; and how to recognise masking and early burnout signals. These are skills — not just attitudes — and they require practice, not just information. Consider role-play scenarios and peer coaching rather than passive e-learning modules.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'talent-filtered-before-it-is-even-seen',
+        text: 'Talent Being Filtered Out Before It Is Even Seen'
+      },
+      {
+        type: 'paragraph',
+        text: 'The Index also surfaces a significant failure point that sits upstream of employment altogether: recruitment. Only <strong>46% of hiring managers have received any training on supporting neurodivergent candidates</strong>. Many job descriptions still prioritise narrow communication styles — confident eye contact, polished small talk, fast-paced group interviews — over the actual capabilities the role requires. Almost half of neurodivergent candidates say they avoid disclosing during the application process due to fear of stigma, even though neurodivergent professionals report high proficiency in many of the fastest-growing skills needed in the economy by 2030.'
+      },
+      {
+        type: 'paragraph',
+        text: 'This is not just an inclusion failure. It is a talent strategy failure. Organisations are structurally filtering out capable people because their hiring architecture was designed for a narrow cognitive profile. <a href="/workspace-providers">Workspace providers who want to attract neurodivergent professionals</a> — and the organisations that employ them — need to rethink not just where work happens, but how the entire hiring process signals whether different minds are genuinely welcome.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        id: 'what-genuine-neuroinclusion-looks-like-in-2026',
+        text: 'What Genuine Neuroinclusion Looks Like in 2026'
+      },
+      {
+        type: 'paragraph',
+        text: 'The organisations that are closing the confidence gap share a set of characteristics. They have moved neuroinclusion from an awareness agenda to an operational one — embedding it in recruitment processes, adjustment frameworks, manager development, and workspace design. They do not wait for disclosure to begin supporting an employee. They build environments where disclosure is lower stakes, because the default environment already works better for a wider range of cognitive profiles. And they measure outcomes at team level — not just policy adoption — so they can see whether their investment is actually reaching the people it was built for.'
+      },
+      {
+        type: 'paragraph',
+        text: 'The <a href="/">Quiet Space Club platform</a> exists precisely to support this shift. A neuro-friendly workspace is not a special accommodation bolted onto a standard office — it is a design choice that makes work more sustainable and more productive for everyone. Sensory considerations, flexible work patterns, clear communication norms, and low-stimulation retreat spaces benefit neurotypical and neurodivergent employees alike. The organisations that understand this are not just doing the right thing. They are building workplaces that retain talent and perform better.'
+      },
+      {
+        type: 'faq',
+        question: 'What is the City & Guilds Foundation Neurodiversity Index?',
+        answer: 'The City & Guilds Foundation Neurodiversity Index is an annual UK benchmark study produced in partnership with Do-IT Solutions. Now in its fourth year, it tracks the state of neurodiversity support across UK and Irish workplaces, measuring both employer-reported practices and neurodivergent employees\' lived experience. The 2026 report found a widening gap between employer confidence and employee outcomes.'
+      },
+      {
+        type: 'faq',
+        question: 'Why is the gap between employer confidence and employee experience growing?',
+        answer: 'The gap is widening because many organisations have invested in awareness — campaigns, networks, leadership statements — without investing in infrastructure. Without a neurodiversity policy, trained managers, or redesigned adjustment processes, neuroinclusion remains dependent on individuals rather than embedded in how the organisation operates. Awareness raises expectations; when those expectations meet unchanged systems, the disconnect grows.'
+      },
+      {
+        type: 'faq',
+        question: 'What is the single most impactful thing an employer can do to close the gap?',
+        answer: 'Equip line managers. Since over 60% of neurodivergent employees turn to their manager first for support, and since manager behaviour drives around 70% of team engagement, manager capability is the highest-leverage intervention available. That means structured neurodiversity training, not just a one-off awareness session — covering adjustment conversations, communication flexibility, and burnout recognition.'
+      },
+      {
+        type: 'faq',
+        question: 'Does a neurodivergent employee need a formal diagnosis to receive workplace adjustments?',
+        answer: 'No — and requiring one is both legally risky and practically harmful. Under the Equality Act 2010, reasonable adjustments may be required for conditions that have a substantial and long-term adverse effect on day-to-day activities, regardless of whether a formal diagnosis exists. More importantly, many neurodivergent people are undiagnosed. Designing adjustment processes that begin with "how do you work best?" rather than "what is your diagnosis?" reaches far more of the people who need support.'
+      },
+      {
+        type: 'faq',
+        question: 'How can neuro-friendly workspaces help address the confidence gap?',
+        answer: 'Physical and environmental design is one of the most tangible ways to demonstrate that different cognitive needs are genuinely considered. Quiet zones, adjustable lighting, low-stimulation areas, and clear wayfinding reduce the daily masking load for neurodivergent employees before they ever need to make a formal adjustment request. <a href="/spaces">Certified neuro-friendly spaces</a> signal inclusion structurally, not just rhetorically — which is exactly what the 2026 Index shows employees are looking for.'
+      }
+    ]
+  },
+  {
     slug: 'neurodiversity-tribunal-risk-uk-2026',
     title: 'Neurodiversity Employment Tribunals Have Risen 164% in Four Years — What Every UK Employer Needs to Know in 2026',
     date: 'May 30, 2026',

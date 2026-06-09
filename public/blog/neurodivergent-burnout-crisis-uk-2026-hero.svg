@@ -1,0 +1,33 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f766e"/>
+      <stop offset="100%" style="stop-color:#134e4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1050" cy="120" r="180" fill="white" fill-opacity="0.04"/>
+  <circle cx="1100" cy="500" r="120" fill="white" fill-opacity="0.03"/>
+  <circle cx="80" cy="520" r="200" fill="white" fill-opacity="0.03"/>
+  <circle cx="200" cy="80" r="90" fill="white" fill-opacity="0.04"/>
+
+  <!-- Accent line -->
+  <rect x="80" y="200" width="6" height="200" rx="3" fill="#5eead4"/>
+
+  <!-- Main headline -->
+  <text x="115" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="60" font-weight="800" fill="white" letter-spacing="-1">The Neurodivergent</text>
+  <text x="115" y="335" font-family="system-ui, -apple-system, sans-serif" font-size="60" font-weight="800" fill="white" letter-spacing="-1">Burnout Crisis:</text>
+  <text x="115" y="410" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="600" fill="#99f6e4" letter-spacing="-0.5">Why UK Workplaces Are Failing</text>
+
+  <!-- Stat pill -->
+  <rect x="115" y="448" width="540" height="72" rx="36" fill="#5eead4" fill-opacity="0.18" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="385" y="484" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#5eead4" text-anchor="middle">Only 5% receive adjustments that work</text>
+  <text x="385" y="508" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#99f6e4" text-anchor="middle">NeuroBridge, May 2026</text>
+
+  <!-- Brand label -->
+  <text x="80" y="600" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="white" fill-opacity="0.5" letter-spacing="3">QUIET SPACE CLUB</text>
+</svg>
