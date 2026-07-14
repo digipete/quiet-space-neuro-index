@@ -15,10 +15,13 @@ export const SEO = ({
   keywords = 'neurodivergent workspaces, ADHD-friendly spaces, autism-friendly workspaces, quiet workspaces, sensory-friendly offices',
   image = 'https://index.quietspace.club/og-image.png',
   url,
-  type = 'website'
-}: SEOProps) => {
-  const fullTitle = `${title} | NeuroIndex - Quiet Space Club`;
-  const canonicalUrl = url || `https://index.quietspace.club${window.location.pathname}`;
+  type = 'website',
+  children,
+}: SEOProps & { children?: React.ReactNode }) => {
+  const fullTitle = title.includes('NeuroIndex') ? title : `${title} | NeuroIndex`;
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+  const canonicalUrl = url || `https://index.quietspace.club${pathname}`;
+
 
   return (
     <Helmet>
