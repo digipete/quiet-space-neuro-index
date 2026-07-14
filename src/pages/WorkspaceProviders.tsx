@@ -101,8 +101,9 @@ export default function WorkspaceProviders() {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="For Workspace Providers - Get Certified"
-        description="Transform your coworking space with neuro-accessibility certification. Attract new customers, increase bookings, and join the leading network of inclusive workspace providers."
+        title="For Workspace Providers"
+        description="Get neuro-accessibility certification for your coworking space. Attract new customers and join the leading network of inclusive providers."
+
         keywords="workspace provider certification, coworking space listing, neuro-accessible certification, inclusive workspace network, workspace assessment, coworking business growth"
       />
       {/* Hero Section */}
