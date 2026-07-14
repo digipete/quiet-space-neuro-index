@@ -167,7 +167,7 @@ const Index = () => {
         {/* Search Section */}
         <div className="mb-12">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-semibold mb-3">Find Your Perfect Workspace</h2>
+            <h1 className="text-2xl md:text-3xl font-semibold mb-3">Search Neuro-Friendly Workspaces</h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Browse curated neuro-friendly spaces with detailed sensory profiles, 
               amenities, and community ratings.
