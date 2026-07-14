@@ -134,6 +134,110 @@ export type Database = {
         }
         Relationships: []
       }
+      space_claims: {
+        Row: {
+          claimant_email: string
+          claimant_name: string
+          claimant_role: string
+          created_at: string
+          id: string
+          listing_id: string
+          status: string
+          updated_at: string
+          verification_note: string | null
+          website: string | null
+        }
+        Insert: {
+          claimant_email: string
+          claimant_name: string
+          claimant_role: string
+          created_at?: string
+          id?: string
+          listing_id: string
+          status?: string
+          updated_at?: string
+          verification_note?: string | null
+          website?: string | null
+        }
+        Update: {
+          claimant_email?: string
+          claimant_name?: string
+          claimant_role?: string
+          created_at?: string
+          id?: string
+          listing_id?: string
+          status?: string
+          updated_at?: string
+          verification_note?: string | null
+          website?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "space_claims_listing_id_fkey"
+            columns: ["listing_id"]
+            isOneToOne: false
+            referencedRelation: "listings"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      space_submissions: {
+        Row: {
+          capacity: string | null
+          contact_email: string
+          contact_name: string
+          contact_phone: string | null
+          created_at: string
+          description: string | null
+          hours: string | null
+          id: string
+          location: string
+          neuro_features: Json | null
+          notes: string | null
+          pricing: string | null
+          space_name: string
+          status: string
+          updated_at: string
+          website: string | null
+        }
+        Insert: {
+          capacity?: string | null
+          contact_email: string
+          contact_name: string
+          contact_phone?: string | null
+          created_at?: string
+          description?: string | null
+          hours?: string | null
+          id?: string
+          location: string
+          neuro_features?: Json | null
+          notes?: string | null
+          pricing?: string | null
+          space_name: string
+          status?: string
+          updated_at?: string
+          website?: string | null
+        }
+        Update: {
+          capacity?: string | null
+          contact_email?: string
+          contact_name?: string
+          contact_phone?: string | null
+          created_at?: string
+          description?: string | null
+          hours?: string | null
+          id?: string
+          location?: string
+          neuro_features?: Json | null
+          notes?: string | null
+          pricing?: string | null
+          space_name?: string
+          status?: string
+          updated_at?: string
+          website?: string | null
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
