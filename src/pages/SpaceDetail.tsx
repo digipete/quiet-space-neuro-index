@@ -145,14 +145,26 @@ export default function SpaceDetail() {
     { name: 'Sensory Break Areas', available: listing.neuro_score >= 9 }
   ];
 
+  const canonicalUrl = `https://index.quietspace.club/space/${listing.id}`;
+  const rawSummary = (listing.description || listing.full_description || '').replace(/\s+/g, ' ').trim();
+  const summary = rawSummary.length > 110 ? `${rawSummary.slice(0, 107)}…` : rawSummary;
+  const metaDescription =
+    `${listing.title} in ${listing.location} — Neuro Score ${listing.neuro_score}/10. ${summary}`.slice(0, 160);
+  const pageTitle = `${listing.title} — Neuro-Friendly Workspace in ${listing.location}`;
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={`${listing.title} — ${listing.location}`}
-        description={`${listing.title} in ${listing.location}. Neuro Score ${listing.neuro_score}/10. ${(listing.description || '').slice(0, 100)}`}
+        title={pageTitle}
+        description={metaDescription}
         image={listing.image_url}
+        url={canonicalUrl}
         type="article"
+        keywords={`${listing.title}, ${listing.location}, neurodivergent workspace, ADHD-friendly, autism-friendly, quiet workspace, sensory-friendly`}
       >
+        <meta property="og:image:alt" content={`${listing.title} — neuro-friendly workspace in ${listing.location}`} />
+        <meta property="article:section" content="Neuro-Friendly Workspaces" />
+        <meta property="place:location:latitude" content="" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
@@ -161,7 +173,7 @@ export default function SpaceDetail() {
           "image": listing.image_url,
           "address": listing.location,
           "openingHours": listing.hours_of_operation,
-          "url": `https://index.quietspace.club/space/${listing.id}`,
+          "url": canonicalUrl,
           "aggregateRating": listing.user_rating ? {
             "@type": "AggregateRating",
             "ratingValue": listing.user_rating,
