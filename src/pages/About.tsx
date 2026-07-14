@@ -87,7 +87,8 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="About Quiet Space Club"
-        description="Learn about our mission to connect neurodivergent individuals with accessible, sensory-friendly workspaces. Discover our evidence-based approach and community-driven platform."
+        description="Our mission: connect neurodivergent people with accessible, sensory-friendly workspaces through evidence-based, community-driven ratings."
+
         keywords="about quiet space club, neurodiverse workplace inclusion, autism workplace support, ADHD office solutions, sensory accessibility research, neurodivergent community platform, inclusive workspace mission"
       />
       {/* Hero Section */}
