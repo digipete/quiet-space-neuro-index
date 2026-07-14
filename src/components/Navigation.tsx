@@ -61,9 +61,12 @@ export const Navigation = () => {
             size="icon"
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Close main menu' : 'Open main menu'}
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </Button>
+
         </div>
 
         {/* Mobile Navigation */}

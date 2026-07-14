@@ -1,4 +1,6 @@
+import type { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
+
 
 interface SEOProps {
   title: string;
@@ -15,10 +17,14 @@ export const SEO = ({
   keywords = 'neurodivergent workspaces, ADHD-friendly spaces, autism-friendly workspaces, quiet workspaces, sensory-friendly offices',
   image = 'https://index.quietspace.club/og-image.png',
   url,
-  type = 'website'
-}: SEOProps) => {
-  const fullTitle = `${title} | NeuroIndex - Quiet Space Club`;
-  const canonicalUrl = url || `https://index.quietspace.club${window.location.pathname}`;
+  type = 'website',
+  children,
+}: SEOProps & { children?: ReactNode }) => {
+
+  const fullTitle = title.includes('NeuroIndex') ? title : `${title} | NeuroIndex`;
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+  const canonicalUrl = url || `https://index.quietspace.club${pathname}`;
+
 
   return (
     <Helmet>
@@ -44,7 +50,10 @@ export const SEO = ({
 
       {/* Additional SEO */}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
       <meta name="googlebot" content="index, follow" />
+      {children}
     </Helmet>
   );
 };
+

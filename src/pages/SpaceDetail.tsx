@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ClaimSpaceModal } from '@/components/ClaimSpaceModal';
+import { SEO } from '@/components/SEO';
+
 
 interface Amenity {
   name: string;
@@ -145,6 +147,35 @@ export default function SpaceDetail() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={`${listing.title} — ${listing.location}`}
+        description={`${listing.title} in ${listing.location}. Neuro Score ${listing.neuro_score}/10. ${(listing.description || '').slice(0, 100)}`}
+        image={listing.image_url}
+        type="article"
+      >
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": listing.title,
+          "description": listing.full_description || listing.description,
+          "image": listing.image_url,
+          "address": listing.location,
+          "openingHours": listing.hours_of_operation,
+          "url": `https://index.quietspace.club/space/${listing.id}`,
+          "aggregateRating": listing.user_rating ? {
+            "@type": "AggregateRating",
+            "ratingValue": listing.user_rating,
+            "bestRating": 5,
+            "ratingCount": 1
+          } : undefined,
+          "additionalProperty": {
+            "@type": "PropertyValue",
+            "name": "Neuro Score",
+            "value": `${listing.neuro_score}/10`
+          }
+        })}</script>
+      </SEO>
+
       {/* Header */}
       <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">

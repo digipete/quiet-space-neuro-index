@@ -56,8 +56,9 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Resources for Neuro-Inclusive Workspaces"
-        description="Explore comprehensive resources, research, and tools for creating neuro-accessible workspaces. Support for neurodivergent professionals and inclusive organizations."
+        title="Neuro-Inclusive Workspace Resources"
+        description="Explore research, guides, and tools for creating neuro-accessible workspaces that support neurodivergent professionals."
+
         keywords="neurodiverse resources, workspace accessibility guides, neurodivergent tools, inclusive workplace research, sensory assessment tools, neuro-friendly design guidelines"
       />
       {/* Hero Section */}

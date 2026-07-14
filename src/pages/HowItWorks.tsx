@@ -165,8 +165,9 @@ const HowItWorks = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="How It Works - NeuroFlow Assessment"
-        description="Learn about our NeuroFlow methodology - a scientifically-validated framework for evaluating neuro-accessibility in workspaces. Discover our comprehensive assessment process."
+        title="How It Works"
+        description="Learn our NeuroFlow methodology — a validated framework for evaluating neuro-accessibility in workspaces and coworking spaces."
+
         keywords="neuroflow assessment, workspace evaluation process, neuro-accessibility scoring, sensory environment evaluation, cognitive load assessment, workspace certification"
       />
       {/* Hero Section */}
