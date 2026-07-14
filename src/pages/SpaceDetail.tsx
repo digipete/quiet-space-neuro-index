@@ -164,7 +164,6 @@ export default function SpaceDetail() {
       >
         <meta property="og:image:alt" content={`${listing.title} — neuro-friendly workspace in ${listing.location}`} />
         <meta property="article:section" content="Neuro-Friendly Workspaces" />
-        <meta property="place:location:latitude" content="" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
