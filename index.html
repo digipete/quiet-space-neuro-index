@@ -66,11 +66,38 @@
           );
         }
       }(window.location))
+
+      window.__loadQuietSpaceBuiltApp = function() {
+        if (window.__quietSpaceBuiltAppLoading) return;
+        window.__quietSpaceBuiltAppLoading = true;
+
+        if (!document.querySelector('link[href="/assets/index-SFOudWi7.css"]')) {
+          var stylesheet = document.createElement('link');
+          stylesheet.rel = 'stylesheet';
+          stylesheet.href = '/assets/index-SFOudWi7.css';
+          document.head.appendChild(stylesheet);
+        }
+
+        var script = document.createElement('script');
+        script.type = 'module';
+        script.crossOrigin = '';
+        script.src = '/assets/index-DCdxdB5x.js';
+        document.body.appendChild(script);
+      };
     </script>
   </head>
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" onerror="window.__loadQuietSpaceBuiltApp && window.__loadQuietSpaceBuiltApp()"></script>
+    <script>
+      window.setTimeout(function() {
+        var root = document.getElementById('root');
+        var isLocalDev = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
+        if (!isLocalDev && root && !root.hasChildNodes()) {
+          window.__loadQuietSpaceBuiltApp && window.__loadQuietSpaceBuiltApp();
+        }
+      }, 1500);
+    </script>
   </body>
 </html>
