@@ -19,7 +19,8 @@ export const SEO = ({
   url,
   type = 'website',
   children,
-}: SEOProps & { children?: React.ReactNode }) => {
+}: SEOProps & { children?: ReactNode }) => {
+
   const fullTitle = title.includes('NeuroIndex') ? title : `${title} | NeuroIndex`;
   const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
   const canonicalUrl = url || `https://index.quietspace.club${pathname}`;
