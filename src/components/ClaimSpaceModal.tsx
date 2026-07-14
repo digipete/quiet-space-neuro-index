@@ -188,8 +188,10 @@ export function ClaimSpaceModal({
               {/* Honeypot — visually hidden from real users */}
               <div
                 aria-hidden="true"
-                style={{ position: 'absolute', left: '-9999px', opacity: 0, tabIndex: -1 }}
+                tabIndex={-1}
+                style={{ position: 'absolute', left: '-9999px', opacity: 0 }}
               >
+
                 <label htmlFor="phone_number">Phone</label>
                 <input
                   id="phone_number"
