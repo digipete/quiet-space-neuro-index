@@ -135,10 +135,21 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Search Neuro-Friendly Workspaces"
-        description="Find and book neuro-inclusive workspaces near you. Browse certified sensory-friendly offices, coworking spaces, and meeting rooms with detailed accessibility profiles."
+        title="Find Neuro-Friendly Workspaces | NeuroIndex"
+        description="Browse certified sensory-friendly offices, coworking spaces, and meeting rooms with detailed neuro-accessibility profiles."
         keywords="search neuro workspaces, find autism friendly office, ADHD workplace near me, sensory friendly coworking spaces, quiet office rental, neurodiverse workspace directory, accessible meeting rooms, neuro-inclusive office spaces"
-      />
+      >
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Neuro-Friendly Workspace Directory",
+          "description": "Directory of certified neuro-inclusive workspaces, coworking spaces, and meeting rooms.",
+          "url": "https://index.quietspace.club/spaces",
+          "isPartOf": { "@type": "WebSite", "name": "NeuroIndex - Quiet Space Club", "url": "https://index.quietspace.club" },
+          "about": { "@type": "Thing", "name": "Neurodivergent-friendly workspaces" }
+        })}</script>
+      </SEO>
+
       {/* Header */}
       {/* <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-6">
