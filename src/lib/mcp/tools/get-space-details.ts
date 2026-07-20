@@ -57,7 +57,7 @@ export default defineTool({
       content: [
         {
           type: "text",
-          text: `${space.title} — ${space.location} (Neuro Score: ${space.neuro_score}/100, Rating: ${space.user_rating}/5)`,
+          text: `${space.title} — ${space.location} (Neuro Score: ${space.neuro_score}, Rating: ${space.user_rating}/5)`,
         },
         { type: "text", text: JSON.stringify(space, null, 2) },
       ],

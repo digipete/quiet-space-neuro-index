@@ -20,7 +20,7 @@ export default defineTool({
     query: z.string().optional().describe("Free-text search across title, description, location, and amenities."),
     location: z.string().optional().describe("Filter by country/region (e.g. 'UK', 'United States')."),
     certification: z.enum(["all", "Certified", "Self-Reported", "Partner", "Pending"]).optional().describe("Certification filter."),
-    minNeuroScore: z.number().min(0).max(100).optional().describe("Minimum neuro-inclusivity score (0-100)."),
+    minNeuroScore: z.number().min(0).max(10).optional().describe("Minimum neuro-inclusivity score."),
     limit: z.number().min(1).max(50).default(20).describe("Maximum number of results to return (1-50)."),
     offset: z.number().min(0).default(0).describe("Pagination offset."),
   },

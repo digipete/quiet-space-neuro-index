@@ -46,8 +46,8 @@
             "minNeuroScore": {
               "type": "number",
               "minimum": 0,
-              "maximum": 100,
-              "description": "Minimum neuro-inclusivity score (0-100)."
+              "maximum": 10,
+              "description": "Minimum neuro-inclusivity score."
             },
             "limit": {
               "type": "number",
