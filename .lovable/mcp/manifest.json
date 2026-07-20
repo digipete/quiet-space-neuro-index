@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "sdk_version": "0.24.0",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "neuroindex",
+      "version": "1.0.0",
+      "title": "NeuroIndex Directory"
+    },
+    "tools": [
+      {
+        "name": "search_spaces",
+        "title": "Search neuro-friendly workspaces",
+        "description": "Search the NeuroIndex directory of neuro-friendly workspaces, coworking spaces, and meeting rooms. Supports filtering by location, certification, minimum neuro score, and free-text search over titles, descriptions, locations, and amenities.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Free-text search across title, description, location, and amenities."
+            },
+            "location": {
+              "type": "string",
+              "description": "Filter by country/region (e.g. 'UK', 'United States')."
+            },
+            "certification": {
+              "type": "string",
+              "enum": [
+                "all",
+                "Certified",
+                "Self-Reported",
+                "Partner",
+                "Pending"
+              ],
+              "description": "Certification filter."
+            },
+            "minNeuroScore": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10,
+              "description": "Minimum neuro-inclusivity score."
+            },
+            "limit": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 50,
+              "default": 20,
+              "description": "Maximum number of results to return (1-50)."
+            },
+            "offset": {
+              "type": "number",
+              "minimum": 0,
+              "default": 0,
+              "description": "Pagination offset."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_space_details",
+        "title": "Get workspace details",
+        "description": "Return the full neuro-accessibility profile for a single workspace by its ID, including amenities, sensory features, pricing, capacity, hours, certification, and community rating.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid",
+              "description": "The UUID of the workspace listing."
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
