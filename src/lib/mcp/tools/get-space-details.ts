@@ -3,11 +3,12 @@ import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
 
 function createPublicSupabase() {
-  return createClient(
-    process.env.SUPABASE_URL!,
-    process.env.SUPABASE_PUBLISHABLE_KEY!,
-    { auth: { persistSession: false, autoRefreshToken: false } }
-  );
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_ANON_KEY;
+  if (!url || !key) {
+    throw new Error("Supabase URL or key is not configured in the MCP environment.");
+  }
+  return createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
 }
 
 export default defineTool({

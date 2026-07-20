@@ -10,11 +10,12 @@ import { defineTool } from "npm:@lovable.dev/mcp-js@0.24.0";
 import { createClient } from "npm:@supabase/supabase-js@^2.52.1";
 import { z } from "npm:zod@^3.23.8";
 function createPublicSupabase() {
-  return createClient(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_PUBLISHABLE_KEY,
-    { auth: { persistSession: false, autoRefreshToken: false } }
-  );
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_ANON_KEY;
+  if (!url || !key) {
+    throw new Error("Supabase URL or key is not configured in the MCP environment.");
+  }
+  return createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
 }
 var search_spaces_default = defineTool({
   name: "search_spaces",
@@ -82,11 +83,12 @@ import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.24.0";
 import { createClient as createClient2 } from "npm:@supabase/supabase-js@^2.52.1";
 import { z as z2 } from "npm:zod@^3.23.8";
 function createPublicSupabase2() {
-  return createClient2(
-    process.env.SUPABASE_URL,
-    process.env.SUPABASE_PUBLISHABLE_KEY,
-    { auth: { persistSession: false, autoRefreshToken: false } }
-  );
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_ANON_KEY;
+  if (!url || !key) {
+    throw new Error("Supabase URL or key is not configured in the MCP environment.");
+  }
+  return createClient2(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
 }
 var get_space_details_default = defineTool2({
   name: "get_space_details",
