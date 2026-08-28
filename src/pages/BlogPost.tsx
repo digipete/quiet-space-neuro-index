@@ -223,8 +223,13 @@ const BlogPost = () => {
               </div>
             </aside>
 
-
+            {/* Related Posts */}
+            {otherPosts.length > 0 && (
+              <section className="mt-16 pt-10 border-t border-border">
+                <h2 className="text-2xl font-bold text-foreground mb-6">Related Articles</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {otherPosts.map(p => (
+
                     <Link key={p.slug} to={`/blog/${p.slug}`} className="group">
                       <Card className="overflow-hidden border-border/50 transition-all group-hover:shadow-md group-hover:border-primary/30">
                         <div className="aspect-[16/10] overflow-hidden">
