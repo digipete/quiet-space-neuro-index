@@ -2,83 +2,82 @@ import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { getAllRoutes, getBlogRoutes, SITE_URL } from './seo-routes.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+function buildSitemap(routes) {
+  const urls = routes.map((r) => [
+    '  <url>',
+    `    <loc>${SITE_URL}${r.path}</loc>`,
+    r.lastmod ? `    <lastmod>${r.lastmod}</lastmod>` : null,
+    r.changefreq ? `    <changefreq>${r.changefreq}</changefreq>` : null,
+    r.priority ? `    <priority>${r.priority}</priority>` : null,
+    '  </url>',
+  ].filter(Boolean).join('\n'));
+
+  return [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...urls,
+    '</urlset>',
+    '',
+  ].join('\n');
+}
+
+function buildLlmsTxt(blogRoutes) {
+  const source = fs.readFileSync(path.join(__dirname, '../src/data/blogPosts.ts'), 'utf8');
+  const titles = [...source.matchAll(/title:\s*'((?:[^'\\]|\\.)*)'/g)].map((m) => m[1].replace(/\\'/g, "'"));
+
+  const posts = blogRoutes.map((r, i) => `- [${titles[i] || r.path}](${r.path})`);
+
+  return [
+    '# NeuroIndex — Quiet Space Club',
+    '',
+    '> The UK directory of neuro-inclusive workspaces. Every space carries a Neuro Index score covering noise, lighting, sensory load and quiet-space provision, so neurodivergent professionals can find offices, coworking spaces and meeting rooms that actually work for them.',
+    '',
+    '## Pages',
+    '',
+    '- [Home](/): What NeuroIndex is and who it is for.',
+    '- [Search workspaces](/spaces): Browse and filter every scored neuro-inclusive workspace.',
+    '- [How it works](/how-it-works): The Neuro Index scoring methodology and assessment process.',
+    '- [For workspace providers](/workspace-providers): How operators get their space assessed and listed.',
+    '- [Submit a space](/submit-space): Add a workspace to the index.',
+    '- [Resources](/resources): Research and guidance on neuro-inclusive workplace design.',
+    '- [About](/about): The Quiet Space Club mission.',
+    '- [Contact](/contact): Get in touch.',
+    '',
+    '## Blog',
+    '',
+    ...posts,
+    '',
+  ].join('\n');
+}
 
 async function buildStatic() {
   try {
     console.log('🏗️  Building React app...');
     execSync('npm run build', { stdio: 'inherit' });
-    
+
     console.log('🎨 Pre-rendering pages with Puppeteer for SEO...');
     execSync('node scripts/prerender-with-puppeteer.js', { stdio: 'inherit' });
-    
-    console.log('📁 Copying static assets...');
+
     const distDir = path.join(__dirname, '../dist');
     const publicDir = path.join(__dirname, '../public');
-    
-    // Generate updated sitemap with current date
-    console.log('🗺️  Generating updated sitemap...');
-    const currentDate = new Date().toISOString().split('T')[0];
-    const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
-  <url>
-    <loc>https://index.quietspace.club/</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <url>
-    <loc>https://index.quietspace.club/spaces</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://index.quietspace.club/workspace-providers</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://index.quietspace.club/about</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://index.quietspace.club/how-it-works</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://index.quietspace.club/resources</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://index.quietspace.club/contact</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
 
-</urlset>`;
-    
-    fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapContent);
-    console.log('✅ Generated updated sitemap.xml');
-    
+    console.log('🗺️  Generating sitemap from live route list...');
+    const routes = await getAllRoutes();
+    const sitemap = buildSitemap(routes);
+    fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
+    fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
+    console.log(`✅ sitemap.xml written (${routes.length} URLs)`);
+
+    console.log('🤖 Generating llms.txt...');
+    const llms = buildLlmsTxt(getBlogRoutes());
+    fs.writeFileSync(path.join(distDir, 'llms.txt'), llms);
+    fs.writeFileSync(path.join(publicDir, 'llms.txt'), llms);
+    console.log('✅ llms.txt written');
+
     // Copy additional static files
     const staticFiles = [
       'robots.txt',
@@ -90,34 +89,39 @@ async function buildStatic() {
       'status.json',
       '.nojekyll'
     ];
-    
+
     staticFiles.forEach(file => {
       const srcPath = path.join(publicDir, file);
       const destPath = path.join(distDir, file);
-      
+
       if (fs.existsSync(srcPath)) {
         fs.copyFileSync(srcPath, destPath);
         console.log(`✅ Copied ${file}`);
       }
     });
 
-    // Generate GitHub Pages 404.html for SPA routing
+    // CNAME lives at the repo root for GitHub Pages
+    const rootCname = path.join(__dirname, '../CNAME');
+    if (fs.existsSync(rootCname)) {
+      fs.copyFileSync(rootCname, path.join(distDir, 'CNAME'));
+      console.log('✅ Copied CNAME');
+    }
+
+    // Generate GitHub Pages 404.html for SPA routing (unknown URLs only —
+    // every indexable route is pre-rendered as a real index.html above).
     console.log('📄 Generating 404.html for SPA routing...');
     const spa404Content = `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting... | Quiet Space Club</title>
+    <meta name="robots" content="noindex" />
+    <title>Page not found | Quiet Space Club</title>
     <script>
-      // GitHub Pages SPA redirect
-      const pathSegmentsToKeep = 1;
       const location = window.location;
-      const pathname = location.pathname.slice(1);
-      
-      if (pathname) {
+      if (location.pathname.slice(1)) {
         location.replace(
-          location.protocol + '//' + location.hostname + location.port +
+          location.protocol + '//' + location.host +
           '/?redirect=' + encodeURIComponent(location.pathname + location.search + location.hash)
         );
       }
@@ -127,12 +131,28 @@ async function buildStatic() {
     <p>Redirecting to the main application...</p>
   </body>
 </html>`;
-    
+
     fs.writeFileSync(path.join(distDir, '404.html'), spa404Content);
     console.log('✅ Generated 404.html for SPA routing');
-    
+
+    // Verification: every sitemap URL must have a real pre-rendered file.
+    console.log('🔍 Verifying every sitemap URL has a pre-rendered page...');
+    const missing = routes.filter((r) => {
+      const file = r.path === '/'
+        ? path.join(distDir, 'index.html')
+        : path.join(distDir, r.path.slice(1), 'index.html');
+      return !fs.existsSync(file);
+    });
+
+    if (missing.length) {
+      throw new Error(
+        `${missing.length} sitemap URL(s) have no pre-rendered page: ${missing.map((m) => m.path).join(', ')}`,
+      );
+    }
+    console.log(`✅ All ${routes.length} sitemap URLs are pre-rendered`);
+
     console.log('🎉 Static build completed successfully!');
-    
+
   } catch (error) {
     console.error('❌ Build failed:', error.message);
     process.exit(1);
