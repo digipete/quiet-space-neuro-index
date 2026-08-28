@@ -203,11 +203,27 @@ const BlogPost = () => {
               {post.content.map((section, i) => renderSection(section, i))}
             </div>
 
-            {/* Related Posts */}
-            {otherPosts.length > 0 && (
-              <section className="mt-16 pt-10 border-t border-border">
-                <h2 className="text-2xl font-bold text-foreground mb-6">Related Articles</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Directory CTA */}
+            <aside className="mt-14 p-6 rounded-xl border border-primary/25 bg-primary/5">
+              <h2 className="text-xl font-bold text-foreground mb-2">Find a neuro-inclusive workspace</h2>
+              <p className="text-foreground/85 mb-4">
+                NeuroIndex scores real offices, coworking spaces and meeting rooms on noise, lighting and sensory load,
+                so you can book somewhere that actually works.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/spaces" className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors">
+                  Search workspaces
+                </Link>
+                <Link to="/how-it-works" className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
+                  How the Neuro Index score works
+                </Link>
+                <Link to="/workspace-providers" className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
+                  List your space
+                </Link>
+              </div>
+            </aside>
+
+
                   {otherPosts.map(p => (
                     <Link key={p.slug} to={`/blog/${p.slug}`} className="group">
                       <Card className="overflow-hidden border-border/50 transition-all group-hover:shadow-md group-hover:border-primary/30">
