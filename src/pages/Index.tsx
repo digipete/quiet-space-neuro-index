@@ -146,8 +146,19 @@ const Index = () => {
           "description": "Directory of certified neuro-inclusive workspaces, coworking spaces, and meeting rooms.",
           "url": "https://index.quietspace.club/spaces",
           "isPartOf": { "@type": "WebSite", "name": "NeuroIndex - Quiet Space Club", "url": "https://index.quietspace.club" },
-          "about": { "@type": "Thing", "name": "Neurodivergent-friendly workspaces" }
+          "about": { "@type": "Thing", "name": "Neurodivergent-friendly workspaces" },
+          "mainEntity": {
+            "@type": "ItemList",
+            "numberOfItems": filteredListings.length,
+            "itemListElement": filteredListings.slice(0, 50).map((listing, i) => ({
+              "@type": "ListItem",
+              "position": i + 1,
+              "url": `https://index.quietspace.club/space/${listing.id}`,
+              "name": listing.title
+            }))
+          }
         })}</script>
+
       </SEO>
 
       {/* Header */}
