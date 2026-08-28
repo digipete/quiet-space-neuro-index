@@ -1,47 +1,32 @@
-# NeuroIndex - Find Neuro-Friendly Workspaces | NeuroIndex - Quiet Space Club
+# NeuroIndex — Quiet Space Club
 
-> Discover certified neuro-inclusive workspaces designed for neurodivergent individuals. Find quiet, sensory-friendly offices, coworking spaces, and meeting rooms with scientifically validated accessibility scores.
+> The UK directory of neuro-inclusive workspaces. Every space carries a Neuro Index score covering noise, lighting, sensory load and quiet-space provision, so neurodivergent professionals can find offices, coworking spaces and meeting rooms that actually work for them.
 
-## Core Content
+## Pages
 
-- [Search NeuroIndex](/spaces): Directory of neuro-accessible workspaces, including offices, coworking spaces, and meeting rooms.
-- [See How It Works](/how-it-works): Explanation of the neuro-accessibility scoring methodology and assessment process.
-- NeuroIndex's proprietary Neuro Index score evaluates environment compatibility with neurodiverse needs, based on environmental psychology, neuroscience, and sensory research.
-- Verified accessibility profiles ensure spaces meet rigorous neuro-accessibility standards, assessed by certified specialists.
-- Community reviews from neurodiverse professionals provide real-world insights and experiences.
-- Scientific research backing the methodology, including Cognitive Load Theory, Sensory Processing research, and Environmental Psychology.
-
-## Resources
-
-- The hidden workplace challenges for neurodiverse professionals:
-  - 20% of workforce is neurodiverse
-  - 78% struggle with sensory overload
-  - 3x higher productivity in neuro-accessible environments
-- Data on spaces helped, cities covered, and user satisfaction:
-  - 2,400+ neurodiverse professionals helped
-  - 340+ certified accessible spaces
-  - 28 UK cities covered
-  - Average user satisfaction of 9.2/10
-- Related research sources:
-  - [Environmental Psychology](https://en.wikipedia.org/wiki/Environmental_psychology)
-  - [Cognitive Load Theory](https://en.wikipedia.org/wiki/Cognitive_load)
-  - Sensory Processing and its impact on workspace design
-
-## Community and Stories
-
-- Testimonials from professionals with ADHD, autism, and sensory sensitivities about how neuro-accessible workspaces improved their productivity and well-being.
-- Real stories highlight the importance of tailored spaces for mental health and focus.
-
-## Optional
-
-- About Quiet Space Club and its mission to promote neuro-inclusive environments.
-- Information on ongoing validation and development of the Neuro Index scoring system.
-- Blog and updates on new space assessments, neurodiversity insights, and related events.
+- [Home](/): What NeuroIndex is and who it is for.
+- [Search workspaces](/spaces): Browse and filter every scored neuro-inclusive workspace.
+- [How it works](/how-it-works): The Neuro Index scoring methodology and assessment process.
+- [For workspace providers](/workspace-providers): How operators get their space assessed and listed.
+- [Submit a space](/submit-space): Add a workspace to the index.
+- [Resources](/resources): Research and guidance on neuro-inclusive workplace design.
+- [About](/about): The Quiet Space Club mission.
+- [Contact](/contact): Get in touch.
 
 ## Blog
 
-- [Quiet Space Club Blog](/blog): Expert insights on neuro-inclusive workspaces, sensory-friendly design, and neurodiversity in the workplace.
-- [Create a sensory friendly meeting room in 2026](/blog/create-sensory-friendly-meeting-room-process): Guide to designing meeting spaces that support cognitive diversity through lighting, sound control, flexible participation, and inclusive planning.
-- [Defining inclusive workspaces for neurodiverse professionals](/blog/defining-inclusive-workspaces-for-neurodiverse-professionals): How to identify truly inclusive workspaces through evidence-based design, sensory adaptations, evaluation frameworks, and UK legal context.
-
-[About Quiet Space Club](/about)
+- [The Stigma Paradox: Why Neurodivergent Disclosure Fear Is Rising in 2026 Despite Record Awareness](/blog/neurodivergent-stigma-rising-despite-awareness-2026)
+- [The One-in-Four Reality: What 2026 Corporate Research Reveals About Neurodivergent Employees](/blog/one-in-four-neurodivergent-corporate-employees-2026)
+- [Awareness Isn't Enough: What the City & Guilds Neurodiversity Index 2026 Really Tells UK Employers](/blog/neurodiversity-index-2026-delivery-gap-uk)
+- [The Neurodivergent Talent Exodus: Why 1 in 4 Employees Are Neurodivergent — and Nearly 1 in 4 Are Planning to Leave in 2026](/blog/neurodivergent-talent-retention-crisis-uk-2026)
+- [The Neurodivergent Burnout Crisis: Why Only 5% of UK Workers Get the Support They Need in 2026](/blog/neurodivergent-burnout-crisis-uk-2026)
+- [The Neurodivergent Career Ceiling: Why 1 in 4 Workers Is Neurodivergent — But Missing From Management in 2026](/blog/neurodivergent-career-ceiling-management-gap-2026)
+- [The Confidence Illusion: Why UK Employers Feel Good About Neurodiversity in 2026 — But Employees Don't](/blog/neurodiversity-confidence-gap-employer-employee-2026)
+- [Neurodiversity Employment Tribunals Have Risen 164% in Four Years — What Every UK Employer Needs to Know in 2026](/blog/neurodiversity-tribunal-risk-uk-2026)
+- [Only 5% of Neurodivergent Employees Get Adjustments That Work — The Disclosure Barrier Explained (2026)](/blog/neurodivergent-workplace-adjustments-disclosure-2026)
+- [Neuroinclusion Pays: The 2026 ROI Data Every UK Employer Needs to See](/blog/neuroinclusion-roi-business-case-uk-2026)
+- [Return-to-Office Is Triggering a Neurodiversity Accommodation Crisis — What the 2026 Data Reveals](/blog/return-to-office-neurodiversity-accommodations-2026)
+- [78% of Neurodivergent Employees Now Use AI at Work — and It's Changing Everything in 2026](/blog/neurodivergent-ai-workplace-tools-2026)
+- [The Manager Training Gap: Why 35% of UK Workers Say Their Employer Is Failing on Neurodiversity in 2026](/blog/manager-training-gap-neurodiversity-2026)
+- [Create a sensory friendly meeting room in 2026](/blog/create-sensory-friendly-meeting-room-process)
+- [Defining inclusive workspaces for neurodiverse professionals](/blog/defining-inclusive-workspaces-for-neurodiverse-professionals)

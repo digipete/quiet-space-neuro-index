@@ -94,18 +94,35 @@ const BlogPost = () => {
   const readTime = estimateReadTime(post.content);
   const toc = post.content.filter(s => s.type === 'heading' && s.level === 2 && s.id);
 
+  const SITE = 'https://index.quietspace.club';
+  const postUrl = `${SITE}/blog/${post.slug}`;
+  const isoDate = (() => {
+    const d = new Date(post.date);
+    return Number.isNaN(d.getTime()) ? undefined : d.toISOString().split('T')[0];
+  })();
+
   const faqSections = post.content.filter(s => s.type === 'faq');
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
     "description": post.excerpt,
-    "image": `https://blog.quietspace.club${post.heroImage}`,
-    "datePublished": post.date,
-    "dateModified": post.date,
-    "author": { "@type": "Organization", "name": "Quiet Space Club", "url": "https://quietspace.club" },
-    "publisher": { "@type": "Organization", "name": "Quiet Space Club", "url": "https://quietspace.club" },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://blog.quietspace.club/blog/${post.slug}` }
+    "image": `${SITE}${post.heroImage}`,
+    "datePublished": isoDate,
+    "dateModified": isoDate,
+    "author": { "@type": "Organization", "name": "Quiet Space Club", "url": SITE },
+    "publisher": { "@type": "Organization", "name": "Quiet Space Club", "url": SITE, "logo": { "@type": "ImageObject", "url": `${SITE}/og-image.png` } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": postUrl }
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE}/` },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${SITE}/blog` },
+      { "@type": "ListItem", "position": 3, "name": post.title, "item": postUrl }
+    ]
   };
 
   const faqStructuredData = faqSections.length > 0 ? {
@@ -126,12 +143,14 @@ const BlogPost = () => {
         title={post.title}
         description={post.excerpt}
         keywords={post.keywords}
-        image={`https://blog.quietspace.club${post.heroImage}`}
-        url={`https://blog.quietspace.club/blog/${post.slug}`}
+        image={`${SITE}${post.heroImage}`}
+        url={postUrl}
         type="article"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }} />
       {faqStructuredData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />}
+
 
       <article className="min-h-screen bg-background" itemScope itemType="https://schema.org/Article">
         {/* Hero */}
@@ -184,12 +203,33 @@ const BlogPost = () => {
               {post.content.map((section, i) => renderSection(section, i))}
             </div>
 
+            {/* Directory CTA */}
+            <aside className="mt-14 p-6 rounded-xl border border-primary/25 bg-primary/5">
+              <h2 className="text-xl font-bold text-foreground mb-2">Find a neuro-inclusive workspace</h2>
+              <p className="text-foreground/85 mb-4">
+                NeuroIndex scores real offices, coworking spaces and meeting rooms on noise, lighting and sensory load,
+                so you can book somewhere that actually works.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/spaces" className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors">
+                  Search workspaces
+                </Link>
+                <Link to="/how-it-works" className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
+                  How the Neuro Index score works
+                </Link>
+                <Link to="/workspace-providers" className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
+                  List your space
+                </Link>
+              </div>
+            </aside>
+
             {/* Related Posts */}
             {otherPosts.length > 0 && (
               <section className="mt-16 pt-10 border-t border-border">
                 <h2 className="text-2xl font-bold text-foreground mb-6">Related Articles</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {otherPosts.map(p => (
+
                     <Link key={p.slug} to={`/blog/${p.slug}`} className="group">
                       <Card className="overflow-hidden border-border/50 transition-all group-hover:shadow-md group-hover:border-primary/30">
                         <div className="aspect-[16/10] overflow-hidden">

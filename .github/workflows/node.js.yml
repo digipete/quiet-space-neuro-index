@@ -43,22 +43,29 @@ jobs:
       - name: Verify build output
         run: |
           echo "Verifying build completed successfully..."
-          ls -la dist/
-          echo "Checking for main files..."
-          test -f dist/index.html && echo "✓ index.html found" || echo "✗ index.html missing"
-          test -f dist/sitemap.xml && echo "✓ sitemap.xml found" || echo "✗ sitemap.xml missing"
-          test -d dist/assets && echo "✓ assets directory found" || echo "✗ assets directory missing"
-          
-          echo "Checking static page generation..."
-          test -f dist/about/index.html && echo "✓ about/index.html generated" || echo "✗ about/index.html missing"
-          test -f dist/how-it-works/index.html && echo "✓ how-it-works/index.html generated" || echo "✗ how-it-works/index.html missing"
-          test -f dist/spaces/index.html && echo "✓ spaces/index.html generated" || echo "✗ spaces/index.html missing"
-          test -f dist/contact/index.html && echo "✓ contact/index.html generated" || echo "✗ contact/index.html missing"
-          test -f dist/resources/index.html && echo "✓ resources/index.html generated" || echo "✗ resources/index.html missing"
-          test -f dist/workspace-providers/index.html && echo "✓ workspace-providers/index.html generated" || echo "✗ workspace-providers/index.html missing"
-          test -f dist/404.html && echo "✓ 404.html generated" || echo "✗ 404.html missing"
-          
-          echo "Static pages successfully generated with proper SEO structure!"
+          test -f dist/index.html || { echo "✗ index.html missing"; exit 1; }
+          test -f dist/sitemap.xml || { echo "✗ sitemap.xml missing"; exit 1; }
+          test -d dist/assets || { echo "✗ assets directory missing"; exit 1; }
+          test -f dist/404.html || { echo "✗ 404.html missing"; exit 1; }
+
+          echo "Checking every sitemap URL resolves to a pre-rendered file..."
+          MISSING=0
+          for LOC in $(grep -o '<loc>[^<]*</loc>' dist/sitemap.xml | sed 's|</\?loc>||g'); do
+            PATHNAME=$(echo "$LOC" | sed 's|https\?://[^/]*||')
+            if [ "$PATHNAME" = "/" ]; then
+              FILE="dist/index.html"
+            else
+              FILE="dist${PATHNAME}/index.html"
+            fi
+            if [ ! -f "$FILE" ]; then
+              echo "✗ missing pre-rendered page for $LOC"
+              MISSING=$((MISSING+1))
+            fi
+          done
+          [ "$MISSING" -eq 0 ] || { echo "$MISSING sitemap URL(s) are not pre-rendered"; exit 1; }
+
+          echo "✓ $(grep -c '<loc>' dist/sitemap.xml) URLs pre-rendered and listed in the sitemap"
+
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
