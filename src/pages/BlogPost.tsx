@@ -94,18 +94,35 @@ const BlogPost = () => {
   const readTime = estimateReadTime(post.content);
   const toc = post.content.filter(s => s.type === 'heading' && s.level === 2 && s.id);
 
+  const SITE = 'https://index.quietspace.club';
+  const postUrl = `${SITE}/blog/${post.slug}`;
+  const isoDate = (() => {
+    const d = new Date(post.date);
+    return Number.isNaN(d.getTime()) ? undefined : d.toISOString().split('T')[0];
+  })();
+
   const faqSections = post.content.filter(s => s.type === 'faq');
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
     "description": post.excerpt,
-    "image": `https://blog.quietspace.club${post.heroImage}`,
-    "datePublished": post.date,
-    "dateModified": post.date,
-    "author": { "@type": "Organization", "name": "Quiet Space Club", "url": "https://quietspace.club" },
-    "publisher": { "@type": "Organization", "name": "Quiet Space Club", "url": "https://quietspace.club" },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://blog.quietspace.club/blog/${post.slug}` }
+    "image": `${SITE}${post.heroImage}`,
+    "datePublished": isoDate,
+    "dateModified": isoDate,
+    "author": { "@type": "Organization", "name": "Quiet Space Club", "url": SITE },
+    "publisher": { "@type": "Organization", "name": "Quiet Space Club", "url": SITE, "logo": { "@type": "ImageObject", "url": `${SITE}/og-image.png` } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": postUrl }
+  };
+
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE}/` },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${SITE}/blog` },
+      { "@type": "ListItem", "position": 3, "name": post.title, "item": postUrl }
+    ]
   };
 
   const faqStructuredData = faqSections.length > 0 ? {
@@ -126,12 +143,14 @@ const BlogPost = () => {
         title={post.title}
         description={post.excerpt}
         keywords={post.keywords}
-        image={`https://blog.quietspace.club${post.heroImage}`}
-        url={`https://blog.quietspace.club/blog/${post.slug}`}
+        image={`${SITE}${post.heroImage}`}
+        url={postUrl}
         type="article"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }} />
       {faqStructuredData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />}
+
 
       <article className="min-h-screen bg-background" itemScope itemType="https://schema.org/Article">
         {/* Hero */}
