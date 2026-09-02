@@ -57,6 +57,20 @@ const Blog = () => {
                 Evidence-based insights on creating neuro-inclusive workspaces, sensory-friendly design, 
                 and supporting neurodivergent professionals in the workplace.
               </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-3">
+                <Link
+                  to="/neurodiversity-in-the-workplace"
+                  className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
+                >
+                  Guide: Neurodiversity in the workplace
+                </Link>
+                <Link
+                  to="/neuroinclusion-for-employers"
+                  className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted transition-colors"
+                >
+                  Guide: Neuroinclusion for employers
+                </Link>
+              </div>
             </div>
           </div>
         </section>
