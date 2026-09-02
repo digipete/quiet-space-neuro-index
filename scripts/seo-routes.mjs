@@ -22,6 +22,8 @@ const STATIC_ROUTES = [
   { path: '/contact', changefreq: 'monthly', priority: '0.5' },
   { path: '/submit-space', changefreq: 'monthly', priority: '0.5' },
   { path: '/blog', changefreq: 'weekly', priority: '0.8' },
+  { path: '/neurodiversity-in-the-workplace', changefreq: 'monthly', priority: '0.9' },
+  { path: '/neuroinclusion-for-employers', changefreq: 'monthly', priority: '0.9' },
 ];
 
 function toIsoDate(value) {

@@ -37,6 +37,16 @@ export const Footer = () => {
                   How It Works
                 </Link>
               </li>
+              <li>
+                <Link to="/neurodiversity-in-the-workplace" className="text-muted-foreground hover:text-primary transition-colors">
+                  Neurodiversity in the Workplace
+                </Link>
+              </li>
+              <li>
+                <Link to="/neuroinclusion-for-employers" className="text-muted-foreground hover:text-primary transition-colors">
+                  Neuroinclusion for Employers
+                </Link>
+              </li>
             </ul>
           </div>
 
