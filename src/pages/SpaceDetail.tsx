@@ -37,6 +37,7 @@ export default function SpaceDetail() {
   const [listing, setListing] = useState<Listing | null>(null);
   const [loading, setLoading] = useState(true);
   const [claimModalOpen, setClaimModalOpen] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -146,6 +147,11 @@ export default function SpaceDetail() {
   ];
 
   const canonicalUrl = `https://index.quietspace.club/space/${listing.id}`;
+  const absoluteImageUrl = listing.image_url
+    ? (listing.image_url.startsWith('http')
+        ? listing.image_url
+        : `https://index.quietspace.club${listing.image_url}`)
+    : 'https://index.quietspace.club/og-image.png';
   const rawSummary = (listing.description || listing.full_description || '').replace(/\s+/g, ' ').trim();
   const summary = rawSummary.length > 110 ? `${rawSummary.slice(0, 107)}…` : rawSummary;
   const metaDescription =
