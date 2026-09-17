@@ -163,7 +163,7 @@ export default function SpaceDetail() {
       <SEO
         title={pageTitle}
         description={metaDescription}
-        image={listing.image_url}
+        image={absoluteImageUrl}
         url={canonicalUrl}
         type="article"
         keywords={`${listing.title}, ${listing.location}, neurodivergent workspace, ADHD-friendly, autism-friendly, quiet workspace, sensory-friendly`}
@@ -175,7 +175,7 @@ export default function SpaceDetail() {
           "@type": "LocalBusiness",
           "name": listing.title,
           "description": listing.full_description || listing.description,
-          "image": listing.image_url,
+          "image": absoluteImageUrl,
           "address": listing.location,
           "openingHours": listing.hours_of_operation,
           "url": canonicalUrl,
@@ -209,11 +209,19 @@ export default function SpaceDetail() {
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Hero Image */}
         <div className="relative rounded-xl overflow-hidden mb-8 shadow-lg">
-          <img
-            src={listing.image_url}
-            alt={listing.title}
-            className="w-full h-80 md:h-96 object-cover"
-          />
+          {!imageError ? (
+            <img
+              src={listing.image_url}
+              alt={`${listing.title} — neuro-friendly workspace in ${listing.location}`}
+              loading="lazy"
+              className="w-full h-80 md:h-96 object-cover"
+              onError={() => setImageError(true)}
+            />
+          ) : (
+            <div className="w-full h-80 md:h-96 bg-muted flex items-center justify-center">
+              <span className="text-muted-foreground">Photo coming soon</span>
+            </div>
+          )}
           <div className="absolute top-4 right-4">
             <Badge className={`${getNeuroScoreColor(listing.neuro_score)} text-xl px-4 py-2 shadow-lg`}>
               <Brain className="w-5 h-5 mr-2" />
