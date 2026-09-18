@@ -23,7 +23,12 @@ export const SEO = ({
 
   const fullTitle = title.includes('NeuroIndex') ? title : `${title} | NeuroIndex`;
   const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
-  const canonicalUrl = url || `https://index.quietspace.club${pathname}`;
+  // The site is served from GitHub Pages, where every page lives at its
+  // trailing-slash URL. Canonicals must match that exactly, or Google follows a
+  // redirect on every address it is given.
+  const withTrailingSlash = (value: string) =>
+    value.endsWith('/') ? value : `${value}/`;
+  const canonicalUrl = withTrailingSlash(url || `https://index.quietspace.club${pathname}`);
 
 
   return (
