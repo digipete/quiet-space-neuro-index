@@ -6,168 +6,184 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/spaces</loc>
+    <loc>https://index.quietspace.club/spaces/</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/workspace-providers</loc>
+    <loc>https://index.quietspace.club/workspace-providers/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/how-it-works</loc>
+    <loc>https://index.quietspace.club/how-it-works/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/about</loc>
+    <loc>https://index.quietspace.club/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/resources</loc>
+    <loc>https://index.quietspace.club/resources/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/contact</loc>
+    <loc>https://index.quietspace.club/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/submit-space</loc>
+    <loc>https://index.quietspace.club/submit-space/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog</loc>
+    <loc>https://index.quietspace.club/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/neurodivergent-stigma-rising-despite-awareness-2026</loc>
+    <loc>https://index.quietspace.club/neurodiversity-in-the-workplace/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://index.quietspace.club/neuroinclusion-for-employers/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://index.quietspace.club/blog/neurodivergent-stigma-rising-despite-awareness-2026/</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/one-in-four-neurodivergent-corporate-employees-2026</loc>
+    <loc>https://index.quietspace.club/blog/one-in-four-neurodivergent-corporate-employees-2026/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/neurodiversity-index-2026-delivery-gap-uk</loc>
+    <loc>https://index.quietspace.club/blog/neurodiversity-index-2026-delivery-gap-uk/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/neurodivergent-talent-retention-crisis-uk-2026</loc>
+    <loc>https://index.quietspace.club/blog/neurodivergent-talent-retention-crisis-uk-2026/</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/neurodivergent-burnout-crisis-uk-2026</loc>
+    <loc>https://index.quietspace.club/blog/neurodivergent-burnout-crisis-uk-2026/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/neurodivergent-career-ceiling-management-gap-2026</loc>
+    <loc>https://index.quietspace.club/blog/neurodivergent-career-ceiling-management-gap-2026/</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/neurodiversity-confidence-gap-employer-employee-2026</loc>
+    <loc>https://index.quietspace.club/blog/neurodiversity-confidence-gap-employer-employee-2026/</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/neurodiversity-tribunal-risk-uk-2026</loc>
+    <loc>https://index.quietspace.club/blog/neurodiversity-tribunal-risk-uk-2026/</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/neurodivergent-workplace-adjustments-disclosure-2026</loc>
+    <loc>https://index.quietspace.club/blog/neurodivergent-workplace-adjustments-disclosure-2026/</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/neuroinclusion-roi-business-case-uk-2026</loc>
+    <loc>https://index.quietspace.club/blog/neuroinclusion-roi-business-case-uk-2026/</loc>
     <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/return-to-office-neurodiversity-accommodations-2026</loc>
+    <loc>https://index.quietspace.club/blog/return-to-office-neurodiversity-accommodations-2026/</loc>
     <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/neurodivergent-ai-workplace-tools-2026</loc>
+    <loc>https://index.quietspace.club/blog/neurodivergent-ai-workplace-tools-2026/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/manager-training-gap-neurodiversity-2026</loc>
+    <loc>https://index.quietspace.club/blog/manager-training-gap-neurodiversity-2026/</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/create-sensory-friendly-meeting-room-process</loc>
+    <loc>https://index.quietspace.club/blog/create-sensory-friendly-meeting-room-process/</loc>
     <lastmod>2026-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/blog/defining-inclusive-workspaces-for-neurodiverse-professionals</loc>
+    <loc>https://index.quietspace.club/blog/defining-inclusive-workspaces-for-neurodiverse-professionals/</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/space/9d84c28a-ca69-4fd9-992e-caea76061e83</loc>
-    <lastmod>2026-03-28</lastmod>
+    <loc>https://index.quietspace.club/blog/managing-neurodivergent-employees/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://index.quietspace.club/space/c0e4631f-bddc-4e47-ad92-4397c346c6f0/</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/space/5a9ee99c-e4a1-4dcf-bd66-7f42939e20d1</loc>
-    <lastmod>2026-03-09</lastmod>
+    <loc>https://index.quietspace.club/space/5a9ee99c-e4a1-4dcf-bd66-7f42939e20d1/</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/space/c0e4631f-bddc-4e47-ad92-4397c346c6f0</loc>
-    <lastmod>2025-08-05</lastmod>
+    <loc>https://index.quietspace.club/space/e9f0d970-0345-4d8b-a5fc-91ec9d79b93d/</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/space/776d4e5a-35df-4e95-bb35-4e82f48f387d</loc>
-    <lastmod>2025-08-04</lastmod>
+    <loc>https://index.quietspace.club/space/1049120b-8b50-49f5-925f-1e2daa9ea946/</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/space/e9f0d970-0345-4d8b-a5fc-91ec9d79b93d</loc>
-    <lastmod>2025-08-04</lastmod>
+    <loc>https://index.quietspace.club/space/9d84c28a-ca69-4fd9-992e-caea76061e83/</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://index.quietspace.club/space/1049120b-8b50-49f5-925f-1e2daa9ea946</loc>
-    <lastmod>2025-08-04</lastmod>
+    <loc>https://index.quietspace.club/space/776d4e5a-35df-4e95-bb35-4e82f48f387d/</loc>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

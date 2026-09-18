@@ -9,6 +9,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export const SITE_URL = 'https://index.quietspace.club';
 
+// GitHub Pages serves every pre-rendered directory at its trailing-slash URL and
+// 301s the slash-less form. Canonicals, sitemap entries and og:url must therefore
+// all use the trailing-slash form so crawlers never hit a redirect.
+export function canonicalFor(routePath) {
+  if (routePath === '/') return `${SITE_URL}/`;
+  return `${SITE_URL}${routePath.endsWith('/') ? routePath : `${routePath}/`}`;
+}
+
 // Safety cap so a growing database can never blow up the published output.
 const MAX_SPACE_PAGES = 2000;
 

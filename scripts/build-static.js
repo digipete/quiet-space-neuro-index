@@ -2,14 +2,14 @@ import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getAllRoutes, getBlogRoutes, SITE_URL } from './seo-routes.mjs';
+import { getAllRoutes, getBlogRoutes, SITE_URL, canonicalFor } from './seo-routes.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 function buildSitemap(routes) {
   const urls = routes.map((r) => [
     '  <url>',
-    `    <loc>${SITE_URL}${r.path}</loc>`,
+    `    <loc>${canonicalFor(r.path)}</loc>`,
     r.lastmod ? `    <lastmod>${r.lastmod}</lastmod>` : null,
     r.changefreq ? `    <changefreq>${r.changefreq}</changefreq>` : null,
     r.priority ? `    <priority>${r.priority}</priority>` : null,
@@ -87,7 +87,9 @@ async function buildStatic() {
       'humans.txt',
       'manifest.json',
       'status.json',
-      '.nojekyll'
+      '.nojekyll',
+      // IndexNow ownership key — lets us tell Bing/Yandex the moment pages change.
+      '83dbfd005d7df55d9762034ff907ea8b.txt'
     ];
 
     staticFiles.forEach(file => {
@@ -150,6 +152,33 @@ async function buildStatic() {
       );
     }
     console.log(`✅ All ${routes.length} sitemap URLs are pre-rendered`);
+
+    // Verification: head tags must be unique and self-referencing on every page.
+    console.log('🔍 Verifying head tags (one title/description/canonical per page)...');
+    const headProblems = [];
+    for (const r of routes) {
+      const file = r.path === '/'
+        ? path.join(distDir, 'index.html')
+        : path.join(distDir, r.path.slice(1), 'index.html');
+      const html = fs.readFileSync(file, 'utf8');
+
+      const titles = html.match(/<title[^>]*>/gi) || [];
+      const descriptions = html.match(/<meta[^>]*name="description"[^>]*>/gi) || [];
+      const canonicals = html.match(/<link[^>]*rel="canonical"[^>]*>/gi) || [];
+      const expected = canonicalFor(r.path);
+
+      if (titles.length !== 1) headProblems.push(`${r.path}: ${titles.length} <title> tags`);
+      if (descriptions.length !== 1) headProblems.push(`${r.path}: ${descriptions.length} description tags`);
+      if (canonicals.length !== 1) headProblems.push(`${r.path}: ${canonicals.length} canonical tags`);
+      else if (!canonicals[0].includes(`href="${expected}"`)) {
+        headProblems.push(`${r.path}: canonical is not ${expected}`);
+      }
+    }
+
+    if (headProblems.length) {
+      throw new Error(`Head tag problems found:\n  - ${headProblems.join('\n  - ')}`);
+    }
+    console.log(`✅ Head tags verified on all ${routes.length} pages`);
 
     console.log('🎉 Static build completed successfully!');
 

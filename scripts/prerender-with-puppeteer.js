@@ -4,9 +4,44 @@ import { writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import handler from 'serve-handler';
-import { getAllRoutes } from './seo-routes.mjs';
+import { getAllRoutes, canonicalFor } from './seo-routes.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// index.html carries site-wide fallback tags. Once react-helmet-async has injected
+// the page's own tags (marked data-rh="true"), the template copies are stale
+// duplicates that tell Google every page is really the homepage. Strip them.
+const DUPLICATED_META = [
+  { attr: 'name', keys: ['description', 'keywords', 'robots'] },
+  { attr: 'property', keys: ['og:title', 'og:description', 'og:url', 'og:type', 'og:image'] },
+  { attr: 'name', keys: ['twitter:title', 'twitter:description', 'twitter:url', 'twitter:image', 'twitter:card'] },
+];
+
+function cleanHead(html, route) {
+  let out = html;
+
+  for (const { attr, keys } of DUPLICATED_META) {
+    for (const key of keys) {
+      const all = [...out.matchAll(new RegExp(`<meta[^>]*${attr}="${key}"[^>]*>`, 'gi'))].map((m) => m[0]);
+      const helmetTags = all.filter((t) => t.includes('data-rh'));
+      if (!helmetTags.length) continue; // no page-specific version — keep the fallback
+      for (const stale of all.filter((t) => !t.includes('data-rh'))) {
+        out = out.replace(stale, '');
+      }
+    }
+  }
+
+  // Exactly one canonical, always self-referencing and trailing-slash.
+  const canonical = canonicalFor(route);
+  out = out.replace(/<link[^>]*rel="canonical"[^>]*>/gi, '');
+  out = out.replace('</head>', `<link rel="canonical" href="${canonical}" data-rh="true"></head>`);
+
+  // og:url / twitter:url must match the canonical exactly.
+  out = out.replace(/(<meta[^>]*property="og:url"[^>]*content=")[^"]*(")/i, `$1${canonical}$2`);
+  out = out.replace(/(<meta[^>]*name="twitter:url"[^>]*content=")[^"]*(")/i, `$1${canonical}$2`);
+
+  return out;
+}
 
 async function prerender() {
   const distDir = join(__dirname, '../dist');
@@ -62,8 +97,8 @@ async function prerender() {
         // Give react-helmet-async time to update meta tags
         await new Promise(resolve => setTimeout(resolve, 1000));
 
-        // Extract the full rendered HTML
-        const html = await page.content();
+        // Extract the full rendered HTML and strip stale template head tags
+        const html = cleanHead(await page.content(), route);
 
         // Determine output path
         let outputPath;
