@@ -20,7 +20,9 @@ export const Navigation = () => {
 
   // { name: 'Resources', path: '/resources' },
 
-  const isActive = (path: string) => location.pathname === path;
+  // Pages are served at their trailing-slash URL, so compare without it.
+  const normalise = (path: string) => (path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path);
+  const isActive = (path: string) => normalise(location.pathname) === normalise(path);
 
   return (
     <nav className="bg-card/50 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
