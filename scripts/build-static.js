@@ -87,7 +87,9 @@ async function buildStatic() {
       'humans.txt',
       'manifest.json',
       'status.json',
-      '.nojekyll'
+      '.nojekyll',
+      // IndexNow ownership key — lets us tell Bing/Yandex the moment pages change.
+      '83dbfd005d7df55d9762034ff907ea8b.txt'
     ];
 
     staticFiles.forEach(file => {
