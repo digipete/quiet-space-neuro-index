@@ -2,14 +2,14 @@ import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getAllRoutes, getBlogRoutes, SITE_URL } from './seo-routes.mjs';
+import { getAllRoutes, getBlogRoutes, SITE_URL, canonicalFor } from './seo-routes.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 function buildSitemap(routes) {
   const urls = routes.map((r) => [
     '  <url>',
-    `    <loc>${SITE_URL}${r.path}</loc>`,
+    `    <loc>${canonicalFor(r.path)}</loc>`,
     r.lastmod ? `    <lastmod>${r.lastmod}</lastmod>` : null,
     r.changefreq ? `    <changefreq>${r.changefreq}</changefreq>` : null,
     r.priority ? `    <priority>${r.priority}</priority>` : null,
