@@ -29,7 +29,7 @@ function buildLlmsTxt(blogRoutes) {
   const source = fs.readFileSync(path.join(__dirname, '../src/data/blogPosts.ts'), 'utf8');
   const titles = [...source.matchAll(/title:\s*'((?:[^'\\]|\\.)*)'/g)].map((m) => m[1].replace(/\\'/g, "'"));
 
-  const posts = blogRoutes.map((r, i) => `- [${titles[i] || r.path}](${r.path})`);
+  const posts = blogRoutes.map((r, i) => `- [${titles[i] || r.path}](${r.path}/)`);
 
   return [
     '# NeuroIndex — Quiet Space Club',
