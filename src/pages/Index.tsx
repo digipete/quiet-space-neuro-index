@@ -144,8 +144,8 @@ const Index = () => {
           "@type": "CollectionPage",
           "name": "Neuro-Friendly Workspace Directory",
           "description": "Directory of certified neuro-inclusive workspaces, coworking spaces, and meeting rooms.",
-          "url": "https://index.quietspace.club/spaces",
-          "isPartOf": { "@type": "WebSite", "name": "NeuroIndex - Quiet Space Club", "url": "https://index.quietspace.club" },
+          "url": "https://index.quietspace.club/spaces/",
+          "isPartOf": { "@type": "WebSite", "name": "NeuroIndex - Quiet Space Club", "url": "https://index.quietspace.club/" },
           "about": { "@type": "Thing", "name": "Neurodivergent-friendly workspaces" },
           "mainEntity": {
             "@type": "ItemList",
@@ -153,7 +153,7 @@ const Index = () => {
             "itemListElement": filteredListings.slice(0, 50).map((listing, i) => ({
               "@type": "ListItem",
               "position": i + 1,
-              "url": `https://index.quietspace.club/space/${listing.id}`,
+              "url": `https://index.quietspace.club/space/${listing.id}/`,
               "name": listing.title
             }))
           }

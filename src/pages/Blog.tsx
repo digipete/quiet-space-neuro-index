@@ -10,7 +10,7 @@ const Blog = () => {
     "@type": "Blog",
     "name": "Quiet Space Club Blog",
     "description": "Expert insights on neuro-inclusive workspaces, sensory-friendly design, and neurodiversity in the workplace.",
-    "url": "https://index.quietspace.club",
+    "url": "https://index.quietspace.club/blog/",
     "publisher": {
       "@type": "Organization",
       "name": "Quiet Space Club",
@@ -22,7 +22,7 @@ const Blog = () => {
       "description": post.excerpt,
       "datePublished": post.date,
       "image": `https://index.quietspace.club${post.heroImage}`,
-      "url": `https://index.quietspace.club/blog/${post.slug}`,
+      "url": `https://index.quietspace.club/blog/${post.slug}/`,
       "author": {
         "@type": "Organization",
         "name": "Quiet Space Club"
@@ -36,7 +36,7 @@ const Blog = () => {
         title="Blog - Neuro-Inclusive Workspace Insights"
         description="Expert articles on creating sensory-friendly workspaces, inclusive meeting rooms, and neurodiversity in the workplace. Evidence-based guidance for neurodiverse professionals and workspace providers."
         keywords="neurodiversity blog, sensory friendly workspace, inclusive workplace design, ADHD workspace tips, autism friendly office, neuro-inclusive design, workplace accommodations UK"
-        url="https://index.quietspace.club/blog"
+        url="https://index.quietspace.club/blog/"
         type="website"
       />
 
