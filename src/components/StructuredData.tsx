@@ -19,10 +19,10 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
           "@type": "WebSite",
           "name": "NeuroIndex - Quiet Space Club",
           "description": "Find neuro-friendly workspaces designed for neurodivergent individuals",
-          "url": "https://index.quietspace.club/",
+          "url": "https://index.quietspace.club",
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://index.quietspace.club/spaces/?query={search_term_string}",
+            "target": "https://index.quietspace.club/spaces?query={search_term_string}",
             "query-input": "required name=search_term_string"
           }
         };
@@ -33,7 +33,7 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
           "@type": "Organization",
           "name": "Quiet Space Club",
           "description": "Connecting neurodivergent individuals with inclusive, accessible workspaces",
-          "url": "https://index.quietspace.club/",
+          "url": "https://index.quietspace.club",
           "logo": "https://index.quietspace.club/og-image.png",
           "sameAs": []
         };

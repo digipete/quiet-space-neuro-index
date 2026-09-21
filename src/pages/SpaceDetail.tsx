@@ -146,7 +146,7 @@ export default function SpaceDetail() {
     { name: 'Sensory Break Areas', available: listing.neuro_score >= 9 }
   ];
 
-  const canonicalUrl = `https://index.quietspace.club/space/${listing.id}/`;
+  const canonicalUrl = `https://index.quietspace.club/space/${listing.id}`;
   const absoluteImageUrl = listing.image_url
     ? (listing.image_url.startsWith('http')
         ? listing.image_url

@@ -43,28 +43,6 @@ function cleanHead(html, route) {
   return out;
 }
 
-// GitHub Pages serves each page at its trailing-slash URL and 301s the slash-less
-// form. React Router links (and links inside article copy) are written slash-less,
-// so every crawled link was a redirect. Rewrite them in the published HTML — both
-// in anchors and inside JSON-LD blocks — so crawlers only ever follow real pages.
-export function fixInternalLinks(html, routePaths) {
-  let out = html;
-
-  for (const route of routePaths) {
-    if (route === '/') continue;
-    const escaped = route.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    // href="/blog"  →  href="/blog/"
-    out = out.replace(new RegExp(`href="${escaped}"`, 'g'), `href="${route}/"`);
-    // "url": "https://index.quietspace.club/blog"  →  ".../blog/"
-    out = out.replace(
-      new RegExp(`(https://index\\.quietspace\\.club${escaped})(?=["\\\\?])`, 'g'),
-      `$1/`,
-    );
-  }
-
-  return out;
-}
-
 async function prerender() {
   const distDir = join(__dirname, '../dist');
   const port = 3000;
@@ -119,9 +97,8 @@ async function prerender() {
         // Give react-helmet-async time to update meta tags
         await new Promise(resolve => setTimeout(resolve, 1000));
 
-        // Extract the full rendered HTML, strip stale template head tags and
-        // point every internal link at the URL the server actually serves.
-        const html = fixInternalLinks(cleanHead(await page.content(), route), routes);
+        // Extract the full rendered HTML and strip stale template head tags
+        const html = cleanHead(await page.content(), route);
 
         // Determine output path
         let outputPath;
