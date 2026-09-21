@@ -10,15 +10,15 @@ export const Navigation = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'NeuroIndex', path: '/spaces' },
-    { name: 'How It Works', path: '/how-it-works' },
-    { name: 'Workspace Providers', path: '/workspace-providers' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'NeuroIndex', path: '/spaces/' },
+    { name: 'How It Works', path: '/how-it-works/' },
+    { name: 'Workspace Providers', path: '/workspace-providers/' },
+    { name: 'Blog', path: '/blog/' },
+    { name: 'About', path: '/about/' },
+    { name: 'Contact', path: '/contact/' },
   ];
 
-  // { name: 'Resources', path: '/resources' },
+  // { name: 'Resources', path: '/resources/' },
 
   // Pages are served at their trailing-slash URL, so compare without it.
   const normalise = (path: string) => (path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path);
