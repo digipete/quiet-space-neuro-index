@@ -10,15 +10,15 @@ export const Navigation = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'NeuroIndex', path: '/spaces' },
-    { name: 'How It Works', path: '/how-it-works' },
-    { name: 'Workspace Providers', path: '/workspace-providers' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'NeuroIndex', path: '/spaces/' },
+    { name: 'How It Works', path: '/how-it-works/' },
+    { name: 'Workspace Providers', path: '/workspace-providers/' },
+    { name: 'Blog', path: '/blog/' },
+    { name: 'About', path: '/about/' },
+    { name: 'Contact', path: '/contact/' },
   ];
 
-  // { name: 'Resources', path: '/resources' },
+  // { name: 'Resources', path: '/resources/' },
 
   // Pages are served at their trailing-slash URL, so compare without it.
   const normalise = (path: string) => (path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path);
@@ -50,7 +50,7 @@ export const Navigation = () => {
               </Link>
             ))}
             <Button asChild size="sm" className="ml-2">
-              <Link to="/submit-space">
+              <Link to="/submit-space/">
                 <Plus className="w-4 h-4 mr-1" />
                 List Your Space
               </Link>
@@ -91,7 +91,7 @@ export const Navigation = () => {
               ))}
               <div className="px-3 pt-2">
                 <Button asChild className="w-full" size="sm" onClick={() => setIsMenuOpen(false)}>
-                  <Link to="/submit-space">
+                  <Link to="/submit-space/">
                     <Plus className="w-4 h-4 mr-1" />
                     List Your Space
                   </Link>

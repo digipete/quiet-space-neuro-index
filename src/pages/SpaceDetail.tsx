@@ -95,7 +95,7 @@ export default function SpaceDetail() {
   }
 
   if (!listing) {
-    return <Navigate to="/spaces" replace />;
+    return <Navigate to="/spaces/" replace />;
   }
 
   const renderStars = (rating: number) => {
@@ -197,7 +197,7 @@ export default function SpaceDetail() {
       <header className="border-b border-border/50 bg-card/50 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">
           <Link 
-            to="/spaces"
+            to="/spaces/"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -403,7 +403,7 @@ export default function SpaceDetail() {
                   Our team can provide detailed information about neuro-friendly features and accommodations.
                 </p>
                 <Button variant="outline" className="w-full" asChild>
-                  <Link to="/contact">Contact for Info</Link>
+                  <Link to="/contact/">Contact for Info</Link>
                 </Button>
               </CardContent>
             </Card>

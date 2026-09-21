@@ -29,7 +29,7 @@ function buildLlmsTxt(blogRoutes) {
   const source = fs.readFileSync(path.join(__dirname, '../src/data/blogPosts.ts'), 'utf8');
   const titles = [...source.matchAll(/title:\s*'((?:[^'\\]|\\.)*)'/g)].map((m) => m[1].replace(/\\'/g, "'"));
 
-  const posts = blogRoutes.map((r, i) => `- [${titles[i] || r.path}](${r.path})`);
+  const posts = blogRoutes.map((r, i) => `- [${titles[i] || r.path}](${r.path}/)`);
 
   return [
     '# NeuroIndex — Quiet Space Club',
@@ -39,13 +39,13 @@ function buildLlmsTxt(blogRoutes) {
     '## Pages',
     '',
     '- [Home](/): What NeuroIndex is and who it is for.',
-    '- [Search workspaces](/spaces): Browse and filter every scored neuro-inclusive workspace.',
-    '- [How it works](/how-it-works): The Neuro Index scoring methodology and assessment process.',
-    '- [For workspace providers](/workspace-providers): How operators get their space assessed and listed.',
-    '- [Submit a space](/submit-space): Add a workspace to the index.',
-    '- [Resources](/resources): Research and guidance on neuro-inclusive workplace design.',
-    '- [About](/about): The Quiet Space Club mission.',
-    '- [Contact](/contact): Get in touch.',
+    '- [Search workspaces](/spaces/): Browse and filter every scored neuro-inclusive workspace.',
+    '- [How it works](/how-it-works/): The Neuro Index scoring methodology and assessment process.',
+    '- [For workspace providers](/workspace-providers/): How operators get their space assessed and listed.',
+    '- [Submit a space](/submit-space/): Add a workspace to the index.',
+    '- [Resources](/resources/): Research and guidance on neuro-inclusive workplace design.',
+    '- [About](/about/): The Quiet Space Club mission.',
+    '- [Contact](/contact/): Get in touch.',
     '',
     '## Blog',
     '',
@@ -109,33 +109,20 @@ async function buildStatic() {
       console.log('✅ Copied CNAME');
     }
 
-    // Generate GitHub Pages 404.html for SPA routing (unknown URLs only —
-    // every indexable route is pre-rendered as a real index.html above).
-    console.log('📄 Generating 404.html for SPA routing...');
-    const spa404Content = `<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <title>Page not found | Quiet Space Club</title>
-    <script>
-      const location = window.location;
-      if (location.pathname.slice(1)) {
-        location.replace(
-          location.protocol + '//' + location.host +
-          '/?redirect=' + encodeURIComponent(location.pathname + location.search + location.hash)
-        );
-      }
-    </script>
-  </head>
-  <body>
-    <p>Redirecting to the main application...</p>
-  </body>
-</html>`;
+    // 404.html: an honest, noindex "page not found" page. It must NOT bounce to
+    // the homepage — Google reads that as a redirect and reports redirect errors.
+    // Every indexable route is a real pre-rendered index.html, so no SPA shim.
+    const notFoundSrc = path.join(publicDir, '404.html');
+    if (!fs.existsSync(notFoundSrc)) {
+      throw new Error('public/404.html is missing');
+    }
+    const notFoundHtml = fs.readFileSync(notFoundSrc, 'utf8');
+    if (/location\.replace|window\.location\s*=/.test(notFoundHtml)) {
+      throw new Error('public/404.html must not redirect — Google reports it as a redirect error');
+    }
+    fs.copyFileSync(notFoundSrc, path.join(distDir, '404.html'));
+    console.log('✅ Copied 404.html (no redirect, noindex)');
 
-    fs.writeFileSync(path.join(distDir, '404.html'), spa404Content);
-    console.log('✅ Generated 404.html for SPA routing');
 
     // Verification: every sitemap URL must have a real pre-rendered file.
     console.log('🔍 Verifying every sitemap URL has a pre-rendered page...');
@@ -179,6 +166,28 @@ async function buildStatic() {
       throw new Error(`Head tag problems found:\n  - ${headProblems.join('\n  - ')}`);
     }
     console.log(`✅ Head tags verified on all ${routes.length} pages`);
+
+    // Verification: no internal link may point at an address that redirects.
+    // GitHub Pages 301s the slash-less form, and Google logs those as redirects.
+    console.log('🔍 Verifying internal links never point at a redirecting address...');
+    const indexable = new Set(routes.map((r) => (r.path === '/' ? '/' : `${r.path}/`)));
+    const linkProblems = [];
+    for (const r of routes) {
+      const file = r.path === '/'
+        ? path.join(distDir, 'index.html')
+        : path.join(distDir, r.path.slice(1), 'index.html');
+      const html = fs.readFileSync(file, 'utf8');
+      const hrefs = [...html.matchAll(/href="(\/[^"#?]*)"/g)].map((m) => m[1]);
+      for (const href of new Set(hrefs)) {
+        if (href.endsWith('/')) continue;
+        if (indexable.has(`${href}/`)) linkProblems.push(`${r.path} → ${href}`);
+      }
+    }
+
+    if (linkProblems.length) {
+      throw new Error(`Internal links pointing at redirecting addresses:\n  - ${linkProblems.join('\n  - ')}`);
+    }
+    console.log('✅ Internal links verified (no redirecting addresses)');
 
     console.log('🎉 Static build completed successfully!');
 

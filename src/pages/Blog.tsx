@@ -59,13 +59,13 @@ const Blog = () => {
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <Link
-                  to="/neurodiversity-in-the-workplace"
+                  to="/neurodiversity-in-the-workplace/"
                   className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
                 >
                   Guide: Neurodiversity in the workplace
                 </Link>
                 <Link
-                  to="/neuroinclusion-for-employers"
+                  to="/neuroinclusion-for-employers/"
                   className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted transition-colors"
                 >
                   Guide: Neuroinclusion for employers
@@ -80,7 +80,7 @@ const Blog = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {blogPosts.map((post) => (
-                <Link key={post.slug} to={`/blog/${post.slug}`} className="group">
+                <Link key={post.slug} to={`/blog/${post.slug}/`} className="group">
                   <Card className="h-full overflow-hidden border-border/50 transition-all duration-300 group-hover:shadow-lg group-hover:border-primary/30">
                     <div className="aspect-[16/10] overflow-hidden">
                       <img

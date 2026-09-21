@@ -89,7 +89,7 @@ const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPost(slug) : undefined;
 
-  if (!post) return <Navigate to="/blog" replace />;
+  if (!post) return <Navigate to="/blog/" replace />;
 
   const readTime = estimateReadTime(post.content);
   const toc = post.content.filter(s => s.type === 'heading' && s.level === 2 && s.id);
@@ -162,7 +162,7 @@ const BlogPost = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto -mt-16 relative z-10">
             {/* Breadcrumb */}
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 mb-6 transition-colors">
+            <Link to="/blog/" className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 mb-6 transition-colors">
               <ArrowLeft className="w-4 h-4" /> Back to Blog
             </Link>
 
@@ -211,13 +211,13 @@ const BlogPost = () => {
                 so you can book somewhere that actually works.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link to="/spaces" className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors">
+                <Link to="/spaces/" className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors">
                   Search workspaces
                 </Link>
-                <Link to="/how-it-works" className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
+                <Link to="/how-it-works/" className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
                   How the Neuro Index score works
                 </Link>
-                <Link to="/workspace-providers" className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
+                <Link to="/workspace-providers/" className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
                   List your space
                 </Link>
               </div>
@@ -230,7 +230,7 @@ const BlogPost = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {otherPosts.map(p => (
 
-                    <Link key={p.slug} to={`/blog/${p.slug}`} className="group">
+                    <Link key={p.slug} to={`/blog/${p.slug}/`} className="group">
                       <Card className="overflow-hidden border-border/50 transition-all group-hover:shadow-md group-hover:border-primary/30">
                         <div className="aspect-[16/10] overflow-hidden">
                           <img src={p.heroImage} alt={p.heroImageAlt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />

@@ -5,29 +5,29 @@
 ## Pages
 
 - [Home](/): What NeuroIndex is and who it is for.
-- [Search workspaces](/spaces): Browse and filter every scored neuro-inclusive workspace.
-- [How it works](/how-it-works): The Neuro Index scoring methodology and assessment process.
-- [For workspace providers](/workspace-providers): How operators get their space assessed and listed.
-- [Submit a space](/submit-space): Add a workspace to the index.
-- [Resources](/resources): Research and guidance on neuro-inclusive workplace design.
-- [About](/about): The Quiet Space Club mission.
-- [Contact](/contact): Get in touch.
+- [Search workspaces](/spaces/): Browse and filter every scored neuro-inclusive workspace.
+- [How it works](/how-it-works/): The Neuro Index scoring methodology and assessment process.
+- [For workspace providers](/workspace-providers/): How operators get their space assessed and listed.
+- [Submit a space](/submit-space/): Add a workspace to the index.
+- [Resources](/resources/): Research and guidance on neuro-inclusive workplace design.
+- [About](/about/): The Quiet Space Club mission.
+- [Contact](/contact/): Get in touch.
 
 ## Blog
 
-- [The Stigma Paradox: Why Neurodivergent Disclosure Fear Is Rising in 2026 Despite Record Awareness](/blog/neurodivergent-stigma-rising-despite-awareness-2026)
-- [The One-in-Four Reality: What 2026 Corporate Research Reveals About Neurodivergent Employees](/blog/one-in-four-neurodivergent-corporate-employees-2026)
-- [Awareness Isn't Enough: What the City & Guilds Neurodiversity Index 2026 Really Tells UK Employers](/blog/neurodiversity-index-2026-delivery-gap-uk)
-- [The Neurodivergent Talent Exodus: Why 1 in 4 Employees Are Neurodivergent — and Nearly 1 in 4 Are Planning to Leave in 2026](/blog/neurodivergent-talent-retention-crisis-uk-2026)
-- [The Neurodivergent Burnout Crisis: Why Only 5% of UK Workers Get the Support They Need in 2026](/blog/neurodivergent-burnout-crisis-uk-2026)
-- [The Neurodivergent Career Ceiling: Why 1 in 4 Workers Is Neurodivergent — But Missing From Management in 2026](/blog/neurodivergent-career-ceiling-management-gap-2026)
-- [The Confidence Illusion: Why UK Employers Feel Good About Neurodiversity in 2026 — But Employees Don't](/blog/neurodiversity-confidence-gap-employer-employee-2026)
-- [Neurodiversity Employment Tribunals Have Risen 164% in Four Years — What Every UK Employer Needs to Know in 2026](/blog/neurodiversity-tribunal-risk-uk-2026)
-- [Only 5% of Neurodivergent Employees Get Adjustments That Work — The Disclosure Barrier Explained (2026)](/blog/neurodivergent-workplace-adjustments-disclosure-2026)
-- [Neuroinclusion Pays: The 2026 ROI Data Every UK Employer Needs to See](/blog/neuroinclusion-roi-business-case-uk-2026)
-- [Return-to-Office Is Triggering a Neurodiversity Accommodation Crisis — What the 2026 Data Reveals](/blog/return-to-office-neurodiversity-accommodations-2026)
-- [78% of Neurodivergent Employees Now Use AI at Work — and It's Changing Everything in 2026](/blog/neurodivergent-ai-workplace-tools-2026)
-- [The Manager Training Gap: Why 35% of UK Workers Say Their Employer Is Failing on Neurodiversity in 2026](/blog/manager-training-gap-neurodiversity-2026)
-- [Create a sensory friendly meeting room in 2026](/blog/create-sensory-friendly-meeting-room-process)
-- [Defining inclusive workspaces for neurodiverse professionals](/blog/defining-inclusive-workspaces-for-neurodiverse-professionals)
-- [Managing Neurodivergent Employees: A Practical Guide for UK Managers (2026)](/blog/managing-neurodivergent-employees)
+- [The Stigma Paradox: Why Neurodivergent Disclosure Fear Is Rising in 2026 Despite Record Awareness](/blog/neurodivergent-stigma-rising-despite-awareness-2026/)
+- [The One-in-Four Reality: What 2026 Corporate Research Reveals About Neurodivergent Employees](/blog/one-in-four-neurodivergent-corporate-employees-2026/)
+- [Awareness Isn't Enough: What the City & Guilds Neurodiversity Index 2026 Really Tells UK Employers](/blog/neurodiversity-index-2026-delivery-gap-uk/)
+- [The Neurodivergent Talent Exodus: Why 1 in 4 Employees Are Neurodivergent — and Nearly 1 in 4 Are Planning to Leave in 2026](/blog/neurodivergent-talent-retention-crisis-uk-2026/)
+- [The Neurodivergent Burnout Crisis: Why Only 5% of UK Workers Get the Support They Need in 2026](/blog/neurodivergent-burnout-crisis-uk-2026/)
+- [The Neurodivergent Career Ceiling: Why 1 in 4 Workers Is Neurodivergent — But Missing From Management in 2026](/blog/neurodivergent-career-ceiling-management-gap-2026/)
+- [The Confidence Illusion: Why UK Employers Feel Good About Neurodiversity in 2026 — But Employees Don't](/blog/neurodiversity-confidence-gap-employer-employee-2026/)
+- [Neurodiversity Employment Tribunals Have Risen 164% in Four Years — What Every UK Employer Needs to Know in 2026](/blog/neurodiversity-tribunal-risk-uk-2026/)
+- [Only 5% of Neurodivergent Employees Get Adjustments That Work — The Disclosure Barrier Explained (2026)](/blog/neurodivergent-workplace-adjustments-disclosure-2026/)
+- [Neuroinclusion Pays: The 2026 ROI Data Every UK Employer Needs to See](/blog/neuroinclusion-roi-business-case-uk-2026/)
+- [Return-to-Office Is Triggering a Neurodiversity Accommodation Crisis — What the 2026 Data Reveals](/blog/return-to-office-neurodiversity-accommodations-2026/)
+- [78% of Neurodivergent Employees Now Use AI at Work — and It's Changing Everything in 2026](/blog/neurodivergent-ai-workplace-tools-2026/)
+- [The Manager Training Gap: Why 35% of UK Workers Say Their Employer Is Failing on Neurodiversity in 2026](/blog/manager-training-gap-neurodiversity-2026/)
+- [Create a sensory friendly meeting room in 2026](/blog/create-sensory-friendly-meeting-room-process/)
+- [Defining inclusive workspaces for neurodiverse professionals](/blog/defining-inclusive-workspaces-for-neurodiverse-professionals/)
+- [Managing Neurodivergent Employees: A Practical Guide for UK Managers (2026)](/blog/managing-neurodivergent-employees/)

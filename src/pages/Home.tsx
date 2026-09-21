@@ -122,19 +122,19 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-lg px-8 py-6">
-                <Link to="/spaces">
+                <Link to="/spaces/">
                   <Search className="w-5 h-5 mr-2" />
                   Search NeuroIndex
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
-                <Link to="/how-it-works">
+                <Link to="/how-it-works/">
                   <Brain className="w-5 h-5 mr-2" />
                   See How It Works
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-primary/40 text-primary hover:bg-primary/5">
-                <Link to="/submit-space">
+                <Link to="/submit-space/">
                   <Plus className="w-5 h-5 mr-2" />
                   List Your Space
                 </Link>
@@ -298,13 +298,13 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-lg px-8 py-6">
-                <Link to="/spaces">
+                <Link to="/spaces/">
                   <Search className="w-5 h-5 mr-2" />
                   Explore NeuroIndex
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
-                <Link to="/about">
+                <Link to="/about/">
                   <Users className="w-5 h-5 mr-2" />
                   Learn Our Story
                 </Link>

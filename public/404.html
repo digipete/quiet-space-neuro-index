@@ -1,24 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NeuroIndex - Redirecting...</title>
-    <script>
-      // GitHub Pages SPA redirect handler
-      (function(l) {
-        if (l.pathname !== '/') {
-          var path = l.pathname.slice(1);
-          window.location.replace('/?redirect=' + encodeURIComponent('/' + path + l.search + l.hash));
-        }
-      }(window.location))
-    </script>
+    <meta name="robots" content="noindex, follow" />
+    <title>Page not found | NeuroIndex</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+        background: #0f1a1c;
+        color: #f2f7f7;
+        padding: 24px;
+      }
+      main { max-width: 34rem; text-align: center; }
+      h1 { font-size: 2rem; margin: 0 0 0.5rem; }
+      p { line-height: 1.6; color: #b9c7c8; margin: 0 0 1.5rem; }
+      nav { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+      a {
+        display: inline-block;
+        padding: 0.65rem 1.1rem;
+        border-radius: 0.6rem;
+        border: 1px solid rgba(242, 247, 247, 0.25);
+        color: #f2f7f7;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      a.primary { background: #2fb8a8; border-color: #2fb8a8; color: #06201d; }
+    </style>
   </head>
   <body>
-    <div style="font-family: Arial, sans-serif; text-align: center; margin-top: 50px;">
-      <h1>Redirecting...</h1>
-      <p>If you are not redirected automatically, <a href="/">click here to go to the homepage</a>.</p>
-    </div>
+    <main>
+      <h1>Page not found</h1>
+      <p>
+        We couldn't find that page. It may have been moved, or the address may
+        have a typo. Here are some good places to pick things up again.
+      </p>
+      <nav>
+        <a class="primary" href="/">Homepage</a>
+        <a href="/spaces/">Browse workspaces</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact us</a>
+      </nav>
+    </main>
   </body>
 </html>

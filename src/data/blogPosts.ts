@@ -79,7 +79,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'While the Understood.org survey was conducted in the United States, the dynamics it captures are acutely recognisable in a UK context. UK employment law already requires employers to make reasonable adjustments for disabled employees — and neurodivergent conditions including ADHD, autism, dyslexia, and dyspraxia can qualify as disabilities under the Equality Act 2010. Yet the fact that 60% of neurodivergent employees globally do not know who to approach about adjustments suggests a systemic failure in how organisations communicate their own policies. For UK employers, the risk is not only reputational. Neurodiversity-related employment tribunal claims have risen sharply in recent years, and the cost of defending or losing such cases is substantial. But the more important argument is not legal — it is human and commercial. If neurodivergent employees cannot safely access the adjustments they are entitled to, organisations are losing the full contribution of a significant proportion of their workforce. <a href="/how-it-works">The NeuroIndex framework</a> used to assess spaces listed on Quiet Space Club consistently finds that physical environment is one of the most controllable factors in neurodivergent performance — but it only matters if employees feel safe enough to ask for it in the first place.'
+        text: 'While the Understood.org survey was conducted in the United States, the dynamics it captures are acutely recognisable in a UK context. UK employment law already requires employers to make reasonable adjustments for disabled employees — and neurodivergent conditions including ADHD, autism, dyslexia, and dyspraxia can qualify as disabilities under the Equality Act 2010. Yet the fact that 60% of neurodivergent employees globally do not know who to approach about adjustments suggests a systemic failure in how organisations communicate their own policies. For UK employers, the risk is not only reputational. Neurodiversity-related employment tribunal claims have risen sharply in recent years, and the cost of defending or losing such cases is substantial. But the more important argument is not legal — it is human and commercial. If neurodivergent employees cannot safely access the adjustments they are entitled to, organisations are losing the full contribution of a significant proportion of their workforce. <a href="/how-it-works/">The NeuroIndex framework</a> used to assess spaces listed on Quiet Space Club consistently finds that physical environment is one of the most controllable factors in neurodivergent performance — but it only matters if employees feel safe enough to ask for it in the first place.'
       },
       {
         type: 'protip',
@@ -117,7 +117,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The Understood.org survey is a useful corrective to the temptation of performative neuroinclusion. Posting about Neurodiversity Celebration Week, or naming a neurodiversity champion, does not change the daily experience of an employee who is masking for eight hours, does not know what adjustments they are entitled to, and fears that asking will mark them out for passed-over promotions. What actually moves the needle is structural: clear, accessible adjustment processes; managers trained not just in awareness but in how to have a practical conversation about support; physical and hybrid environments that reduce sensory and cognitive load by default rather than by exception. The <a href="/spaces">Quiet Space Club directory</a> exists precisely because the physical environment is one of the highest-leverage, lowest-stigma interventions available. An employee who can work from a certified <a href="/spaces">neuro-friendly workspace</a> does not need to disclose, negotiate, or justify — they simply have access to an environment that works for their brain. For <a href="/workspace-providers">workspace providers</a> looking to differentiate in an increasingly competitive market, formal neuroinclusion certification is a meaningful and commercially relevant signal. And for the organisations recommending or subsidising those spaces, it is one of the most tangible demonstrations that inclusion policy translates into practice.'
+        text: 'The Understood.org survey is a useful corrective to the temptation of performative neuroinclusion. Posting about Neurodiversity Celebration Week, or naming a neurodiversity champion, does not change the daily experience of an employee who is masking for eight hours, does not know what adjustments they are entitled to, and fears that asking will mark them out for passed-over promotions. What actually moves the needle is structural: clear, accessible adjustment processes; managers trained not just in awareness but in how to have a practical conversation about support; physical and hybrid environments that reduce sensory and cognitive load by default rather than by exception. The <a href="/spaces/">Quiet Space Club directory</a> exists precisely because the physical environment is one of the highest-leverage, lowest-stigma interventions available. An employee who can work from a certified <a href="/spaces/">neuro-friendly workspace</a> does not need to disclose, negotiate, or justify — they simply have access to an environment that works for their brain. For <a href="/workspace-providers/">workspace providers</a> looking to differentiate in an increasingly competitive market, formal neuroinclusion certification is a meaningful and commercially relevant signal. And for the organisations recommending or subsidising those spaces, it is one of the most tangible demonstrations that inclusion policy translates into practice.'
       },
       {
         type: 'heading',
@@ -148,7 +148,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'faq',
         question: 'How can a neurodivergent professional find a neuro-friendly workspace in the UK?',
-        answer: 'The <a href="/spaces">Quiet Space Club directory</a> lists certified neuro-friendly workspaces across the UK, assessed using the NeuroIndex methodology. Spaces are evaluated on sensory environment, acoustics, lighting, flexibility, and neuroinclusion culture — so you can find a venue that genuinely works for your brain, without having to disclose or negotiate with an individual workspace provider. The <a href="/how-it-works">assessment process</a> is explained in detail on the site.'
+        answer: 'The <a href="/spaces/">Quiet Space Club directory</a> lists certified neuro-friendly workspaces across the UK, assessed using the NeuroIndex methodology. Spaces are evaluated on sensory environment, acoustics, lighting, flexibility, and neuroinclusion culture — so you can find a venue that genuinely works for your brain, without having to disclose or negotiate with an individual workspace provider. The <a href="/how-it-works/">assessment process</a> is explained in detail on the site.'
       },
     ]
   },
@@ -197,7 +197,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'This matters because organisations are still largely designing their workplaces, cultures, and progression pathways for a neurotypical majority that may not exist in the proportions assumed. <a href="/how-it-works">The NeuroIndex methodology</a> used to assess spaces listed on Quiet Space Club is grounded in this same reality: that neuro-friendly design cannot be an afterthought, because neurodivergent people are not a small edge case. They are a substantial and growing proportion of every UK workforce.'
+        text: 'This matters because organisations are still largely designing their workplaces, cultures, and progression pathways for a neurotypical majority that may not exist in the proportions assumed. <a href="/how-it-works/">The NeuroIndex methodology</a> used to assess spaces listed on Quiet Space Club is grounded in this same reality: that neuro-friendly design cannot be an afterthought, because neurodivergent people are not a small edge case. They are a substantial and growing proportion of every UK workforce.'
       },
       {
         type: 'heading',
@@ -225,7 +225,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The City & Guilds Neurodiversity Index 2026 adds another layer to this picture: 41% of neurodivergent employees report being impacted by workplace challenges on most days. That figure has not improved despite years of rising employer confidence in their neuroinclusion efforts. The confidence gap — with employers rating their own neuroinclusion efforts 30 to 35 percentage points higher than neurodivergent employees rate the same efforts — suggests that most organisations are measuring their intentions rather than their impact. <a href="/workspace-providers">Workspace providers</a> who want to attract neurodivergent professionals are increasingly aware of this: it is not enough to label a room as a quiet zone. The design, the consistency, and the culture around that space all matter.'
+        text: 'The City & Guilds Neurodiversity Index 2026 adds another layer to this picture: 41% of neurodivergent employees report being impacted by workplace challenges on most days. That figure has not improved despite years of rising employer confidence in their neuroinclusion efforts. The confidence gap — with employers rating their own neuroinclusion efforts 30 to 35 percentage points higher than neurodivergent employees rate the same efforts — suggests that most organisations are measuring their intentions rather than their impact. <a href="/workspace-providers/">Workspace providers</a> who want to attract neurodivergent professionals are increasingly aware of this: it is not enough to label a room as a quiet zone. The design, the consistency, and the culture around that space all matter.'
       },
       {
         type: 'heading',
@@ -239,7 +239,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'This is precisely what Quiet Space Club\'s <a href="/spaces">directory of certified neuro-friendly workspaces</a> is designed to support: for neurodivergent professionals who need a space that works with their brain rather than against it. Not every employer can provide a dedicated quiet room — but those that partner with spaces in the Quiet Space Club network can offer their neurodivergent employees access to assessed, neuro-friendly environments whenever they need them. It is one of the most straightforward ways to move from awareness to the action that the DCU research identifies as the missing piece.'
+        text: 'This is precisely what Quiet Space Club\'s <a href="/spaces/">directory of certified neuro-friendly workspaces</a> is designed to support: for neurodivergent professionals who need a space that works with their brain rather than against it. Not every employer can provide a dedicated quiet room — but those that partner with spaces in the Quiet Space Club network can offer their neurodivergent employees access to assessed, neuro-friendly environments whenever they need them. It is one of the most straightforward ways to move from awareness to the action that the DCU research identifies as the missing piece.'
       },
       {
         type: 'protip',
@@ -327,7 +327,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'Professor Amanda Kirby MBBS MRCGP PhD FCGI, CEO of Do-IT Solutions and the lead researcher behind the Index, frames the challenge clearly: "This is not just an inclusion agenda. It is a productivity strategy, a health imperative, and a test of organisational maturity in a changing workforce." The report makes explicit that organisations cannot measure their way out of this problem by surveying only managers and HR teams — the data must come from neurodivergent employees themselves. Those of us building neuro-friendly workspaces at Quiet Space Club know this first-hand: <a href="/how-it-works">our NeuroIndex assessment</a> is grounded in the lived experience of neurodivergent people, not the assumptions of those designing the spaces.'
+        text: 'Professor Amanda Kirby MBBS MRCGP PhD FCGI, CEO of Do-IT Solutions and the lead researcher behind the Index, frames the challenge clearly: "This is not just an inclusion agenda. It is a productivity strategy, a health imperative, and a test of organisational maturity in a changing workforce." The report makes explicit that organisations cannot measure their way out of this problem by surveying only managers and HR teams — the data must come from neurodivergent employees themselves. Those of us building neuro-friendly workspaces at Quiet Space Club know this first-hand: <a href="/how-it-works/">our NeuroIndex assessment</a> is grounded in the lived experience of neurodivergent people, not the assumptions of those designing the spaces.'
       },
       {
         type: 'heading',
@@ -341,7 +341,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The reasons for delay are structural. Many adjustment requests fall into no-man\'s-land between HR, line managers, occupational health, and facilities — with no single owner and no defined timeline. Even when goodwill exists, most organisations lack a clear process for handling neurodivergent-specific requests, which differ from standard disability accommodations in that they are often low-cost, preventative, and non-medical. The 2026 Index urges organisations to build dedicated adjustment pathways that are fast, transparent, and not contingent on formal diagnosis — a recommendation entirely consistent with <a href="/workspace-providers">how Quiet Space Club certifies workspace providers</a> to ensure their environments genuinely accommodate neurodivergent needs from day one.'
+        text: 'The reasons for delay are structural. Many adjustment requests fall into no-man\'s-land between HR, line managers, occupational health, and facilities — with no single owner and no defined timeline. Even when goodwill exists, most organisations lack a clear process for handling neurodivergent-specific requests, which differ from standard disability accommodations in that they are often low-cost, preventative, and non-medical. The 2026 Index urges organisations to build dedicated adjustment pathways that are fast, transparent, and not contingent on formal diagnosis — a recommendation entirely consistent with <a href="/workspace-providers/">how Quiet Space Club certifies workspace providers</a> to ensure their environments genuinely accommodate neurodivergent needs from day one.'
       },
       {
         type: 'protip',
@@ -391,7 +391,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'For workspace providers, the picture is similarly uneven. Many providers who would benefit from <a href="/workspace-providers">Quiet Space Club certification</a> are currently operating without a clear neuroinclusion standard — no acoustic assessment, no lighting audit, no sensory environment review. As demand for certified neuro-friendly spaces grows among neurodivergent professionals and the employers who support them, this gap becomes both a reputational and a commercial risk for providers who have not yet acted.'
+        text: 'For workspace providers, the picture is similarly uneven. Many providers who would benefit from <a href="/workspace-providers/">Quiet Space Club certification</a> are currently operating without a clear neuroinclusion standard — no acoustic assessment, no lighting audit, no sensory environment review. As demand for certified neuro-friendly spaces grows among neurodivergent professionals and the employers who support them, this gap becomes both a reputational and a commercial risk for providers who have not yet acted.'
       },
       {
         type: 'heading',
@@ -401,7 +401,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The 2026 Index is not only a catalogue of failures — it also documents what organisations that are getting this right are doing differently. The common factors among higher-performing organisations include: a defined and fast adjustment process that does not require formal diagnosis; neurodiversity included explicitly in DEI strategy rather than bolted on as an afterthought; line manager training that goes beyond awareness to practical skill-building; regular listening exercises that gather data from neurodivergent employees directly; and physical environments — including third-party workspaces — that are assessed against meaningful neuroinclusion standards rather than generic accessibility checklists. The <a href="/spaces">Quiet Space Club directory</a> exists precisely to make that last element easier: a curated, certified list of UK spaces where neurodivergent professionals can work, meet, and focus without the sensory and social load of conventional offices.'
+        text: 'The 2026 Index is not only a catalogue of failures — it also documents what organisations that are getting this right are doing differently. The common factors among higher-performing organisations include: a defined and fast adjustment process that does not require formal diagnosis; neurodiversity included explicitly in DEI strategy rather than bolted on as an afterthought; line manager training that goes beyond awareness to practical skill-building; regular listening exercises that gather data from neurodivergent employees directly; and physical environments — including third-party workspaces — that are assessed against meaningful neuroinclusion standards rather than generic accessibility checklists. The <a href="/spaces/">Quiet Space Club directory</a> exists precisely to make that last element easier: a curated, certified list of UK spaces where neurodivergent professionals can work, meet, and focus without the sensory and social load of conventional offices.'
       },
       {
         type: 'faq',
@@ -426,7 +426,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'faq',
         question: 'How can neuro-friendly workspaces help address the findings of the 2026 Index?',
-        answer: 'Certified neuro-friendly workspaces remove the physical and sensory barriers that compound the daily challenges documented in the Index. For neurodivergent professionals who cannot get their office environment adjusted quickly enough, access to a <a href="/spaces">quiet, certified workspace</a> can be the difference between a sustainable working week and burnout. For employers, providing access to such spaces is one of the fastest adjustments they can make — no procurement process required, no facilities sign-off needed.'
+        answer: 'Certified neuro-friendly workspaces remove the physical and sensory barriers that compound the daily challenges documented in the Index. For neurodivergent professionals who cannot get their office environment adjusted quickly enough, access to a <a href="/spaces/">quiet, certified workspace</a> can be the difference between a sustainable working week and burnout. For employers, providing access to such spaces is one of the fastest adjustments they can make — no procurement process required, no facilities sign-off needed.'
       },
     ],
   },
@@ -475,7 +475,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'Critically, the DCU research found that the wellbeing of neurodivergent employees is significantly worse than that of their neurotypical colleagues. <strong>18.5% of neurodivergent employees are likely experiencing significant levels of depression</strong> based on the WHO-5 Well-Being Index. These individuals are not on sick leave or recorded in any adverse way — they are simply deteriorating quietly inside organisations that have not asked the right questions. The business cost of that deterioration shows up later, in attrition data, in sickness absence, and increasingly in employment tribunals. <a href="/how-it-works">The NeuroIndex assessment</a> used by Quiet Space Club to evaluate workspaces is built precisely to identify whether environments are supporting or compounding this kind of invisible load.'
+        text: 'Critically, the DCU research found that the wellbeing of neurodivergent employees is significantly worse than that of their neurotypical colleagues. <strong>18.5% of neurodivergent employees are likely experiencing significant levels of depression</strong> based on the WHO-5 Well-Being Index. These individuals are not on sick leave or recorded in any adverse way — they are simply deteriorating quietly inside organisations that have not asked the right questions. The business cost of that deterioration shows up later, in attrition data, in sickness absence, and increasingly in employment tribunals. <a href="/how-it-works/">The NeuroIndex assessment</a> used by Quiet Space Club to evaluate workspaces is built precisely to identify whether environments are supporting or compounding this kind of invisible load.'
       },
       {
         type: 'heading',
@@ -507,7 +507,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The Acas finding is consistent with patterns seen across multiple 2026 reports: awareness has risen, but operational competence has not followed. Managers who have attended a lunch-and-learn on ADHD are not equipped to have a meaningful adjustment conversation, identify sensory overload, or create the psychological safety that neurodivergent employees need in order to disclose and seek support. <a href="/workspace-providers">Workspace providers who seek certification</a> through the Quiet Space platform are assessed not just on physical environment but on whether their teams understand and can respond to neurodivergent needs. Policy on paper rarely survives contact with a manager who has never been properly trained.'
+        text: 'The Acas finding is consistent with patterns seen across multiple 2026 reports: awareness has risen, but operational competence has not followed. Managers who have attended a lunch-and-learn on ADHD are not equipped to have a meaningful adjustment conversation, identify sensory overload, or create the psychological safety that neurodivergent employees need in order to disclose and seek support. <a href="/workspace-providers/">Workspace providers who seek certification</a> through the Quiet Space platform are assessed not just on physical environment but on whether their teams understand and can respond to neurodivergent needs. Policy on paper rarely survives contact with a manager who has never been properly trained.'
       },
       {
         type: 'heading',
@@ -521,11 +521,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The physical environment is a separate and consistently underappreciated variable. <a href="/spaces">Certified neuro-friendly spaces</a> in the Quiet Space directory are assessed against criteria that reflect what neurodivergent employees actually report needing: predictable sensory conditions, control over lighting and acoustics, access to quiet zones for focused work, and the ability to transition between different types of working environment without negotiating it with a manager each time. Many neurodivergent professionals find that accessing a certified workspace — even for two or three days a week — reduces the sensory and cognitive load of their working week significantly enough to make the difference between sustainable employment and deterioration.'
+        text: 'The physical environment is a separate and consistently underappreciated variable. <a href="/spaces/">Certified neuro-friendly spaces</a> in the Quiet Space directory are assessed against criteria that reflect what neurodivergent employees actually report needing: predictable sensory conditions, control over lighting and acoustics, access to quiet zones for focused work, and the ability to transition between different types of working environment without negotiating it with a manager each time. Many neurodivergent professionals find that accessing a certified workspace — even for two or three days a week — reduces the sensory and cognitive load of their working week significantly enough to make the difference between sustainable employment and deterioration.'
       },
       {
         type: 'protip',
-        text: 'If your organisation is returning people to the office and has not specifically audited the sensory environment for neurodivergent suitability, you are almost certainly losing people you cannot see losing. The combination of open-plan noise, fluorescent lighting, unpredictable interruptions and back-to-back meetings creates a sensory load that accumulates invisibly over weeks and months. Providing access to <a href="/spaces">certified neuro-friendly workspaces</a> as part of your hybrid policy is one of the most evidence-backed retention interventions available — and one of the least commonly used.'
+        text: 'If your organisation is returning people to the office and has not specifically audited the sensory environment for neurodivergent suitability, you are almost certainly losing people you cannot see losing. The combination of open-plan noise, fluorescent lighting, unpredictable interruptions and back-to-back meetings creates a sensory load that accumulates invisibly over weeks and months. Providing access to <a href="/spaces/">certified neuro-friendly workspaces</a> as part of your hybrid policy is one of the most evidence-backed retention interventions available — and one of the least commonly used.'
       },
       {
         type: 'heading',
@@ -627,7 +627,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'This is not a character flaw in neurodivergent workers. It is a rational response to a system that places the entire burden of access on the most vulnerable party. And it explains why organisations with mature-looking adjustment policies on paper still show 82% non-uptake in practice. <a href="/how-it-works">The NeuroIndex assessment approach</a> at Quiet Space Club operates on a similar principle — evaluating workspaces against the actual sensory and cognitive needs of neurodivergent users, rather than relying on people to self-identify and request support. The infrastructure should meet the need. The individual should not have to unlock it with a disclosure.'
+        text: 'This is not a character flaw in neurodivergent workers. It is a rational response to a system that places the entire burden of access on the most vulnerable party. And it explains why organisations with mature-looking adjustment policies on paper still show 82% non-uptake in practice. <a href="/how-it-works/">The NeuroIndex assessment approach</a> at Quiet Space Club operates on a similar principle — evaluating workspaces against the actual sensory and cognitive needs of neurodivergent users, rather than relying on people to self-identify and request support. The infrastructure should meet the need. The individual should not have to unlock it with a disclosure.'
       },
       {
         type: 'protip',
@@ -645,7 +645,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The gap between employer confidence and employee experience has widened, not narrowed. Neurodivergent employees report longer waits for adjustments, lower psychological safety, and increased exposure to microaggressions compared to previous years — even as awareness programmes have multiplied. Awareness without infrastructure is not neuroinclusion. It is the appearance of neuroinclusion, and neurodivergent employees can tell the difference immediately. <a href="/workspace-providers">Workspace providers seeking certification</a> through the Quiet Space platform undergo a structured assessment of whether the environment — not just the policy — genuinely supports different cognitive needs.'
+        text: 'The gap between employer confidence and employee experience has widened, not narrowed. Neurodivergent employees report longer waits for adjustments, lower psychological safety, and increased exposure to microaggressions compared to previous years — even as awareness programmes have multiplied. Awareness without infrastructure is not neuroinclusion. It is the appearance of neuroinclusion, and neurodivergent employees can tell the difference immediately. <a href="/workspace-providers/">Workspace providers seeking certification</a> through the Quiet Space platform undergo a structured assessment of whether the environment — not just the policy — genuinely supports different cognitive needs.'
       },
       {
         type: 'heading',
@@ -659,11 +659,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'Beyond adjustment processes, <a href="/spaces">the physical workspace itself</a> is one of the most powerful and consistently overlooked variables in neurodivergent burnout. Sensory overload — noise, lighting, visual clutter, unpredictable interruptions — is a primary burnout driver for many autistic and ADHD professionals, yet it is almost never addressed in standard reasonable adjustment conversations. Access to genuinely quiet, low-stimulation spaces for focused work is not a luxury preference. For many neurodivergent professionals it is the difference between sustainable employment and cumulative cognitive depletion. The <a href="/">Quiet Space Club directory</a> exists precisely because this need is not being met by mainstream office design.'
+        text: 'Beyond adjustment processes, <a href="/spaces/">the physical workspace itself</a> is one of the most powerful and consistently overlooked variables in neurodivergent burnout. Sensory overload — noise, lighting, visual clutter, unpredictable interruptions — is a primary burnout driver for many autistic and ADHD professionals, yet it is almost never addressed in standard reasonable adjustment conversations. Access to genuinely quiet, low-stimulation spaces for focused work is not a luxury preference. For many neurodivergent professionals it is the difference between sustainable employment and cumulative cognitive depletion. The <a href="/">Quiet Space Club directory</a> exists precisely because this need is not being met by mainstream office design.'
       },
       {
         type: 'protip',
-        text: 'If you\'re a neurodivergent professional experiencing burnout symptoms, consider whether your working environment — not just your workload — is contributing. Sensory factors like fluorescent lighting, open-plan noise and unpredictable interruptions create a constant low-level cognitive load that compounds over time. Accessing a <a href="/spaces">certified neuro-friendly workspace</a> even one or two days a week can significantly reduce the sensory burden and create the conditions for sustainable focus.'
+        text: 'If you\'re a neurodivergent professional experiencing burnout symptoms, consider whether your working environment — not just your workload — is contributing. Sensory factors like fluorescent lighting, open-plan noise and unpredictable interruptions create a constant low-level cognitive load that compounds over time. Accessing a <a href="/spaces/">certified neuro-friendly workspace</a> even one or two days a week can significantly reduce the sensory burden and create the conditions for sustainable focus.'
       },
       {
         type: 'heading',
@@ -702,7 +702,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'faq',
         question: 'How can physical workspace design reduce neurodivergent burnout?',
-        answer: 'Sensory environment is a primary burnout driver for many autistic and ADHD professionals. Open-plan offices with high noise, fluorescent lighting and unpredictable interruptions impose a constant cognitive load that compounds over time. Access to quiet, low-stimulation spaces for focused work — whether in the office or via <a href="/spaces">certified neuro-friendly external workspaces</a> — is one of the most practical and underutilised burnout reduction strategies available to UK employers.'
+        answer: 'Sensory environment is a primary burnout driver for many autistic and ADHD professionals. Open-plan offices with high noise, fluorescent lighting and unpredictable interruptions impose a constant cognitive load that compounds over time. Access to quiet, low-stimulation spaces for focused work — whether in the office or via <a href="/spaces/">certified neuro-friendly external workspaces</a> — is one of the most practical and underutilised burnout reduction strategies available to UK employers.'
       },
     ]
   },
@@ -750,7 +750,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The management gap is the most striking headline, but the wellbeing data is arguably more urgent. <strong>18.5% of neurodivergent employees in the study were assessed as likely experiencing significant levels of depression</strong>, based on the World Health Organisation\'s Well-Being Index (WHO-5). These are not people who are disengaged or struggling through a bad week — these are talented professionals experiencing a sustained wellbeing crisis at work, largely invisible to their employers. Neurodivergent employees who cannot access <a href="/how-it-works">the right support and environment</a> do not simply underperform. They quietly deteriorate.'
+        text: 'The management gap is the most striking headline, but the wellbeing data is arguably more urgent. <strong>18.5% of neurodivergent employees in the study were assessed as likely experiencing significant levels of depression</strong>, based on the World Health Organisation\'s Well-Being Index (WHO-5). These are not people who are disengaged or struggling through a bad week — these are talented professionals experiencing a sustained wellbeing crisis at work, largely invisible to their employers. Neurodivergent employees who cannot access <a href="/how-it-works/">the right support and environment</a> do not simply underperform. They quietly deteriorate.'
       },
       {
         type: 'heading',
@@ -764,7 +764,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'For neurodivergent professionals who have been masking for years, the prospect of moving into a more senior, visible role can feel actively threatening rather than aspirational. More exposure means more performance, more scrutiny, more sustained effort to appear neurotypical. It is not that neurodivergent employees lack ambition — it is that the environment makes ambition feel dangerous. <a href="/spaces">Workplaces that remove the need to mask</a>, by design rather than by exception, are the ones where neurodivergent careers actually flourish.'
+        text: 'For neurodivergent professionals who have been masking for years, the prospect of moving into a more senior, visible role can feel actively threatening rather than aspirational. More exposure means more performance, more scrutiny, more sustained effort to appear neurotypical. It is not that neurodivergent employees lack ambition — it is that the environment makes ambition feel dangerous. <a href="/spaces/">Workplaces that remove the need to mask</a>, by design rather than by exception, are the ones where neurodivergent careers actually flourish.'
       },
       {
         type: 'protip',
@@ -782,7 +782,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The report also highlights hot-desking as a specific structural barrier. For many neurodivergent employees — particularly those with ADHD, autism, or sensory processing differences — arriving at the office without a guaranteed, consistent workspace creates immediate anxiety and cognitive overload before the working day has started. The recommendation is clear: reduce or eliminate hot-desking, or at minimum provide a designated quiet focus zone that employees can use without prior booking or formal disclosure. <a href="/spaces">The neuro-friendly spaces in our directory</a> are assessed specifically on whether they offer this kind of predictable, low-sensory environment.'
+        text: 'The report also highlights hot-desking as a specific structural barrier. For many neurodivergent employees — particularly those with ADHD, autism, or sensory processing differences — arriving at the office without a guaranteed, consistent workspace creates immediate anxiety and cognitive overload before the working day has started. The recommendation is clear: reduce or eliminate hot-desking, or at minimum provide a designated quiet focus zone that employees can use without prior booking or formal disclosure. <a href="/spaces/">The neuro-friendly spaces in our directory</a> are assessed specifically on whether they offer this kind of predictable, low-sensory environment.'
       },
       {
         type: 'heading',
@@ -796,7 +796,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'With only <strong>36% of UK employers having any neurodiversity policy</strong> (City &amp; Guilds Neurodiversity Index 2026), the structural foundations for equitable career progression simply do not exist in most organisations. When neuroinclusion depends on individuals — a sympathetic manager, a persistent HR champion — it cannot be consistently applied across a leadership pipeline. <a href="/workspace-providers">Becoming a certified neuroinclusive workspace</a> is one way organisations can signal a structural commitment rather than a discretionary one. The <a href="/how-it-works">NeuroIndex assessment process</a> examines not just physical environment but policies, management culture, and career development equity.'
+        text: 'With only <strong>36% of UK employers having any neurodiversity policy</strong> (City &amp; Guilds Neurodiversity Index 2026), the structural foundations for equitable career progression simply do not exist in most organisations. When neuroinclusion depends on individuals — a sympathetic manager, a persistent HR champion — it cannot be consistently applied across a leadership pipeline. <a href="/workspace-providers/">Becoming a certified neuroinclusive workspace</a> is one way organisations can signal a structural commitment rather than a discretionary one. The <a href="/how-it-works/">NeuroIndex assessment process</a> examines not just physical environment but policies, management culture, and career development equity.'
       },
       {
         type: 'protip',
@@ -810,7 +810,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The DCU research closes with a series of practical recommendations that require no specialist budget and no external consultant. They include: providing a dedicated quiet focus space within the immediate team environment; reducing or eliminating hot-desking; switching from bright overhead lighting to dimmable or ambient alternatives; offering genuine flexibility over work schedules; and — critically — designing access to accommodations so that employees do not need to formally disclose a diagnosis to receive support. This last point matters enormously. <a href="/blog/neurodivergent-workplace-adjustments-disclosure-2026">Disclosure remains the biggest barrier to neurodivergent employees accessing support</a>, and any system that requires disclosure first will always miss the people who need it most.'
+        text: 'The DCU research closes with a series of practical recommendations that require no specialist budget and no external consultant. They include: providing a dedicated quiet focus space within the immediate team environment; reducing or eliminating hot-desking; switching from bright overhead lighting to dimmable or ambient alternatives; offering genuine flexibility over work schedules; and — critically — designing access to accommodations so that employees do not need to formally disclose a diagnosis to receive support. This last point matters enormously. <a href="/blog/neurodivergent-workplace-adjustments-disclosure-2026/">Disclosure remains the biggest barrier to neurodivergent employees accessing support</a>, and any system that requires disclosure first will always miss the people who need it most.'
       },
       {
         type: 'paragraph',
@@ -839,7 +839,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'faq',
         question: 'How can I find a neuro-friendly workplace that supports career development?',
-        answer: 'The Quiet Space Club directory lists certified neuro-friendly workspaces assessed against the NeuroIndex — a framework that evaluates physical environment, policy, management culture, and career development equity. Browse the <a href="/spaces">directory</a> or learn more about how spaces are assessed via the <a href="/how-it-works">NeuroIndex assessment process</a>.'
+        answer: 'The Quiet Space Club directory lists certified neuro-friendly workspaces assessed against the NeuroIndex — a framework that evaluates physical environment, policy, management culture, and career development equity. Browse the <a href="/spaces/">directory</a> or learn more about how spaces are assessed via the <a href="/how-it-works/">NeuroIndex assessment process</a>.'
       }
     ]
   },
@@ -901,7 +901,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The absence of policy creates two further problems. First, it makes it nearly impossible to apply adjustments consistently across teams and business units, so two neurodivergent employees in the same organisation may have radically different experiences depending on which manager they report to. Second, it leaves organisations dangerously exposed to legal challenge. <a href="/blog/neurodiversity-tribunal-risk-uk-2026">Neurodiversity-related employment tribunals have risen 164% in four years</a>, and in many cases the employer\'s liability stems not from malice but from the absence of any framework that managers could actually follow.'
+        text: 'The absence of policy creates two further problems. First, it makes it nearly impossible to apply adjustments consistently across teams and business units, so two neurodivergent employees in the same organisation may have radically different experiences depending on which manager they report to. Second, it leaves organisations dangerously exposed to legal challenge. <a href="/blog/neurodiversity-tribunal-risk-uk-2026/">Neurodiversity-related employment tribunals have risen 164% in four years</a>, and in many cases the employer\'s liability stems not from malice but from the absence of any framework that managers could actually follow.'
       },
       {
         type: 'protip',
@@ -919,7 +919,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The mechanism is well understood: when a workplace\'s default communication styles, sensory environment, and performance expectations do not account for neurodivergent needs, employees spend enormous energy masking and compensating simply to meet baseline expectations. This is exhausting in a way that compounds over time — and it\'s invisible to managers who equate presence with performance. Organisations that are not <a href="/spaces">actively providing neuro-friendly workspaces and conditions</a> are, in effect, asking neurodivergent employees to pay a daily cognitive tax that their neurotypical colleagues do not.'
+        text: 'The mechanism is well understood: when a workplace\'s default communication styles, sensory environment, and performance expectations do not account for neurodivergent needs, employees spend enormous energy masking and compensating simply to meet baseline expectations. This is exhausting in a way that compounds over time — and it\'s invisible to managers who equate presence with performance. Organisations that are not <a href="/spaces/">actively providing neuro-friendly workspaces and conditions</a> are, in effect, asking neurodivergent employees to pay a daily cognitive tax that their neurotypical colleagues do not.'
       },
       {
         type: 'heading',
@@ -933,7 +933,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'When managers are the primary delivery mechanism for neuroinclusion but have no preparation, the result is exactly what the Index documents: inconsistency, avoidable mistakes, and a reliance on the neurodivergent employee themselves to educate their manager about their own needs — often at significant personal and professional cost. Understanding <a href="/how-it-works">what a genuinely neuroinclusive environment requires</a> starts with equipping the people closest to neurodivergent employees to respond well. That means more than a one-hour awareness session at Neurodiversity Celebration Week.'
+        text: 'When managers are the primary delivery mechanism for neuroinclusion but have no preparation, the result is exactly what the Index documents: inconsistency, avoidable mistakes, and a reliance on the neurodivergent employee themselves to educate their manager about their own needs — often at significant personal and professional cost. Understanding <a href="/how-it-works/">what a genuinely neuroinclusive environment requires</a> starts with equipping the people closest to neurodivergent employees to respond well. That means more than a one-hour awareness session at Neurodiversity Celebration Week.'
       },
       {
         type: 'protip',
@@ -951,7 +951,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'This is not just an inclusion failure. It is a talent strategy failure. Organisations are structurally filtering out capable people because their hiring architecture was designed for a narrow cognitive profile. <a href="/workspace-providers">Workspace providers who want to attract neurodivergent professionals</a> — and the organisations that employ them — need to rethink not just where work happens, but how the entire hiring process signals whether different minds are genuinely welcome.'
+        text: 'This is not just an inclusion failure. It is a talent strategy failure. Organisations are structurally filtering out capable people because their hiring architecture was designed for a narrow cognitive profile. <a href="/workspace-providers/">Workspace providers who want to attract neurodivergent professionals</a> — and the organisations that employ them — need to rethink not just where work happens, but how the entire hiring process signals whether different minds are genuinely welcome.'
       },
       {
         type: 'heading',
@@ -990,7 +990,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'faq',
         question: 'How can neuro-friendly workspaces help address the confidence gap?',
-        answer: 'Physical and environmental design is one of the most tangible ways to demonstrate that different cognitive needs are genuinely considered. Quiet zones, adjustable lighting, low-stimulation areas, and clear wayfinding reduce the daily masking load for neurodivergent employees before they ever need to make a formal adjustment request. <a href="/spaces">Certified neuro-friendly spaces</a> signal inclusion structurally, not just rhetorically — which is exactly what the 2026 Index shows employees are looking for.'
+        answer: 'Physical and environmental design is one of the most tangible ways to demonstrate that different cognitive needs are genuinely considered. Quiet zones, adjustable lighting, low-stimulation areas, and clear wayfinding reduce the daily masking load for neurodivergent employees before they ever need to make a formal adjustment request. <a href="/spaces/">Certified neuro-friendly spaces</a> signal inclusion structurally, not just rhetorically — which is exactly what the 2026 Index shows employees are looking for.'
       }
     ]
   },
@@ -1009,7 +1009,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'This post unpacks what is driving the surge, what the 2026 data tells us about organisational readiness, and — critically — what practical steps employers can take to reduce risk while genuinely improving outcomes for their neurodivergent workforce. You can <a href="/spaces" target="_blank" rel="noopener noreferrer">explore neuro-friendly workspaces in our directory</a> or <a href="/how-it-works" target="_blank" rel="noopener noreferrer">learn how our NeuroIndex assessment works</a> alongside reading this piece.'
+        text: 'This post unpacks what is driving the surge, what the 2026 data tells us about organisational readiness, and — critically — what practical steps employers can take to reduce risk while genuinely improving outcomes for their neurodivergent workforce. You can <a href="/spaces/" target="_blank" rel="noopener noreferrer">explore neuro-friendly workspaces in our directory</a> or <a href="/how-it-works/" target="_blank" rel="noopener noreferrer">learn how our NeuroIndex assessment works</a> alongside reading this piece.'
       },
       {
         type: 'heading',
@@ -1061,7 +1061,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'protip',
-        text: 'If your organisation doesn\'t yet have a neurodiversity policy, start with three foundations: a clear definition of what neurodiversity means in your context, a process for requesting and reviewing adjustments that doesn\'t require formal diagnosis, and a commitment to manager training. These three elements alone will close the majority of your legal risk gap — and dramatically improve the experience of neurodivergent staff. <a href="/workspace-providers" target="_blank" rel="noopener noreferrer">Workspace providers certified through our NeuroIndex</a> have already embedded these frameworks into their physical environments.'
+        text: 'If your organisation doesn\'t yet have a neurodiversity policy, start with three foundations: a clear definition of what neurodiversity means in your context, a process for requesting and reviewing adjustments that doesn\'t require formal diagnosis, and a commitment to manager training. These three elements alone will close the majority of your legal risk gap — and dramatically improve the experience of neurodivergent staff. <a href="/workspace-providers/" target="_blank" rel="noopener noreferrer">Workspace providers certified through our NeuroIndex</a> have already embedded these frameworks into their physical environments.'
       },
       {
         type: 'heading',
@@ -1125,7 +1125,7 @@ export const blogPosts: BlogPost[] = [
           '<strong>Establish a neurodiversity policy</strong> — document your organisation\'s commitment, define how adjustments are requested and reviewed, and ensure the process does not require formal diagnosis as a precondition.',
           '<strong>Train line managers</strong> — not a single awareness session, but ongoing, practical training on how to have adjustment conversations, recognise masking, and apply support consistently.',
           '<strong>Audit your adjustment process</strong> — map how adjustments actually flow from request to implementation. Identify where delays or inconsistencies occur and fix the process, not just individual instances.',
-          '<strong>Review your physical and remote working environments</strong> — sensory overload, open-plan noise, and inflexible working patterns are among the most common barriers. <a href="/spaces">Neuro-friendly certified spaces</a> provide a benchmark for what good looks like.',
+          '<strong>Review your physical and remote working environments</strong> — sensory overload, open-plan noise, and inflexible working patterns are among the most common barriers. <a href="/spaces/">Neuro-friendly certified spaces</a> provide a benchmark for what good looks like.',
           '<strong>Build psychological safety</strong> — the majority of neurodivergent employees do not disclose because they fear the career consequences. Structural changes (policy, training, environment) create the conditions for safer disclosure over time.'
         ]
       },
@@ -1156,7 +1156,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'faq',
         question: 'How can workspace environment help reduce neurodiversity-related legal risk?',
-        answer: 'Physical and remote working environments are a significant — and often overlooked — source of disadvantage for neurodivergent employees. Noisy open-plan offices, unpredictable sensory environments, and rigid desk-based working can all constitute barriers for employees with ADHD, autism, sensory processing differences and related conditions. Providing access to quiet, low-stimulus workspaces is one of the most impactful adjustments an employer can offer. <a href="/spaces" target="_blank" rel="noopener noreferrer">Browse our directory of certified neuro-friendly spaces</a> to find options near you, or <a href="/how-it-works" target="_blank" rel="noopener noreferrer">learn about our NeuroIndex certification</a> for workspace providers.'
+        answer: 'Physical and remote working environments are a significant — and often overlooked — source of disadvantage for neurodivergent employees. Noisy open-plan offices, unpredictable sensory environments, and rigid desk-based working can all constitute barriers for employees with ADHD, autism, sensory processing differences and related conditions. Providing access to quiet, low-stimulus workspaces is one of the most impactful adjustments an employer can offer. <a href="/spaces/" target="_blank" rel="noopener noreferrer">Browse our directory of certified neuro-friendly spaces</a> to find options near you, or <a href="/how-it-works/" target="_blank" rel="noopener noreferrer">learn about our NeuroIndex certification</a> for workspace providers.'
       }
     ]
   },
@@ -1253,7 +1253,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'This approach also benefits employees who aren\'t formally neurodivergent. Anyone can use a self-directed tool to understand the rhythm of their own attention, focus and recovery. Designing for the sharpest cognitive challenge raises the floor for everyone — a principle familiar to anyone who has worked in a <a href="/spaces">neuro-friendly workspace</a> and found that the quiet, lower-sensory environment benefits the whole team, not just neurodivergent members.',
+        text: 'This approach also benefits employees who aren\'t formally neurodivergent. Anyone can use a self-directed tool to understand the rhythm of their own attention, focus and recovery. Designing for the sharpest cognitive challenge raises the floor for everyone — a principle familiar to anyone who has worked in a <a href="/spaces/">neuro-friendly workspace</a> and found that the quiet, lower-sensory environment benefits the whole team, not just neurodivergent members.',
       },
       {
         type: 'protip',
@@ -1271,7 +1271,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The Equality Act 2010 places a duty on employers to make reasonable adjustments for employees with disabilities, and ADHD, autism, dyslexia and other neurodivergent conditions are regularly found to meet the legal definition of disability by employment tribunals. Organisations that can demonstrate a proactive, accessible adjustment process — one that doesn\'t rely on a single gate of disclosure — are in a far stronger position than those whose policy exists on paper but is barely used. You can learn more about <a href="/how-it-works">how the NeuroIndex assessment works</a> and what it measures in practice.',
+        text: 'The Equality Act 2010 places a duty on employers to make reasonable adjustments for employees with disabilities, and ADHD, autism, dyslexia and other neurodivergent conditions are regularly found to meet the legal definition of disability by employment tribunals. Organisations that can demonstrate a proactive, accessible adjustment process — one that doesn\'t rely on a single gate of disclosure — are in a far stronger position than those whose policy exists on paper but is barely used. You can learn more about <a href="/how-it-works/">how the NeuroIndex assessment works</a> and what it measures in practice.',
       },
       {
         type: 'heading',
@@ -1285,7 +1285,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'This is precisely why the growth of <a href="/spaces">certified neuro-friendly workspaces</a> matters. When a space is independently assessed and certified as neuro-friendly — with quiet zones, sensory-considered design, and predictable environment as standard — it removes the need for any individual to flag their needs. The space works for neurodivergent brains by design, not by negotiation. For neurodivergent professionals who are self-employed, freelance, or working in offices that don\'t yet meet their needs, access to a verified neuro-friendly workspace is itself a form of adjustment — one that doesn\'t require disclosing anything to anyone. <a href="/workspace-providers">Workspace providers</a> can find out more about the NeuroIndex certification process.',
+        text: 'This is precisely why the growth of <a href="/spaces/">certified neuro-friendly workspaces</a> matters. When a space is independently assessed and certified as neuro-friendly — with quiet zones, sensory-considered design, and predictable environment as standard — it removes the need for any individual to flag their needs. The space works for neurodivergent brains by design, not by negotiation. For neurodivergent professionals who are self-employed, freelance, or working in offices that don\'t yet meet their needs, access to a verified neuro-friendly workspace is itself a form of adjustment — one that doesn\'t require disclosing anything to anyone. <a href="/workspace-providers/">Workspace providers</a> can find out more about the NeuroIndex certification process.',
       },
       {
         type: 'faq',
@@ -1325,7 +1325,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: 'paragraph',
-        text: 'For years, the business case for neuroinclusion was built on moral arguments — it\'s the right thing to do, it reflects our values, it helps with DEI commitments. In 2026, those arguments remain valid, but they\'re no longer the most compelling ones in the room. A growing body of data from UK employers — ranging from professional services giants to broadcasters and pharmaceutical companies — now makes the financial case with striking clarity. Neuroinclusion is not a cost centre. It is a performance lever. And organisations that are still treating it as optional charity are leaving substantial, measurable value on the table. This piece draws on the most significant data published by and about UK employers in 2026 to make that case as concretely as the evidence allows — and to highlight what\'s still going wrong in the gap between policy and practice. For neurodivergent professionals seeking genuinely supportive environments in the meantime, the <a href="/spaces">Quiet Space Club directory of certified neuro-friendly workspaces</a> provides a practical starting point.'
+        text: 'For years, the business case for neuroinclusion was built on moral arguments — it\'s the right thing to do, it reflects our values, it helps with DEI commitments. In 2026, those arguments remain valid, but they\'re no longer the most compelling ones in the room. A growing body of data from UK employers — ranging from professional services giants to broadcasters and pharmaceutical companies — now makes the financial case with striking clarity. Neuroinclusion is not a cost centre. It is a performance lever. And organisations that are still treating it as optional charity are leaving substantial, measurable value on the table. This piece draws on the most significant data published by and about UK employers in 2026 to make that case as concretely as the evidence allows — and to highlight what\'s still going wrong in the gap between policy and practice. For neurodivergent professionals seeking genuinely supportive environments in the meantime, the <a href="/spaces/">Quiet Space Club directory of certified neuro-friendly workspaces</a> provides a practical starting point.'
       },
       {
         type: 'heading',
@@ -1454,7 +1454,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'protip',
-        text: 'When calculating neuroinclusion ROI for your board or senior leadership, use three line items: (1) <strong>Avoided tribunal cost</strong> — average UK employment tribunal settlement plus legal costs, weighted by your tribunal risk given current adjustment practices; (2) <strong>Reduced attrition cost</strong> — estimated replacement cost per neurodivergent leaver, multiplied by estimated number preventable with structured support; (3) <strong>Productivity gain</strong> — EY\'s 1.2–1.4x productivity multiplier applied to neurodivergent headcount percentage. Most teams find the combined figure dramatically exceeds the cost of a structured neuroinclusion programme. Workspace providers who want to make their spaces part of that ROI story can explore the <a href="/workspace-providers">NeuroIndex certification process here</a>.'
+        text: 'When calculating neuroinclusion ROI for your board or senior leadership, use three line items: (1) <strong>Avoided tribunal cost</strong> — average UK employment tribunal settlement plus legal costs, weighted by your tribunal risk given current adjustment practices; (2) <strong>Reduced attrition cost</strong> — estimated replacement cost per neurodivergent leaver, multiplied by estimated number preventable with structured support; (3) <strong>Productivity gain</strong> — EY\'s 1.2–1.4x productivity multiplier applied to neurodivergent headcount percentage. Most teams find the combined figure dramatically exceeds the cost of a structured neuroinclusion programme. Workspace providers who want to make their spaces part of that ROI story can explore the <a href="/workspace-providers/">NeuroIndex certification process here</a>.'
       },
       {
         type: 'heading',
@@ -1472,7 +1472,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'For neurodivergent professionals who cannot wait for their employer\'s neuroinclusion strategy to mature, the physical workspace remains a critical factor. Sensory-hostile open-plan offices are not a neutral baseline — they actively undermine performance, wellbeing, and retention. The <a href="/how-it-works">NeuroIndex assessment process</a> provides an evidence-based framework for evaluating whether a workspace genuinely meets neurodivergent needs, not just claims to. And the <a href="/spaces">Quiet Space Club certified directory</a> connects neurodivergent professionals with workspaces that have been rigorously assessed against those criteria — providing an immediate, practical option while employer-wide change moves more slowly than many need it to.'
+        text: 'For neurodivergent professionals who cannot wait for their employer\'s neuroinclusion strategy to mature, the physical workspace remains a critical factor. Sensory-hostile open-plan offices are not a neutral baseline — they actively undermine performance, wellbeing, and retention. The <a href="/how-it-works/">NeuroIndex assessment process</a> provides an evidence-based framework for evaluating whether a workspace genuinely meets neurodivergent needs, not just claims to. And the <a href="/spaces/">Quiet Space Club certified directory</a> connects neurodivergent professionals with workspaces that have been rigorously assessed against those criteria — providing an immediate, practical option while employer-wide change moves more slowly than many need it to.'
       },
       {
         type: 'faq',
@@ -1497,7 +1497,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'faq',
         question: 'Where can neurodivergent professionals find workspaces that support their performance?',
-        answer: 'The <a href="/spaces">Quiet Space Club directory</a> lists certified neuro-friendly workspaces across the UK, each assessed against evidence-based criteria covering sensory environment, acoustic quality, lighting flexibility, and cognitive accessibility. For professionals whose employer\'s office does not yet meet their needs — a common situation while organisational neuroinclusion strategies develop — a certified co-working space can serve as a practical reasonable adjustment. In some cases, costs may be fundable through the Access to Work scheme. Workspace providers who want to attract neurodivergent professionals and contribute to their clients\' neuroinclusion ROI can apply for <a href="/workspace-providers">NeuroIndex certification here</a>.'
+        answer: 'The <a href="/spaces/">Quiet Space Club directory</a> lists certified neuro-friendly workspaces across the UK, each assessed against evidence-based criteria covering sensory environment, acoustic quality, lighting flexibility, and cognitive accessibility. For professionals whose employer\'s office does not yet meet their needs — a common situation while organisational neuroinclusion strategies develop — a certified co-working space can serve as a practical reasonable adjustment. In some cases, costs may be fundable through the Access to Work scheme. Workspace providers who want to attract neurodivergent professionals and contribute to their clients\' neuroinclusion ROI can apply for <a href="/workspace-providers/">NeuroIndex certification here</a>.'
       },
     ],
   },
@@ -1512,7 +1512,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: 'paragraph',
-        text: 'As UK employers push workers back to the office in 2026, a largely invisible crisis is unfolding in HR inboxes across the country. Return-to-office mandates — whether full five-day requirements or structured hybrid arrangements — are triggering a sharp surge in neurodiversity accommodation requests that most organisations are ill-equipped to handle. At the same time, a newly published interim report from the UK Government\'s independent review into mental health, ADHD and autism services has laid bare the scale of the underlying problem: <strong>13 times more people were waiting for an autism assessment in September 2025 than in April 2019</strong>, and common mental health conditions now affect 22.6% of working-age adults — up from 15.5% three decades ago. For neurodivergent professionals seeking <a href="/spaces">genuinely neuro-friendly workspaces</a>, the return to noisy, open-plan offices is not merely inconvenient — it is, for many, the moment when work becomes unsustainable.'
+        text: 'As UK employers push workers back to the office in 2026, a largely invisible crisis is unfolding in HR inboxes across the country. Return-to-office mandates — whether full five-day requirements or structured hybrid arrangements — are triggering a sharp surge in neurodiversity accommodation requests that most organisations are ill-equipped to handle. At the same time, a newly published interim report from the UK Government\'s independent review into mental health, ADHD and autism services has laid bare the scale of the underlying problem: <strong>13 times more people were waiting for an autism assessment in September 2025 than in April 2019</strong>, and common mental health conditions now affect 22.6% of working-age adults — up from 15.5% three decades ago. For neurodivergent professionals seeking <a href="/spaces/">genuinely neuro-friendly workspaces</a>, the return to noisy, open-plan offices is not merely inconvenient — it is, for many, the moment when work becomes unsustainable.'
       },
       {
         type: 'heading',
@@ -1615,7 +1615,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The NeuroBridge State of Neurodiversity in the Workplace 2026 report found that <strong>neurodivergent professionals are twice as likely to experience high symptoms of burnout</strong> compared to their neurotypical peers, and more than half have taken an absence from work specifically because of workplace challenges. RTO mandates, implemented without adequate adjustment frameworks, are likely to accelerate these already alarming figures. The <a href="/how-it-works">NeuroIndex assessment process</a> exists precisely to evaluate whether physical workspaces are actually meeting the needs of neurodivergent workers — not just claiming to.'
+        text: 'The NeuroBridge State of Neurodiversity in the Workplace 2026 report found that <strong>neurodivergent professionals are twice as likely to experience high symptoms of burnout</strong> compared to their neurotypical peers, and more than half have taken an absence from work specifically because of workplace challenges. RTO mandates, implemented without adequate adjustment frameworks, are likely to accelerate these already alarming figures. The <a href="/how-it-works/">NeuroIndex assessment process</a> exists precisely to evaluate whether physical workspaces are actually meeting the needs of neurodivergent workers — not just claiming to.'
       },
       {
         type: 'heading',
@@ -1633,7 +1633,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'protip',
-        text: 'Before rolling out a return-to-office mandate, HR teams should conduct an adjustment impact assessment specifically for neurodivergent staff. This does not require individual disclosure — instead, it involves reviewing what informal accommodations were in place during remote working and whether these need to be formalised and recreated in the office environment. A simple FAQ document on how to request adjustments, distributed alongside the RTO announcement, can significantly reduce both the administrative burden on HR and the anxiety experienced by neurodivergent employees who may not know who to approach or what they are entitled to. Workspace providers looking to attract neurodivergent professionals can find guidance on creating evidence-based environments through the <a href="/workspace-providers">NeuroIndex certification process</a>.'
+        text: 'Before rolling out a return-to-office mandate, HR teams should conduct an adjustment impact assessment specifically for neurodivergent staff. This does not require individual disclosure — instead, it involves reviewing what informal accommodations were in place during remote working and whether these need to be formalised and recreated in the office environment. A simple FAQ document on how to request adjustments, distributed alongside the RTO announcement, can significantly reduce both the administrative burden on HR and the anxiety experienced by neurodivergent employees who may not know who to approach or what they are entitled to. Workspace providers looking to attract neurodivergent professionals can find guidance on creating evidence-based environments through the <a href="/workspace-providers/">NeuroIndex certification process</a>.'
       },
       {
         type: 'heading',
@@ -1647,7 +1647,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'Employment lawyer Trevor Hardy\'s practical advice for employers managing RTO accommodation requests centres on moving away from templates and towards genuine individual engagement. Neurodivergent conditions manifest in countless ways — an employee with ADHD requesting a "quieter workspace" may mean something entirely different from another employee with the same diagnosis. Robust accommodation requires asking specific questions, working with the employee and their healthcare provider, and being willing to trial arrangements iteratively rather than reaching for a one-size solution. For organisations looking to get this right, <a href="/">Quiet Space Club</a> provides <a href="/spaces">a certified directory of neuro-friendly spaces</a> that have been rigorously assessed — offering employers an immediate, practical option for neurodivergent staff who cannot function effectively in a standard open-plan environment.'
+        text: 'Employment lawyer Trevor Hardy\'s practical advice for employers managing RTO accommodation requests centres on moving away from templates and towards genuine individual engagement. Neurodivergent conditions manifest in countless ways — an employee with ADHD requesting a "quieter workspace" may mean something entirely different from another employee with the same diagnosis. Robust accommodation requires asking specific questions, working with the employee and their healthcare provider, and being willing to trial arrangements iteratively rather than reaching for a one-size solution. For organisations looking to get this right, <a href="/">Quiet Space Club</a> provides <a href="/spaces/">a certified directory of neuro-friendly spaces</a> that have been rigorously assessed — offering employers an immediate, practical option for neurodivergent staff who cannot function effectively in a standard open-plan environment.'
       },
       {
         type: 'faq',
@@ -1672,7 +1672,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'faq',
         question: 'Where can neurodivergent professionals find office spaces that genuinely meet their needs?',
-        answer: 'The <a href="/spaces">Quiet Space Club directory</a> lists certified neuro-friendly workspaces across the UK, assessed against evidence-based criteria for sensory comfort, acoustic quality, lighting flexibility, and cognitive accessibility. For professionals whose primary employer\'s office does not meet their needs, a certified co-working space can serve as a legitimate reasonable adjustment — and in some cases, costs can be funded through the UK\'s Access to Work scheme. Workspace providers who want to attract neurodivergent professionals can apply for <a href="/workspace-providers">NeuroIndex certification here</a>.'
+        answer: 'The <a href="/spaces/">Quiet Space Club directory</a> lists certified neuro-friendly workspaces across the UK, assessed against evidence-based criteria for sensory comfort, acoustic quality, lighting flexibility, and cognitive accessibility. For professionals whose primary employer\'s office does not meet their needs, a certified co-working space can serve as a legitimate reasonable adjustment — and in some cases, costs can be funded through the UK\'s Access to Work scheme. Workspace providers who want to attract neurodivergent professionals can apply for <a href="/workspace-providers/">NeuroIndex certification here</a>.'
       },
     ],
   },
@@ -1687,7 +1687,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: 'paragraph',
-        text: 'A landmark new survey from <a href="https://www.understood.org/en/press-releases/neurodiversity-at-work-survey-reveals-persistent-stigma-and-role-for-ai-in-the-workplace" target="_blank" rel="noopener noreferrer">Understood.org, published on 12 May 2026</a>, has confirmed what many neurodivergent professionals have quietly known for some time: artificial intelligence is becoming one of the most significant workplace accessibility tools in a generation. The data reveals that <strong>78% of neurodivergent employees now use AI tools at work</strong> — a full 19 percentage points higher than their neurotypical colleagues (59%). More than half say AI has made them more confident applying for higher-level roles that previously felt out of reach because of the administrative and organisational demands involved. For neurodivergent professionals seeking <a href="/spaces">genuinely supportive work environments</a>, the rise of AI is reshaping what inclusion at work actually looks like in practice.'
+        text: 'A landmark new survey from <a href="https://www.understood.org/en/press-releases/neurodiversity-at-work-survey-reveals-persistent-stigma-and-role-for-ai-in-the-workplace" target="_blank" rel="noopener noreferrer">Understood.org, published on 12 May 2026</a>, has confirmed what many neurodivergent professionals have quietly known for some time: artificial intelligence is becoming one of the most significant workplace accessibility tools in a generation. The data reveals that <strong>78% of neurodivergent employees now use AI tools at work</strong> — a full 19 percentage points higher than their neurotypical colleagues (59%). More than half say AI has made them more confident applying for higher-level roles that previously felt out of reach because of the administrative and organisational demands involved. For neurodivergent professionals seeking <a href="/spaces/">genuinely supportive work environments</a>, the rise of AI is reshaping what inclusion at work actually looks like in practice.'
       },
       {
         type: 'heading',
@@ -1809,7 +1809,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'Yet the Understood.org data suggests that the formal route — declaration, request, adjustment — remains deeply unappealing for most neurodivergent workers. Employers who want to retain neurodivergent talent in 2026 cannot simply publish a reasonable adjustments policy and wait for staff to come forward. They need to proactively normalise the use of AI tools as accessibility aids, make it clear that disclosure will not negatively affect career progression, and communicate clearly what support is available and who to approach. The <a href="/how-it-works">NeuroIndex assessment process</a> provides a framework for workspace providers and employers who want to assess how well their physical and technological environment actually serves neurodivergent workers.'
+        text: 'Yet the Understood.org data suggests that the formal route — declaration, request, adjustment — remains deeply unappealing for most neurodivergent workers. Employers who want to retain neurodivergent talent in 2026 cannot simply publish a reasonable adjustments policy and wait for staff to come forward. They need to proactively normalise the use of AI tools as accessibility aids, make it clear that disclosure will not negatively affect career progression, and communicate clearly what support is available and who to approach. The <a href="/how-it-works/">NeuroIndex assessment process</a> provides a framework for workspace providers and employers who want to assess how well their physical and technological environment actually serves neurodivergent workers.'
       },
       {
         type: 'protip',
@@ -1827,7 +1827,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'Tania Gerard\'s warning bears repeating: "Tools that lack crucial flexibility or customisation might not effectively help neurodivergents process information or complete tasks." The most effective neuroinclusion in 2026 combines thoughtful AI tool deployment with genuinely supportive physical environments. This is why <a href="/">Quiet Space Club</a> exists — to help neurodivergent professionals find <a href="/spaces">certified workspaces</a> where the physical environment has been rigorously assessed for sensory comfort and cognitive accessibility. Workspace providers who want to meet the needs of this growing segment of the workforce can <a href="/workspace-providers">explore the NeuroIndex certification process here</a>.'
+        text: 'Tania Gerard\'s warning bears repeating: "Tools that lack crucial flexibility or customisation might not effectively help neurodivergents process information or complete tasks." The most effective neuroinclusion in 2026 combines thoughtful AI tool deployment with genuinely supportive physical environments. This is why <a href="/">Quiet Space Club</a> exists — to help neurodivergent professionals find <a href="/spaces/">certified workspaces</a> where the physical environment has been rigorously assessed for sensory comfort and cognitive accessibility. Workspace providers who want to meet the needs of this growing segment of the workforce can <a href="/workspace-providers/">explore the NeuroIndex certification process here</a>.'
       },
       {
         type: 'faq',
@@ -1852,7 +1852,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'faq',
         question: 'Does using AI tools mean employers no longer need to improve the physical workspace?',
-        answer: 'No. AI tools address cognitive and administrative barriers but cannot compensate for physically hostile environments. Sensory overload from open-plan offices, harsh lighting, and unpredictable noise affects the performance and wellbeing of autistic workers, those with ADHD, and others with sensory processing differences — regardless of what software they have access to. Genuine neuroinclusion requires both: AI-enabled cognitive support and a physical environment assessed for sensory safety. The <a href="/spaces">Quiet Space Club directory</a> helps neurodivergent professionals find certified workspaces that have been evaluated against real, evidence-based criteria.'
+        answer: 'No. AI tools address cognitive and administrative barriers but cannot compensate for physically hostile environments. Sensory overload from open-plan offices, harsh lighting, and unpredictable noise affects the performance and wellbeing of autistic workers, those with ADHD, and others with sensory processing differences — regardless of what software they have access to. Genuine neuroinclusion requires both: AI-enabled cognitive support and a physical environment assessed for sensory safety. The <a href="/spaces/">Quiet Space Club directory</a> helps neurodivergent professionals find certified workspaces that have been evaluated against real, evidence-based criteria.'
       },
     ],
   },
@@ -1867,7 +1867,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: 'paragraph',
-        text: 'A major new survey by <a href="https://www.acas.org.uk/employers-are-failing-to-support-neurodiversity-at-work" target="_blank" rel="noopener noreferrer">Acas and YouGov</a>, published in March 2026, has confirmed what many neurodivergent professionals in the UK already know from lived experience: the people most responsible for their day-to-day support — their line managers — are not being equipped to help. One in three workers (35%) say their employer is ineffective at training managers on neurodiversity, while fewer than a third (32%) believe their employer gets this right. For neurodivergent workers seeking <a href="/spaces">neuro-friendly environments</a>, this gap between policy intention and on-the-ground reality is acutely felt every single working day.'
+        text: 'A major new survey by <a href="https://www.acas.org.uk/employers-are-failing-to-support-neurodiversity-at-work" target="_blank" rel="noopener noreferrer">Acas and YouGov</a>, published in March 2026, has confirmed what many neurodivergent professionals in the UK already know from lived experience: the people most responsible for their day-to-day support — their line managers — are not being equipped to help. One in three workers (35%) say their employer is ineffective at training managers on neurodiversity, while fewer than a third (32%) believe their employer gets this right. For neurodivergent workers seeking <a href="/spaces/">neuro-friendly environments</a>, this gap between policy intention and on-the-ground reality is acutely felt every single working day.'
       },
       {
         type: 'heading',
@@ -1954,7 +1954,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'For organisations wondering why they struggle to retain neurodivergent talent, or why certain teams have unusually high attrition or sick leave, unaddressed neurodiversity needs — amplified by under-trained managers — are frequently the root cause. The cost of replacing a skilled neurodivergent employee consistently exceeds the cost of providing appropriate adjustments, which are often free or low-cost. Quiet, distraction-reduced environments, flexible hours, written rather than verbal instructions — many of the most impactful adjustments cost nothing at all. Finding <a href="/spaces">genuinely neuro-friendly workspaces</a> and building them into everyday working life is part of what the <a href="/how-it-works">NeuroIndex assessment process</a> supports.'
+        text: 'For organisations wondering why they struggle to retain neurodivergent talent, or why certain teams have unusually high attrition or sick leave, unaddressed neurodiversity needs — amplified by under-trained managers — are frequently the root cause. The cost of replacing a skilled neurodivergent employee consistently exceeds the cost of providing appropriate adjustments, which are often free or low-cost. Quiet, distraction-reduced environments, flexible hours, written rather than verbal instructions — many of the most impactful adjustments cost nothing at all. Finding <a href="/spaces/">genuinely neuro-friendly workspaces</a> and building them into everyday working life is part of what the <a href="/how-it-works/">NeuroIndex assessment process</a> supports.'
       },
       {
         type: 'protip',
@@ -1972,7 +1972,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'This is why <a href="/">Quiet Space Club</a> exists: to provide neurodivergent professionals with a <a href="/spaces">certified directory of neuro-friendly workspaces</a> assessed against real, evidence-based criteria. Workspace providers who want to genuinely serve this community can <a href="/workspace-providers">learn more about the NeuroIndex certification process here</a>. Policy change and physical environment improvement are not alternatives — they are two sides of the same neuroinclusion coin.'
+        text: 'This is why <a href="/">Quiet Space Club</a> exists: to provide neurodivergent professionals with a <a href="/spaces/">certified directory of neuro-friendly workspaces</a> assessed against real, evidence-based criteria. Workspace providers who want to genuinely serve this community can <a href="/workspace-providers/">learn more about the NeuroIndex certification process here</a>. Policy change and physical environment improvement are not alternatives — they are two sides of the same neuroinclusion coin.'
       },
       {
         type: 'faq',
@@ -1992,7 +1992,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'faq',
         question: 'Why does the physical workspace matter for neurodivergent employees?',
-        answer: 'Even with excellent manager support and strong policy, an inappropriate physical environment can prevent neurodivergent employees from performing at their best. Factors such as unpredictable noise, harsh lighting, open-plan layouts, and sensory overload are significant barriers for people with ADHD, autism, sensory processing differences, and related conditions. Access to certified neuro-friendly workspaces — like those in <a href="/spaces">the Quiet Space Club directory</a> — can make a substantial difference to daily functioning and long-term wellbeing.'
+        answer: 'Even with excellent manager support and strong policy, an inappropriate physical environment can prevent neurodivergent employees from performing at their best. Factors such as unpredictable noise, harsh lighting, open-plan layouts, and sensory overload are significant barriers for people with ADHD, autism, sensory processing differences, and related conditions. Access to certified neuro-friendly workspaces — like those in <a href="/spaces/">the Quiet Space Club directory</a> — can make a substantial difference to daily functioning and long-term wellbeing.'
       },
       {
         type: 'faq',
@@ -2030,7 +2030,7 @@ export const blogPosts: BlogPost[] = [
         'Dimmable lighting controls or lamps with adjustable brightness',
         'Flexible seating options including standing desks and movement friendly chairs',
       ]},
-      { type: 'paragraph', text: 'You also need permission to modify meeting spaces physically. This might involve installing acoustic panels, changing light fixtures, or rearranging furniture. Partnering with facilities teams and <a href="/workspace-providers">workspace providers certification</a> programmes helps identify which changes deliver the most impact for your specific environment.' },
+      { type: 'paragraph', text: 'You also need permission to modify meeting spaces physically. This might involve installing acoustic panels, changing light fixtures, or rearranging furniture. Partnering with facilities teams and <a href="/workspace-providers/">workspace providers certification</a> programmes helps identify which changes deliver the most impact for your specific environment.' },
       { type: 'image', src: '/blog/sensory-room-infographic.png', alt: 'Infographic showing key sensory room adjustments including lighting, sound, and seating modifications' },
       { type: 'protip', text: 'Create a sensory accommodation checklist that attendees can review before booking meeting rooms, helping them identify spaces that match their needs.' },
       { type: 'heading', level: 2, text: 'Physical environmental adjustments for sensory comfort', id: 'physical-environmental-adjustments-for-sensory-comfort' },
@@ -2047,7 +2047,7 @@ export const blogPosts: BlogPost[] = [
         ['Visual input', 'Clutter increases cognitive load', 'Minimise decorations and use neutral colours'],
       ]},
       { type: 'protip', text: 'Test your meeting room modifications with a small group of neurodiverse colleagues before rolling out changes company wide, gathering specific feedback on what works.' },
-      { type: 'paragraph', text: 'Consider exploring <a href="/spaces">neuro-friendly meeting spaces</a> that already meet accessibility standards if modifications prove challenging in your current location.' },
+      { type: 'paragraph', text: 'Consider exploring <a href="/spaces/">neuro-friendly meeting spaces</a> that already meet accessibility standards if modifications prove challenging in your current location.' },
       { type: 'heading', level: 2, text: 'Pre-meeting communication and planning', id: 'pre-meeting-communication-and-planning' },
       { type: 'paragraph', text: 'Uncertainty amplifies anxiety for many neurodiverse professionals. Sending detailed agendas at least 24 hours before meetings gives attendees time to prepare questions, review materials, and mentally rehearse participation. Include timing for each agenda item so people can pace their energy accordingly.' },
       { type: 'paragraph', text: 'Clear communication of meeting objectives, roles, and accommodations reduces confusion and stress. Specify who will lead each discussion, what decisions need making, and what preparation attendees should complete beforehand. This structure helps everyone arrive ready to contribute.' },
@@ -2062,7 +2062,7 @@ export const blogPosts: BlogPost[] = [
       ]},
       { type: 'paragraph', text: 'These guidelines reduce social uncertainty and help neurodiverse attendees navigate unwritten rules that neurotypical colleagues may take for granted.' },
       { type: 'protip', text: 'Create meeting agenda templates that prompt organisers to include timing, participation methods, and accommodation requests, making inclusive planning automatic.' },
-      { type: 'paragraph', text: 'The <a href="/how-it-works">NeuroFlow assessment process</a> demonstrates how systematic evaluation of workspace features supports neurodiverse needs.' },
+      { type: 'paragraph', text: 'The <a href="/how-it-works/">NeuroFlow assessment process</a> demonstrates how systematic evaluation of workspace features supports neurodiverse needs.' },
       { type: 'heading', level: 2, text: 'Inclusive participation formats during meetings', id: 'inclusive-participation-formats-during-meetings' },
       { type: 'paragraph', text: 'Forcing everyone to participate identically excludes people whose cognitive styles differ from the majority. Offer verbal contributions, written responses in shared documents, and chat messages as equally valid ways to join discussions. This flexibility lets attendees choose methods that match their processing speed and communication preferences.' },
       { type: 'paragraph', text: 'Using colour coded badges allows attendees to signal social interaction preferences, enhancing comfort and lowering stress. Green means open to conversation, yellow indicates selective interaction, and red signals a need for minimal contact. These visual cues remove the awkwardness of verbally declining social engagement.' },
@@ -2099,7 +2099,7 @@ export const blogPosts: BlogPost[] = [
       { type: 'image', src: '/blog/neuroindex-platform.jpg', alt: 'NeuroIndex platform showing certified neuro-friendly workspace listings' },
       { type: 'paragraph', text: 'The NeuroIndex platform evaluates meeting rooms using evidence based criteria that matter for sensory comfort. Each space receives detailed scoring on lighting quality, acoustic control, seating flexibility, and sensory tool availability. You can search specifically for rooms matching your team\'s needs rather than hoping generic accessibility features will work.' },
       { type: 'paragraph', text: 'The workspace certification program helps venue providers understand what creates genuinely neuro friendly environments. Certified spaces undergo specialist assessment, ensuring they meet consistent standards.' },
-      { type: 'paragraph', text: 'When you need to find neuro-friendly meeting rooms quickly, the <a href="/spaces">searchable database</a> shows verified options across UK cities. Filter by specific accommodations like quiet rooms, adjustable lighting, or break spaces. Read reviews from other neurodiverse professionals about their actual experiences in each venue.' },
+      { type: 'paragraph', text: 'When you need to find neuro-friendly meeting rooms quickly, the <a href="/spaces/">searchable database</a> shows verified options across UK cities. Filter by specific accommodations like quiet rooms, adjustable lighting, or break spaces. Read reviews from other neurodiverse professionals about their actual experiences in each venue.' },
       { type: 'heading', level: 2, text: 'Frequently asked questions', id: 'frequently-asked-questions' },
       { type: 'faq', question: 'What is a sensory friendly meeting room?', answer: 'A sensory friendly meeting room controls environmental factors like lighting, sound, and layout to reduce triggers that cause stress or distraction for neurodiverse individuals. These spaces typically feature adjustable lighting, acoustic treatments, flexible seating, and sensory tools. They prioritise cognitive comfort alongside functional meeting needs.' },
       { type: 'faq', question: 'How can I prepare before booking a sensory friendly meeting room?', answer: 'Clarify your specific sensory needs and those of expected attendees through a simple survey or conversation. Review the room\'s lighting options, sound control features, and seating flexibility before committing. Confirm availability of sensory tools like noise cancelling headphones, earplugs, or fidget items.' },
@@ -2137,7 +2137,7 @@ export const blogPosts: BlogPost[] = [
         'Lack of dedicated quiet zones or sensory retreat spaces',
         'Inflexible seating arrangements that prevent personalisation of immediate workspace',
       ]},
-      { type: 'paragraph', text: 'Platforms like <a href="/">NeuroIndex</a> have emerged to address these gaps by connecting neurodiverse professionals with <a href="/workspace-providers">certified workspace providers</a> that meet evidence-based standards for sensory accessibility. The <a href="/how-it-works">NeuroFlow assessment process</a> evaluates spaces against comprehensive criteria informed by research on sensory processing in autism and related conditions.' },
+      { type: 'paragraph', text: 'Platforms like <a href="/">NeuroIndex</a> have emerged to address these gaps by connecting neurodiverse professionals with <a href="/workspace-providers/">certified workspace providers</a> that meet evidence-based standards for sensory accessibility. The <a href="/how-it-works/">NeuroFlow assessment process</a> evaluates spaces against comprehensive criteria informed by research on sensory processing in autism and related conditions.' },
       { type: 'heading', level: 2, text: 'Key environmental adaptations in neuro-inclusive workspaces', id: 'key-environmental-adaptations-in-neuro-inclusive-workspaces' },
       { type: 'paragraph', text: 'Effective neuro-inclusive design focuses on specific environmental modifications that reduce sensory overload and enhance focus. Acoustic treatments represent one of the most critical interventions. Sound-absorbing materials on walls and ceilings, acoustic panels strategically placed throughout open areas, and dedicated quiet zones help manage noise levels that otherwise trigger stress responses in neurodiverse individuals.' },
       { type: 'paragraph', text: 'Lighting adaptability is equally essential. Research shows that <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7074947/" target="_blank" rel="noopener noreferrer">natural light exposure correlates with 15-20% reduced stress markers</a> in neurodiverse office workers. Workspaces that maximise natural light whilst providing individual control over artificial lighting through dimmable fixtures, task lamps, and adjustable colour temperatures allow workers to tailor their environment to their current sensory needs.' },
@@ -2230,8 +2230,8 @@ export const blogPosts: BlogPost[] = [
       { type: 'heading', level: 2, text: 'Explore neuro-friendly workplaces with NeuroIndex', id: 'explore-neuro-friendly-workplaces-with-neuroindex' },
       { type: 'paragraph', text: 'Finding workspaces that genuinely support neurodiverse needs requires more than reading accessibility claims on websites. NeuroIndex provides trusted certification identifying environments that meet evidence-based standards for sensory comfort and cognitive accessibility.' },
       { type: 'image', src: '/blog/neuroindex-platform-2.jpg', alt: 'NeuroIndex platform interface showing workspace search and certification details' },
-      { type: 'paragraph', text: 'Whether you need a quiet office for focused work, a flexible coworking space with varied zones, or meeting rooms designed for sensory comfort, you can <a href="/spaces">search certified neuro-friendly spaces</a> that match your specific requirements.' },
-      { type: 'paragraph', text: 'Workspace providers can certify their spaces through the <a href="/workspace-providers">NeuroIndex assessment process</a>, demonstrating commitment to neuro-inclusivity whilst gaining visibility amongst professionals actively seeking accessible environments.' },
+      { type: 'paragraph', text: 'Whether you need a quiet office for focused work, a flexible coworking space with varied zones, or meeting rooms designed for sensory comfort, you can <a href="/spaces/">search certified neuro-friendly spaces</a> that match your specific requirements.' },
+      { type: 'paragraph', text: 'Workspace providers can certify their spaces through the <a href="/workspace-providers/">NeuroIndex assessment process</a>, demonstrating commitment to neuro-inclusivity whilst gaining visibility amongst professionals actively seeking accessible environments.' },
       { type: 'heading', level: 2, text: 'Frequently asked questions', id: 'frequently-asked-questions' },
       { type: 'faq', question: 'What is a neuro-inclusive workspace?', answer: 'A neuro-inclusive workspace is an environment specifically designed to accommodate the sensory, cognitive, and social needs of neurodiverse individuals, including those with ADHD, autism, dyslexia, and related conditions. These spaces feature adjustable environmental controls like dimmable lighting and acoustic treatments, spatial flexibility with varied work zones, and community support structures.' },
       { type: 'faq', question: 'How can workspaces reduce sensory overload for ADHD and autism?', answer: 'Workspaces reduce sensory overload through acoustic treatments that manage noise levels, adjustable lighting systems offering individual control, dedicated quiet zones for sensory retreat, and spatial layouts minimising visual clutter. Providing temperature control, natural light access, and flexible furniture arrangements allows individuals to tailor their immediate environment.' },
@@ -2249,7 +2249,7 @@ export const blogPosts: BlogPost[] = [
     keywords: 'managing neurodivergent employees, neurodiversity manager training, how to manage ADHD employees, managing autistic employees, reasonable adjustments manager, neurodiversity in the workplace, line manager neurodiversity UK, neuroinclusion managers',
     content: [
       { type: 'paragraph', text: 'Line managers are where neuroinclusion succeeds or quietly fails. Policies do not implement themselves: almost every workplace adjustment passes through one manager\'s inbox, and Acas/YouGov data from 2026 shows 35% of UK workers say their employer is ineffective at training managers on neurodiversity. Meanwhile 70% of neurodivergent employees fear that disclosing will damage their career, and 60% do not know who to ask about adjustments. If you manage people, the odds are that someone on your team is managing a condition you know nothing about, and has concluded that telling you is not worth the risk.' },
-      { type: 'paragraph', text: 'This guide is deliberately behavioural. It is not about diagnosis — you are not required to understand ADHD or autism clinically, and you should not attempt to assess anyone. It is about what you say, what you change, and what you do in the following 48 hours. For the wider organisational picture, see our guide to <a href="/neurodiversity-in-the-workplace">neurodiversity in the workplace</a> and the <a href="/neuroinclusion-for-employers">employer implementation guide</a>.' },
+      { type: 'paragraph', text: 'This guide is deliberately behavioural. It is not about diagnosis — you are not required to understand ADHD or autism clinically, and you should not attempt to assess anyone. It is about what you say, what you change, and what you do in the following 48 hours. For the wider organisational picture, see our guide to <a href="/neurodiversity-in-the-workplace/">neurodiversity in the workplace</a> and the <a href="/neuroinclusion-for-employers/">employer implementation guide</a>.' },
       { type: 'heading', level: 2, id: 'the-disclosure-conversation', text: 'The disclosure conversation' },
       { type: 'paragraph', text: 'When someone tells you they are neurodivergent, they have usually rehearsed it and are watching your first five seconds closely. The goal of that conversation is not to solve anything. It is to establish that disclosure was safe and that something will happen next.' },
       { type: 'list', items: [
@@ -2286,7 +2286,7 @@ export const blogPosts: BlogPost[] = [
       },
       { type: 'heading', level: 2, id: 'the-environment', text: 'The part of the job most managers ignore: the room' },
       { type: 'paragraph', text: 'Noise, lighting and unpredictability are the barriers neurodivergent employees name first, and return-to-office mandates have pushed them back up the list. You may not control the building, but you usually control seating, meeting rooms, hybrid patterns and whether focus time is respected. Move someone away from the walkway and the overhead fluorescent, book a quiet room for deep work, and let start times flex around rush hour.' },
-      { type: 'paragraph', text: 'Where your office genuinely cannot support focused work, assessed external space is a legitimate adjustment. NeuroIndex scores real UK workspaces on noise, lighting and sensory load — you can <a href="/spaces">search assessed spaces</a> and see <a href="/how-it-works">how the scoring works</a>.' },
+      { type: 'paragraph', text: 'Where your office genuinely cannot support focused work, assessed external space is a legitimate adjustment. NeuroIndex scores real UK workspaces on noise, lighting and sensory load — you can <a href="/spaces/">search assessed spaces</a> and see <a href="/how-it-works/">how the scoring works</a>.' },
       { type: 'heading', level: 2, id: 'legal-basics', text: 'The legal basics you personally need to know' },
       { type: 'list', items: [
         'Under the Equality Act 2010, the duty to make reasonable adjustments is triggered by knowledge you have or reasonably ought to have — a formal diagnosis is not required.',

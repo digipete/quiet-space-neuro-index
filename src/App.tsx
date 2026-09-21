@@ -26,19 +26,10 @@ import PillarPage from "./pages/PillarPage";
 const queryClient = new QueryClient();
 
 const App = () => {
-  // Handle GitHub Pages SPA routing redirect
-  React.useEffect(() => {
-    const search = window.location.search;
-    if (search) {
-      const query = new URLSearchParams(search);
-      const redirect = query.get('redirect');
-      if (redirect) {
-        const decodedPath = decodeURIComponent(redirect);
-        // Clean up the URL and navigate to the proper route
-        window.history.replaceState(null, '', decodedPath);
-      }
-    }
-  }, []);
+  // Every public route is a real pre-rendered file, so no SPA redirect shim is
+  // needed — the 404 page now stays put instead of bouncing to the homepage.
+
+
 
   return (
     <QueryClientProvider client={queryClient}>

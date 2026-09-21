@@ -110,12 +110,12 @@ export const pillarPages: PillarPage[] = [
       },
       {
         type: 'paragraph',
-        text: 'If your own building cannot offer these yet, external space can bridge the gap. NeuroIndex scores real offices, coworking spaces and meeting rooms on noise, lighting and sensory load, so you can <a href="/spaces">book somewhere already assessed</a> instead of guessing from a photo gallery. Our <a href="/how-it-works">scoring framework</a> explains exactly what is measured.',
+        text: 'If your own building cannot offer these yet, external space can bridge the gap. NeuroIndex scores real offices, coworking spaces and meeting rooms on noise, lighting and sensory load, so you can <a href="/spaces/">book somewhere already assessed</a> instead of guessing from a photo gallery. Our <a href="/how-it-works/">scoring framework</a> explains exactly what is measured.',
       },
       { type: 'heading', level: 2, id: 'managers-are-the-bottleneck', text: 'Managers are the bottleneck' },
       {
         type: 'paragraph',
-        text: 'Almost every adjustment passes through a line manager, and 35% of UK workers say their employer is ineffective at training them. Untrained managers do not usually refuse adjustments outright — they delay, they escalate unnecessarily, or they agree informally and never implement. The employee reads that as a no, stops asking, and starts looking elsewhere. Our guide to <a href="/blog/managing-neurodivergent-employees">managing neurodivergent employees</a> sets out what to train managers to actually do.',
+        text: 'Almost every adjustment passes through a line manager, and 35% of UK workers say their employer is ineffective at training them. Untrained managers do not usually refuse adjustments outright — they delay, they escalate unnecessarily, or they agree informally and never implement. The employee reads that as a no, stops asking, and starts looking elsewhere. Our guide to <a href="/blog/managing-neurodivergent-employees/">managing neurodivergent employees</a> sets out what to train managers to actually do.',
       },
       {
         type: 'list',
@@ -129,7 +129,7 @@ export const pillarPages: PillarPage[] = [
       { type: 'heading', level: 2, id: 'building-the-business-case', text: 'Building the business case' },
       {
         type: 'paragraph',
-        text: 'The return on neuroinclusion is mostly retention and productivity, not recruitment marketing. Replacing an experienced employee typically costs six to nine months of their salary; nearly a quarter of neurodivergent UK employees say they are planning to leave. Set against adjustments that usually cost under £100, the arithmetic is not close. Add avoided tribunal exposure — claims up 164% in four years, with awards for injury to feelings uncapped — and the case is straightforward. The detail is in our <a href="/blog/neuroinclusion-roi-business-case-uk-2026">neuroinclusion ROI analysis</a> and the <a href="/neuroinclusion-for-employers">employer implementation guide</a>.',
+        text: 'The return on neuroinclusion is mostly retention and productivity, not recruitment marketing. Replacing an experienced employee typically costs six to nine months of their salary; nearly a quarter of neurodivergent UK employees say they are planning to leave. Set against adjustments that usually cost under £100, the arithmetic is not close. Add avoided tribunal exposure — claims up 164% in four years, with awards for injury to feelings uncapped — and the case is straightforward. The detail is in our <a href="/blog/neuroinclusion-roi-business-case-uk-2026/">neuroinclusion ROI analysis</a> and the <a href="/neuroinclusion-for-employers/">employer implementation guide</a>.',
       },
       { type: 'heading', level: 2, id: 'a-90-day-plan', text: 'A realistic 90-day plan' },
       {
@@ -216,7 +216,7 @@ export const pillarPages: PillarPage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Present it as a retention and risk case, not a moral one. Finance approves retention and risk. The full breakdown, with published employer programme results, is in our <a href="/blog/neuroinclusion-roi-business-case-uk-2026">2026 ROI analysis</a>.',
+        text: 'Present it as a retention and risk case, not a moral one. Finance approves retention and risk. The full breakdown, with published employer programme results, is in our <a href="/blog/neuroinclusion-roi-business-case-uk-2026/">2026 ROI analysis</a>.',
       },
       { type: 'heading', level: 2, id: 'build-the-adjustments-service', text: 'Step 1: Build an adjustments service, not a policy' },
       {
@@ -233,7 +233,7 @@ export const pillarPages: PillarPage[] = [
       { type: 'heading', level: 2, id: 'train-managers', text: 'Step 2: Train managers on the response' },
       {
         type: 'paragraph',
-        text: 'Manager capability is where most neuroinclusion strategies quietly die. Train the behaviour, not the condition: what to say in the disclosure conversation, what happens in the next 48 hours, what they can approve alone, and how to run one-to-ones, feedback and workload planning in ways that do not penalise executive-function differences. Detail in the <a href="/blog/managing-neurodivergent-employees">manager guide</a> and the evidence in our <a href="/blog/manager-training-gap-neurodiversity-2026">manager training gap analysis</a>.',
+        text: 'Manager capability is where most neuroinclusion strategies quietly die. Train the behaviour, not the condition: what to say in the disclosure conversation, what happens in the next 48 hours, what they can approve alone, and how to run one-to-ones, feedback and workload planning in ways that do not penalise executive-function differences. Detail in the <a href="/blog/managing-neurodivergent-employees/">manager guide</a> and the evidence in our <a href="/blog/manager-training-gap-neurodiversity-2026/">manager training gap analysis</a>.',
       },
       { type: 'heading', level: 2, id: 'fix-the-environment', text: 'Step 3: Fix the environment' },
       {
@@ -252,7 +252,7 @@ export const pillarPages: PillarPage[] = [
       },
       {
         type: 'paragraph',
-        text: 'Where your estate cannot meet that yet, use assessed external space in the interim: <a href="/spaces">browse scored neuro-inclusive workspaces</a>, or if you operate space yourself, <a href="/workspace-providers">get your building assessed</a> so employers searching for it can find you.',
+        text: 'Where your estate cannot meet that yet, use assessed external space in the interim: <a href="/spaces/">browse scored neuro-inclusive workspaces</a>, or if you operate space yourself, <a href="/workspace-providers/">get your building assessed</a> so employers searching for it can find you.',
       },
       { type: 'heading', level: 2, id: 'fix-hiring-and-progression', text: 'Step 4: Fix hiring and progression' },
       {

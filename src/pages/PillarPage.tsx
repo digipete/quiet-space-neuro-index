@@ -120,19 +120,19 @@ const PillarPage = () => {
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
-                  to="/spaces"
+                  to="/spaces/"
                   className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
                 >
                   Search workspaces
                 </Link>
                 <Link
-                  to="/how-it-works"
+                  to="/how-it-works/"
                   className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted transition-colors"
                 >
                   How the Neuro Index score works
                 </Link>
                 <Link
-                  to="/workspace-providers"
+                  to="/workspace-providers/"
                   className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted transition-colors"
                 >
                   List your space
@@ -145,7 +145,7 @@ const PillarPage = () => {
                 <h2 className="text-2xl font-bold text-foreground mb-6">Read next</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {related.map((p) => (
-                    <Link key={p!.slug} to={`/blog/${p!.slug}`} className="group">
+                    <Link key={p!.slug} to={`/blog/${p!.slug}/`} className="group">
                       <Card className="h-full overflow-hidden border-border/50 transition-all group-hover:shadow-md group-hover:border-primary/30">
                         <CardContent className="p-5">
                           <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">

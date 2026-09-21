@@ -23,27 +23,27 @@ export const Footer = () => {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/spaces" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/spaces/" className="text-muted-foreground hover:text-primary transition-colors">
                   Find Spaces
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/about/" className="text-muted-foreground hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/how-it-works" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/how-it-works/" className="text-muted-foreground hover:text-primary transition-colors">
                   How It Works
                 </Link>
               </li>
               <li>
-                <Link to="/neurodiversity-in-the-workplace" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/neurodiversity-in-the-workplace/" className="text-muted-foreground hover:text-primary transition-colors">
                   Neurodiversity in the Workplace
                 </Link>
               </li>
               <li>
-                <Link to="/neuroinclusion-for-employers" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/neuroinclusion-for-employers/" className="text-muted-foreground hover:text-primary transition-colors">
                   Neuroinclusion for Employers
                 </Link>
               </li>
@@ -55,7 +55,7 @@ export const Footer = () => {
             <h3 className="font-semibold mb-4">Support</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contact/" className="text-muted-foreground hover:text-primary transition-colors">
                   Contact Us
                 </Link>
               </li>
