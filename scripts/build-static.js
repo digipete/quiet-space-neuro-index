@@ -109,33 +109,20 @@ async function buildStatic() {
       console.log('✅ Copied CNAME');
     }
 
-    // Generate GitHub Pages 404.html for SPA routing (unknown URLs only —
-    // every indexable route is pre-rendered as a real index.html above).
-    console.log('📄 Generating 404.html for SPA routing...');
-    const spa404Content = `<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <title>Page not found | Quiet Space Club</title>
-    <script>
-      const location = window.location;
-      if (location.pathname.slice(1)) {
-        location.replace(
-          location.protocol + '//' + location.host +
-          '/?redirect=' + encodeURIComponent(location.pathname + location.search + location.hash)
-        );
-      }
-    </script>
-  </head>
-  <body>
-    <p>Redirecting to the main application...</p>
-  </body>
-</html>`;
+    // 404.html: an honest, noindex "page not found" page. It must NOT bounce to
+    // the homepage — Google reads that as a redirect and reports redirect errors.
+    // Every indexable route is a real pre-rendered index.html, so no SPA shim.
+    const notFoundSrc = path.join(publicDir, '404.html');
+    if (!fs.existsSync(notFoundSrc)) {
+      throw new Error('public/404.html is missing');
+    }
+    const notFoundHtml = fs.readFileSync(notFoundSrc, 'utf8');
+    if (/location\.replace|window\.location\s*=/.test(notFoundHtml)) {
+      throw new Error('public/404.html must not redirect — Google reports it as a redirect error');
+    }
+    fs.copyFileSync(notFoundSrc, path.join(distDir, '404.html'));
+    console.log('✅ Copied 404.html (no redirect, noindex)');
 
-    fs.writeFileSync(path.join(distDir, '404.html'), spa404Content);
-    console.log('✅ Generated 404.html for SPA routing');
 
     // Verification: every sitemap URL must have a real pre-rendered file.
     console.log('🔍 Verifying every sitemap URL has a pre-rendered page...');
