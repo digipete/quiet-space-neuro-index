@@ -119,8 +119,9 @@ async function prerender() {
         // Give react-helmet-async time to update meta tags
         await new Promise(resolve => setTimeout(resolve, 1000));
 
-        // Extract the full rendered HTML and strip stale template head tags
-        const html = cleanHead(await page.content(), route);
+        // Extract the full rendered HTML, strip stale template head tags and
+        // point every internal link at the URL the server actually serves.
+        const html = fixInternalLinks(cleanHead(await page.content(), route), routes);
 
         // Determine output path
         let outputPath;
