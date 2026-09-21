@@ -167,6 +167,28 @@ async function buildStatic() {
     }
     console.log(`✅ Head tags verified on all ${routes.length} pages`);
 
+    // Verification: no internal link may point at an address that redirects.
+    // GitHub Pages 301s the slash-less form, and Google logs those as redirects.
+    console.log('🔍 Verifying internal links never point at a redirecting address...');
+    const indexable = new Set(routes.map((r) => (r.path === '/' ? '/' : `${r.path}/`)));
+    const linkProblems = [];
+    for (const r of routes) {
+      const file = r.path === '/'
+        ? path.join(distDir, 'index.html')
+        : path.join(distDir, r.path.slice(1), 'index.html');
+      const html = fs.readFileSync(file, 'utf8');
+      const hrefs = [...html.matchAll(/href="(\/[^"#?]*)"/g)].map((m) => m[1]);
+      for (const href of new Set(hrefs)) {
+        if (href.endsWith('/')) continue;
+        if (indexable.has(`${href}/`)) linkProblems.push(`${r.path} → ${href}`);
+      }
+    }
+
+    if (linkProblems.length) {
+      throw new Error(`Internal links pointing at redirecting addresses:\n  - ${linkProblems.join('\n  - ')}`);
+    }
+    console.log('✅ Internal links verified (no redirecting addresses)');
+
     console.log('🎉 Static build completed successfully!');
 
   } catch (error) {
