@@ -183,7 +183,7 @@ const Resources = () => {
               Our team is here to help you find the right resources for your needs.
             </p>
             <Button asChild size="lg" className="text-lg px-8 py-6">
-              <Link to="/contact">
+              <Link to="/contact/">
                 Contact Our Team
               </Link>
             </Button>

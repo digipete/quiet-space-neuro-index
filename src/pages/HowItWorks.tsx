@@ -413,13 +413,13 @@ const HowItWorks = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-lg px-8 py-6">
-                <Link to="/spaces">
+                <Link to="/spaces/">
                   <Search className="w-5 h-5 mr-2" />
                   Find Your Perfect Space
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
-                <Link to="/about">
+                <Link to="/about/">
                   <Brain className="w-5 h-5 mr-2" />
                   Learn About Our Research
                 </Link>

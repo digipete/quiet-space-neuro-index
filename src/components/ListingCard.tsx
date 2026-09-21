@@ -117,7 +117,7 @@ export function ListingCard({
       <CardContent className="p-5 space-y-4">
         <div className="space-y-2">
           <Link 
-            to={`/space/${id}`}
+            to={`/space/${id}/`}
             className="block group-hover:text-primary transition-colors"
           >
             <h3 className="text-lg font-semibold line-clamp-1">{title}</h3>
@@ -165,7 +165,7 @@ export function ListingCard({
             <span className="text-sm font-medium text-primary">Score: {neuroScore}/10</span>
           </div>
           <Link 
-            to={`/space/${id}`}
+            to={`/space/${id}/`}
             className="text-sm text-primary hover:text-primary/80 font-medium transition-colors"
           >
             View Details →

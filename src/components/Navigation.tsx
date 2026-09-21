@@ -50,7 +50,7 @@ export const Navigation = () => {
               </Link>
             ))}
             <Button asChild size="sm" className="ml-2">
-              <Link to="/submit-space">
+              <Link to="/submit-space/">
                 <Plus className="w-4 h-4 mr-1" />
                 List Your Space
               </Link>
@@ -91,7 +91,7 @@ export const Navigation = () => {
               ))}
               <div className="px-3 pt-2">
                 <Button asChild className="w-full" size="sm" onClick={() => setIsMenuOpen(false)}>
-                  <Link to="/submit-space">
+                  <Link to="/submit-space/">
                     <Plus className="w-4 h-4 mr-1" />
                     List Your Space
                   </Link>
