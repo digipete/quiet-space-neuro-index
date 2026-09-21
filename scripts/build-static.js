@@ -180,6 +180,26 @@ async function buildStatic() {
     }
     console.log(`✅ Head tags verified on all ${routes.length} pages`);
 
+    // Verification: no published page may link to a URL the server only redirects to.
+    console.log('🔍 Verifying no internal link points at a redirecting URL...');
+    const routePaths = new Set(routes.map((r) => r.path).filter((p) => p !== '/'));
+    const linkProblems = [];
+    for (const r of routes) {
+      const file = r.path === '/'
+        ? path.join(distDir, 'index.html')
+        : path.join(distDir, r.path.slice(1), 'index.html');
+      const html = fs.readFileSync(file, 'utf8');
+
+      const hrefs = [...html.matchAll(/href="(\/[^"#?]*)"/g)].map((m) => m[1]);
+      const bad = [...new Set(hrefs.filter((h) => routePaths.has(h)))];
+      if (bad.length) linkProblems.push(`${r.path}: ${bad.join(', ')}`);
+    }
+
+    if (linkProblems.length) {
+      throw new Error(`Internal links pointing at redirecting URLs:\n  - ${linkProblems.join('\n  - ')}`);
+    }
+    console.log(`✅ Internal links verified on all ${routes.length} pages`);
+
     console.log('🎉 Static build completed successfully!');
 
   } catch (error) {
