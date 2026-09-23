@@ -124,8 +124,17 @@ export default function WorkspaceProviders() {
           offers: [
             {
               '@type': 'Offer',
-              name: 'One-off assessment and certification',
-              description: 'Full space assessment, improvement recommendations, initial Neuro Index certification and listing setup.',
+              name: 'Directory listing',
+              description: 'Listing your space on NeuroIndex is free.',
+              price: '0',
+              priceCurrency: 'GBP',
+              url: 'https://index.quietspace.club/workspace-providers/',
+              availability: 'https://schema.org/InStock',
+            },
+            {
+              '@type': 'Offer',
+              name: 'NeuroFlow assessment and certification',
+              description: 'One-off on-site assessment against the NeuroFlow framework, improvement recommendations and initial certification.',
               price: '5000',
               priceCurrency: 'GBP',
               url: 'https://index.quietspace.club/workspace-providers/',
@@ -133,8 +142,8 @@ export default function WorkspaceProviders() {
             },
             {
               '@type': 'Offer',
-              name: 'Annual listing',
-              description: 'Active listing on NeuroIndex, enquiry management and ongoing certification maintenance, per property per year.',
+              name: 'Annual certification maintenance',
+              description: 'Ongoing NeuroFlow certification: annual reassessment, updated Neuro Index score and certification maintenance, per property per year.',
               price: '5000',
               priceCurrency: 'GBP',
               url: 'https://index.quietspace.club/workspace-providers/',
@@ -201,47 +210,21 @@ export default function WorkspaceProviders() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Simple, straightforward pricing with no hidden costs
+              Listing your space is free. You only pay for the NeuroFlow assessment and certification.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="p-8 border-2">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2">One-Off Setup</h3>
-                <div className="text-4xl font-bold text-primary mb-2">£5,000</div>
-                <p className="text-gray-600">Initial assessment and certification</p>
-              </div>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>Comprehensive space assessment</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>Detailed improvement recommendations</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>Initial NeuroFlow certification</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>Platform listing setup</span>
-                </li>
-              </ul>
-            </Card>
-
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="p-8 border-2 border-primary bg-primary/5">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2">Annual Listing</h3>
-                <div className="text-4xl font-bold text-primary mb-2">£5,000</div>
-                <p className="text-gray-600">Per property per year</p>
+                <h3 className="text-2xl font-bold mb-2">Listing</h3>
+                <div className="text-4xl font-bold text-primary mb-2">Free</div>
+                <p className="text-gray-600">Always free to be listed</p>
               </div>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>Active listing on Quiet Space Club</span>
+                  <span>Your space on the NeuroIndex directory</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-primary" />
@@ -249,7 +232,55 @@ export default function WorkspaceProviders() {
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>Ongoing certification maintenance</span>
+                  <span>Visible to neurodivergent professionals and employers</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card className="p-8 border-2">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2">Assessment & Certification</h3>
+                <div className="text-4xl font-bold text-primary mb-2">£5,000</div>
+                <p className="text-gray-600">One-off NeuroFlow assessment</p>
+              </div>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span>On-site assessment against the NeuroFlow framework</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span>Detailed improvement recommendations</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span>NeuroFlow certification and Neuro Index score</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span>Certified badge on your listing</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card className="p-8 border-2">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2">Certification Maintenance</h3>
+                <div className="text-4xl font-bold text-primary mb-2">£5,000</div>
+                <p className="text-gray-600">Per property per year</p>
+              </div>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span>Annual reassessment using the NeuroFlow framework</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span>Updated Neuro Index score each year</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span>Ongoing certification so your score stays current</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-primary" />
