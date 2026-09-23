@@ -18,6 +18,7 @@ import WorkspaceProviders from "./pages/WorkspaceProviders";
 import AdminAuth from "./pages/AdminAuth";
 import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
+import SensorySelfAssessment from "./pages/SensorySelfAssessment";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import SubmitSpace from "./pages/SubmitSpace";
@@ -60,6 +61,7 @@ const App = () => {
                 <Route path="/for/managers" element={<PillarPage />} />
                 <Route path="/for/neurodivergent-professionals" element={<PillarPage />} />
                 <Route path="/quiet-workspaces/london" element={<PillarPage />} />
+                <Route path="/tools/sensory-self-assessment" element={<SensorySelfAssessment />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/admin/auth" element={<AdminAuth />} />

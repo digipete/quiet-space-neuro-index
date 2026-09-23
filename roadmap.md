@@ -16,13 +16,13 @@ Source plan: `.lovable/plan/neuroindex-marketing-and-seo-built-on-the-marketing-
 - [ ] Baseline check of who gets cited today in ChatGPT / Perplexity / AI Overviews
 
 ## Phase 3 — Content
-- [ ] Sensory audit checklist for offices
-- [ ] Reasonable adjustments: the UK legal position
+- [x] Sensory audit checklist for offices
+- [x] Reasonable adjustments: the UK legal position
 - [ ] What makes an office ADHD-friendly
-- [ ] Quiet working spaces in London: what to look for
-- [ ] The cost of getting neuroinclusion wrong
+- [x] Quiet working spaces in London: what to look for
+- [x] The cost of getting neuroinclusion wrong
 - [ ] How to run a neuroinclusive interview
-- [ ] Free scored self-assessment tool (link magnet)
+- [x] Free scored self-assessment tool (link magnet)
 
 ## Phase 4 — Distribution
 - [ ] Directory submissions with per-directory positioning

@@ -35,6 +35,7 @@ const GUIDE_PATHS = new Set([
   '/for/managers',
   '/for/neurodivergent-professionals',
   '/quiet-workspaces/london',
+  '/tools/sensory-self-assessment',
 ]);
 
 function fileFor(distDir, routePath) {
