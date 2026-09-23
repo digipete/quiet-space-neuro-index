@@ -1,0 +1,31 @@
+# NeuroIndex marketing and SEO roadmap
+
+Source plan: `.lovable/plan/neuroindex-marketing-and-seo-built-on-the-marketing-skills-p-2026-09-23.md`
+
+## Phase 1 — Foundations and conversion layer
+- [x] Audience pages: `/for/hr-teams/`, `/for/managers/`, `/for/neurodivergent-professionals/`
+- [x] Location template: `/quiet-workspaces/london/`
+- [x] Privacy policy and terms pages (required by most directories)
+- [x] Provider page rewritten as an offer page with pricing stated in the title/description
+- [ ] Resolve the pricing contradiction: homepage says "Free to list during beta", provider page says £5,000 + £5,000/year
+
+## Phase 2 — Structured data and AI search
+- [x] Organization schema sitewide (WebSite schema already present)
+- [x] Service + Offer schema on the provider page
+- [x] `llms.txt` generated from the real route list; new `llms-full.txt` (whole site in one fetch)
+- [ ] Baseline check of who gets cited today in ChatGPT / Perplexity / AI Overviews
+
+## Phase 3 — Content
+- [ ] Sensory audit checklist for offices
+- [ ] Reasonable adjustments: the UK legal position
+- [ ] What makes an office ADHD-friendly
+- [ ] Quiet working spaces in London: what to look for
+- [ ] The cost of getting neuroinclusion wrong
+- [ ] How to run a neuroinclusive interview
+- [ ] Free scored self-assessment tool (link magnet)
+
+## Phase 4 — Distribution
+- [ ] Directory submissions with per-directory positioning
+- [ ] Google Business Profile / UK local listings (needs a registered address)
+- [ ] Outreach drafts: neurodiversity networks, occupational health, the six listed spaces
+- [ ] Request indexing for each new page after deploy
