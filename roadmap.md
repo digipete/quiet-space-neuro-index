@@ -7,7 +7,7 @@ Source plan: `.lovable/plan/neuroindex-marketing-and-seo-built-on-the-marketing-
 - [x] Location template: `/quiet-workspaces/london/`
 - [x] Privacy policy and terms pages (required by most directories)
 - [x] Provider page rewritten as an offer page with pricing stated in the title/description
-- [ ] Resolve the pricing contradiction: homepage says "Free to list during beta", provider page says £5,000 + £5,000/year
+- [x] Pricing resolved per Pete: listing is free; £5,000 is the one-off NeuroFlow assessment, £5,000/year maintains certification
 
 ## Phase 2 — Structured data and AI search
 - [x] Organization schema sitewide (WebSite schema already present)
