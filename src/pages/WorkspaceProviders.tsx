@@ -101,11 +101,47 @@ export default function WorkspaceProviders() {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="For Workspace Providers"
-        description="Get neuro-accessibility certification for your coworking space. Attract new customers and join the leading network of inclusive providers."
+        title="List Your Space: Neuro-Accessibility Assessment & Listing"
+        description="Get your coworking space, office or meeting rooms assessed and scored for neuro-accessibility, then listed on NeuroIndex. £5,000 assessment and certification, £5,000 per property per year to stay listed."
 
         keywords="workspace provider certification, coworking space listing, neuro-accessible certification, inclusive workspace network, workspace assessment, coworking business growth"
-      />
+      >
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'NeuroIndex neuro-accessibility assessment and listing',
+          serviceType: 'Workspace neuro-accessibility assessment and certification',
+          description:
+            'On-site assessment of a workspace against the Neuro Index criteria — noise, lighting, sensory load and quiet-space provision — followed by a written improvement report, a published Neuro Index score and a listing on the NeuroIndex directory.',
+          provider: {
+            '@type': 'Organization',
+            name: 'Quiet Space Club',
+            url: 'https://index.quietspace.club',
+          },
+          areaServed: { '@type': 'Country', name: 'United Kingdom' },
+          url: 'https://index.quietspace.club/workspace-providers/',
+          offers: [
+            {
+              '@type': 'Offer',
+              name: 'One-off assessment and certification',
+              description: 'Full space assessment, improvement recommendations, initial Neuro Index certification and listing setup.',
+              price: '5000',
+              priceCurrency: 'GBP',
+              url: 'https://index.quietspace.club/workspace-providers/',
+              availability: 'https://schema.org/InStock',
+            },
+            {
+              '@type': 'Offer',
+              name: 'Annual listing',
+              description: 'Active listing on NeuroIndex, enquiry management and ongoing certification maintenance, per property per year.',
+              price: '5000',
+              priceCurrency: 'GBP',
+              url: 'https://index.quietspace.club/workspace-providers/',
+              availability: 'https://schema.org/InStock',
+            },
+          ],
+        })}</script>
+      </SEO>
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-primary/5 to-secondary/5 py-20">
         <div className="container mx-auto px-4 text-center">

@@ -25,32 +25,119 @@ function buildSitemap(routes) {
   ].join('\n');
 }
 
-function buildLlmsTxt(blogRoutes) {
-  const source = fs.readFileSync(path.join(__dirname, '../src/data/blogPosts.ts'), 'utf8');
-  const titles = [...source.matchAll(/title:\s*'((?:[^'\\]|\\.)*)'/g)].map((m) => m[1].replace(/\\'/g, "'"));
+const SITE_SUMMARY =
+  'The UK directory of neuro-inclusive workspaces. Every space carries a Neuro Index score covering noise, lighting, sensory load and quiet-space provision, so neurodivergent professionals can find offices, coworking spaces and meeting rooms that actually work for them. The site also publishes practical UK guidance on neurodiversity at work for HR teams, managers and neurodivergent professionals.';
 
-  const posts = blogRoutes.map((r, i) => `- [${titles[i] || r.path}](${r.path}/)`);
+const GUIDE_PATHS = new Set([
+  '/neurodiversity-in-the-workplace',
+  '/neuroinclusion-for-employers',
+  '/for/hr-teams',
+  '/for/managers',
+  '/for/neurodivergent-professionals',
+  '/quiet-workspaces/london',
+]);
+
+function fileFor(distDir, routePath) {
+  return routePath === '/'
+    ? path.join(distDir, 'index.html')
+    : path.join(distDir, routePath.slice(1), 'index.html');
+}
+
+function decodeEntities(value) {
+  return value
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&rsquo;/g, "'")
+    .replace(/&nbsp;/g, ' ');
+}
+
+// Read the real, pre-rendered title and description so the AI files can never
+// drift from what the site actually serves.
+function readMeta(distDir, routePath) {
+  const html = fs.readFileSync(fileFor(distDir, routePath), 'utf8');
+  const title = decodeEntities((html.match(/<title[^>]*>([^<]*)<\/title>/i)?.[1] || routePath).trim());
+  const description = decodeEntities(
+    (html.match(/<meta[^>]*name="description"[^>]*content="([^"]*)"/i)?.[1] || '').trim(),
+  );
+  const body = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i)?.[1] || '';
+  const text = decodeEntities(
+    body
+      .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+      .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+      .replace(/<[^>]+>/g, ' '),
+  )
+    .replace(/\s+/g, ' ')
+    .trim();
+  return { title, description, text };
+}
+
+function buildLlmsTxt(distDir, routes) {
+  const entry = (r) => {
+    const { title, description } = readMeta(distDir, r.path);
+    return `- [${title}](${r.path === '/' ? '/' : `${r.path}/`})${description ? `: ${description}` : ''}`;
+  };
+
+  const pages = routes.filter(
+    (r) => !r.path.startsWith('/blog/') && !r.path.startsWith('/space/') && !GUIDE_PATHS.has(r.path),
+  );
+  const guides = routes.filter((r) => GUIDE_PATHS.has(r.path));
+  const posts = routes.filter((r) => r.path.startsWith('/blog/'));
+  const spaces = routes.filter((r) => r.path.startsWith('/space/'));
 
   return [
     '# NeuroIndex — Quiet Space Club',
     '',
-    '> The UK directory of neuro-inclusive workspaces. Every space carries a Neuro Index score covering noise, lighting, sensory load and quiet-space provision, so neurodivergent professionals can find offices, coworking spaces and meeting rooms that actually work for them.',
+    `> ${SITE_SUMMARY}`,
     '',
     '## Pages',
     '',
-    '- [Home](/): What NeuroIndex is and who it is for.',
-    '- [Search workspaces](/spaces/): Browse and filter every scored neuro-inclusive workspace.',
-    '- [How it works](/how-it-works/): The Neuro Index scoring methodology and assessment process.',
-    '- [For workspace providers](/workspace-providers/): How operators get their space assessed and listed.',
-    '- [Submit a space](/submit-space/): Add a workspace to the index.',
-    '- [Resources](/resources/): Research and guidance on neuro-inclusive workplace design.',
-    '- [About](/about/): The Quiet Space Club mission.',
-    '- [Contact](/contact/): Get in touch.',
+    ...pages.map(entry),
+    '',
+    '## Guides',
+    '',
+    ...guides.map(entry),
     '',
     '## Blog',
     '',
-    ...posts,
+    ...posts.map(entry),
     '',
+    '## Workspace listings',
+    '',
+    ...spaces.map(entry),
+    '',
+    '## Full text',
+    '',
+    `- [Every page as one document](/llms-full.txt)`,
+    '',
+  ].join('\n');
+}
+
+// One document containing the readable text of every page, so an AI assistant
+// can read the whole site in a single fetch instead of crawling 39 URLs.
+function buildLlmsFullTxt(distDir, routes) {
+  const blocks = routes.map((r) => {
+    const { title, description, text } = readMeta(distDir, r.path);
+    return [
+      `## ${title}`,
+      '',
+      `URL: ${canonicalFor(r.path)}`,
+      description ? `Summary: ${description}` : null,
+      '',
+      text,
+      '',
+    ]
+      .filter((line) => line !== null)
+      .join('\n');
+  });
+
+  return [
+    '# NeuroIndex — Quiet Space Club (full text)',
+    '',
+    `> ${SITE_SUMMARY}`,
+    '',
+    ...blocks,
   ].join('\n');
 }
 
@@ -72,11 +159,13 @@ async function buildStatic() {
     fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
     console.log(`✅ sitemap.xml written (${routes.length} URLs)`);
 
-    console.log('🤖 Generating llms.txt...');
-    const llms = buildLlmsTxt(getBlogRoutes());
+    console.log('🤖 Generating llms.txt and llms-full.txt...');
+    const llms = buildLlmsTxt(distDir, routes);
     fs.writeFileSync(path.join(distDir, 'llms.txt'), llms);
     fs.writeFileSync(path.join(publicDir, 'llms.txt'), llms);
-    console.log('✅ llms.txt written');
+    const llmsFull = buildLlmsFullTxt(distDir, routes);
+    fs.writeFileSync(path.join(distDir, 'llms-full.txt'), llmsFull);
+    console.log(`✅ llms.txt (${routes.length} URLs) and llms-full.txt written`);
 
     // Copy additional static files
     const staticFiles = [
