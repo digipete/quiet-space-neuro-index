@@ -76,6 +76,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://index.quietspace.club/tools/sensory-self-assessment/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://index.quietspace.club/privacy/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -84,6 +89,42 @@
     <loc>https://index.quietspace.club/terms/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://index.quietspace.club/blog/office-sensory-audit-checklist/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://index.quietspace.club/blog/reasonable-adjustments-neurodivergent-employees-uk-law/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://index.quietspace.club/blog/adhd-friendly-office/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://index.quietspace.club/blog/quiet-working-spaces-london-what-to-look-for/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://index.quietspace.club/blog/cost-of-getting-neuroinclusion-wrong/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://index.quietspace.club/blog/neuroinclusive-interview-guide/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://index.quietspace.club/blog/neurodivergent-stigma-rising-despite-awareness-2026/</loc>

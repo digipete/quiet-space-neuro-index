@@ -83,6 +83,11 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/tools/sensory-self-assessment/" className="text-muted-foreground hover:text-primary transition-colors">
+                  Free Sensory Self-Assessment
+                </Link>
+              </li>
+              <li>
                 <Link to="/privacy/" className="text-muted-foreground hover:text-primary transition-colors">
                   Privacy Policy
                 </Link>
