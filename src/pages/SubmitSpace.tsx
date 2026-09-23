@@ -531,8 +531,12 @@ const SubmitSpace = () => {
 
                     <p className="text-xs text-center text-muted-foreground">
                       By submitting you agree to our{' '}
-                      <a href="/privacy" className="underline underline-offset-4">
+                      <a href="/privacy/" className="underline underline-offset-4">
                         Privacy Policy
+                      </a>{' '}
+                      and{' '}
+                      <a href="/terms/" className="underline underline-offset-4">
+                        Terms of Service
                       </a>
                       . We'll only use your details to process your listing.
                     </p>

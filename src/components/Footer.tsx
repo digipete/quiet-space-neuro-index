@@ -60,19 +60,37 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Help Center
-                </a>
+                <Link to="/for/hr-teams/" className="text-muted-foreground hover:text-primary transition-colors">
+                  For HR Teams
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/for/managers/" className="text-muted-foreground hover:text-primary transition-colors">
+                  For Managers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/for/neurodivergent-professionals/"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  For Neurodivergent Professionals
+                </Link>
+              </li>
+              <li>
+                <Link to="/quiet-workspaces/london/" className="text-muted-foreground hover:text-primary transition-colors">
+                  Quiet Workspaces in London
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy/" className="text-muted-foreground hover:text-primary transition-colors">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/terms/" className="text-muted-foreground hover:text-primary transition-colors">
                   Terms of Service
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

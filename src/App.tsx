@@ -22,6 +22,8 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import SubmitSpace from "./pages/SubmitSpace";
 import PillarPage from "./pages/PillarPage";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +56,12 @@ const App = () => {
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/neurodiversity-in-the-workplace" element={<PillarPage />} />
                 <Route path="/neuroinclusion-for-employers" element={<PillarPage />} />
+                <Route path="/for/hr-teams" element={<PillarPage />} />
+                <Route path="/for/managers" element={<PillarPage />} />
+                <Route path="/for/neurodivergent-professionals" element={<PillarPage />} />
+                <Route path="/quiet-workspaces/london" element={<PillarPage />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
                 <Route path="/admin/auth" element={<AdminAuth />} />
                 <Route path="/admin/dashboard" element={<AdminDashboard />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -2,7 +2,7 @@ import { Link, Navigate, useLocation } from 'react-router-dom';
 import { Calendar } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { renderArticleSection } from '@/components/ArticleSections';
-import { getPillarPage } from '@/data/pillarPages';
+import { getGuidePage } from '@/data/landingPages';
 import { getBlogPost } from '@/data/blogPosts';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -10,7 +10,7 @@ const SITE = 'https://index.quietspace.club';
 
 const PillarPage = () => {
   const location = useLocation();
-  const page = getPillarPage(location.pathname.replace(/\/$/, '') || '/');
+  const page = getGuidePage(location.pathname.replace(/\/$/, '') || '/');
 
   if (!page) return <Navigate to="/" replace />;
 

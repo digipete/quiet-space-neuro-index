@@ -1,33 +1,58 @@
 # NeuroIndex — Quiet Space Club
 
-> The UK directory of neuro-inclusive workspaces. Every space carries a Neuro Index score covering noise, lighting, sensory load and quiet-space provision, so neurodivergent professionals can find offices, coworking spaces and meeting rooms that actually work for them.
+> The UK directory of neuro-inclusive workspaces. Every space carries a Neuro Index score covering noise, lighting, sensory load and quiet-space provision, so neurodivergent professionals can find offices, coworking spaces and meeting rooms that actually work for them. The site also publishes practical UK guidance on neurodiversity at work for HR teams, managers and neurodivergent professionals.
 
 ## Pages
 
-- [Home](/): What NeuroIndex is and who it is for.
-- [Search workspaces](/spaces/): Browse and filter every scored neuro-inclusive workspace.
-- [How it works](/how-it-works/): The Neuro Index scoring methodology and assessment process.
-- [For workspace providers](/workspace-providers/): How operators get their space assessed and listed.
-- [Submit a space](/submit-space/): Add a workspace to the index.
-- [Resources](/resources/): Research and guidance on neuro-inclusive workplace design.
-- [About](/about/): The Quiet Space Club mission.
-- [Contact](/contact/): Get in touch.
+- [NeuroIndex - Find Neuro-Friendly Workspaces](/): Discover certified neuro-inclusive workspaces designed for neurodivergent individuals. Find quiet, sensory-friendly offices, coworking spaces, and meeting rooms with NeuroFlow assessment scores.
+- [Find Neuro-Friendly Workspaces | NeuroIndex](/spaces/): Browse certified sensory-friendly offices, coworking spaces, and meeting rooms with detailed neuro-accessibility profiles.
+- [List Your Space: Neuro-Accessibility Assessment & Listing | NeuroIndex](/workspace-providers/): Get your coworking space, office or meeting rooms assessed and scored for neuro-accessibility, then listed on NeuroIndex. £5,000 assessment and certification, £5,000 per property per year to stay listed.
+- [How It Works | NeuroIndex](/how-it-works/): Learn our NeuroFlow methodology — a validated framework for evaluating neuro-accessibility in workspaces and coworking spaces.
+- [About Quiet Space Club | NeuroIndex](/about/): Our mission: connect neurodivergent people with accessible, sensory-friendly workspaces through evidence-based, community-driven ratings.
+- [Neuro-Inclusive Workspace Resources | NeuroIndex](/resources/): Explore research, guides, and tools for creating neuro-accessible workspaces that support neurodivergent professionals.
+- [Contact Us | NeuroIndex](/contact/): Get in touch with Quiet Space Club. Have questions about neuro-accessible workspaces? Want to list your space? We're here to help.
+- [List Your Space | NeuroIndex](/submit-space/): Submit your workspace for inclusion in the UK's leading neuro-inclusive workspace directory.
+- [Blog - Neuro-Inclusive Workspace Insights | NeuroIndex](/blog/): Expert articles on creating sensory-friendly workspaces, inclusive meeting rooms, and neurodiversity in the workplace. Evidence-based guidance for neurodiverse professionals and workspace providers.
+- [Privacy Policy | NeuroIndex](/privacy/): How Quiet Space Club collects, uses and protects personal data on the NeuroIndex workspace directory, and the rights you have under UK GDPR.
+- [Terms of Service | NeuroIndex](/terms/): The terms that apply when you use the NeuroIndex workspace directory, submit a space for assessment, or list a workspace with Quiet Space Club.
+
+## Guides
+
+- [Neurodiversity in the Workplace: 2026 UK Guide | NeuroIndex](/neurodiversity-in-the-workplace/): A practical UK guide to neurodiversity in the workplace in 2026: the law, reasonable adjustments, sensory environments, manager training and the evidence behind what actually works.
+- [Neuroinclusion for Employers: 2026 Implementation Guide | NeuroIndex](/neuroinclusion-for-employers/): How UK employers implement neuroinclusion in 2026: the business case, an adjustments process that works, manager training, sensory environment standards and the metrics to report.
+- [Neuroinclusion for HR Teams | Where to Start | NeuroIndex](/for/hr-teams/): A practical starting order for UK HR teams on neuroinclusion: the adjustments process, the physical environment, manager capability and the evidence you need to show it works.
+- [Managing a Neurodivergent Team Member | Manager Guide | NeuroIndex](/for/managers/): What to say, what to change and what to avoid when a team member is neurodivergent or asks for an adjustment. A short, practical guide for UK line managers.
+- [Finding a Neurodivergent-Friendly Workspace | NeuroIndex](/for/neurodivergent-professionals/): How to judge whether an office or coworking space will work for you before you commit: the questions to ask, the things to check in person, and what you can ask your employer to fund.
+- [Quiet Workspaces in London | Sensory-Friendly Offices | NeuroIndex](/quiet-workspaces/london/): What to look for in a quiet, sensory-friendly workspace in London, which areas suit different tolerances, and the London spaces scored on the Neuro Index.
 
 ## Blog
 
-- [The Stigma Paradox: Why Neurodivergent Disclosure Fear Is Rising in 2026 Despite Record Awareness](/blog/neurodivergent-stigma-rising-despite-awareness-2026/)
-- [The One-in-Four Reality: What 2026 Corporate Research Reveals About Neurodivergent Employees](/blog/one-in-four-neurodivergent-corporate-employees-2026/)
-- [Awareness Isn't Enough: What the City & Guilds Neurodiversity Index 2026 Really Tells UK Employers](/blog/neurodiversity-index-2026-delivery-gap-uk/)
-- [The Neurodivergent Talent Exodus: Why 1 in 4 Employees Are Neurodivergent — and Nearly 1 in 4 Are Planning to Leave in 2026](/blog/neurodivergent-talent-retention-crisis-uk-2026/)
-- [The Neurodivergent Burnout Crisis: Why Only 5% of UK Workers Get the Support They Need in 2026](/blog/neurodivergent-burnout-crisis-uk-2026/)
-- [The Neurodivergent Career Ceiling: Why 1 in 4 Workers Is Neurodivergent — But Missing From Management in 2026](/blog/neurodivergent-career-ceiling-management-gap-2026/)
-- [The Confidence Illusion: Why UK Employers Feel Good About Neurodiversity in 2026 — But Employees Don't](/blog/neurodiversity-confidence-gap-employer-employee-2026/)
-- [Neurodiversity Employment Tribunals Have Risen 164% in Four Years — What Every UK Employer Needs to Know in 2026](/blog/neurodiversity-tribunal-risk-uk-2026/)
-- [Only 5% of Neurodivergent Employees Get Adjustments That Work — The Disclosure Barrier Explained (2026)](/blog/neurodivergent-workplace-adjustments-disclosure-2026/)
-- [Neuroinclusion Pays: The 2026 ROI Data Every UK Employer Needs to See](/blog/neuroinclusion-roi-business-case-uk-2026/)
-- [Return-to-Office Is Triggering a Neurodiversity Accommodation Crisis — What the 2026 Data Reveals](/blog/return-to-office-neurodiversity-accommodations-2026/)
-- [78% of Neurodivergent Employees Now Use AI at Work — and It's Changing Everything in 2026](/blog/neurodivergent-ai-workplace-tools-2026/)
-- [The Manager Training Gap: Why 35% of UK Workers Say Their Employer Is Failing on Neurodiversity in 2026](/blog/manager-training-gap-neurodiversity-2026/)
-- [Create a sensory friendly meeting room in 2026](/blog/create-sensory-friendly-meeting-room-process/)
-- [Defining inclusive workspaces for neurodiverse professionals](/blog/defining-inclusive-workspaces-for-neurodiverse-professionals/)
-- [Managing Neurodivergent Employees: A Practical Guide for UK Managers (2026)](/blog/managing-neurodivergent-employees/)
+- [The Stigma Paradox: Why Neurodivergent Disclosure Fear Is Rising in 2026 Despite Record Awareness | NeuroIndex](/blog/neurodivergent-stigma-rising-despite-awareness-2026/): New Understood.org data shows 70% of neurodivergent workers fear disclosure — up from 59% in 2024. Here's what UK employers must do about the widening awareness-action gap.
+- [The One-in-Four Reality: What 2026 Corporate Research Reveals About Neurodivergent Employees | NeuroIndex](/blog/one-in-four-neurodivergent-corporate-employees-2026/): New research finds 1 in 4 corporate employees are neurodivergent — yet most face daily barriers to progression, wellbeing, and inclusion. Here's what the data demands of UK employers.
+- [Awareness Isn't Enough: What the City & Guilds Neurodiversity Index 2026 Really Tells UK Employers | NeuroIndex](/blog/neurodiversity-index-2026-delivery-gap-uk/): The 2026 Neurodiversity Index reveals a widening gap between employer confidence and employee experience. Here's what the data means for UK workplaces right now.
+- [The Neurodivergent Talent Exodus: Why 1 in 4 Employees Are Neurodivergent — and Nearly 1 in 4 Are Planning to Leave in 2026 | NeuroIndex](/blog/neurodivergent-talent-retention-crisis-uk-2026/): New data shows 25.7% of neurodivergent employees have already quit due to lack of support, and 23% are considering it now. UK employers are sleepwalking into a retention crisis.
+- [The Neurodivergent Burnout Crisis: Why Only 5% of UK Workers Get the Support They Need in 2026 | NeuroIndex](/blog/neurodivergent-burnout-crisis-uk-2026/): New data shows 82% of neurodivergent employees receive no workplace adjustments, and burnout is accelerating. Here's what the evidence says — and what must change.
+- [The Neurodivergent Career Ceiling: Why 1 in 4 Workers Is Neurodivergent — But Missing From Management in 2026 | NeuroIndex](/blog/neurodivergent-career-ceiling-management-gap-2026/): New research shows 25% of corporate employees are neurodivergent, yet they hold fewer management roles. Here's what the data reveals about the career progression gap.
+- [The Confidence Illusion: Why UK Employers Feel Good About Neurodiversity in 2026 — But Employees Don't | NeuroIndex](/blog/neurodiversity-confidence-gap-employer-employee-2026/): The City & Guilds 2026 Neurodiversity Index reveals a troubling paradox: employer confidence is rising while neurodivergent employees' lived experience is getting worse.
+- [Neurodiversity Employment Tribunals Have Risen 164% in Four Years — What Every UK Employer Needs to Know in 2026 | NeuroIndex](/blog/neurodiversity-tribunal-risk-uk-2026/): UK neurodiversity-related employment tribunals have surged 164% in four years. New 2026 data reveals why — and what HR teams must do now to protect their people and their organisation.
+- [Only 5% of Neurodivergent Employees Get Adjustments That Work — The Disclosure Barrier Explained (2026) | NeuroIndex](/blog/neurodivergent-workplace-adjustments-disclosure-2026/): New UK data reveals 82% of neurodivergent employees have no workplace adjustments. The reason isn't a broken process — it's a broken precondition: disclosure.
+- [Neuroinclusion Pays: The 2026 ROI Data Every UK Employer Needs to See | NeuroIndex](/blog/neuroinclusion-roi-business-case-uk-2026/): From SAP's £31m saving to EY's 1.4x productivity uplift, the business case for neuroinclusion is now undeniable. Here's what 2026 data from UK's leading employers reveals.
+- [Return-to-Office Is Triggering a Neurodiversity Accommodation Crisis — What the 2026 Data Reveals | NeuroIndex](/blog/return-to-office-neurodiversity-accommodations-2026/): RTO mandates are flooding UK HR teams with neurodiversity accommodation requests they're not equipped to handle. Government data shows 13x autism waiting list growth since 2019.
+- [78% of Neurodivergent Employees Now Use AI at Work — and It's Changing Everything in 2026 | NeuroIndex](/blog/neurodivergent-ai-workplace-tools-2026/): New Understood.org survey data reveals 78% of neurodivergent workers use AI tools — 19 points more than neurotypical peers. Here's what the data means for inclusion.
+- [The Manager Training Gap: Why 35% of UK Workers Say Their Employer Is Failing on Neurodiversity in 2026 | NeuroIndex](/blog/manager-training-gap-neurodiversity-2026/): A new Acas/YouGov survey finds 35% of UK workers say their employer is ineffective at neurodiversity manager training — here's what the data means for your workplace.
+- [Create a sensory friendly meeting room in 2026 | NeuroIndex](/blog/create-sensory-friendly-meeting-room-process/): Learn how to create sensory friendly meeting rooms that reduce overload for neurodiverse professionals through lighting, sound control, flexible participation, and inclusive planning.
+- [Defining inclusive workspaces for neurodiverse professionals | NeuroIndex](/blog/defining-inclusive-workspaces-for-neurodiverse-professionals/): Discover how to identify truly inclusive workspaces for neurodiverse professionals through evidence-based design, sensory adaptations, and systematic evaluation frameworks.
+- [Managing Neurodivergent Employees: A Practical Guide for UK Managers (2026) | NeuroIndex](/blog/managing-neurodivergent-employees/): Around one in four of your team is neurodivergent, and 35% of UK workers say their employer is failing on manager training. This is what to actually do — in disclosure conversations, one-to-ones, feedback, workload and progression.
+
+## Workspace listings
+
+- [The Ministry - Borough — Neuro-Friendly Workspace in Borough, South London, UK | NeuroIndex](/space/c0e4631f-bddc-4e47-ad92-4397c346c6f0/): The Ministry - Borough in Borough, South London, UK — Neuro Score 8.5/10. A vibrant and flexible workspace in a converted Victorian printworks, designed for com
+- [White Collar Factory - Old Street — Neuro-Friendly Workspace in Old Street, London, UK | NeuroIndex](/space/5a9ee99c-e4a1-4dcf-bd66-7f42939e20d1/): White Collar Factory - Old Street in Old Street, London, UK — Neuro Score 9/10. Award-winning workspace in the heart of Tech City, featuring advanced sustainabi
+- [Mindful Coworking Studio — Neuro-Friendly Workspace in Downtown Portland, OR, USA | NeuroIndex](/space/e9f0d970-0345-4d8b-a5fc-91ec9d79b93d/): Mindful Coworking Studio in Downtown Portland, OR, USA — Neuro Score 9.2/10. A serene workspace designed for neurodiverse professionals in Portland's downtown c
+- [Calm Collective Workspace — Neuro-Friendly Workspace in Mission District, San Francisco, CA, USA | NeuroIndex](/space/1049120b-8b50-49f5-925f-1e2daa9ea946/): Calm Collective Workspace in Mission District, San Francisco, CA, USA — Neuro Score 8.7/10. Open yet peaceful environment with designated focus areas, soft text
+- [Tech Hub Coworking — Neuro-Friendly Workspace in Capitol Hill, Seattle, WA, USA | NeuroIndex](/space/9d84c28a-ca69-4fd9-992e-caea76061e83/): Tech Hub Coworking in Capitol Hill, Seattle, WA, USA — Neuro Score 8.9/10. Modern workspace in Seattle's Capitol Hill with individual pods, circadian lighting,
+- [The Jellicoe - Fora Space — Neuro-Friendly Workspace in King's Cross, London, UK | NeuroIndex](/space/776d4e5a-35df-4e95-bb35-4e82f48f387d/): The Jellicoe - Fora Space in King's Cross, London, UK — Neuro Score 9.5/10. A leading example of neuro-inclusive workspace design, offering exceptional acoustic
+
+## Full text
+
+- [Every page as one document](/llms-full.txt)

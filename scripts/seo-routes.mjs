@@ -32,6 +32,12 @@ const STATIC_ROUTES = [
   { path: '/blog', changefreq: 'weekly', priority: '0.8' },
   { path: '/neurodiversity-in-the-workplace', changefreq: 'monthly', priority: '0.9' },
   { path: '/neuroinclusion-for-employers', changefreq: 'monthly', priority: '0.9' },
+  { path: '/for/hr-teams', changefreq: 'monthly', priority: '0.8' },
+  { path: '/for/managers', changefreq: 'monthly', priority: '0.8' },
+  { path: '/for/neurodivergent-professionals', changefreq: 'monthly', priority: '0.8' },
+  { path: '/quiet-workspaces/london', changefreq: 'monthly', priority: '0.8' },
+  { path: '/privacy', changefreq: 'yearly', priority: '0.3' },
+  { path: '/terms', changefreq: 'yearly', priority: '0.3' },
 ];
 
 function toIsoDate(value) {
