@@ -101,8 +101,9 @@ export default function WorkspaceProviders() {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="List Your Space: Neuro-Accessibility Assessment & Listing"
-        description="Get your coworking space, office or meeting rooms assessed and scored for neuro-accessibility, then listed on NeuroIndex. £5,000 assessment and certification, £5,000 per property per year to stay listed."
+        title="List Your Space Free: NeuroFlow Assessment & Certification"
+        description="List your coworking space, office or meeting rooms on NeuroIndex free. NeuroFlow neuro-accessibility assessment and certification: £5,000 one-off, then £5,000 per property per year to maintain certification."
+
 
         keywords="workspace provider certification, coworking space listing, neuro-accessible certification, inclusive workspace network, workspace assessment, coworking business growth"
       >
