@@ -29,3 +29,8 @@ Source plan: `.lovable/plan/neuroindex-marketing-and-seo-built-on-the-marketing-
 - [ ] Google Business Profile / UK local listings (needs a registered address)
 - [ ] Outreach drafts: neurodiversity networks, occupational health, the six listed spaces
 - [ ] Request indexing for each new page after deploy
+
+## Credibility review
+- [x] Removed unsupported statistics, institutional partnerships and paper citations
+- [x] Removed placeholder team members and testimonials
+- [x] Corrected About page typos and replaced validation overclaims with accurate framework language
