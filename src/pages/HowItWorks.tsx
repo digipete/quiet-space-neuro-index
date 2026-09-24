@@ -15,7 +15,7 @@ const HowItWorks = () => {
     {
       icon: Brain,
       title: "Comprehensive Neuro-Accessibility Score",
-      description: "Each space receives a detailed score based on our scientifically-validated framework covering sensory environment, cognitive load, and environmental predictability."
+      description: "Each assessed space receives a detailed score using our structured framework covering sensory environment, cognitive load, and environmental predictability."
     },
     {
       icon: Star,
@@ -166,7 +166,7 @@ const HowItWorks = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="How It Works"
-        description="Learn our NeuroFlow methodology — a validated framework for evaluating neuro-accessibility in workspaces and coworking spaces."
+        description="Learn how the NeuroFlow framework evaluates sensory and environmental features in workspaces and coworking spaces."
 
         keywords="neuroflow assessment, workspace evaluation process, neuro-accessibility scoring, sensory environment evaluation, cognitive load assessment, workspace certification"
       />
@@ -179,7 +179,7 @@ const HowItWorks = () => {
               <span className="text-primary block">The Science Behind Our Assessment</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Our NeuroFlow methodology combines cutting-edge research in environmental psychology, neuroscience, and occupational therapy to create the world's first comprehensive neuro-accessibility index.
+              NeuroFlow draws on established research in environmental psychology, sensory processing and cognitive load to organise a detailed workspace assessment.
             </p>
           </div>
         </div>
@@ -227,7 +227,7 @@ const HowItWorks = () => {
               Our NeuroFlow Scoring Framework
             </h2>
             <p className="text-xl text-muted-foreground">
-              Each workspace is evaluated with NeuroFlow across five scientifically-validated dimensions that directly impact neurodiverse productivity and well-being.
+              Each assessed workspace is reviewed across five consistent dimensions relevant to sensory comfort, focus and predictability.
             </p>
             </div>
 
@@ -367,7 +367,7 @@ const HowItWorks = () => {
                 Scientific Foundation
               </h2>
               <p className="text-xl text-muted-foreground">
-                Our methodology is grounded in peer-reviewed research and validated through academic partnerships.
+                 Our methodology draws on established research areas; NeuroFlow itself is our independently developed assessment framework.
               </p>
             </div>
 
@@ -409,7 +409,7 @@ const HowItWorks = () => {
               Experience the Difference Science Makes
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Join thousands of neurodiverse professionals who've discovered workspaces that truly support their unique needs through our evidence-based approach.
+              Explore detailed workspace information and look for an environment that supports your individual needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-lg px-8 py-6">

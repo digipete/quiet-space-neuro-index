@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Brain, Heart, Target, Users, Award, Globe, Lightbulb, CheckCircle } from 'lucide-react';
+import { Brain, Heart, Target, Users, Lightbulb, CheckCircle } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 const About = () => {
@@ -31,20 +31,8 @@ const About = () => {
     {
       name: "Pete Hallett",
       role: "Founder",
-      description: "Late adulthood diagnosed Neuro spicy human with AuDHD who struggled for years to find workspaces that didn't overwhelm his sensory processing. Her personal journey combined with deep learning over the last 10 years led to the creation of our NeuroFlow framework.",
-      expertise: "Life Experience of coping and not being well supported"
-    },
-    {
-      name: "Marcus Thompson",
-      role: "Head of Research & Assessment",
-      description: "Occupational therapist and autism advocate who developed our sensory evaluation protocols. His work focuses on translating complex sensory needs into actionable workspace modifications.",
-      expertise: "Sensory Processing, Occupational Therapy"
-    },
-    {
-      name: "Elena Rodriguez",
-      role: "Community & User Experience",
-      description: "UX researcher with dyslexia who ensures our platform is accessible and intuitive. She leads our community feedback integration and user advocacy initiatives.",
-      expertise: "Accessible Design, Community Management"
+      description: "Diagnosed with AuDHD in adulthood, Pete spent years trying to work in environments that overwhelmed his sensory processing. His lived experience and a decade of learning led to the creation of the NeuroFlow framework.",
+      expertise: "Lived experience and neuroinclusive workspace assessment"
     }
   ];
 
@@ -52,17 +40,17 @@ const About = () => {
     {
       year: "1998",
       title: "The Struggle Begins",
-      description: "Pete Hallett's personal experience with sensory overload in traditional work environments sparked the couriosity into what was happening inside his brain."
+      description: "Pete Hallett's experience with sensory overload in traditional work environments sparked his curiosity about what was happening inside his brain."
     },
     {
       year: "2020",
       title: "Something Needed To Be Done",
-      description: "After having some time to reflect on his career, Pete realised that the struggles he had experienced might have een to do with having a different way of seeing things and so began an Neurodiversity assessment process."
+      description: "After reflecting on his career, Pete realised that his experiences might be connected to a different way of processing the world, so he began a neurodiversity assessment process."
     },
     {
       year: "2022",
-      title: "Research Foundation",
-      description: "Partnered with University College London to develop the first scientifically-validated neuro-accessibility scoring system."
+      title: "Framework Development",
+      description: "Began translating lived experience and established research into a structured approach for observing sensory and environmental features."
     },
     {
       year: "2024",
@@ -74,13 +62,6 @@ const About = () => {
       title: "Beta Launch",
       description: "Launched a beta product and started to rapidly scale the offering"
     }
-  ];
-
-  const researchPartners = [
-    "University College London - Environmental Psychology Lab",
-    "Imperial College London - Neuroscience Department",
-    "Autism Research Centre, University of Cambridge",
-    "National Autistic Society - Research Division"
   ];
 
   return (
@@ -139,15 +120,15 @@ const About = () => {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-success" />
-                    <span className="text-sm">20% of workforce is neurodiverse</span>
+                    <span className="text-sm">Sensory needs differ from person to person</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-success" />
-                    <span className="text-sm">78% struggle with sensory overload</span>
+                    <span className="text-sm">Workspace conditions can support or hinder focus</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-success" />
-                    <span className="text-sm">3x productivity increase in suitable environments</span>
+                    <span className="text-sm">Clear information supports informed choices</span>
                   </div>
                 </div>
               </div>
@@ -192,11 +173,11 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A diverse group of researchers, advocates, and professionals who understand the neurodiverse experience from both scientific and personal perspectives.
+              Quiet Space Club was founded from lived experience of neurodivergence and sensory barriers at work.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-xl mx-auto">
             {team.map((member, index) => (
               <Card key={index} className="text-left">
                 <CardHeader>
@@ -229,24 +210,21 @@ const About = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Research Foundation</h2>
               <p className="text-xl text-muted-foreground">
-                Our methodology is validated through partnerships with leading research institutions.
+                NeuroFlow is informed by established fields of research and is presented transparently as our own assessment framework.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Award className="w-5 h-5 text-primary" />
-                    Research Partners
-                  </CardTitle>
+                  <CardTitle>What informs NeuroFlow</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    {researchPartners.map((partner, index) => (
-                      <li key={index} className="flex items-start gap-2 text-sm">
+                    {["Environmental psychology", "Sensory processing research", "Cognitive load theory", "Inclusive and universal design principles"].map((area) => (
+                      <li key={area} className="flex items-start gap-2 text-sm">
                         <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
-                        <span>{partner}</span>
+                        <span>{area}</span>
                       </li>
                     ))}
                   </ul>
@@ -255,26 +233,12 @@ const About = () => {
               
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Globe className="w-5 h-5 text-primary" />
-                    Published Research
-                  </CardTitle>
+                  <CardTitle>Our commitment to accuracy</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3 text-sm">
-                    <li>
-                      <strong>Journal of Environmental Psychology (2024)</strong><br />
-                      "Neuro-Accessibility in Workspace Design: A Framework for Evaluation"
-                    </li>
-                    <li>
-                      <strong>Applied Ergonomics (2024)</strong><br />
-                      "Sensory Processing and Cognitive Load in Coworking Environments"
-                    </li>
-                    <li>
-                      <strong>Autism Research (2024)</strong><br />
-                      "User-Centered Design for Neurodiverse Workspace Platforms"
-                    </li>
-                  </ul>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    We distinguish the NeuroFlow framework from independent academic validation. We will only name research partners, certifications or published studies when they can be publicly verified.
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -310,33 +274,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Impact Section */}
-      <section className="py-20 px-4 bg-primary/5">
-        <div className="container mx-auto text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Making a Real Difference
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Every neurodiverse professional who finds their ideal workspace through our platform validates our mission and drives us to reach more people who need support.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-card rounded-lg p-6 border border-border/50">
-                <div className="text-3xl font-bold text-primary mb-2">2,400+</div>
-                <p className="text-muted-foreground">Professionals matched with suitable workspaces</p>
-              </div>
-              <div className="bg-card rounded-lg p-6 border border-border/50">
-                <div className="text-3xl font-bold text-primary mb-2">340+</div>
-                <p className="text-muted-foreground">Spaces certified for neuro-accessibility</p>
-              </div>
-              <div className="bg-card rounded-lg p-6 border border-border/50">
-                <div className="text-3xl font-bold text-primary mb-2">92%</div>
-                <p className="text-muted-foreground">Report improved productivity and well-being</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

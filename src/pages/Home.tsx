@@ -44,7 +44,7 @@ const Home = () => {
     {
       icon: MapPin,
       title: "Verified Accessibility Profiles",
-      description: "Every space undergoes rigorous on-site assessment by certified accessibility specialists, ensuring accurate and reliable neuro-accessibility ratings."
+      description: "Workspace profiles document practical sensory and environmental features so visitors can make a more informed choice."
     },
     {
       icon: Star,
@@ -66,33 +66,6 @@ const Home = () => {
         { value: "Free", label: "To List During Beta" },
       ]
     : null;
-
-  const testimonials = [
-    {
-      quote: "Finding spaces that don't overwhelm my sensory processing has transformed my productivity. The neuro-accessibility scores are incredibly accurate.",
-      author: "Sarah M.",
-      role: "Software Developer with ADHD",
-      rating: 5
-    },
-    {
-      quote: "As someone with autism, I need predictable, low-stimulation environments. Quiet Space Club's detailed profiles help me avoid spaces that would cause meltdowns.",
-      author: "Marcus T.",
-      role: "Data Analyst",
-      rating: 5
-    },
-    {
-      quote: "The community reviews from other neurodiverse professionals are invaluable. They understand the specific challenges I face with sensory overload.",
-      author: "Elena R.",
-      role: "Graphic Designer",
-      rating: 5
-    }
-  ];
-
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <Star key={i} className={`w-4 h-4 ${i < rating ? 'fill-warning text-warning' : 'text-muted-foreground/30'}`} />
-    ));
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -151,18 +124,21 @@ const Home = () => {
             <h2 className="text-3xl font-bold mb-6">
               The Hidden Workplace Challenge
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-card rounded-lg p-6 border border-border/50">
-                <div className="text-3xl font-bold text-primary mb-2">20%</div>
-                <p className="text-muted-foreground">of the workforce is neurodiverse</p>
+                  <Brain className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <p className="font-semibold mb-2">Sensory demands vary</p>
+                  <p className="text-muted-foreground">Noise, lighting and visual activity can affect people differently.</p>
               </div>
               <div className="bg-card rounded-lg p-6 border border-border/50">
-                <div className="text-3xl font-bold text-primary mb-2">78%</div>
-                <p className="text-muted-foreground">struggle with sensory overload in traditional offices</p>
+                  <MapPin className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <p className="font-semibold mb-2">Details matter</p>
+                  <p className="text-muted-foreground">Practical information helps people judge a space before visiting.</p>
               </div>
               <div className="bg-card rounded-lg p-6 border border-border/50">
-                <div className="text-3xl font-bold text-primary mb-2">3x</div>
-                <p className="text-muted-foreground">higher productivity in neuro-accessible spaces</p>
+                  <Heart className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <p className="font-semibold mb-2">Choice supports comfort</p>
+                  <p className="text-muted-foreground">Clear profiles make it easier to find environments that suit individual needs.</p>
               </div>
             </div>
             <p className="text-lg text-muted-foreground">
@@ -224,49 +200,16 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-card/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Real Stories from Our Community
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Hear from neurodiverse professionals who've found their perfect workspace through our platform.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="text-left">
-                <CardContent className="pt-6">
-                  <div className="flex items-center mb-4">
-                    {renderStars(testimonial.rating)}
-                  </div>
-                  <blockquote className="text-muted-foreground mb-4 italic">
-                    "{testimonial.quote}"
-                  </blockquote>
-                  <div className="text-sm">
-                    <div className="font-semibold">{testimonial.author}</div>
-                    <div className="text-muted-foreground">{testimonial.role}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Research Foundation */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <Award className="w-16 h-16 text-primary mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Scientifically Validated Approach
+              A Research-Informed Approach
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Our methodology is grounded in peer-reviewed research from environmental psychology, occupational therapy, and neuroscience, ensuring every recommendation is evidence-based.
+              NeuroFlow draws on established ideas from environmental psychology, occupational therapy and neuroscience to structure consistent workspace observations.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="flex flex-col items-center gap-2">
@@ -294,7 +237,7 @@ const Home = () => {
               Ready to Find Your Productive Space?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Join thousands of neurodiverse professionals who've transformed their work experience by finding spaces that truly support their needs.
+              Explore workspace profiles and choose an environment that better supports your individual needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-lg px-8 py-6">
