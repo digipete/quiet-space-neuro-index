@@ -25,6 +25,8 @@ import SubmitSpace from "./pages/SubmitSpace";
 import PillarPage from "./pages/PillarPage";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import AdminAnalytics from "./pages/AdminAnalytics";
+import { PageViewTracker } from "./components/PageViewTracker";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +42,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter basename="/">
+          <PageViewTracker />
           <div className="min-h-screen flex flex-col">
             <Navigation />
             <main className="flex-1">
@@ -66,6 +69,7 @@ const App = () => {
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/admin/auth" element={<AdminAuth />} />
                 <Route path="/admin/dashboard" element={<AdminDashboard />} />
+                <Route path="/admin/analytics" element={<AdminAnalytics />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

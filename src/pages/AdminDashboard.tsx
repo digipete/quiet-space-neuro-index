@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Shield, Mail, Calendar, User, MessageSquare, LogOut, RefreshCw } from 'lucide-react';
+import { Shield, Mail, Calendar, User, MessageSquare, LogOut, RefreshCw, BarChart3 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
@@ -202,6 +202,10 @@ const AdminDashboard = () => {
               </div>
             </div>
             <div className="flex items-center gap-2">
+              <Button variant="default" size="sm" onClick={() => navigate('/admin/analytics')}>
+                <BarChart3 className="w-4 h-4 mr-2" />
+                Visitor analytics
+              </Button>
               <Button 
                 variant="outline" 
                 size="sm" 

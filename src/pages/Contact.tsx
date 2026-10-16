@@ -12,6 +12,7 @@ import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import DOMPurify from 'dompurify';
 import { SEO } from '@/components/SEO';
+import { track } from '@/lib/analytics';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -98,6 +99,7 @@ const Contact = () => {
       if (error) {
         throw error;
       }
+      track('contact_submitted');
 
       // Send email notification
       const emailResponse = await supabase.functions.invoke('send-contact-email-secure', {
