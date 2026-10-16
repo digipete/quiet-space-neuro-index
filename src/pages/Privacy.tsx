@@ -43,8 +43,9 @@ const Privacy = () => (
                 credentials handled by our hosting provider.
               </li>
               <li>
-                <strong>Technical data.</strong> Anonymous usage data such as pages visited and approximate
-                region, used to understand what is useful. We do not build advertising profiles.
+                <strong>Technical data.</strong> Anonymous usage counts: the page visited, the website that sent you
+                and whether a form or tool was completed. No cookies, IP addresses or identifiers are used, and
+                self-assessment answers are never recorded. We do not build advertising profiles.
               </li>
             </ul>
           </section>

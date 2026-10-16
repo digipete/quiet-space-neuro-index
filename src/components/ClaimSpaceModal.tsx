@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import DOMPurify from 'dompurify';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
+import { track } from '@/lib/analytics';
 import {
   Dialog,
   DialogContent,
@@ -137,6 +138,7 @@ export function ClaimSpaceModal({
       if (error) throw error;
 
       setSuccessEmail(form.claimant_email.trim());
+      track('space_claimed');
     } catch (err) {
       console.error('ClaimSpaceModal submit error:', err);
       toast({

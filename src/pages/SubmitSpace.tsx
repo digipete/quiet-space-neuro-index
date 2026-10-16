@@ -10,6 +10,7 @@ import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import DOMPurify from 'dompurify';
 import { SEO } from '@/components/SEO';
+import { track } from '@/lib/analytics';
 import { CheckCircle, Star, Users, Award, Heart, Loader2 } from 'lucide-react';
 
 const NEURO_FEATURES = [
@@ -167,6 +168,7 @@ const SubmitSpace = () => {
       }
 
       setSubmitted(true);
+      track('space_submitted');
     } catch (error) {
       console.error('Error submitting space:', error);
       toast({

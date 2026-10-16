@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
+import { track } from '@/lib/analytics';
 
 type Q = { area: string; text: string };
 
@@ -70,7 +71,7 @@ const SensorySelfAssessment = () => {
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Workspace Sensory Self-Assessment</h1>
           <p className="text-lg text-foreground/85 leading-relaxed mb-10">
             Fourteen questions, about two minutes. Answer for the space you manage or work in and get a score out of 100
-            with the areas to fix first. Nothing is stored or sent anywhere. Based on our{' '}
+            with the areas to fix first. Your answers are never stored or sent anywhere. Based on our{' '}
             <Link to="/blog/office-sensory-audit-checklist/" className="text-primary underline underline-offset-2">office sensory audit checklist</Link>.
           </p>
 
@@ -79,6 +80,7 @@ const SensorySelfAssessment = () => {
               onSubmit={(e) => {
                 e.preventDefault();
                 setDone(true);
+                track('assessment_completed');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               className="space-y-5"
@@ -139,9 +141,9 @@ const SensorySelfAssessment = () => {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <Button onClick={() => navigator.clipboard?.writeText(shareText)}>Copy result to share</Button>
-                <Button variant="outline" asChild><Link to="/workspace-providers/">List your space free</Link></Button>
-                <Button variant="outline" asChild><Link to="/spaces/">Find an assessed space</Link></Button>
+                <Button onClick={() => { navigator.clipboard?.writeText(shareText); track('assessment_shared'); }}>Copy result to share</Button>
+                <Button variant="outline" asChild><Link to="/workspace-providers/" onClick={() => track('listing_cta_clicked')}>List your space free</Link></Button>
+                <Button variant="outline" asChild><Link to="/spaces/" onClick={() => track('listing_cta_clicked')}>Find an assessed space</Link></Button>
                 <Button variant="ghost" onClick={() => { setAnswers({}); setDone(false); }}>Start again</Button>
               </div>
             </div>
