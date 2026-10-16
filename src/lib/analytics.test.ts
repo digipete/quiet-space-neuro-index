@@ -1,3 +1,4 @@
+// @ts-ignore -- bun's built-in test runner types aren't part of the app's type setup
 import { describe, expect, test, mock } from 'bun:test';
 mock.module('@/integrations/supabase/client', () => ({ supabase: {} }));
 const { sectionFor, referrerSource } = await import('./analytics');

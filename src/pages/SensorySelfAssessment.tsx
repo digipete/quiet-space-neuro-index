@@ -71,7 +71,7 @@ const SensorySelfAssessment = () => {
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Workspace Sensory Self-Assessment</h1>
           <p className="text-lg text-foreground/85 leading-relaxed mb-10">
             Fourteen questions, about two minutes. Answer for the space you manage or work in and get a score out of 100
-            with the areas to fix first. Nothing is stored or sent anywhere. Based on our{' '}
+            with the areas to fix first. Your answers are never stored or sent anywhere. Based on our{' '}
             <Link to="/blog/office-sensory-audit-checklist/" className="text-primary underline underline-offset-2">office sensory audit checklist</Link>.
           </p>
 
