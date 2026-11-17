@@ -3,20 +3,27 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { defineMcp } from "npm:@lovable.dev/mcp-js@0.24.0";
+import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.24.0";
 
 // src/lib/mcp/tools/search-spaces.ts
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.24.0";
+
+// src/lib/mcp/supabase.ts
 import { createClient } from "npm:@supabase/supabase-js@^2.52.1";
-import { z } from "npm:zod@^3.23.8";
-function createPublicSupabase() {
+function supabaseForUser(ctx) {
+  const token = ctx.getToken();
+  if (!token) throw new Error("supabaseForUser requires a verified OAuth token");
   const url = process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_ANON_KEY;
-  if (!url || !key) {
-    throw new Error("Supabase URL or key is not configured in the MCP environment.");
-  }
-  return createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
+  if (!url || !key) throw new Error("Supabase URL or key is not configured in the MCP environment.");
+  return createClient(url, key, {
+    global: { headers: { Authorization: `Bearer ${token}` } },
+    auth: { persistSession: false, autoRefreshToken: false }
+  });
 }
+
+// src/lib/mcp/tools/search-spaces.ts
+import { z } from "npm:zod@^3.23.8";
 var search_spaces_default = defineTool({
   name: "search_spaces",
   title: "Search neuro-friendly workspaces",
@@ -30,8 +37,8 @@ var search_spaces_default = defineTool({
     offset: z.number().min(0).default(0).describe("Pagination offset.")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ query, location, certification, minNeuroScore, limit, offset }) => {
-    const supabase = createPublicSupabase();
+  handler: async ({ query, location, certification, minNeuroScore, limit, offset }, ctx) => {
+    const supabase = supabaseForUser(ctx);
     let builder = supabase.from("listings").select("*", { count: "exact" });
     if (certification && certification !== "all") {
       builder = builder.eq("certification", certification);
@@ -80,16 +87,7 @@ var search_spaces_default = defineTool({
 
 // src/lib/mcp/tools/get-space-details.ts
 import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.24.0";
-import { createClient as createClient2 } from "npm:@supabase/supabase-js@^2.52.1";
 import { z as z2 } from "npm:zod@^3.23.8";
-function createPublicSupabase2() {
-  const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_ANON_KEY;
-  if (!url || !key) {
-    throw new Error("Supabase URL or key is not configured in the MCP environment.");
-  }
-  return createClient2(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
-}
 var get_space_details_default = defineTool2({
   name: "get_space_details",
   title: "Get workspace details",
@@ -98,8 +96,8 @@ var get_space_details_default = defineTool2({
     id: z2.string().uuid().describe("The UUID of the workspace listing.")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ id }) => {
-    const supabase = createPublicSupabase2();
+  handler: async ({ id }, ctx) => {
+    const supabase = supabaseForUser(ctx);
     const { data, error } = await supabase.from("listings").select("*").eq("id", id).single();
     if (error) {
       return { content: [{ type: "text", text: `Database error: ${error.message}` }], isError: true };
@@ -135,11 +133,16 @@ var get_space_details_default = defineTool2({
 });
 
 // src/lib/mcp/index.ts
+var projectRef = "zbylujrthjyryngdbiwv";
 var mcp_default = defineMcp({
   name: "neuroindex",
   title: "NeuroIndex Directory",
-  version: "1.0.0",
-  instructions: "Public read-only tools for the NeuroIndex directory of neuro-friendly workspaces, coworking spaces, and meeting rooms. Use `search_spaces` to discover spaces and `get_space_details` to retrieve the full profile for a specific listing.",
+  version: "1.1.0",
+  instructions: "Read-only tools for the NeuroIndex directory of neuro-friendly workspaces, coworking spaces, and meeting rooms. Callers sign in with OAuth. Use `search_spaces` to discover spaces and `get_space_details` to retrieve the full profile for a specific listing.",
+  auth: auth.oauth.issuer({
+    issuer: `https://${projectRef}.supabase.co/auth/v1`,
+    acceptedAudiences: "authenticated"
+  }),
   tools: [search_spaces_default, get_space_details_default]
 });
 

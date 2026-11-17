@@ -26,6 +26,7 @@ import PillarPage from "./pages/PillarPage";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import AdminAnalytics from "./pages/AdminAnalytics";
+import OAuthConsent from "./pages/OAuthConsent";
 import { PageViewTracker } from "./components/PageViewTracker";
 
 const queryClient = new QueryClient();
@@ -70,6 +71,7 @@ const App = () => {
                 <Route path="/admin/auth" element={<AdminAuth />} />
                 <Route path="/admin/dashboard" element={<AdminDashboard />} />
                 <Route path="/admin/analytics" element={<AdminAnalytics />} />
+                <Route path="/.lovable/oauth/consent" element={<OAuthConsent />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

@@ -3,12 +3,16 @@
   "sdk_version": "0.24.0",
   "path": "/functions/v1/mcp",
   "auth": {
-    "type": "none"
+    "type": "oauth",
+    "issuer": "https://zbylujrthjyryngdbiwv.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
   },
   "mcp": {
     "server": {
       "name": "neuroindex",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "title": "NeuroIndex Directory"
     },
     "tools": [

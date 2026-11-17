@@ -1,15 +1,6 @@
 import { defineTool } from "@lovable.dev/mcp-js";
-import { createClient } from "@supabase/supabase-js";
+import { supabaseForUser } from "../supabase";
 import { z } from "zod";
-
-function createPublicSupabase() {
-  const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_ANON_KEY;
-  if (!url || !key) {
-    throw new Error("Supabase URL or key is not configured in the MCP environment.");
-  }
-  return createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
-}
 
 export default defineTool({
   name: "get_space_details",
@@ -20,8 +11,8 @@ export default defineTool({
     id: z.string().uuid().describe("The UUID of the workspace listing."),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ id }) => {
-    const supabase = createPublicSupabase();
+  handler: async ({ id }, ctx) => {
+    const supabase = supabaseForUser(ctx);
 
     const { data, error } = await supabase
       .from("listings")
