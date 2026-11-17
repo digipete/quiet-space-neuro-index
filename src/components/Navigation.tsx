@@ -11,6 +11,7 @@ export const Navigation = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'NeuroIndex', path: '/spaces/' },
+    { name: 'Find My Space', path: '/find-my-space/' },
     { name: 'How It Works', path: '/how-it-works/' },
     { name: 'Workspace Providers', path: '/workspace-providers/' },
     { name: 'Blog', path: '/blog/' },

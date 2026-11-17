@@ -27,6 +27,7 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import AdminAnalytics from "./pages/AdminAnalytics";
 import OAuthConsent from "./pages/OAuthConsent";
+import FindMySpace from "./pages/FindMySpace";
 import { PageViewTracker } from "./components/PageViewTracker";
 
 const queryClient = new QueryClient();
@@ -66,6 +67,7 @@ const App = () => {
                 <Route path="/for/neurodivergent-professionals" element={<PillarPage />} />
                 <Route path="/quiet-workspaces/london" element={<PillarPage />} />
                 <Route path="/tools/sensory-self-assessment" element={<SensorySelfAssessment />} />
+                <Route path="/find-my-space" element={<FindMySpace />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/admin/auth" element={<AdminAuth />} />

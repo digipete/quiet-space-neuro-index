@@ -1,1 +1,4 @@
 project_id = "zbylujrthjyryngdbiwv"
+
+[functions.recommend-spaces]
+verify_jwt = false

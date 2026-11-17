@@ -37,6 +37,7 @@ const STATIC_ROUTES = [
   { path: '/for/neurodivergent-professionals', changefreq: 'monthly', priority: '0.8' },
   { path: '/quiet-workspaces/london', changefreq: 'monthly', priority: '0.8' },
   { path: '/tools/sensory-self-assessment', changefreq: 'monthly', priority: '0.8' },
+  { path: '/find-my-space', changefreq: 'monthly', priority: '0.8' },
   { path: '/privacy', changefreq: 'yearly', priority: '0.3' },
   { path: '/terms', changefreq: 'yearly', priority: '0.3' },
 ];
