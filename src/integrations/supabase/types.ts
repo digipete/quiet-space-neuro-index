@@ -104,6 +104,51 @@ export type Database = {
         }
         Relationships: []
       }
+      search_console_snapshots: {
+        Row: {
+          alerts: Json
+          clicks: number
+          created_at: string
+          ctr: number
+          id: string
+          impressions: number
+          index_status: Json
+          position: number
+          sitemap_status: Json
+          top_pages: Json
+          top_queries: Json
+          week_start: string
+        }
+        Insert: {
+          alerts?: Json
+          clicks?: number
+          created_at?: string
+          ctr?: number
+          id?: string
+          impressions?: number
+          index_status?: Json
+          position?: number
+          sitemap_status?: Json
+          top_pages?: Json
+          top_queries?: Json
+          week_start: string
+        }
+        Update: {
+          alerts?: Json
+          clicks?: number
+          created_at?: string
+          ctr?: number
+          id?: string
+          impressions?: number
+          index_status?: Json
+          position?: number
+          sitemap_status?: Json
+          top_pages?: Json
+          top_queries?: Json
+          week_start?: string
+        }
+        Relationships: []
+      }
       security_events: {
         Row: {
           created_at: string

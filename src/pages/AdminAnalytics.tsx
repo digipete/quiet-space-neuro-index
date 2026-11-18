@@ -5,6 +5,7 @@ import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxi
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
+import SearchConsolePanel from '@/components/SearchConsolePanel';
 
 type Ev = { event_type: string; path: string; section: string; referrer_source: string; utm_campaign: string | null; created_at: string };
 
@@ -99,6 +100,7 @@ const AdminAnalytics = () => {
         {!stats && !error && <p className="text-muted-foreground">Loading…</p>}
         {stats && (
           <>
+            <SearchConsolePanel />
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <Card><CardHeader className="pb-2"><CardDescription>Page visits</CardDescription><CardTitle className="text-3xl">{stats.views.length}</CardTitle></CardHeader></Card>
               <Card><CardHeader className="pb-2"><CardDescription>Conversions</CardDescription><CardTitle className="text-3xl">{stats.conv.length}</CardTitle></CardHeader></Card>
