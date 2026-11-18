@@ -34,3 +34,7 @@ Source plan: `.lovable/plan/neuroindex-marketing-and-seo-built-on-the-marketing-
 - [x] Removed unsupported statistics, institutional partnerships and paper citations
 - [x] Removed placeholder team members and testimonials
 - [x] Corrected About page typos and replaced validation overclaims with accurate framework language
+
+## GitHub Pages installation fix
+- [x] Synchronize the npm lockfile with current dependencies and verify a clean npm ci installation
+- [x] Update GitHub Actions to Node 22 for Puppeteer compatibility
