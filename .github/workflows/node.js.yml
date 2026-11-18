@@ -101,3 +101,12 @@ jobs:
         run: node scripts/search-console-sync.mjs deploy
         env:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+      - name: Check every listing photo loads on the live site
+        run: |
+          sleep 30
+          FAIL=0
+          for IMG in $(curl -s -A "Mozilla/5.0" https://index.quietspace.club/spaces/ | grep -o '/spaces/[a-z0-9-]*\.\(jpg\|jpeg\|png\|webp\)?v=[a-z0-9]*' | sort -u); do
+            TYPE=$(curl -s -o /dev/null -w '%{http_code} %{content_type}' -A "Mozilla/5.0" "https://index.quietspace.club$IMG")
+            echo "$TYPE $IMG"; case "$TYPE" in "200 image/"*) ;; *) FAIL=1;; esac
+          done
+          [ "$FAIL" -eq 0 ] || { echo "A listing photo did not load"; exit 1; }

@@ -8,7 +8,8 @@ export type EventType =
   | 'space_submitted'
   | 'space_claimed'
   | 'contact_submitted'
-  | 'listing_cta_clicked';
+  | 'listing_cta_clicked'
+  | 'image_failed';
 
 const GUIDE_PREFIXES = ['/blog/', '/neurodiversity-in-the-workplace', '/neuroinclusion-for-employers', '/for/', '/quiet-workspaces/'];
 

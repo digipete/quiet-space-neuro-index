@@ -52,3 +52,7 @@ Source plan: `.lovable/plan/neuroindex-marketing-and-seo-built-on-the-marketing-
 - [x] Deploy-time sitemap + IndexNow job, weekly report, alerts, admin panel
 - [ ] Pete: create service account, add to Search Console, add GitHub secrets (GSC_SERVICE_ACCOUNT_JSON, SUPABASE_SERVICE_ROLE_KEY)
 - [ ] Pete: Request indexing for key pages
+
+## Listing photos "Image unavailable"
+- [x] Versioned photo addresses, one retry, failure tracking, live photo check after deploy
+- [ ] Pete: Purge Everything in Cloudflare (optional, confirms cause)

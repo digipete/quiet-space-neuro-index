@@ -13,6 +13,9 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   base: '/',
+  define: {
+    __BUILD_ID__: JSON.stringify((process.env.GITHUB_SHA || Date.now().toString(36)).slice(0, 8)),
+  },
   plugins: [
     react(),
     mode === 'development' &&

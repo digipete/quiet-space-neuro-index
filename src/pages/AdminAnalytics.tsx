@@ -60,7 +60,7 @@ const AdminAnalytics = () => {
   const stats = useMemo(() => {
     if (!rows) return null;
     const views = rows.filter((r) => r.event_type === 'page_view');
-    const conv = rows.filter((r) => r.event_type !== 'page_view');
+    const conv = rows.filter((r) => r.event_type !== 'page_view' && r.event_type !== 'image_failed');
     const daily = new Map<string, { day: string; visits: number; conversions: number }>();
     for (let i = days - 1; i >= 0; i--) {
       const d = new Date(Date.now() - i * 86400000).toISOString().slice(0, 10);
@@ -101,6 +101,9 @@ const AdminAnalytics = () => {
         {stats && (
           <>
             <SearchConsolePanel />
+            {rows!.some((r) => r.event_type === 'image_failed') && (
+              <p className="mb-6 text-sm text-destructive">Photo failures in this period: {rows!.filter((r) => r.event_type === 'image_failed').length} ({[...new Set(rows!.filter((r) => r.event_type === 'image_failed').map((r) => r.path))].join(', ')})</p>
+            )}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <Card><CardHeader className="pb-2"><CardDescription>Page visits</CardDescription><CardTitle className="text-3xl">{stats.views.length}</CardTitle></CardHeader></Card>
               <Card><CardHeader className="pb-2"><CardDescription>Conversions</CardDescription><CardTitle className="text-3xl">{stats.conv.length}</CardTitle></CardHeader></Card>

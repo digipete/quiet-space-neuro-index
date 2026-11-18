@@ -1,4 +1,5 @@
 
+import { ListingPhoto } from '@/components/ListingPhoto';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { ArrowLeft, Star, MapPin, Users, Clock, Brain, CheckCircle, Award, BadgeCheck } from 'lucide-react';
@@ -37,7 +38,6 @@ export default function SpaceDetail() {
   const [listing, setListing] = useState<Listing | null>(null);
   const [loading, setLoading] = useState(true);
   const [claimModalOpen, setClaimModalOpen] = useState(false);
-  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -209,19 +209,14 @@ export default function SpaceDetail() {
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Hero Image */}
         <div className="relative rounded-xl overflow-hidden mb-8 shadow-lg">
-          {!imageError ? (
-            <img
-              src={listing.image_url}
-              alt={`${listing.title} — neuro-friendly workspace in ${listing.location}`}
-              loading="lazy"
-              className="w-full h-80 md:h-96 object-cover"
-              onError={() => setImageError(true)}
-            />
-          ) : (
-            <div className="w-full h-80 md:h-96 bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground">Photo coming soon</span>
-            </div>
-          )}
+          <ListingPhoto
+            src={listing.image_url}
+            alt={`${listing.title} — neuro-friendly workspace in ${listing.location}`}
+            loading="lazy"
+            className="w-full h-80 md:h-96 object-cover"
+            fallbackClassName="w-full h-80 md:h-96 bg-muted flex items-center justify-center"
+            fallbackText="Photo coming soon"
+          />
           <div className="absolute top-4 right-4">
             <Badge className={`${getNeuroScoreColor(listing.neuro_score)} text-xl px-4 py-2 shadow-lg`}>
               <Brain className="w-5 h-5 mr-2" />

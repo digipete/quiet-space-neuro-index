@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { ListingPhoto } from './ListingPhoto';
 import { Link } from 'react-router-dom';
 import { Star, MapPin, Brain, Award } from 'lucide-react';
 import { AmenityIcon } from './AmenityIcon';
@@ -36,7 +36,6 @@ export function ListingCard({
   certification,
   price 
 }: ListingCardProps) {
-  const [imageError, setImageError] = useState(false);
 
   const renderStars = (rating: number) => {
     const fullStars = Math.floor(rating);
@@ -75,20 +74,13 @@ export function ListingCard({
   return (
     <Card className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20 bg-card">
       <div className="relative overflow-hidden rounded-t-lg">
-        {!imageError ? (
-          <div className="relative">
-            <img
-              src={imageUrl}
-              alt={title}
-              className="aspect-[4/3] w-full bg-muted object-cover group-hover:scale-105 transition-transform duration-500"
-              onError={() => setImageError(true)}
-            />
-          </div>
-        ) : (
-          <div className="aspect-[4/3] bg-muted flex items-center justify-center">
-            <span className="text-muted-foreground">Image unavailable</span>
-          </div>
-        )}
+        <ListingPhoto
+          src={imageUrl}
+          alt={title}
+          className="aspect-[4/3] w-full bg-muted object-cover group-hover:scale-105 transition-transform duration-500"
+          fallbackClassName="aspect-[4/3] bg-muted flex items-center justify-center"
+          fallbackText="Image unavailable"
+        />
         
         {/* Prominent Neuro Score Badge */}
         <div className="absolute top-3 right-3">
