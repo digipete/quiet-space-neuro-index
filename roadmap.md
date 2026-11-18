@@ -43,3 +43,6 @@ Source plan: `.lovable/plan/neuroindex-marketing-and-seo-built-on-the-marketing-
 - [x] Check every public live route with and without a trailing slash, and listing photos on desktop and smaller screens
 - [x] Generate the missing private consent page and verify private direct-link files (four regression tests pass; deployment awaits GitHub Actions)
 - [x] Prevent publishing missing listing pages or missing local listing photos; add regression tests
+
+## Listing photo visibility
+- [x] Remove the image-load visibility gate and verify all six photos with missed load callbacks, refreshes, and listing navigation (preview verified; GitHub deployment pending)
