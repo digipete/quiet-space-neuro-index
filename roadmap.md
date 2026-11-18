@@ -38,3 +38,8 @@ Source plan: `.lovable/plan/neuroindex-marketing-and-seo-built-on-the-marketing-
 ## GitHub Pages installation fix
 - [x] Synchronize the npm lockfile with current dependencies and verify a clean npm ci installation
 - [x] Update GitHub Actions to Node 22 for Puppeteer compatibility
+
+## Direct-link and listing-photo checks
+- [x] Check every public live route with and without a trailing slash, and listing photos on desktop and smaller screens
+- [x] Generate the missing private consent page and verify private direct-link files (four regression tests pass; deployment awaits GitHub Actions)
+- [x] Prevent publishing missing listing pages or missing local listing photos; add regression tests

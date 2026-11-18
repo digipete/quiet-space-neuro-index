@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { getAllRoutes, getBlogRoutes, SITE_URL, canonicalFor } from './seo-routes.mjs';
+import { writePrivatePages, verifyDeployment } from './deployment-checks.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -148,6 +149,8 @@ async function buildStatic() {
     console.log('🏗️  Building React app...');
     execSync('npm run build', { stdio: 'inherit' });
 
+    const appShell = fs.readFileSync(path.join(__dirname, '../dist/index.html'), 'utf8');
+
     console.log('🎨 Pre-rendering pages with Puppeteer for SEO...');
     execSync('node scripts/prerender-with-puppeteer.js', { stdio: 'inherit' });
 
@@ -214,21 +217,10 @@ async function buildStatic() {
     fs.copyFileSync(notFoundSrc, path.join(distDir, '404.html'));
     console.log('✅ Copied 404.html (no redirect, noindex)');
 
-    // Private admin pages: not pre-rendered or in the sitemap, but they need a
-    // real file so bookmarks and refreshes work on GitHub Pages. Each is the app
-    // shell with noindex and no canonical; React renders the admin page itself.
-    const shell = fs.readFileSync(path.join(distDir, 'index.html'), 'utf8')
-      .replace(/<link[^>]+rel="canonical"[^>]*>/gi, '')
-      .replace(/<meta[^>]+name="robots"[^>]*>/gi, '')
-      .replace(/<title>[\s\S]*?<\/title>/i, '<title>Admin | NeuroIndex</title>')
-      .replace(/<head>/i, '<head><meta name="robots" content="noindex, nofollow">')
-      .replace(/<div id="root">[\s\S]*<\/div>(\s*<script[^>]*type="module")/i, '<div id="root"></div>$1');
-    for (const adminPath of ['admin/auth', 'admin/dashboard', 'admin/analytics']) {
-      const dir = path.join(distDir, adminPath);
-      fs.mkdirSync(dir, { recursive: true });
-      fs.writeFileSync(path.join(dir, 'index.html'), shell);
-    }
-    console.log('✅ Wrote noindex admin pages (auth, dashboard, analytics)');
+    // Private routes need physical files too, including the OAuth consent link.
+    writePrivatePages(distDir, appShell);
+    verifyDeployment(distDir, routes);
+    console.log('✅ Verified public/private direct links and local listing photos');
 
 
     // Verification: every sitemap URL must have a real pre-rendered file.

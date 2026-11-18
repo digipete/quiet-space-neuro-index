@@ -75,8 +75,7 @@ export async function getSpaceRoutes() {
   const key = process.env.VITE_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
   if (!url || !key) {
-    console.warn('⚠️  Supabase env vars missing — skipping /space/:id routes.');
-    return [];
+    throw new Error('Supabase environment variables are missing — refusing to publish without listing detail pages.');
   }
 
   try {
@@ -85,8 +84,7 @@ export async function getSpaceRoutes() {
       { headers: { apikey: key, Authorization: `Bearer ${key}` } },
     );
     if (!res.ok) {
-      console.warn(`⚠️  Could not fetch listings (${res.status}) — skipping /space/:id routes.`);
-      return [];
+      throw new Error(`Could not fetch listings (${res.status})`);
     }
     const rows = await res.json();
     return rows.map((row) => ({
@@ -96,8 +94,7 @@ export async function getSpaceRoutes() {
       priority: '0.8',
     }));
   } catch (error) {
-    console.warn(`⚠️  Could not fetch listings (${error.message}) — skipping /space/:id routes.`);
-    return [];
+    throw new Error(`Refusing to publish without listing detail pages: ${error.message}`);
   }
 }
 
